@@ -1,0 +1,49 @@
+{
+	"name": "glhd/laravel-timezone-mapper",
+	"description": "Timezone mapper for Laravel",
+	"keywords": [
+		"laravel",
+		"timezone"
+	],
+	"authors": [
+		{
+			"name": "Chris Morrell",
+			"homepage": "http://www.cmorrell.com"
+		}
+	],
+	"license": "MIT",
+	"require": {
+		"php": ">=7.1.3",
+		"illuminate/support": "5.8.*|^6.0"
+	},
+	"require-dev": {
+		"orchestra/testbench": "~3.0",
+		"phpunit/phpunit": "^7.3",
+		"mockery/mockery": "^1.1",
+		"php-coveralls/php-coveralls": "^2.1"
+	},
+	"autoload": {
+		"psr-4": {
+			"Galahad\\TimezoneMapper\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"classmap": [
+			"tests/TestCase.php"
+		],
+		"psr-4": {
+			"Galahad\\TimezoneMapper\\Tests\\": "tests/"
+		}
+	},
+	"minimum-stability": "stable",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Galahad\\TimezoneMapper\\TimezoneMapperProvider"
+			],
+			"aliases": {
+				"TimezoneMapper": "Galahad\\TimezoneMapper\\Facades\\TimezoneMapper"
+			}
+		}
+	}
+}

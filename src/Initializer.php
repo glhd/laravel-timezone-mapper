@@ -4,7 +4,7 @@ namespace Galahad\TimezoneMapper;
 
 class Initializer
 {
-	public static function initialize() : array
+	public static function initialize(): array
 	{
 		$map = array_fill(0, 2697, 0);
 		
@@ -39,7 +39,7 @@ class Initializer
 		return $map;
 	}
 	
-	protected static function initializer1(array &$map) : void
+	protected static function initializer1(array &$map): void
 	{
 		$map[0] = new Polygon(45.286988, 7.123472, 45.265778, 7.128861, 45.262008, 7.123472);
 		$map[1] = new Polygon(45.409389, 7.123472, 45.409389, 7.181056, 45.349019, 7.123472);
@@ -388,7 +388,7 @@ class Initializer
 		
 	}
 	
-	protected static function initializer2(array &$map) : void
+	protected static function initializer2(array &$map): void
 	{
 		
 		$map[100] = new Polygon(-27.188787, -58.655621, -27.137747, -58.648048, -27.105818, -58.554455, -27.054114, -58.549523, -27.054114, -58.519925,
@@ -766,7 +766,7 @@ class Initializer
 		
 	}
 	
-	protected static function initializer3(array &$map) : void
+	protected static function initializer3(array &$map): void
 	{
 		
 		$map[200] = new Polygon(-13.530348, -61.753394, -13.521331, -61.778309, -13.540883, -61.777035, -13.539249, -61.824284, -13.442552, -61.865635,
@@ -1157,7 +1157,7 @@ class Initializer
 		
 	}
 	
-	protected static function initializer4(array &$map) : void
+	protected static function initializer4(array &$map): void
 	{
 		
 		$map[300] = new Polygon(-22.225376, -57.341666, -22.227705, -57.363777, -22.225376, -57.367694);
@@ -1519,7 +1519,7 @@ class Initializer
 		
 	}
 	
-	protected static function initializer5(array &$map) : void
+	protected static function initializer5(array &$map): void
 	{
 		
 		$map[400] = new Polygon(10.307525, -5.327115, 10.319864, -5.300287, 10.322351, -5.206856, 10.302064, -5.192394, 10.324627, -5.157140,
@@ -1898,7 +1898,7 @@ class Initializer
 		
 	}
 	
-	protected static function initializer6(array &$map) : void
+	protected static function initializer6(array &$map): void
 	{
 		
 		$map[500] = new Polygon(11.377222, -14.770593, 11.382429, -14.768075, 11.506736, -14.665382, 11.498796, -14.516198, 11.603085, -14.319524,
@@ -2236,7 +2236,7 @@ class Initializer
 		
 	}
 	
-	protected static function initializer7(array &$map) : void
+	protected static function initializer7(array &$map): void
 	{
 		
 		$map[600] = new Polygon(28.957256, -100.640395, 29.102413, -100.674675, 29.165094, -100.769157, 29.258591, -100.812798, 29.363337, -101.007683,
@@ -2522,7 +2522,7 @@ class Initializer
 		
 	}
 	
-	protected static function initializer8(array &$map) : void
+	protected static function initializer8(array &$map): void
 	{
 		
 		$map[700] = new Polygon(47.575298, -103.436537, 47.591843, -103.438538, 47.576626, -103.069450, 47.633202, -103.020645, 47.669712, -103.038185,
@@ -2800,7 +2800,7 @@ class Initializer
 		
 	}
 	
-	protected static function initializer9(array &$map) : void
+	protected static function initializer9(array &$map): void
 	{
 		
 		$map[800] = new Polygon(42.489974, 1.780389, 42.454945, 1.923889, 42.382862, 1.965500, 42.359833, 2.016639, 42.373196, 2.092806,
@@ -3055,7 +3055,7 @@ class Initializer
 		
 	}
 	
-	protected static function initializer10(array &$map) : void
+	protected static function initializer10(array &$map): void
 	{
 		
 		$map[900] = new Polygon(52.665272, -78.757111, 52.663300, -78.753601, 52.649010, -78.766899, 52.649792, -78.772202);
@@ -3265,7 +3265,7 @@ class Initializer
 		
 	}
 	
-	protected static function initializer11(array &$map) : void
+	protected static function initializer11(array &$map): void
 	{
 		
 		$map[1000] = new Polygon(61.487820, -77.626060, 61.478649, -77.609978, 61.472168, -77.629768, 61.475460, -77.637474);
@@ -3505,7 +3505,7 @@ class Initializer
 		
 	}
 	
-	protected static function initializer12(array &$map) : void
+	protected static function initializer12(array &$map): void
 	{
 		
 		$map[1100] = new Polygon(-29.003499, 29.156690, -29.030283, 29.220833, -29.089039, 29.261618, -29.089560, 29.335032, -29.144077, 29.342787,
@@ -3906,7 +3906,7 @@ class Initializer
 		
 	}
 	
-	protected static function initializer13(array &$map) : void
+	protected static function initializer13(array &$map): void
 	{
 		
 		$map[1200] = new Polygon(4.759902, 23.651386, 4.782346, 23.709150, 4.779634, 23.770649, 4.829398, 23.833492, 4.810766, 23.851171,
@@ -4281,7 +4281,7 @@ class Initializer
 		
 	}
 	
-	protected static function initializer14(array &$map) : void
+	protected static function initializer14(array &$map): void
 	{
 		
 		$map[1300] = new Polygon(10.519229, 13.546225, 10.489459, 13.553228, 10.462906, 13.527234, 10.307340, 13.509507, 10.285587, 13.495735,
@@ -4632,7 +4632,7 @@ class Initializer
 		
 	}
 	
-	protected static function initializer15(array &$map) : void
+	protected static function initializer15(array &$map): void
 	{
 		
 		$map[1400] = new Polygon(29.734839, 35.047298, 29.950527, 35.077610, 30.022556, 35.098446, 30.119139, 35.175804, 30.239529, 35.144474,
@@ -4974,7 +4974,7 @@ class Initializer
 		
 	}
 	
-	protected static function initializer16(array &$map) : void
+	protected static function initializer16(array &$map): void
 	{
 		
 		$map[1500] = new Polygon(45.749973, 13.767301, 45.749973, 14.957358, 45.525536, 14.957358, 45.532639, 14.945861, 45.474724, 14.900917,
@@ -5317,7 +5317,7 @@ class Initializer
 		
 	}
 	
-	protected static function initializer17(array &$map) : void
+	protected static function initializer17(array &$map): void
 	{
 		
 		$map[1600] = new Polygon(42.784737, 18.018444, 42.900806, 17.844389, 42.915600, 17.754278, 44.885307, 17.754278, 44.885307, 18.018444);
@@ -5625,7 +5625,7 @@ class Initializer
 		
 	}
 	
-	protected static function initializer18(array &$map) : void
+	protected static function initializer18(array &$map): void
 	{
 		
 		$map[1700] = new Polygon(12.614500, 99.394151, 12.669972, 99.310143, 12.715667, 99.294334, 12.725695, 99.248474, 12.907416, 99.183806,
@@ -6011,7 +6011,7 @@ class Initializer
 		
 	}
 	
-	protected static function initializer19(array &$map) : void
+	protected static function initializer19(array &$map): void
 	{
 		
 		$map[1800] = new Polygon(60.290175, 51.993003, 60.317497, 52.060547, 60.204994, 52.415543, 60.167770, 52.847214, 60.165543, 53.386108,
@@ -6368,7 +6368,7 @@ class Initializer
 		
 	}
 	
-	protected static function initializer20(array &$map) : void
+	protected static function initializer20(array &$map): void
 	{
 		
 		$map[1900] = new Polygon(31.834249, 65.278113, 29.593026, 65.278113, 29.536222, 65.067055, 29.581083, 64.631920, 29.545389, 64.352608,
@@ -6765,7 +6765,7 @@ class Initializer
 		
 	}
 	
-	protected static function initializer21(array &$map) : void
+	protected static function initializer21(array &$map): void
 	{
 		
 		$map[2000] = new Polygon(24.305824, 88.639677, 24.303389, 88.648109, 24.328278, 88.685303, 24.290861, 88.725136, 24.209167, 88.733719,
@@ -7156,7 +7156,7 @@ class Initializer
 		
 	}
 	
-	protected static function initializer22(array &$map) : void
+	protected static function initializer22(array &$map): void
 	{
 		
 		$map[2100] = new Polygon(50.978461, 89.185585, 51.051384, 89.062759, 51.179718, 89.039154, 51.232765, 88.942749, 51.430824, 88.967758,
@@ -7496,7 +7496,7 @@ class Initializer
 		
 	}
 	
-	protected static function initializer23(array &$map) : void
+	protected static function initializer23(array &$map): void
 	{
 		
 		$map[2200] = new Polygon(49.099679, 87.312668, 49.202778, 87.281387, 49.207596, 87.285132, 49.207596, 87.312668);
@@ -7821,7 +7821,7 @@ class Initializer
 		
 	}
 	
-	protected static function initializer24(array &$map) : void
+	protected static function initializer24(array &$map): void
 	{
 		
 		$map[2300] = new Polygon(5.617496, 101.147694, 5.707056, 101.258224, 5.810083, 101.270164, 5.811028, 101.348335, 5.876389, 101.396889,
@@ -8188,7 +8188,7 @@ class Initializer
 		
 	}
 	
-	protected static function initializer25(array &$map) : void
+	protected static function initializer25(array &$map): void
 	{
 		
 		$map[2400] = new Polygon(21.556590, 108.035889, 21.543833, 107.957886, 21.648750, 107.876221, 21.661167, 107.822746, 21.604778, 107.653198,
@@ -8650,7 +8650,7 @@ class Initializer
 		
 	}
 	
-	protected static function initializer26(array &$map) : void
+	protected static function initializer26(array &$map): void
 	{
 		
 		$map[2500] = new Polygon(63.435753, 109.230943, 63.347214, 109.271652, 63.361938, 109.363037, 63.255272, 109.375259, 63.218597, 109.456383,
@@ -9060,7 +9060,7 @@ class Initializer
 		
 	}
 	
-	protected static function initializer27(array &$map) : void
+	protected static function initializer27(array &$map): void
 	{
 		
 		$map[2600] = new Polygon(64.386932, 163.466064, 64.406097, 163.388031, 64.487488, 163.346924, 64.503876, 163.232452, 64.550812, 163.168854,

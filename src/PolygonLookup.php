@@ -14,11 +14,11 @@ class PolygonLookup
 		$this->polygons = $polygons;
 	}
 	
-	public function lookup(float $latitude, float $longitude) : ?int
+	public function lookup(float $latitude, float $longitude): ?int
 	{
 		if ($longitude < 7.123472) {
 			return $this->call50($latitude, $longitude);
-		} else if ($longitude < 105.104637) {
+		} elseif ($longitude < 105.104637) {
 			if ($longitude < 43.199055) {
 				if ($latitude < 58.776028) {
 					if ($latitude < 36.495724) {
@@ -27,9 +27,9 @@ class PolygonLookup
 						} else {
 							return $this->call25($latitude, $longitude);
 						}
-					} else if ($latitude < 44.885307) {
+					} elseif ($latitude < 44.885307) {
 						return $this->call28($latitude, $longitude);
-					} else if ($longitude < 12.963583) {
+					} elseif ($longitude < 12.963583) {
 						if ($latitude < 55.276527) {
 							if ($latitude < 54.561165) {
 								if ($latitude < 53.259864) {
@@ -41,7 +41,7 @@ class PolygonLookup
 												} else {
 													return 271;
 												}
-											} else if ($latitude < 45.409389) {
+											} elseif ($latitude < 45.409389) {
 												if ($this->polygons[1]->contains($latitude, $longitude)) {
 													return 297;
 												} else {
@@ -57,7 +57,7 @@ class PolygonLookup
 										} else {
 											return 271;
 										}
-									} else if ($longitude < 10.491472) {
+									} elseif ($longitude < 10.491472) {
 										if ($longitude < 8.721278) {
 											if ($latitude < 46.464279) {
 												if ($this->polygons[3]->contains($latitude, $longitude)) {
@@ -65,7 +65,7 @@ class PolygonLookup
 												} else {
 													return 271;
 												}
-											} else if ($latitude < 49.182751) {
+											} elseif ($latitude < 49.182751) {
 												if ($latitude < 47.805332) {
 													if ($longitude < 7.922375) {
 														if ($this->polygons[4]->contains($latitude, $longitude)) {
@@ -100,7 +100,7 @@ class PolygonLookup
 													return 6;
 												}
 											}
-										} else if ($latitude < 46.939667) {
+										} elseif ($latitude < 46.939667) {
 											if ($longitude < 9.606375) {
 												if ($this->polygons[10]->contains($latitude, $longitude)) {
 													return 271;
@@ -120,7 +120,7 @@ class PolygonLookup
 													return 172;
 												}
 											}
-										} else if ($latitude < 50.099766) {
+										} elseif ($latitude < 50.099766) {
 											if ($latitude < 48.519716) {
 												if ($longitude < 9.606375) {
 													if ($this->polygons[14]->contains($latitude, $longitude)) {
@@ -165,9 +165,9 @@ class PolygonLookup
 										} else {
 											return 6;
 										}
-									} else if ($latitude < 45.546391) {
+									} elseif ($latitude < 45.546391) {
 										return 271;
-									} else if ($latitude < 47.794126) {
+									} elseif ($latitude < 47.794126) {
 										if ($latitude < 47.095196) {
 											if ($this->polygons[24]->contains($latitude, $longitude)) {
 												return 276;
@@ -187,7 +187,7 @@ class PolygonLookup
 												return 6;
 											}
 										}
-									} else if ($latitude < 48.216392) {
+									} elseif ($latitude < 48.216392) {
 										if ($this->polygons[28]->contains($latitude, $longitude)) {
 											return 276;
 										} else {
@@ -203,13 +203,13 @@ class PolygonLookup
 								} else {
 									return 6;
 								}
-							} else if ($longitude < 10.036305) {
+							} elseif ($longitude < 10.036305) {
 								if ($latitude < 54.760555) {
 									return 6;
-								} else if ($latitude < 55.045019) {
+								} elseif ($latitude < 55.045019) {
 									if ($longitude < 8.408679) {
 										return 6;
-									} else if ($latitude < 54.913971) {
+									} elseif ($latitude < 54.913971) {
 										if ($longitude < 9.604082) {
 											if ($longitude < 8.817778) {
 												if ($this->polygons[30]->contains($latitude, $longitude)) {
@@ -224,13 +224,13 @@ class PolygonLookup
 													return 6;
 												}
 											}
-										} else if ($longitude < 9.782444) {
+										} elseif ($longitude < 9.782444) {
 											if ($this->polygons[32]->contains($latitude, $longitude)) {
 												return 6;
 											} else {
 												return 319;
 											}
-										} else if ($latitude < 54.802927) {
+										} elseif ($latitude < 54.802927) {
 											return 6;
 										} else {
 											return 319;
@@ -244,17 +244,17 @@ class PolygonLookup
 							} else {
 								return 319;
 							}
-						} else if ($latitude < 57.760113) {
+						} elseif ($latitude < 57.760113) {
 							if ($longitude < 11.307861) {
 								return 319;
-							} else if ($latitude < 56.739723) {
+							} elseif ($latitude < 56.739723) {
 								if ($longitude < 12.102083) {
 									return 319;
-								} else if ($longitude < 12.792528) {
+								} elseif ($longitude < 12.792528) {
 									if ($latitude < 56.120609) {
 										if ($latitude < 55.698891) {
 											return 319;
-										} else if ($longitude < 12.635111) {
+										} elseif ($longitude < 12.635111) {
 											if ($this->polygons[33]->contains($latitude, $longitude)) {
 												return 375;
 											} else {
@@ -272,20 +272,20 @@ class PolygonLookup
 							} else {
 								return 375;
 							}
-						} else if ($longitude < 9.394170) {
+						} elseif ($longitude < 9.394170) {
 							return 355;
 						} else {
 							return 375;
 						}
-					} else if ($latitude < 56.900307) {
+					} elseif ($latitude < 56.900307) {
 						return $this->call27($latitude, $longitude);
-					} else if ($longitude < 19.184860) {
+					} elseif ($longitude < 19.184860) {
 						return 375;
-					} else if ($longitude < 23.412361) {
+					} elseif ($longitude < 23.412361) {
 						if ($latitude < 58.394665) {
 							if ($longitude < 19.362333) {
 								return 375;
-							} else if ($latitude < 57.761696) {
+							} elseif ($latitude < 57.761696) {
 								return 332;
 							} else {
 								return 49;
@@ -293,19 +293,19 @@ class PolygonLookup
 						} else {
 							return 49;
 						}
-					} else if ($longitude < 23.499717) {
+					} elseif ($longitude < 23.499717) {
 						if ($latitude < 57.042571) {
 							return 332;
 						} else {
 							return 49;
 						}
-					} else if ($longitude < 24.020306) {
+					} elseif ($longitude < 24.020306) {
 						if ($latitude < 57.039259) {
 							return 332;
 						} else {
 							return 49;
 						}
-					} else if ($longitude < 33.609680) {
+					} elseif ($longitude < 33.609680) {
 						if ($longitude < 28.814993) {
 							if ($longitude < 26.417649) {
 								if ($this->polygons[34]->contains($latitude, $longitude)) {
@@ -332,7 +332,7 @@ class PolygonLookup
 				} else {
 					return $this->call29($latitude, $longitude);
 				}
-			} else if ($latitude < 20.645721) {
+			} elseif ($latitude < 20.645721) {
 				return $this->call40($latitude, $longitude);
 			} else {
 				return $this->call41($latitude, $longitude);
@@ -342,7 +342,7 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call0(float $latitude, float $longitude) : ?int
+	protected function call0(float $latitude, float $longitude): ?int
 	{
 		if ($longitude < -58.655621) {
 			if ($longitude < -62.365894) {
@@ -350,7 +350,7 @@ class PolygonLookup
 					if ($latitude < -36.247081) {
 						if ($longitude < -72.442055) {
 							return 31;
-						} else if ($latitude < -36.383263) {
+						} elseif ($latitude < -36.383263) {
 							if ($latitude < -39.927078) {
 								if ($latitude < -41.698986) {
 									if ($this->polygons[37]->contains($latitude, $longitude)) {
@@ -368,7 +368,7 @@ class PolygonLookup
 										return 31;
 									}
 								}
-							} else if ($latitude < -38.155170) {
+							} elseif ($latitude < -38.155170) {
 								if ($this->polygons[40]->contains($latitude, $longitude)) {
 									return 31;
 								} else {
@@ -391,19 +391,19 @@ class PolygonLookup
 					} else {
 						return 31;
 					}
-				} else if ($latitude < -40.237473) {
+				} elseif ($latitude < -40.237473) {
 					if ($longitude < -62.790363) {
 						if ($latitude < -42.344032) {
 							return 88;
-						} else if ($latitude < -42.072571) {
+						} elseif ($latitude < -42.072571) {
 							return 88;
-						} else if ($longitude < -65.033895) {
+						} elseif ($longitude < -65.033895) {
 							if ($this->polygons[43]->contains($latitude, $longitude)) {
 								return 88;
 							} else {
 								return 127;
 							}
-						} else if ($longitude < -65.004135) {
+						} elseif ($longitude < -65.004135) {
 							return 127;
 						} else {
 							if ($this->polygons[44]->contains($latitude, $longitude)) {
@@ -415,7 +415,7 @@ class PolygonLookup
 					} else {
 						return 226;
 					}
-				} else if ($latitude < -31.954723) {
+				} elseif ($latitude < -31.954723) {
 					if ($longitude < -69.174179) {
 						if ($latitude < -36.096098) {
 							if ($this->polygons[45]->contains($latitude, $longitude)) {
@@ -429,13 +429,13 @@ class PolygonLookup
 							} else {
 								return 127;
 							}
-						} else if ($latitude < -34.025411) {
+						} elseif ($latitude < -34.025411) {
 							if ($this->polygons[48]->contains($latitude, $longitude)) {
 								return 31;
 							} else {
 								return 14;
 							}
-						} else if ($latitude < -32.990067) {
+						} elseif ($latitude < -32.990067) {
 							if ($this->polygons[49]->contains($latitude, $longitude)) {
 								return 31;
 							} else {
@@ -451,14 +451,14 @@ class PolygonLookup
 								return 14;
 							}
 						}
-					} else if ($longitude < -66.501678) {
+					} elseif ($longitude < -66.501678) {
 						if ($latitude < -36.096098) {
 							if ($this->polygons[52]->contains($latitude, $longitude)) {
 								return 14;
 							} else {
 								return 127;
 							}
-						} else if ($latitude < -34.025411) {
+						} elseif ($latitude < -34.025411) {
 							if ($this->polygons[53]->contains($latitude, $longitude)) {
 								return 127;
 							}
@@ -490,7 +490,7 @@ class PolygonLookup
 							return 278;
 						}
 					}
-				} else if ($longitude < -66.523230) {
+				} elseif ($longitude < -66.523230) {
 					if ($latitude < -28.555717) {
 						if ($longitude < -68.601897) {
 							if ($latitude < -30.255220) {
@@ -519,7 +519,7 @@ class PolygonLookup
 								return 346;
 							}
 						}
-					} else if ($longitude < -68.601897) {
+					} elseif ($longitude < -68.601897) {
 						if ($this->polygons[65]->contains($latitude, $longitude)) {
 							return 88;
 						}
@@ -531,7 +531,7 @@ class PolygonLookup
 						} else {
 							return 31;
 						}
-					} else if ($latitude < -26.856215) {
+					} elseif ($latitude < -26.856215) {
 						if ($this->polygons[68]->contains($latitude, $longitude)) {
 							return 31;
 						}
@@ -553,7 +553,7 @@ class PolygonLookup
 							return 88;
 						}
 					}
-				} else if ($latitude < -28.555717) {
+				} elseif ($latitude < -28.555717) {
 					if ($this->polygons[73]->contains($latitude, $longitude)) {
 						return 249;
 					}
@@ -565,7 +565,7 @@ class PolygonLookup
 					} else {
 						return 88;
 					}
-				} else if ($longitude < -64.444562) {
+				} elseif ($longitude < -64.444562) {
 					if ($latitude < -26.856215) {
 						if ($longitude < -65.483896) {
 							if ($this->polygons[76]->contains($latitude, $longitude)) {
@@ -609,7 +609,7 @@ class PolygonLookup
 						return 278;
 					}
 				}
-			} else if ($latitude < -38.766533) {
+			} elseif ($latitude < -38.766533) {
 				return 226;
 			} else {
 				if ($this->polygons[85]->contains($latitude, $longitude)) {
@@ -618,30 +618,30 @@ class PolygonLookup
 					return 226;
 				}
 			}
-		} else if ($longitude < -53.073933) {
+		} elseif ($longitude < -53.073933) {
 			if ($latitude < -33.963406) {
 				if ($longitude < -58.364113) {
 					if ($latitude < -34.247784) {
 						return 226;
-					} else if ($longitude < -58.432247) {
+					} elseif ($longitude < -58.432247) {
 						if ($this->polygons[86]->contains($latitude, $longitude)) {
 							return 278;
 						} else {
 							return 226;
 						}
-					} else if ($latitude < -34.015757) {
+					} elseif ($latitude < -34.015757) {
 						return 226;
 					} else {
 						return 245;
 					}
-				} else if ($longitude < -56.669033) {
+				} elseif ($longitude < -56.669033) {
 					if ($latitude < -34.604405) {
 						if ($this->polygons[87]->contains($latitude, $longitude)) {
 							return 245;
 						} else {
 							return 226;
 						}
-					} else if ($longitude < -58.238857) {
+					} elseif ($longitude < -58.238857) {
 						if ($latitude < -34.121304) {
 							return 226;
 						} else {
@@ -653,7 +653,7 @@ class PolygonLookup
 				} else {
 					return 245;
 				}
-			} else if ($latitude < -32.746323) {
+			} elseif ($latitude < -32.746323) {
 				if ($longitude < -58.113934) {
 					if ($longitude < -58.179478) {
 						if ($latitude < -33.112217) {
@@ -662,7 +662,7 @@ class PolygonLookup
 							} else {
 								return 245;
 							}
-						} else if ($longitude < -58.244583) {
+						} elseif ($longitude < -58.244583) {
 							return 278;
 						} else {
 							if ($this->polygons[89]->contains($latitude, $longitude)) {
@@ -671,15 +671,15 @@ class PolygonLookup
 								return 278;
 							}
 						}
-					} else if ($latitude < -33.078617) {
+					} elseif ($latitude < -33.078617) {
 						return 245;
-					} else if ($longitude < -58.151073) {
+					} elseif ($longitude < -58.151073) {
 						if ($this->polygons[90]->contains($latitude, $longitude)) {
 							return 245;
 						} else {
 							return 278;
 						}
-					} else if ($latitude < -33.051277) {
+					} elseif ($latitude < -33.051277) {
 						return 245;
 					} else {
 						if ($this->polygons[91]->contains($latitude, $longitude)) {
@@ -688,7 +688,7 @@ class PolygonLookup
 							return 245;
 						}
 					}
-				} else if ($longitude < -58.083050) {
+				} elseif ($longitude < -58.083050) {
 					return 245;
 				} else {
 					if ($this->polygons[92]->contains($latitude, $longitude)) {
@@ -697,7 +697,7 @@ class PolygonLookup
 						return 245;
 					}
 				}
-			} else if ($latitude < -28.951517) {
+			} elseif ($latitude < -28.951517) {
 				if ($longitude < -55.864777) {
 					if ($latitude < -30.848920) {
 						if ($this->polygons[93]->contains($latitude, $longitude)) {
@@ -708,7 +708,7 @@ class PolygonLookup
 						} else {
 							return 245;
 						}
-					} else if ($longitude < -57.260199) {
+					} elseif ($longitude < -57.260199) {
 						if ($this->polygons[95]->contains($latitude, $longitude)) {
 							return 278;
 						}
@@ -717,7 +717,7 @@ class PolygonLookup
 						} else {
 							return 245;
 						}
-					} else if ($latitude < -29.900218) {
+					} elseif ($latitude < -29.900218) {
 						if ($this->polygons[97]->contains($latitude, $longitude)) {
 							return 329;
 						} else {
@@ -737,7 +737,7 @@ class PolygonLookup
 						return 245;
 					}
 				}
-			} else if ($longitude < -55.864777) {
+			} elseif ($longitude < -55.864777) {
 				if ($latitude < -27.054114) {
 					if ($this->polygons[100]->contains($latitude, $longitude)) {
 						return 219;
@@ -747,7 +747,7 @@ class PolygonLookup
 					} else {
 						return 278;
 					}
-				} else if ($longitude < -57.260199) {
+				} elseif ($longitude < -57.260199) {
 					if ($latitude < -26.105413) {
 						if ($this->polygons[102]->contains($latitude, $longitude)) {
 							return 278;
@@ -764,7 +764,7 @@ class PolygonLookup
 				} else {
 					return 219;
 				}
-			} else if ($latitude < -27.054114) {
+			} elseif ($latitude < -27.054114) {
 				if ($longitude < -54.469355) {
 					if ($latitude < -28.002816) {
 						if ($this->polygons[104]->contains($latitude, $longitude)) {
@@ -798,7 +798,7 @@ class PolygonLookup
 						return 329;
 					}
 				}
-			} else if ($longitude < -54.469355) {
+			} elseif ($longitude < -54.469355) {
 				if ($this->polygons[111]->contains($latitude, $longitude)) {
 					return 278;
 				}
@@ -807,7 +807,7 @@ class PolygonLookup
 				} else {
 					return 219;
 				}
-			} else if ($latitude < -26.105413) {
+			} elseif ($latitude < -26.105413) {
 				if ($this->polygons[113]->contains($latitude, $longitude)) {
 					return 329;
 				}
@@ -826,14 +826,14 @@ class PolygonLookup
 					return 329;
 				}
 			}
-		} else if ($longitude < -47.913853) {
+		} elseif ($longitude < -47.913853) {
 			return 329;
 		} else {
 			return 156;
 		}
 	}
 	
-	protected function call1(float $latitude, float $longitude) : ?int
+	protected function call1(float $latitude, float $longitude): ?int
 	{
 		if ($longitude < -82.738289) {
 			if ($latitude < 14.445067) {
@@ -845,7 +845,7 @@ class PolygonLookup
 							} else {
 								return 312;
 							}
-						} else if ($longitude < -134.878342) {
+						} elseif ($longitude < -134.878342) {
 							return 305;
 						} else {
 							return 107;
@@ -853,11 +853,11 @@ class PolygonLookup
 					} else {
 						return 114;
 					}
-				} else if ($latitude < 12.177296) {
+				} elseif ($latitude < 12.177296) {
 					if ($latitude < 8.949529) {
 						if ($longitude < -89.933998) {
 							return 114;
-						} else if ($longitude < -83.620537) {
+						} elseif ($longitude < -83.620537) {
 							return 396;
 						} else {
 							if ($this->polygons[117]->contains($latitude, $longitude)) {
@@ -866,7 +866,7 @@ class PolygonLookup
 								return 396;
 							}
 						}
-					} else if ($latitude < 9.948153) {
+					} elseif ($latitude < 9.948153) {
 						if ($longitude < -83.621902) {
 							return 396;
 						} else {
@@ -876,9 +876,9 @@ class PolygonLookup
 								return 396;
 							}
 						}
-					} else if ($latitude < 10.119060) {
+					} elseif ($latitude < 10.119060) {
 						return 396;
-					} else if ($longitude < -83.202422) {
+					} elseif ($longitude < -83.202422) {
 						if ($latitude < 10.124827) {
 							return 396;
 						} else {
@@ -891,10 +891,10 @@ class PolygonLookup
 					} else {
 						return 259;
 					}
-				} else if ($longitude < -87.692162) {
+				} elseif ($longitude < -87.692162) {
 					if ($latitude < 13.312460) {
 						return 258;
-					} else if ($longitude < -89.350505) {
+					} elseif ($longitude < -89.350505) {
 						if ($longitude < -90.279968) {
 							return 392;
 						} else {
@@ -917,23 +917,23 @@ class PolygonLookup
 							return 145;
 						}
 					}
-				} else if ($longitude < -85.157913) {
+				} elseif ($longitude < -85.157913) {
 					if ($longitude < -87.547157) {
 						if ($latitude < 13.082987) {
 							return 259;
 						} else {
 							return 145;
 						}
-					} else if ($latitude < 12.833526) {
+					} elseif ($latitude < 12.833526) {
 						return 259;
-					} else if ($latitude < 14.293488) {
+					} elseif ($latitude < 14.293488) {
 						if ($latitude < 13.315682) {
 							if ($this->polygons[124]->contains($latitude, $longitude)) {
 								return 259;
 							} else {
 								return 145;
 							}
-						} else if ($longitude < -87.386246) {
+						} elseif ($longitude < -87.386246) {
 							return 145;
 						} else {
 							if ($this->polygons[125]->contains($latitude, $longitude)) {
@@ -952,21 +952,21 @@ class PolygonLookup
 				} else {
 					return 259;
 				}
-			} else if ($latitude < 17.817400) {
+			} elseif ($latitude < 17.817400) {
 				if ($longitude < -88.033722) {
 					if ($longitude < -88.175591) {
 						if ($longitude < -92.937019) {
 							return 192;
-						} else if ($longitude < -90.371544) {
+						} elseif ($longitude < -90.371544) {
 							if ($latitude < 16.131234) {
 								if ($this->polygons[127]->contains($latitude, $longitude)) {
 									return 192;
 								} else {
 									return 392;
 								}
-							} else if ($longitude < -91.654282) {
+							} elseif ($longitude < -91.654282) {
 								return 192;
-							} else if ($latitude < 16.974317) {
+							} elseif ($latitude < 16.974317) {
 								if ($this->polygons[128]->contains($latitude, $longitude)) {
 									return 392;
 								} else {
@@ -979,32 +979,32 @@ class PolygonLookup
 									return 192;
 								}
 							}
-						} else if ($latitude < 15.718479) {
+						} elseif ($latitude < 15.718479) {
 							if ($this->polygons[130]->contains($latitude, $longitude)) {
 								return 145;
 							} else {
 								return 392;
 							}
-						} else if ($longitude < -88.627838) {
+						} elseif ($longitude < -88.627838) {
 							if ($this->polygons[131]->contains($latitude, $longitude)) {
 								return 392;
 							} else {
 								return 41;
 							}
-						} else if ($latitude < 16.102887) {
+						} elseif ($latitude < 16.102887) {
 							return 41;
 						} else {
 							return 392;
 						}
-					} else if ($latitude < 15.784808) {
+					} elseif ($latitude < 15.784808) {
 						return 145;
 					} else {
 						return 41;
 					}
-				} else if ($latitude < 16.510256) {
+				} elseif ($latitude < 16.510256) {
 					if ($longitude < -85.842651) {
 						return 145;
-					} else if ($longitude < -84.498272) {
+					} elseif ($longitude < -84.498272) {
 						if ($this->polygons[132]->contains($latitude, $longitude)) {
 							return 259;
 						} else {
@@ -1017,18 +1017,18 @@ class PolygonLookup
 							return 259;
 						}
 					}
-				} else if ($longitude < -87.468124) {
+				} elseif ($longitude < -87.468124) {
 					return 41;
 				} else {
 					return 145;
 				}
-			} else if ($longitude < -87.849937) {
+			} elseif ($longitude < -87.849937) {
 				if ($longitude < -90.983063) {
 					if ($longitude < -110.807060) {
 						return 407;
-					} else if ($longitude < -96.048988) {
+					} elseif ($longitude < -96.048988) {
 						return 192;
-					} else if ($longitude < -91.509560) {
+					} elseif ($longitude < -91.509560) {
 						if ($this->polygons[134]->contains($latitude, $longitude)) {
 							return 32;
 						}
@@ -1037,7 +1037,7 @@ class PolygonLookup
 						} else {
 							return 192;
 						}
-					} else if ($latitude < 18.103054) {
+					} elseif ($latitude < 18.103054) {
 						if ($this->polygons[136]->contains($latitude, $longitude)) {
 							return 192;
 						} else {
@@ -1046,7 +1046,7 @@ class PolygonLookup
 					} else {
 						return 32;
 					}
-				} else if ($longitude < -88.067238) {
+				} elseif ($longitude < -88.067238) {
 					if ($longitude < -88.080856) {
 						if ($this->polygons[137]->contains($latitude, $longitude)) {
 							return 32;
@@ -1059,7 +1059,7 @@ class PolygonLookup
 					} else {
 						return 401;
 					}
-				} else if ($latitude < 18.167719) {
+				} elseif ($latitude < 18.167719) {
 					return 41;
 				} else {
 					return 401;
@@ -1067,13 +1067,13 @@ class PolygonLookup
 			} else {
 				return 401;
 			}
-		} else if ($latitude < 7.644825) {
+		} elseif ($latitude < 7.644825) {
 			if ($latitude < 1.841667) {
 				if ($longitude < -79.895477) {
 					if ($latitude < -3.404815) {
 						if ($longitude < -80.838730) {
 							return 164;
-						} else if ($longitude < -80.230945) {
+						} elseif ($longitude < -80.230945) {
 							if ($latitude < -3.453752) {
 								if ($latitude < -3.949543) {
 									if ($this->polygons[139]->contains($latitude, $longitude)) {
@@ -1095,7 +1095,7 @@ class PolygonLookup
 									return 381;
 								}
 							}
-						} else if ($latitude < -3.437323) {
+						} elseif ($latitude < -3.437323) {
 							if ($latitude < -4.285207) {
 								if ($longitude < -80.136307) {
 									if ($this->polygons[142]->contains($latitude, $longitude)) {
@@ -1110,7 +1110,7 @@ class PolygonLookup
 										return 164;
 									}
 								}
-							} else if ($latitude < -3.478404) {
+							} elseif ($latitude < -3.478404) {
 								if ($this->polygons[144]->contains($latitude, $longitude)) {
 									return 164;
 								} else {
@@ -1129,9 +1129,9 @@ class PolygonLookup
 					} else {
 						return 381;
 					}
-				} else if ($latitude < -9.017232) {
+				} elseif ($latitude < -9.017232) {
 					return 164;
-				} else if ($latitude < 1.439020) {
+				} elseif ($latitude < 1.439020) {
 					if ($longitude < -79.723465) {
 						if ($latitude < -4.393893) {
 							if ($this->polygons[146]->contains($latitude, $longitude)) {
@@ -1142,13 +1142,13 @@ class PolygonLookup
 						} else {
 							return 381;
 						}
-					} else if ($latitude < -3.789106) {
+					} elseif ($latitude < -3.789106) {
 						if ($this->polygons[147]->contains($latitude, $longitude)) {
 							return 381;
 						} else {
 							return 164;
 						}
-					} else if ($longitude < -77.101025) {
+					} elseif ($longitude < -77.101025) {
 						if ($this->polygons[148]->contains($latitude, $longitude)) {
 							return 164;
 						}
@@ -1157,19 +1157,19 @@ class PolygonLookup
 						} else {
 							return 381;
 						}
-					} else if ($latitude < -1.175043) {
+					} elseif ($latitude < -1.175043) {
 						if ($this->polygons[150]->contains($latitude, $longitude)) {
 							return 381;
 						} else {
 							return 164;
 						}
-					} else if ($longitude < -75.789804) {
+					} elseif ($longitude < -75.789804) {
 						if ($this->polygons[151]->contains($latitude, $longitude)) {
 							return 390;
 						} else {
 							return 381;
 						}
-					} else if ($latitude < 0.131988) {
+					} elseif ($latitude < 0.131988) {
 						if ($longitude < -75.134194) {
 							if ($this->polygons[152]->contains($latitude, $longitude)) {
 								return 164;
@@ -1192,11 +1192,11 @@ class PolygonLookup
 				} else {
 					return 390;
 				}
-			} else if ($latitude < 7.110721) {
+			} elseif ($latitude < 7.110721) {
 				return 390;
-			} else if ($longitude < -79.995277) {
+			} elseif ($longitude < -79.995277) {
 				return 22;
-			} else if ($longitude < -77.718857) {
+			} elseif ($longitude < -77.718857) {
 				if ($latitude < 7.508337) {
 					if ($this->polygons[155]->contains($latitude, $longitude)) {
 						return 390;
@@ -1217,10 +1217,10 @@ class PolygonLookup
 					return 390;
 				}
 			}
-		} else if ($longitude < -79.893906) {
+		} elseif ($longitude < -79.893906) {
 			if ($latitude < 8.331585) {
 				return 22;
-			} else if ($longitude < -82.231812) {
+			} elseif ($longitude < -82.231812) {
 				if ($longitude < -82.555992) {
 					if ($latitude < 9.648608) {
 						if ($latitude < 8.973391) {
@@ -1242,24 +1242,24 @@ class PolygonLookup
 				} else {
 					return 22;
 				}
-			} else if ($latitude < 9.380544) {
+			} elseif ($latitude < 9.380544) {
 				return 22;
-			} else if ($latitude < 13.380502) {
+			} elseif ($latitude < 13.380502) {
 				return 390;
 			} else {
 				return 221;
 			}
-		} else if ($longitude < -78.793159) {
+		} elseif ($longitude < -78.793159) {
 			if ($latitude < 9.637514) {
 				return 22;
 			} else {
 				return 221;
 			}
-		} else if ($latitude < 11.112972) {
+		} elseif ($latitude < 11.112972) {
 			if ($longitude < -77.174110) {
 				if ($longitude < -78.151619) {
 					return 22;
-				} else if ($latitude < 8.686544) {
+				} elseif ($latitude < 8.686544) {
 					if ($longitude < -77.659527) {
 						if ($this->polygons[160]->contains($latitude, $longitude)) {
 							return 390;
@@ -1279,9 +1279,9 @@ class PolygonLookup
 			} else {
 				return 390;
 			}
-		} else if ($latitude < 18.526976) {
+		} elseif ($latitude < 18.526976) {
 			return 72;
-		} else if ($longitude < -77.162140) {
+		} elseif ($longitude < -77.162140) {
 			return 376;
 		} else {
 			if ($this->polygons[162]->contains($latitude, $longitude)) {
@@ -1295,20 +1295,20 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call2(float $latitude, float $longitude) : ?int
+	protected function call2(float $latitude, float $longitude): ?int
 	{
 		if ($latitude < -4.122895) {
 			if ($longitude < -67.557743) {
 				if ($latitude < -10.505639) {
 					if ($longitude < -71.018164) {
 						return 164;
-					} else if ($latitude < -12.734070) {
+					} elseif ($latitude < -12.734070) {
 						if ($this->polygons[164]->contains($latitude, $longitude)) {
 							return 190;
 						} else {
 							return 164;
 						}
-					} else if ($longitude < -69.287953) {
+					} elseif ($longitude < -69.287953) {
 						if ($this->polygons[165]->contains($latitude, $longitude)) {
 							return 164;
 						}
@@ -1327,7 +1327,7 @@ class PolygonLookup
 							return 190;
 						}
 					}
-				} else if ($longitude < -71.018164) {
+				} elseif ($longitude < -71.018164) {
 					if ($latitude < -7.314267) {
 						if ($longitude < -72.748374) {
 							if ($latitude < -8.909953) {
@@ -1336,7 +1336,7 @@ class PolygonLookup
 								} else {
 									return 164;
 								}
-							} else if ($longitude < -73.613479) {
+							} elseif ($longitude < -73.613479) {
 								if ($this->polygons[170]->contains($latitude, $longitude)) {
 									return 180;
 								} else {
@@ -1362,7 +1362,7 @@ class PolygonLookup
 								return 180;
 							}
 						}
-					} else if ($longitude < -72.748374) {
+					} elseif ($longitude < -72.748374) {
 						if ($latitude < -5.718581) {
 							if ($this->polygons[175]->contains($latitude, $longitude)) {
 								return 180;
@@ -1379,9 +1379,9 @@ class PolygonLookup
 								return 164;
 							}
 						}
-					} else if ($latitude < -5.718581) {
+					} elseif ($latitude < -5.718581) {
 						return 241;
-					} else if ($longitude < -71.883269) {
+					} elseif ($longitude < -71.883269) {
 						if ($this->polygons[178]->contains($latitude, $longitude)) {
 							return 241;
 						} else {
@@ -1394,7 +1394,7 @@ class PolygonLookup
 							return 164;
 						}
 					}
-				} else if ($latitude < -7.314267) {
+				} elseif ($latitude < -7.314267) {
 					if ($this->polygons[180]->contains($latitude, $longitude)) {
 						return 7;
 					}
@@ -1406,13 +1406,13 @@ class PolygonLookup
 					} else {
 						return 180;
 					}
-				} else if ($longitude < -69.287953) {
+				} elseif ($longitude < -69.287953) {
 					if ($latitude < -5.718581) {
 						return 241;
-					} else if ($longitude < -70.153058) {
+					} elseif ($longitude < -70.153058) {
 						if ($latitude < -4.920738) {
 							return 241;
-						} else if ($longitude < -70.585611) {
+						} elseif ($longitude < -70.585611) {
 							if ($this->polygons[183]->contains($latitude, $longitude)) {
 								return 164;
 							} else {
@@ -1451,7 +1451,7 @@ class PolygonLookup
 						return 7;
 					}
 				}
-			} else if ($longitude < -59.818611) {
+			} elseif ($longitude < -59.818611) {
 				if ($latitude < -9.542698) {
 					if ($longitude < -63.688177) {
 						if ($latitude < -12.252600) {
@@ -1460,10 +1460,10 @@ class PolygonLookup
 							} else {
 								return 190;
 							}
-						} else if ($longitude < -65.622960) {
+						} elseif ($longitude < -65.622960) {
 							if ($latitude < -10.897649) {
 								return 190;
-							} else if ($longitude < -66.590351) {
+							} elseif ($longitude < -66.590351) {
 								if ($this->polygons[192]->contains($latitude, $longitude)) {
 									return 7;
 								}
@@ -1488,7 +1488,7 @@ class PolygonLookup
 									return 341;
 								}
 							}
-						} else if ($latitude < -10.897649) {
+						} elseif ($latitude < -10.897649) {
 							if ($this->polygons[198]->contains($latitude, $longitude)) {
 								return 341;
 							} else {
@@ -1501,14 +1501,14 @@ class PolygonLookup
 								return 341;
 							}
 						}
-					} else if ($latitude < -12.252600) {
+					} elseif ($latitude < -12.252600) {
 						if ($longitude < -61.753394) {
 							if ($this->polygons[200]->contains($latitude, $longitude)) {
 								return 341;
 							} else {
 								return 190;
 							}
-						} else if ($latitude < -13.607551) {
+						} elseif ($latitude < -13.607551) {
 							if ($this->polygons[201]->contains($latitude, $longitude)) {
 								return 341;
 							}
@@ -1534,7 +1534,7 @@ class PolygonLookup
 							return 363;
 						}
 					}
-				} else if ($longitude < -63.688177) {
+				} elseif ($longitude < -63.688177) {
 					if ($latitude < -6.832796) {
 						if ($longitude < -65.622960) {
 							if ($this->polygons[206]->contains($latitude, $longitude)) {
@@ -1568,9 +1568,9 @@ class PolygonLookup
 						return 341;
 					}
 				}
-			} else if ($latitude < -9.542698) {
+			} elseif ($latitude < -9.542698) {
 				return 363;
-			} else if ($latitude < -6.832796) {
+			} elseif ($latitude < -6.832796) {
 				if ($longitude < -58.062149) {
 					if ($this->polygons[212]->contains($latitude, $longitude)) {
 						return 310;
@@ -1594,7 +1594,7 @@ class PolygonLookup
 					return 7;
 				}
 			}
-		} else if ($longitude < -66.869835) {
+		} elseif ($longitude < -66.869835) {
 			if ($latitude < 0.940826) {
 				if ($longitude < -70.674210) {
 					if ($latitude < -1.591035) {
@@ -1604,7 +1604,7 @@ class PolygonLookup
 							} else {
 								return 164;
 							}
-						} else if ($latitude < -2.856965) {
+						} elseif ($latitude < -2.856965) {
 							if ($this->polygons[217]->contains($latitude, $longitude)) {
 								return 390;
 							} else {
@@ -1624,7 +1624,7 @@ class PolygonLookup
 							return 390;
 						}
 					}
-				} else if ($latitude < -1.591035) {
+				} elseif ($latitude < -1.591035) {
 					if ($this->polygons[220]->contains($latitude, $longitude)) {
 						return 7;
 					}
@@ -1643,16 +1643,16 @@ class PolygonLookup
 						return 7;
 					}
 				}
-			} else if ($longitude < -70.674210) {
+			} elseif ($longitude < -70.674210) {
 				return 390;
-			} else if ($latitude < 3.472686) {
+			} elseif ($latitude < 3.472686) {
 				if ($longitude < -68.772022) {
 					if ($this->polygons[224]->contains($latitude, $longitude)) {
 						return 7;
 					} else {
 						return 390;
 					}
-				} else if ($latitude < 2.206756) {
+				} elseif ($latitude < 2.206756) {
 					if ($this->polygons[225]->contains($latitude, $longitude)) {
 						return 7;
 					}
@@ -1675,13 +1675,13 @@ class PolygonLookup
 					return 390;
 				}
 			}
-		} else if ($latitude < -2.231925) {
+		} elseif ($latitude < -2.231925) {
 			if ($this->polygons[229]->contains($latitude, $longitude)) {
 				return 7;
 			} else {
 				return 310;
 			}
-		} else if ($longitude < -61.587761) {
+		} elseif ($longitude < -61.587761) {
 			if ($latitude < 1.886310) {
 				if ($longitude < -64.228798) {
 					if ($this->polygons[230]->contains($latitude, $longitude)) {
@@ -1689,7 +1689,7 @@ class PolygonLookup
 					} else {
 						return 7;
 					}
-				} else if ($latitude < -0.172808) {
+				} elseif ($latitude < -0.172808) {
 					if ($this->polygons[231]->contains($latitude, $longitude)) {
 						return 349;
 					} else {
@@ -1705,7 +1705,7 @@ class PolygonLookup
 						return 7;
 					}
 				}
-			} else if ($longitude < -64.228798) {
+			} elseif ($longitude < -64.228798) {
 				if ($this->polygons[234]->contains($latitude, $longitude)) {
 					return 349;
 				}
@@ -1714,7 +1714,7 @@ class PolygonLookup
 				} else {
 					return 397;
 				}
-			} else if ($latitude < 3.945428) {
+			} elseif ($latitude < 3.945428) {
 				if ($longitude < -62.908279) {
 					if ($latitude < 2.915869) {
 						if ($this->polygons[236]->contains($latitude, $longitude)) {
@@ -1770,7 +1770,7 @@ class PolygonLookup
 					return 397;
 				}
 			}
-		} else if ($latitude < 1.886310) {
+		} elseif ($latitude < 1.886310) {
 			if ($longitude < -58.946724) {
 				if ($latitude < -0.172808) {
 					if ($this->polygons[249]->contains($latitude, $longitude)) {
@@ -1791,7 +1791,7 @@ class PolygonLookup
 						return 349;
 					}
 				}
-			} else if ($latitude < -0.172808) {
+			} elseif ($latitude < -0.172808) {
 				if ($this->polygons[253]->contains($latitude, $longitude)) {
 					return 310;
 				} else {
@@ -1813,14 +1813,14 @@ class PolygonLookup
 					return 310;
 				}
 			}
-		} else if ($longitude < -58.946724) {
+		} elseif ($longitude < -58.946724) {
 			if ($latitude < 3.945428) {
 				if ($this->polygons[258]->contains($latitude, $longitude)) {
 					return 349;
 				} else {
 					return 298;
 				}
-			} else if ($longitude < -60.267242) {
+			} elseif ($longitude < -60.267242) {
 				if ($this->polygons[259]->contains($latitude, $longitude)) {
 					return 298;
 				}
@@ -1836,14 +1836,14 @@ class PolygonLookup
 					return 298;
 				}
 			}
-		} else if ($latitude < 3.945428) {
+		} elseif ($latitude < 3.945428) {
 			if ($longitude < -57.626205) {
 				if ($this->polygons[262]->contains($latitude, $longitude)) {
 					return 200;
 				} else {
 					return 298;
 				}
-			} else if ($latitude < 2.915869) {
+			} elseif ($latitude < 2.915869) {
 				if ($this->polygons[263]->contains($latitude, $longitude)) {
 					return 200;
 				}
@@ -1871,19 +1871,19 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call3(float $latitude, float $longitude) : ?int
+	protected function call3(float $latitude, float $longitude): ?int
 	{
 		if ($latitude < -14.962502) {
 			if ($longitude < -64.158066) {
 				if ($longitude < -68.814156) {
 					if ($latitude < -23.428734) {
 						return 31;
-					} else if ($latitude < -16.337534) {
+					} elseif ($latitude < -16.337534) {
 						if ($latitude < -19.883134) {
 							return 31;
-						} else if ($longitude < -71.069149) {
+						} elseif ($longitude < -71.069149) {
 							return 164;
-						} else if ($latitude < -18.110334) {
+						} elseif ($latitude < -18.110334) {
 							if ($this->polygons[268]->contains($latitude, $longitude)) {
 								return 164;
 							}
@@ -1909,7 +1909,7 @@ class PolygonLookup
 							return 164;
 						}
 					}
-				} else if ($latitude < -20.059607) {
+				} elseif ($latitude < -20.059607) {
 					if ($latitude < -22.608159) {
 						if ($longitude < -66.486111) {
 							if ($this->polygons[273]->contains($latitude, $longitude)) {
@@ -1923,7 +1923,7 @@ class PolygonLookup
 							} else {
 								return 127;
 							}
-						} else if ($latitude < -23.882435) {
+						} elseif ($latitude < -23.882435) {
 							if ($this->polygons[276]->contains($latitude, $longitude)) {
 								return 159;
 							}
@@ -1942,7 +1942,7 @@ class PolygonLookup
 								return 127;
 							}
 						}
-					} else if ($longitude < -66.486111) {
+					} elseif ($longitude < -66.486111) {
 						if ($this->polygons[280]->contains($latitude, $longitude)) {
 							return 31;
 						}
@@ -1971,7 +1971,7 @@ class PolygonLookup
 						return 190;
 					}
 				}
-			} else if ($latitude < -19.294041) {
+			} elseif ($latitude < -19.294041) {
 				if ($longitude < -59.983578) {
 					if ($latitude < -22.225376) {
 						if ($longitude < -62.070822) {
@@ -2006,7 +2006,7 @@ class PolygonLookup
 							return 190;
 						}
 					}
-				} else if ($longitude < -55.612143) {
+				} elseif ($longitude < -55.612143) {
 					if ($latitude < -22.225376) {
 						if ($longitude < -57.797860) {
 							if ($this->polygons[293]->contains($latitude, $longitude)) {
@@ -2039,7 +2039,7 @@ class PolygonLookup
 								return 219;
 							}
 						}
-					} else if ($longitude < -57.797860) {
+					} elseif ($longitude < -57.797860) {
 						if ($latitude < -20.759708) {
 							if ($this->polygons[301]->contains($latitude, $longitude)) {
 								return 317;
@@ -2078,7 +2078,7 @@ class PolygonLookup
 							return 317;
 						}
 					}
-				} else if ($latitude < -22.225376) {
+				} elseif ($latitude < -22.225376) {
 					if ($longitude < -53.426425) {
 						if ($latitude < -23.691044) {
 							if ($this->polygons[310]->contains($latitude, $longitude)) {
@@ -2113,10 +2113,10 @@ class PolygonLookup
 						return 317;
 					}
 				}
-			} else if ($longitude < -57.699387) {
+			} elseif ($longitude < -57.699387) {
 				if ($longitude < -60.928726) {
 					return 190;
-				} else if ($latitude < -17.128271) {
+				} elseif ($latitude < -17.128271) {
 					if ($this->polygons[316]->contains($latitude, $longitude)) {
 						return 317;
 					}
@@ -2138,7 +2138,7 @@ class PolygonLookup
 						return 190;
 					}
 				}
-			} else if ($longitude < -54.470047) {
+			} elseif ($longitude < -54.470047) {
 				if ($this->polygons[321]->contains($latitude, $longitude)) {
 					return 190;
 				}
@@ -2150,7 +2150,7 @@ class PolygonLookup
 				} else {
 					return 317;
 				}
-			} else if ($latitude < -17.128271) {
+			} elseif ($latitude < -17.128271) {
 				if ($longitude < -52.855377) {
 					if ($this->polygons[324]->contains($latitude, $longitude)) {
 						return 329;
@@ -2177,9 +2177,9 @@ class PolygonLookup
 					return 363;
 				}
 			}
-		} else if ($longitude < -56.305687) {
+		} elseif ($longitude < -56.305687) {
 			return $this->call2($latitude, $longitude);
-		} else if ($longitude < -51.613949) {
+		} elseif ($longitude < -51.613949) {
 			if ($latitude < -9.477882) {
 				if ($this->polygons[329]->contains($latitude, $longitude)) {
 					return 310;
@@ -2189,11 +2189,11 @@ class PolygonLookup
 				} else {
 					return 400;
 				}
-			} else if ($latitude < -1.736668) {
+			} elseif ($latitude < -1.736668) {
 				if ($latitude < -5.607275) {
 					if ($longitude < -53.959818) {
 						return 310;
-					} else if ($latitude < -7.542579) {
+					} elseif ($latitude < -7.542579) {
 						if ($this->polygons[331]->contains($latitude, $longitude)) {
 							return 400;
 						} else {
@@ -2213,7 +2213,7 @@ class PolygonLookup
 						return 310;
 					}
 				}
-			} else if ($latitude < 2.133939) {
+			} elseif ($latitude < 2.133939) {
 				if ($longitude < -53.959818) {
 					if ($this->polygons[334]->contains($latitude, $longitude)) {
 						return 200;
@@ -2226,7 +2226,7 @@ class PolygonLookup
 					} else {
 						return 310;
 					}
-				} else if ($latitude < 0.198636) {
+				} elseif ($latitude < 0.198636) {
 					if ($this->polygons[337]->contains($latitude, $longitude)) {
 						return 400;
 					} else {
@@ -2239,7 +2239,7 @@ class PolygonLookup
 						return 400;
 					}
 				}
-			} else if ($longitude < -53.959818) {
+			} elseif ($longitude < -53.959818) {
 				if ($latitude < 4.069243) {
 					if ($longitude < -55.132752) {
 						if ($this->polygons[339]->contains($latitude, $longitude)) {
@@ -2247,7 +2247,7 @@ class PolygonLookup
 						} else {
 							return 200;
 						}
-					} else if ($latitude < 3.101591) {
+					} elseif ($latitude < 3.101591) {
 						if ($longitude < -54.546285) {
 							if ($this->polygons[340]->contains($latitude, $longitude)) {
 								return 310;
@@ -2291,7 +2291,7 @@ class PolygonLookup
 					return 362;
 				}
 			}
-		} else if ($latitude < -9.768946) {
+		} elseif ($latitude < -9.768946) {
 			if ($this->polygons[348]->contains($latitude, $longitude)) {
 				return 400;
 			} else {
@@ -2302,7 +2302,7 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call4(float $latitude, float $longitude) : ?int
+	protected function call4(float $latitude, float $longitude): ?int
 	{
 		if ($longitude < -5.327115) {
 			if ($latitude < 10.000000) {
@@ -2317,13 +2317,13 @@ class PolygonLookup
 								return 68;
 							}
 						}
-					} else if ($latitude < 5.327682) {
+					} elseif ($latitude < 5.327682) {
 						if ($this->polygons[350]->contains($latitude, $longitude)) {
 							return 300;
 						} else {
 							return 356;
 						}
-					} else if ($latitude < 7.663841) {
+					} elseif ($latitude < 7.663841) {
 						if ($longitude < -9.430896) {
 							if ($this->polygons[351]->contains($latitude, $longitude)) {
 								return 68;
@@ -2333,13 +2333,13 @@ class PolygonLookup
 							} else {
 								return 356;
 							}
-						} else if ($latitude < 6.495762) {
+						} elseif ($latitude < 6.495762) {
 							if ($this->polygons[353]->contains($latitude, $longitude)) {
 								return 300;
 							} else {
 								return 356;
 							}
-						} else if ($longitude < -8.398005) {
+						} elseif ($longitude < -8.398005) {
 							if ($this->polygons[354]->contains($latitude, $longitude)) {
 								return 184;
 							}
@@ -2364,7 +2364,7 @@ class PolygonLookup
 								return 300;
 							}
 						}
-					} else if ($longitude < -9.430896) {
+					} elseif ($longitude < -9.430896) {
 						if ($latitude < 8.831921) {
 							if ($longitude < -10.463788) {
 								if ($this->polygons[360]->contains($latitude, $longitude)) {
@@ -2395,7 +2395,7 @@ class PolygonLookup
 								return 184;
 							}
 						}
-					} else if ($latitude < 8.831921) {
+					} elseif ($latitude < 8.831921) {
 						if ($longitude < -8.398005) {
 							if ($this->polygons[366]->contains($latitude, $longitude)) {
 								return 356;
@@ -2422,15 +2422,15 @@ class PolygonLookup
 							return 184;
 						}
 					}
-				} else if ($latitude < -15.897190) {
+				} elseif ($latitude < -15.897190) {
 					return 156;
 				} else {
 					return 300;
 				}
-			} else if ($latitude < 11.842492) {
+			} elseif ($latitude < 11.842492) {
 				if ($longitude < -8.890819) {
 					return 184;
-				} else if ($longitude < -7.108967) {
+				} elseif ($longitude < -7.108967) {
 					if ($latitude < 10.921246) {
 						if ($this->polygons[371]->contains($latitude, $longitude)) {
 							return 184;
@@ -2447,7 +2447,7 @@ class PolygonLookup
 							return 181;
 						}
 					}
-				} else if ($latitude < 10.921246) {
+				} elseif ($latitude < 10.921246) {
 					if ($longitude < -6.218041) {
 						if ($this->polygons[374]->contains($latitude, $longitude)) {
 							return 181;
@@ -2486,7 +2486,7 @@ class PolygonLookup
 						return 181;
 					}
 				}
-			} else if ($latitude < 16.333138) {
+			} elseif ($latitude < 16.333138) {
 				if ($longitude < -8.890819) {
 					if ($latitude < 14.087815) {
 						if ($longitude < -10.672671) {
@@ -2497,7 +2497,7 @@ class PolygonLookup
 									} else {
 										return 184;
 									}
-								} else if ($latitude < 12.403823) {
+								} elseif ($latitude < 12.403823) {
 									if ($this->polygons[384]->contains($latitude, $longitude)) {
 										return 181;
 									} else {
@@ -2530,7 +2530,7 @@ class PolygonLookup
 								return 181;
 							}
 						}
-					} else if ($longitude < -10.672671) {
+					} elseif ($longitude < -10.672671) {
 						if ($latitude < 15.210476) {
 							if ($this->polygons[390]->contains($latitude, $longitude)) {
 								return 33;
@@ -2574,7 +2574,7 @@ class PolygonLookup
 					return 33;
 				}
 			}
-		} else if ($latitude < 4.509286) {
+		} elseif ($latitude < 4.509286) {
 			if ($latitude < 0.415882) {
 				if ($longitude < 5.635208) {
 					return 201;
@@ -2584,7 +2584,7 @@ class PolygonLookup
 			} else {
 				return 96;
 			}
-		} else if ($latitude < 11.173301) {
+		} elseif ($latitude < 11.173301) {
 			if ($longitude < -0.273275) {
 				if ($latitude < 7.955012) {
 					if ($this->polygons[398]->contains($latitude, $longitude)) {
@@ -2592,14 +2592,14 @@ class PolygonLookup
 					} else {
 						return 70;
 					}
-				} else if ($longitude < -2.800195) {
+				} elseif ($longitude < -2.800195) {
 					if ($latitude < 9.564156) {
 						if ($this->polygons[399]->contains($latitude, $longitude)) {
 							return 262;
 						} else {
 							return 300;
 						}
-					} else if ($longitude < -4.063655) {
+					} elseif ($longitude < -4.063655) {
 						if ($latitude < 10.368729) {
 							if ($longitude < -4.695385) {
 								if ($this->polygons[400]->contains($latitude, $longitude)) {
@@ -2630,7 +2630,7 @@ class PolygonLookup
 							return 262;
 						}
 					}
-				} else if ($latitude < 9.564156) {
+				} elseif ($latitude < 9.564156) {
 					if ($this->polygons[405]->contains($latitude, $longitude)) {
 						return 70;
 					}
@@ -2646,7 +2646,7 @@ class PolygonLookup
 						return 262;
 					}
 				}
-			} else if ($longitude < 1.806693) {
+			} elseif ($longitude < 1.806693) {
 				if ($latitude < 8.347418) {
 					if ($latitude < 6.934477) {
 						if ($longitude < 0.766709) {
@@ -2678,7 +2678,7 @@ class PolygonLookup
 							return 272;
 						}
 					}
-				} else if ($latitude < 9.760359) {
+				} elseif ($latitude < 9.760359) {
 					if ($this->polygons[414]->contains($latitude, $longitude)) {
 						return 70;
 					}
@@ -2687,7 +2687,7 @@ class PolygonLookup
 					} else {
 						return 272;
 					}
-				} else if ($longitude < 0.766709) {
+				} elseif ($longitude < 0.766709) {
 					if ($this->polygons[416]->contains($latitude, $longitude)) {
 						return 70;
 					}
@@ -2706,13 +2706,13 @@ class PolygonLookup
 						return 84;
 					}
 				}
-			} else if ($latitude < 7.841293) {
+			} elseif ($latitude < 7.841293) {
 				if ($this->polygons[420]->contains($latitude, $longitude)) {
 					return 84;
 				} else {
 					return 96;
 				}
-			} else if ($longitude < 4.465083) {
+			} elseif ($longitude < 4.465083) {
 				if ($latitude < 9.507297) {
 					if ($this->polygons[421]->contains($latitude, $longitude)) {
 						return 96;
@@ -2729,14 +2729,14 @@ class PolygonLookup
 			} else {
 				return 96;
 			}
-		} else if ($longitude < -5.199527) {
+		} elseif ($longitude < -5.199527) {
 			if ($latitude < 11.432508) {
 				if ($this->polygons[423]->contains($latitude, $longitude)) {
 					return 181;
 				} else {
 					return 262;
 				}
-			} else if ($latitude < 11.788111) {
+			} elseif ($latitude < 11.788111) {
 				if ($this->polygons[424]->contains($latitude, $longitude)) {
 					return 262;
 				} else {
@@ -2749,7 +2749,7 @@ class PolygonLookup
 					return 262;
 				}
 			}
-		} else if ($latitude < 15.082593) {
+		} elseif ($latitude < 15.082593) {
 			if ($longitude < -0.462076) {
 				if ($longitude < -2.830801) {
 					if ($latitude < 13.127947) {
@@ -2772,7 +2772,7 @@ class PolygonLookup
 						return 262;
 					}
 				}
-			} else if ($longitude < 3.330698) {
+			} elseif ($longitude < 3.330698) {
 				if ($latitude < 13.127947) {
 					if ($longitude < 1.434311) {
 						if ($this->polygons[429]->contains($latitude, $longitude)) {
@@ -2783,7 +2783,7 @@ class PolygonLookup
 						} else {
 							return 262;
 						}
-					} else if ($latitude < 12.150624) {
+					} elseif ($latitude < 12.150624) {
 						if ($this->polygons[431]->contains($latitude, $longitude)) {
 							return 260;
 						}
@@ -2825,9 +2825,9 @@ class PolygonLookup
 					return 260;
 				}
 			}
-		} else if ($longitude < 0.961973) {
+		} elseif ($longitude < 0.961973) {
 			return 181;
-		} else if ($longitude < 4.042722) {
+		} elseif ($longitude < 4.042722) {
 			if ($this->polygons[440]->contains($latitude, $longitude)) {
 				return 260;
 			}
@@ -2848,27 +2848,27 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call5(float $latitude, float $longitude) : ?int
+	protected function call5(float $latitude, float $longitude): ?int
 	{
 		if ($longitude < -39.243401) {
 			if ($latitude < -1.820639) {
 				if ($latitude < -2.685229) {
 					if ($latitude < -21.599977) {
 						return 329;
-					} else if ($latitude < -3.148118) {
+					} elseif ($latitude < -3.148118) {
 						if ($latitude < -7.354445) {
 							if ($latitude < -12.556720) {
 								if ($longitude < -39.656792) {
 									if ($longitude < -44.428988) {
 										if ($latitude < -17.078349) {
 											return 329;
-										} else if ($longitude < -46.815085) {
+										} elseif ($longitude < -46.815085) {
 											if ($this->polygons[444]->contains($latitude, $longitude)) {
 												return 329;
 											} else {
 												return 61;
 											}
-										} else if ($latitude < -14.817534) {
+										} elseif ($latitude < -14.817534) {
 											if ($this->polygons[445]->contains($latitude, $longitude)) {
 												return 171;
 											} else {
@@ -2884,13 +2884,13 @@ class PolygonLookup
 												return 329;
 											}
 										}
-									} else if ($latitude < -17.078349) {
+									} elseif ($latitude < -17.078349) {
 										if ($this->polygons[448]->contains($latitude, $longitude)) {
 											return 171;
 										} else {
 											return 329;
 										}
-									} else if ($longitude < -42.042890) {
+									} elseif ($longitude < -42.042890) {
 										if ($this->polygons[449]->contains($latitude, $longitude)) {
 											return 329;
 										} else {
@@ -2906,7 +2906,7 @@ class PolygonLookup
 								} else {
 									return 171;
 								}
-							} else if ($longitude < -49.154449) {
+							} elseif ($longitude < -49.154449) {
 								if ($latitude < -7.791389) {
 									if ($this->polygons[451]->contains($latitude, $longitude)) {
 										return 400;
@@ -2920,11 +2920,11 @@ class PolygonLookup
 										return 61;
 									}
 								}
-							} else if ($longitude < -44.198925) {
+							} elseif ($longitude < -44.198925) {
 								if ($latitude < -9.955582) {
 									if ($longitude < -46.676687) {
 										return 61;
-									} else if ($latitude < -11.256151) {
+									} elseif ($latitude < -11.256151) {
 										if ($this->polygons[453]->contains($latitude, $longitude)) {
 											return 171;
 										} else {
@@ -2940,7 +2940,7 @@ class PolygonLookup
 											return 171;
 										}
 									}
-								} else if ($longitude < -46.676687) {
+								} elseif ($longitude < -46.676687) {
 									if ($this->polygons[456]->contains($latitude, $longitude)) {
 										return 143;
 									}
@@ -2959,19 +2959,19 @@ class PolygonLookup
 										return 143;
 									}
 								}
-							} else if ($latitude < -9.955582) {
+							} elseif ($latitude < -9.955582) {
 								if ($this->polygons[460]->contains($latitude, $longitude)) {
 									return 143;
 								} else {
 									return 171;
 								}
-							} else if ($longitude < -41.721163) {
+							} elseif ($longitude < -41.721163) {
 								if ($this->polygons[461]->contains($latitude, $longitude)) {
 									return 171;
 								} else {
 									return 143;
 								}
-							} else if ($latitude < -8.655013) {
+							} elseif ($latitude < -8.655013) {
 								if ($this->polygons[462]->contains($latitude, $longitude)) {
 									return 143;
 								}
@@ -2993,7 +2993,7 @@ class PolygonLookup
 									return 191;
 								}
 							}
-						} else if ($longitude < -46.716667) {
+						} elseif ($longitude < -46.716667) {
 							if ($latitude < -3.180000) {
 								if ($latitude < -5.267222) {
 									if ($longitude < -47.958925) {
@@ -3041,7 +3041,7 @@ class PolygonLookup
 						} else {
 							return 143;
 						}
-					} else if ($longitude < -46.568893) {
+					} elseif ($longitude < -46.568893) {
 						if ($longitude < -46.698047) {
 							if ($this->polygons[476]->contains($latitude, $longitude)) {
 								return 143;
@@ -3058,7 +3058,7 @@ class PolygonLookup
 					} else {
 						return 143;
 					}
-				} else if ($longitude < -46.206947) {
+				} elseif ($longitude < -46.206947) {
 					if ($longitude < -49.192532) {
 						return 400;
 					} else {
@@ -3071,9 +3071,9 @@ class PolygonLookup
 				} else {
 					return 143;
 				}
-			} else if ($longitude < -46.319450) {
+			} elseif ($longitude < -46.319450) {
 				return 400;
-			} else if ($longitude < -46.049419) {
+			} elseif ($longitude < -46.049419) {
 				if ($latitude < -1.159195) {
 					if ($latitude < -1.745833) {
 						if ($this->polygons[479]->contains($latitude, $longitude)) {
@@ -3094,11 +3094,11 @@ class PolygonLookup
 			} else {
 				return 143;
 			}
-		} else if ($longitude < -15.836494) {
+		} elseif ($longitude < -15.836494) {
 			if ($longitude < -23.098490) {
 				if ($latitude < -12.650455) {
 					return 171;
-				} else if ($longitude < -32.382004) {
+				} elseif ($longitude < -32.382004) {
 					if ($longitude < -34.790123) {
 						if ($latitude < -8.632456) {
 							if ($longitude < -37.151226) {
@@ -3108,7 +3108,7 @@ class PolygonLookup
 									} else {
 										return 171;
 									}
-								} else if ($longitude < -38.197313) {
+								} elseif ($longitude < -38.197313) {
 									if ($this->polygons[482]->contains($latitude, $longitude)) {
 										return 191;
 									}
@@ -3134,7 +3134,7 @@ class PolygonLookup
 									return 325;
 								}
 							}
-						} else if ($latitude < -5.932234) {
+						} elseif ($latitude < -5.932234) {
 							if ($longitude < -37.016762) {
 								if ($latitude < -7.282345) {
 									if ($longitude < -38.130081) {
@@ -3157,7 +3157,7 @@ class PolygonLookup
 										return 143;
 									}
 								}
-							} else if ($latitude < -7.282345) {
+							} elseif ($latitude < -7.282345) {
 								if ($this->polygons[490]->contains($latitude, $longitude)) {
 									return 143;
 								} else {
@@ -3175,9 +3175,9 @@ class PolygonLookup
 				} else {
 					return 353;
 				}
-			} else if ($latitude < 11.974076) {
+			} elseif ($latitude < 11.974076) {
 				return 38;
-			} else if ($latitude < 16.853725) {
+			} elseif ($latitude < 16.853725) {
 				if ($latitude < 13.691580) {
 					if ($latitude < 13.588785) {
 						if ($latitude < 13.159023) {
@@ -3202,7 +3202,7 @@ class PolygonLookup
 									return 225;
 								}
 							}
-						} else if ($latitude < 13.488581) {
+						} elseif ($latitude < 13.488581) {
 							return 252;
 						} else {
 							if ($this->polygons[494]->contains($latitude, $longitude)) {
@@ -3214,9 +3214,9 @@ class PolygonLookup
 					} else {
 						return 225;
 					}
-				} else if ($longitude < -22.669443) {
+				} elseif ($longitude < -22.669443) {
 					return 353;
-				} else if ($longitude < -16.604567) {
+				} elseif ($longitude < -16.604567) {
 					return 225;
 				} else {
 					if ($this->polygons[495]->contains($latitude, $longitude)) {
@@ -3228,16 +3228,16 @@ class PolygonLookup
 			} else {
 				return 33;
 			}
-		} else if ($longitude < -13.435683) {
+		} elseif ($longitude < -13.435683) {
 			if ($latitude < 11.075797) {
 				if ($longitude < -15.169497) {
 					return 38;
-				} else if ($longitude < -14.295186) {
+				} elseif ($longitude < -14.295186) {
 					if ($longitude < -14.897633) {
 						if ($longitude < -14.918398) {
 							if ($latitude < 10.889210) {
 								return 184;
-							} else if ($latitude < 11.046461) {
+							} elseif ($latitude < 11.046461) {
 								if ($this->polygons[496]->contains($latitude, $longitude)) {
 									return 38;
 								} else {
@@ -3253,7 +3253,7 @@ class PolygonLookup
 						} else {
 							return 184;
 						}
-					} else if ($latitude < -7.887815) {
+					} elseif ($latitude < -7.887815) {
 						return 156;
 					} else {
 						return 184;
@@ -3261,7 +3261,7 @@ class PolygonLookup
 				} else {
 					return 184;
 				}
-			} else if ($latitude < 11.377222) {
+			} elseif ($latitude < 11.377222) {
 				if ($longitude < -15.225043) {
 					return 38;
 				} else {
@@ -3271,7 +3271,7 @@ class PolygonLookup
 						return 38;
 					}
 				}
-			} else if ($latitude < 12.680789) {
+			} elseif ($latitude < 12.680789) {
 				if ($longitude < -15.179247) {
 					if ($latitude < 11.882746) {
 						return 38;
@@ -3292,7 +3292,7 @@ class PolygonLookup
 						return 38;
 					}
 				}
-			} else if ($latitude < 13.826571) {
+			} elseif ($latitude < 13.826571) {
 				if ($this->polygons[502]->contains($latitude, $longitude)) {
 					return 225;
 				}
@@ -3301,10 +3301,10 @@ class PolygonLookup
 				} else {
 					return 252;
 				}
-			} else if ($latitude < 17.100223) {
+			} elseif ($latitude < 17.100223) {
 				if ($latitude < 15.463397) {
 					return 225;
-				} else if ($longitude < -14.636089) {
+				} elseif ($longitude < -14.636089) {
 					if ($this->polygons[504]->contains($latitude, $longitude)) {
 						return 225;
 					} else {
@@ -3320,10 +3320,10 @@ class PolygonLookup
 			} else {
 				return 33;
 			}
-		} else if ($longitude < -12.454523) {
+		} elseif ($longitude < -12.454523) {
 			if ($latitude < 8.912874) {
 				return 68;
-			} else if ($latitude < 9.868772) {
+			} elseif ($latitude < 9.868772) {
 				if ($longitude < -13.420199) {
 					return 184;
 				} else {
@@ -3333,7 +3333,7 @@ class PolygonLookup
 						return 184;
 					}
 				}
-			} else if ($latitude < 12.661082) {
+			} elseif ($latitude < 12.661082) {
 				if ($this->polygons[507]->contains($latitude, $longitude)) {
 					return 184;
 				} else {
@@ -3351,7 +3351,7 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call6(float $latitude, float $longitude) : ?int
+	protected function call6(float $latitude, float $longitude): ?int
 	{
 		if ($longitude < -74.478584) {
 			if ($longitude < -138.593521) {
@@ -3359,10 +3359,10 @@ class PolygonLookup
 					if ($longitude < -172.053955) {
 						if ($longitude < -178.235748) {
 							return 147;
-						} else if ($longitude < -174.397614) {
+						} elseif ($longitude < -174.397614) {
 							if ($latitude < -19.878145) {
 								return 119;
-							} else if ($longitude < -175.597549) {
+							} elseif ($longitude < -175.597549) {
 								if ($latitude < -15.562988) {
 									if ($latitude < -17.727858) {
 										return 119;
@@ -3372,21 +3372,21 @@ class PolygonLookup
 								} else {
 									return 5;
 								}
-							} else if ($latitude < -18.782106) {
+							} elseif ($latitude < -18.782106) {
 								return 119;
 							} else {
 								return 282;
 							}
-						} else if ($longitude < -173.702484) {
+						} elseif ($longitude < -173.702484) {
 							return 119;
-						} else if ($latitude < -13.432207) {
+						} elseif ($latitude < -13.432207) {
 							return 199;
-						} else if ($longitude < -172.481934) {
+						} elseif ($longitude < -172.481934) {
 							return 336;
 						} else {
 							return 282;
 						}
-					} else if ($latitude < -15.787958) {
+					} elseif ($latitude < -15.787958) {
 						if ($longitude < -157.312134) {
 							if ($longitude < -169.775177) {
 								return 372;
@@ -3396,25 +3396,25 @@ class PolygonLookup
 						} else {
 							return 312;
 						}
-					} else if ($longitude < -161.067062) {
+					} elseif ($longitude < -161.067062) {
 						if ($longitude < -169.416077) {
 							if ($latitude < -14.161497) {
 								return 44;
-							} else if ($longitude < -171.409317) {
+							} elseif ($longitude < -171.409317) {
 								if ($latitude < -13.786870) {
 									return 199;
-								} else if ($latitude < -6.019926) {
+								} elseif ($latitude < -6.019926) {
 									return 282;
 								} else {
 									return 336;
 								}
-							} else if ($longitude < -171.211426) {
+							} elseif ($longitude < -171.211426) {
 								if ($latitude < -6.907127) {
 									return 282;
 								} else {
 									return 336;
 								}
-							} else if ($longitude < -171.059448) {
+							} elseif ($longitude < -171.059448) {
 								if ($latitude < -7.099203) {
 									return 44;
 								} else {
@@ -3426,24 +3426,24 @@ class PolygonLookup
 						} else {
 							return 360;
 						}
-					} else if ($longitude < -157.964737) {
+					} elseif ($longitude < -157.964737) {
 						if ($latitude < -8.944030) {
 							return 360;
 						} else {
 							return 237;
 						}
-					} else if ($longitude < -157.178757) {
+					} elseif ($longitude < -157.178757) {
 						if ($longitude < -157.907135) {
 							return 360;
 						} else {
 							return 237;
 						}
-					} else if ($latitude < -3.989176) {
+					} elseif ($latitude < -3.989176) {
 						return 237;
 					} else {
 						return 244;
 					}
-				} else if ($latitude < -10.539028) {
+				} elseif ($latitude < -10.539028) {
 					return 312;
 				} else {
 					return 102;
@@ -3451,13 +3451,13 @@ class PolygonLookup
 			} else {
 				return $this->call1($latitude, $longitude);
 			}
-		} else if ($longitude < -49.201183) {
+		} elseif ($longitude < -49.201183) {
 			if ($latitude < 8.980554) {
 				if ($longitude < -51.240707) {
 					if ($latitude < 8.600101) {
 						if ($latitude < 6.004546) {
 							return $this->call3($latitude, $longitude);
-						} else if ($longitude < -59.803780) {
+						} elseif ($longitude < -59.803780) {
 							if ($longitude < -67.422675) {
 								if ($longitude < -70.950629) {
 									if ($this->polygons[509]->contains($latitude, $longitude)) {
@@ -3472,12 +3472,12 @@ class PolygonLookup
 										return 397;
 									}
 								}
-							} else if ($latitude < 8.557567) {
+							} elseif ($latitude < 8.557567) {
 								if ($longitude < -63.613227) {
 									return 397;
-								} else if ($longitude < -61.708503) {
+								} elseif ($longitude < -61.708503) {
 									return 397;
-								} else if ($latitude < 7.281056) {
+								} elseif ($latitude < 7.281056) {
 									if ($this->polygons[511]->contains($latitude, $longitude)) {
 										return 397;
 									} else {
@@ -3496,7 +3496,7 @@ class PolygonLookup
 						} else {
 							return 298;
 						}
-					} else if ($longitude < -72.626933) {
+					} elseif ($longitude < -72.626933) {
 						if ($this->polygons[513]->contains($latitude, $longitude)) {
 							return 397;
 						} else {
@@ -3505,7 +3505,7 @@ class PolygonLookup
 					} else {
 						return 397;
 					}
-				} else if ($latitude < -2.030330) {
+				} elseif ($latitude < -2.030330) {
 					if ($latitude < -8.062619) {
 						if ($latitude < -19.269809) {
 							if ($this->polygons[514]->contains($latitude, $longitude)) {
@@ -3513,13 +3513,13 @@ class PolygonLookup
 							} else {
 								return 329;
 							}
-						} else if ($latitude < -13.666214) {
+						} elseif ($latitude < -13.666214) {
 							if ($this->polygons[515]->contains($latitude, $longitude)) {
 								return 363;
 							} else {
 								return 329;
 							}
-						} else if ($latitude < -10.864416) {
+						} elseif ($latitude < -10.864416) {
 							if ($latitude < -12.265315) {
 								if ($longitude < -50.220945) {
 									if ($this->polygons[516]->contains($latitude, $longitude)) {
@@ -3554,7 +3554,7 @@ class PolygonLookup
 								return 61;
 							}
 						}
-					} else if ($latitude < -6.923692) {
+					} elseif ($latitude < -6.923692) {
 						if ($latitude < -7.274446) {
 							if ($this->polygons[522]->contains($latitude, $longitude)) {
 								return 61;
@@ -3574,7 +3574,7 @@ class PolygonLookup
 				} else {
 					return 400;
 				}
-			} else if ($latitude < 12.691054) {
+			} elseif ($latitude < 12.691054) {
 				if ($longitude < -64.505745) {
 					if ($longitude < -68.192307) {
 						if ($longitude < -71.116249) {
@@ -3595,7 +3595,7 @@ class PolygonLookup
 										return 390;
 									}
 								}
-							} else if ($latitude < 11.051531) {
+							} elseif ($latitude < 11.051531) {
 								return 397;
 							} else {
 								if ($this->polygons[527]->contains($latitude, $longitude)) {
@@ -3604,9 +3604,9 @@ class PolygonLookup
 									return 390;
 								}
 							}
-						} else if ($latitude < 10.845729) {
+						} elseif ($latitude < 10.845729) {
 							return 397;
-						} else if ($longitude < -68.733948) {
+						} elseif ($longitude < -68.733948) {
 							if ($latitude < 12.385672) {
 								if ($this->polygons[528]->contains($latitude, $longitude)) {
 									return 91;
@@ -3616,7 +3616,7 @@ class PolygonLookup
 							} else {
 								return 234;
 							}
-						} else if ($latitude < 11.998877) {
+						} elseif ($latitude < 11.998877) {
 							if ($latitude < 11.664527) {
 								return 91;
 							} else {
@@ -3628,11 +3628,11 @@ class PolygonLookup
 					} else {
 						return 397;
 					}
-				} else if ($latitude < 9.922397) {
+				} elseif ($latitude < 9.922397) {
 					return 397;
-				} else if ($longitude < -61.981004) {
+				} elseif ($longitude < -61.981004) {
 					return 397;
-				} else if ($latitude < 11.338342) {
+				} elseif ($latitude < 11.338342) {
 					if ($longitude < -61.843590) {
 						if ($latitude < 10.095178) {
 							return 168;
@@ -3642,12 +3642,12 @@ class PolygonLookup
 					} else {
 						return 168;
 					}
-				} else if ($latitude < 12.529215) {
+				} elseif ($latitude < 12.529215) {
 					return 86;
 				} else {
 					return 2;
 				}
-			} else if ($longitude < -64.555527) {
+			} elseif ($longitude < -64.555527) {
 				if ($longitude < -65.592079) {
 					if ($longitude < -72.619797) {
 						if ($longitude < -74.131775) {
@@ -3659,11 +3659,11 @@ class PolygonLookup
 						} else {
 							return 19;
 						}
-					} else if ($longitude < -68.320000) {
+					} elseif ($longitude < -68.320000) {
 						if ($longitude < -71.613358) {
 							if ($latitude < 17.481750) {
 								return 229;
-							} else if ($latitude < 19.201639) {
+							} elseif ($latitude < 19.201639) {
 								if ($this->polygons[529]->contains($latitude, $longitude)) {
 									return 229;
 								} else {
@@ -3682,16 +3682,16 @@ class PolygonLookup
 					} else {
 						return 393;
 					}
-				} else if ($longitude < -64.833633) {
+				} elseif ($longitude < -64.833633) {
 					if ($longitude < -65.242737) {
 						return 393;
 					} else {
 						return 338;
 					}
-				} else if ($latitude < 18.379963) {
+				} elseif ($latitude < 18.379963) {
 					if ($latitude < 17.795403) {
 						return 338;
-					} else if ($longitude < -64.662430) {
+					} elseif ($longitude < -64.662430) {
 						return 338;
 					} else {
 						return 301;
@@ -3699,14 +3699,14 @@ class PolygonLookup
 				} else {
 					return 301;
 				}
-			} else if ($longitude < -62.146420) {
+			} elseif ($longitude < -62.146420) {
 				if ($longitude < -64.268768) {
 					return 301;
-				} else if ($latitude < 18.130697) {
+				} elseif ($latitude < 18.130697) {
 					if ($longitude < -62.943668) {
 						if ($latitude < 17.656101) {
 							return 138;
-						} else if ($longitude < -63.012993) {
+						} elseif ($longitude < -63.012993) {
 							if ($this->polygons[531]->contains($latitude, $longitude)) {
 								return 354;
 							} else {
@@ -3715,13 +3715,13 @@ class PolygonLookup
 						} else {
 							return 277;
 						}
-					} else if ($latitude < 17.209156) {
+					} elseif ($latitude < 17.209156) {
 						if ($latitude < 16.956336) {
 							return 80;
 						} else {
 							return 342;
 						}
-					} else if ($latitude < 17.652030) {
+					} elseif ($latitude < 17.652030) {
 						return 173;
 					} else {
 						return 342;
@@ -3729,13 +3729,13 @@ class PolygonLookup
 				} else {
 					return 176;
 				}
-			} else if ($latitude < 14.878819) {
+			} elseif ($latitude < 14.878819) {
 				if ($latitude < 12.964186) {
 					return 2;
-				} else if ($latitude < 14.103245) {
+				} elseif ($latitude < 14.103245) {
 					if ($longitude < -61.113880) {
 						return 2;
-					} else if ($latitude < 13.516017) {
+					} elseif ($latitude < 13.516017) {
 						return 228;
 					} else {
 						return 386;
@@ -3743,13 +3743,13 @@ class PolygonLookup
 				} else {
 					return 328;
 				}
-			} else if ($longitude < -61.546261) {
+			} elseif ($longitude < -61.546261) {
 				if ($latitude < 16.368206) {
 					return 277;
 				} else {
 					return 204;
 				}
-			} else if ($latitude < 15.631809) {
+			} elseif ($latitude < 15.631809) {
 				return 1;
 			} else {
 				return 277;
@@ -3759,7 +3759,7 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call7(float $latitude, float $longitude) : ?int
+	protected function call7(float $latitude, float $longitude): ?int
 	{
 		if ($longitude < -103.047236) {
 			if ($longitude < -109.624168) {
@@ -3769,9 +3769,9 @@ class PolygonLookup
 					} else {
 						return 402;
 					}
-				} else if ($latitude < 27.905155) {
+				} elseif ($latitude < 27.905155) {
 					return 402;
-				} else if ($latitude < 31.330078) {
+				} elseif ($latitude < 31.330078) {
 					if ($this->polygons[532]->contains($latitude, $longitude)) {
 						return 9;
 					} else {
@@ -3784,7 +3784,7 @@ class PolygonLookup
 						return 9;
 					}
 				}
-			} else if ($latitude < 25.528921) {
+			} elseif ($latitude < 25.528921) {
 				if ($longitude < -108.804733) {
 					return 407;
 				} else {
@@ -3794,7 +3794,7 @@ class PolygonLookup
 						return 407;
 					}
 				}
-			} else if ($latitude < 27.061386) {
+			} elseif ($latitude < 27.061386) {
 				if ($longitude < -106.335702) {
 					if ($longitude < -107.979935) {
 						if ($this->polygons[535]->contains($latitude, $longitude)) {
@@ -3822,7 +3822,7 @@ class PolygonLookup
 						return 384;
 					}
 				}
-			} else if ($longitude < -108.558060) {
+			} elseif ($longitude < -108.558060) {
 				if ($latitude < 31.330776) {
 					if ($latitude < 29.992775) {
 						if ($this->polygons[540]->contains($latitude, $longitude)) {
@@ -3847,23 +3847,23 @@ class PolygonLookup
 						return 273;
 					}
 				}
-			} else if ($latitude < 31.159515) {
+			} elseif ($latitude < 31.159515) {
 				if ($longitude < -105.802648) {
 					if ($this->polygons[544]->contains($latitude, $longitude)) {
 						return 185;
 					} else {
 						return 133;
 					}
-				} else if ($latitude < 29.110451) {
+				} elseif ($latitude < 29.110451) {
 					if ($longitude < -104.424942) {
 						return 185;
-					} else if ($latitude < 28.085918) {
+					} elseif ($latitude < 28.085918) {
 						if ($this->polygons[545]->contains($latitude, $longitude)) {
 							return 384;
 						} else {
 							return 185;
 						}
-					} else if ($longitude < -103.736089) {
+					} elseif ($longitude < -103.736089) {
 						if ($this->polygons[546]->contains($latitude, $longitude)) {
 							return 133;
 						}
@@ -3875,13 +3875,13 @@ class PolygonLookup
 						} else {
 							return 185;
 						}
-					} else if ($latitude < 28.598185) {
+					} elseif ($latitude < 28.598185) {
 						if ($this->polygons[549]->contains($latitude, $longitude)) {
 							return 185;
 						} else {
 							return 384;
 						}
-					} else if ($longitude < -103.391663) {
+					} elseif ($longitude < -103.391663) {
 						if ($this->polygons[550]->contains($latitude, $longitude)) {
 							return 160;
 						}
@@ -3909,7 +3909,7 @@ class PolygonLookup
 							return 374;
 						}
 					}
-				} else if ($longitude < -104.424942) {
+				} elseif ($longitude < -104.424942) {
 					if ($latitude < 30.134983) {
 						if ($this->polygons[557]->contains($latitude, $longitude)) {
 							return 160;
@@ -3919,7 +3919,7 @@ class PolygonLookup
 						} else {
 							return 133;
 						}
-					} else if ($longitude < -105.113795) {
+					} elseif ($longitude < -105.113795) {
 						if ($this->polygons[559]->contains($latitude, $longitude)) {
 							return 185;
 						}
@@ -3954,7 +3954,7 @@ class PolygonLookup
 						return 133;
 					}
 				}
-			} else if ($longitude < -105.802648) {
+			} elseif ($longitude < -105.802648) {
 				if ($this->polygons[567]->contains($latitude, $longitude)) {
 					return 185;
 				}
@@ -3976,11 +3976,11 @@ class PolygonLookup
 					return 273;
 				}
 			}
-		} else if ($longitude < -97.475403) {
+		} elseif ($longitude < -97.475403) {
 			if ($latitude < 26.857126) {
 				if ($longitude < -100.261320) {
 					return 384;
-				} else if ($longitude < -98.868361) {
+				} elseif ($longitude < -98.868361) {
 					if ($this->polygons[572]->contains($latitude, $longitude)) {
 						return 160;
 					}
@@ -3989,7 +3989,7 @@ class PolygonLookup
 					} else {
 						return 374;
 					}
-				} else if ($latitude < 26.155322) {
+				} elseif ($latitude < 26.155322) {
 					if ($longitude < -98.171882) {
 						if ($this->polygons[574]->contains($latitude, $longitude)) {
 							return 160;
@@ -4022,7 +4022,7 @@ class PolygonLookup
 						return 160;
 					}
 				}
-			} else if ($longitude < -99.285888) {
+			} elseif ($longitude < -99.285888) {
 				if ($latitude < 31.057385) {
 					if ($latitude < 28.957256) {
 						if ($longitude < -101.166562) {
@@ -4031,14 +4031,14 @@ class PolygonLookup
 							} else {
 								return 384;
 							}
-						} else if ($latitude < 27.907191) {
+						} elseif ($latitude < 27.907191) {
 							if ($longitude < -100.226225) {
 								if ($this->polygons[582]->contains($latitude, $longitude)) {
 									return 374;
 								} else {
 									return 384;
 								}
-							} else if ($latitude < 27.382159) {
+							} elseif ($latitude < 27.382159) {
 								if ($this->polygons[583]->contains($latitude, $longitude)) {
 									return 160;
 								}
@@ -4067,7 +4067,7 @@ class PolygonLookup
 								return 374;
 							}
 						}
-					} else if ($longitude < -101.166562) {
+					} elseif ($longitude < -101.166562) {
 						if ($latitude < 30.007321) {
 							if ($longitude < -102.106899) {
 								if ($latitude < 29.482288) {
@@ -4089,7 +4089,7 @@ class PolygonLookup
 										return 374;
 									}
 								}
-							} else if ($latitude < 29.482288) {
+							} elseif ($latitude < 29.482288) {
 								if ($this->polygons[593]->contains($latitude, $longitude)) {
 									return 160;
 								}
@@ -4136,7 +4136,7 @@ class PolygonLookup
 			} else {
 				return 160;
 			}
-		} else if ($latitude < 25.878584) {
+		} elseif ($latitude < 25.878584) {
 			if ($latitude < 25.603125) {
 				if ($longitude < -97.450340) {
 					if ($this->polygons[602]->contains($latitude, $longitude)) {
@@ -4163,12 +4163,12 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call8(float $latitude, float $longitude) : ?int
+	protected function call8(float $latitude, float $longitude): ?int
 	{
 		if ($longitude < -118.678200) {
 			if ($latitude < 48.419193) {
 				return 39;
-			} else if ($latitude < 49.002640) {
+			} elseif ($latitude < 49.002640) {
 				if ($longitude < -122.902634) {
 					if ($latitude < 48.722092) {
 						if ($latitude < 48.429218) {
@@ -4176,9 +4176,9 @@ class PolygonLookup
 						} else {
 							return 39;
 						}
-					} else if ($longitude < -123.176979) {
+					} elseif ($longitude < -123.176979) {
 						return 45;
-					} else if ($latitude < 48.820377) {
+					} elseif ($latitude < 48.820377) {
 						if ($longitude < -123.040512) {
 							return 45;
 						} else {
@@ -4191,7 +4191,7 @@ class PolygonLookup
 							return 39;
 						}
 					}
-				} else if ($latitude < 48.744881) {
+				} elseif ($latitude < 48.744881) {
 					return 39;
 				} else {
 					if ($this->polygons[606]->contains($latitude, $longitude)) {
@@ -4203,16 +4203,16 @@ class PolygonLookup
 			} else {
 				return 45;
 			}
-		} else if ($latitude < 27.895760) {
+		} elseif ($latitude < 27.895760) {
 			return 407;
-		} else if ($latitude < 29.996002) {
+		} elseif ($latitude < 29.996002) {
 			if ($longitude < -114.366554) {
 				if ($latitude < 27.899921) {
 					return 407;
 				} else {
 					return 367;
 				}
-			} else if ($longitude < -112.753685) {
+			} elseif ($longitude < -112.753685) {
 				if ($latitude < 28.002499) {
 					if ($latitude < 27.946997) {
 						return 407;
@@ -4229,10 +4229,10 @@ class PolygonLookup
 			} else {
 				return 402;
 			}
-		} else if ($latitude < 33.478561) {
+		} elseif ($latitude < 33.478561) {
 			if ($longitude < -118.299171) {
 				return 39;
-			} else if ($longitude < -116.797958) {
+			} elseif ($longitude < -116.797958) {
 				if ($latitude < 32.419422) {
 					return 194;
 				} else {
@@ -4242,13 +4242,13 @@ class PolygonLookup
 						return 39;
 					}
 				}
-			} else if ($latitude < 30.494665) {
+			} elseif ($latitude < 30.494665) {
 				if ($longitude < -114.543932) {
 					return 367;
 				} else {
 					return 402;
 				}
-			} else if ($longitude < -113.899330) {
+			} elseif ($longitude < -113.899330) {
 				if ($latitude < 31.986613) {
 					if ($this->polygons[609]->contains($latitude, $longitude)) {
 						return 194;
@@ -4281,12 +4281,12 @@ class PolygonLookup
 					return 402;
 				}
 			}
-		} else if ($latitude < 46.038212) {
+		} elseif ($latitude < 46.038212) {
 			if ($latitude < 37.004261) {
 				if ($longitude < -114.047243) {
 					if ($longitude < -116.362721) {
 						return 39;
-					} else if ($latitude < 35.241411) {
+					} elseif ($latitude < 35.241411) {
 						if ($this->polygons[616]->contains($latitude, $longitude)) {
 							return 9;
 						} else {
@@ -4299,15 +4299,15 @@ class PolygonLookup
 							return 39;
 						}
 					}
-				} else if ($latitude < 35.241411) {
+				} elseif ($latitude < 35.241411) {
 					if ($this->polygons[618]->contains($latitude, $longitude)) {
 						return 273;
 					} else {
 						return 9;
 					}
-				} else if ($longitude < -112.523972) {
+				} elseif ($longitude < -112.523972) {
 					return 9;
-				} else if ($latitude < 36.122836) {
+				} elseif ($latitude < 36.122836) {
 					if ($this->polygons[619]->contains($latitude, $longitude)) {
 						return 9;
 					}
@@ -4332,20 +4332,20 @@ class PolygonLookup
 						return 273;
 					}
 				}
-			} else if ($latitude < 41.521236) {
+			} elseif ($latitude < 41.521236) {
 				if ($this->polygons[625]->contains($latitude, $longitude)) {
 					return 39;
 				} else {
 					return 273;
 				}
-			} else if ($longitude < -114.839451) {
+			} elseif ($longitude < -114.839451) {
 				if ($latitude < 43.779724) {
 					if ($this->polygons[626]->contains($latitude, $longitude)) {
 						return 27;
 					} else {
 						return 39;
 					}
-				} else if ($longitude < -116.758825) {
+				} elseif ($longitude < -116.758825) {
 					if ($this->polygons[627]->contains($latitude, $longitude)) {
 						return 27;
 					}
@@ -4361,7 +4361,7 @@ class PolygonLookup
 						return 39;
 					}
 				}
-			} else if ($latitude < 43.779724) {
+			} elseif ($latitude < 43.779724) {
 				if ($this->polygons[630]->contains($latitude, $longitude)) {
 					return 27;
 				}
@@ -4370,14 +4370,14 @@ class PolygonLookup
 				} else {
 					return 273;
 				}
-			} else if ($longitude < -112.920076) {
+			} elseif ($longitude < -112.920076) {
 				if ($latitude < 44.908968) {
 					if ($this->polygons[632]->contains($latitude, $longitude)) {
 						return 273;
 					} else {
 						return 27;
 					}
-				} else if ($longitude < -113.879764) {
+				} elseif ($longitude < -113.879764) {
 					if ($this->polygons[633]->contains($latitude, $longitude)) {
 						return 27;
 					}
@@ -4400,7 +4400,7 @@ class PolygonLookup
 					return 273;
 				}
 			}
-		} else if ($latitude < 52.150300) {
+		} elseif ($latitude < 52.150300) {
 			if ($longitude < -114.839451) {
 				if ($latitude < 49.094256) {
 					if ($this->polygons[637]->contains($latitude, $longitude)) {
@@ -4417,7 +4417,7 @@ class PolygonLookup
 					} else {
 						return 39;
 					}
-				} else if ($longitude < -116.758825) {
+				} elseif ($longitude < -116.758825) {
 					if ($latitude < 50.622278) {
 						if ($this->polygons[641]->contains($latitude, $longitude)) {
 							return 253;
@@ -4434,7 +4434,7 @@ class PolygonLookup
 							return 45;
 						}
 					}
-				} else if ($latitude < 50.622278) {
+				} elseif ($latitude < 50.622278) {
 					if ($longitude < -115.799138) {
 						if ($latitude < 49.858267) {
 							if ($this->polygons[644]->contains($latitude, $longitude)) {
@@ -4484,12 +4484,12 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call9(float $latitude, float $longitude) : ?int
+	protected function call9(float $latitude, float $longitude): ?int
 	{
 		if ($latitude < 25.453518) {
 			if ($longitude < -108.089081) {
 				return 407;
-			} else if ($latitude < 24.790808) {
+			} elseif ($latitude < 24.790808) {
 				if ($longitude < -101.290734) {
 					if ($longitude < -106.203979) {
 						if ($latitude < 21.819218) {
@@ -4501,7 +4501,7 @@ class PolygonLookup
 								return 407;
 							}
 						}
-					} else if ($longitude < -102.505865) {
+					} elseif ($longitude < -102.505865) {
 						if ($latitude < 22.582341) {
 							if ($longitude < -104.208678) {
 								if ($this->polygons[653]->contains($latitude, $longitude)) {
@@ -4541,7 +4541,7 @@ class PolygonLookup
 								return 384;
 							}
 						}
-					} else if ($longitude < -101.403413) {
+					} elseif ($longitude < -101.403413) {
 						if ($this->polygons[662]->contains($latitude, $longitude)) {
 							return 384;
 						} else {
@@ -4554,7 +4554,7 @@ class PolygonLookup
 							return 192;
 						}
 					}
-				} else if ($longitude < -97.596219) {
+				} elseif ($longitude < -97.596219) {
 					if ($latitude < 24.653814) {
 						if ($longitude < -97.731384) {
 							if ($latitude < 22.513844) {
@@ -4570,12 +4570,12 @@ class PolygonLookup
 									return 384;
 								}
 							}
-						} else if ($latitude < 22.034286) {
+						} elseif ($latitude < 22.034286) {
 							return 192;
 						} else {
 							return 384;
 						}
-					} else if ($longitude < -101.085294) {
+					} elseif ($longitude < -101.085294) {
 						if ($this->polygons[666]->contains($latitude, $longitude)) {
 							return 384;
 						} else {
@@ -4587,10 +4587,10 @@ class PolygonLookup
 				} else {
 					return 192;
 				}
-			} else if ($longitude < -101.222706) {
+			} elseif ($longitude < -101.222706) {
 				if ($longitude < -108.038940) {
 					return 407;
-				} else if ($longitude < -101.585564) {
+				} elseif ($longitude < -101.585564) {
 					if ($longitude < -106.892400) {
 						if ($this->polygons[667]->contains($latitude, $longitude)) {
 							return 384;
@@ -4604,7 +4604,7 @@ class PolygonLookup
 							return 384;
 						}
 					}
-				} else if ($longitude < -101.332363) {
+				} elseif ($longitude < -101.332363) {
 					if ($this->polygons[669]->contains($latitude, $longitude)) {
 						return 192;
 					} else {
@@ -4620,10 +4620,10 @@ class PolygonLookup
 			} else {
 				return 384;
 			}
-		} else if ($longitude < -97.406975) {
+		} elseif ($longitude < -97.406975) {
 			if ($latitude < 35.257645) {
 				return $this->call7($latitude, $longitude);
-			} else if ($longitude < -108.883000) {
+			} elseif ($longitude < -108.883000) {
 				if ($latitude < 37.340875) {
 					if ($longitude < -109.941851) {
 						if ($latitude < 36.299260) {
@@ -4675,7 +4675,7 @@ class PolygonLookup
 						return 308;
 					}
 				}
-			} else if ($latitude < 47.575298) {
+			} elseif ($latitude < 47.575298) {
 				if ($longitude < -103.093439) {
 					if ($longitude < -103.434273) {
 						if ($this->polygons[681]->contains($latitude, $longitude)) {
@@ -4690,7 +4690,7 @@ class PolygonLookup
 							return 273;
 						}
 					}
-				} else if ($longitude < -102.432684) {
+				} elseif ($longitude < -102.432684) {
 					if ($latitude < 36.998989) {
 						if ($this->polygons[683]->contains($latitude, $longitude)) {
 							return 160;
@@ -4704,26 +4704,26 @@ class PolygonLookup
 							return 273;
 						}
 					}
-				} else if ($latitude < 41.416471) {
+				} elseif ($latitude < 41.416471) {
 					if ($this->polygons[685]->contains($latitude, $longitude)) {
 						return 273;
 					} else {
 						return 160;
 					}
-				} else if ($latitude < 44.495885) {
+				} elseif ($latitude < 44.495885) {
 					if ($this->polygons[686]->contains($latitude, $longitude)) {
 						return 273;
 					} else {
 						return 160;
 					}
-				} else if ($longitude < -99.919829) {
+				} elseif ($longitude < -99.919829) {
 					if ($latitude < 46.035592) {
 						if ($this->polygons[687]->contains($latitude, $longitude)) {
 							return 160;
 						} else {
 							return 273;
 						}
-					} else if ($longitude < -101.176257) {
+					} elseif ($longitude < -101.176257) {
 						if ($latitude < 46.805445) {
 							if ($this->polygons[688]->contains($latitude, $longitude)) {
 								return 52;
@@ -4765,7 +4765,7 @@ class PolygonLookup
 				} else {
 					return 160;
 				}
-			} else if ($longitude < -103.610133) {
+			} elseif ($longitude < -103.610133) {
 				if ($latitude < 48.997666) {
 					if ($this->polygons[697]->contains($latitude, $longitude)) {
 						return 160;
@@ -4782,7 +4782,7 @@ class PolygonLookup
 						return 308;
 					}
 				}
-			} else if ($latitude < 47.674011) {
+			} elseif ($latitude < 47.674011) {
 				if ($longitude < -102.711964) {
 					if ($this->polygons[700]->contains($latitude, $longitude)) {
 						return 273;
@@ -4796,7 +4796,7 @@ class PolygonLookup
 						return 160;
 					}
 				}
-			} else if ($latitude < 48.994424) {
+			} elseif ($latitude < 48.994424) {
 				if ($this->polygons[702]->contains($latitude, $longitude)) {
 					return 308;
 				} else {
@@ -4809,7 +4809,7 @@ class PolygonLookup
 					return 284;
 				}
 			}
-		} else if ($latitude < 27.880161) {
+		} elseif ($latitude < 27.880161) {
 			if ($latitude < 25.959148) {
 				if ($latitude < 25.643694) {
 					if ($this->polygons[704]->contains($latitude, $longitude)) {
@@ -4827,7 +4827,7 @@ class PolygonLookup
 			} else {
 				return 160;
 			}
-		} else if ($latitude < 29.841980) {
+		} elseif ($latitude < 29.841980) {
 			return 160;
 		} else {
 			if ($this->polygons[706]->contains($latitude, $longitude)) {
@@ -4841,18 +4841,18 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call10(float $latitude, float $longitude) : ?int
+	protected function call10(float $latitude, float $longitude): ?int
 	{
 		if ($latitude < 44.018513) {
 			if ($longitude < -87.921288) {
 				return 160;
-			} else if ($longitude < -84.575844) {
+			} elseif ($longitude < -84.575844) {
 				if ($latitude < 30.474203) {
 					if ($longitude < -85.625534) {
 						return 160;
-					} else if ($latitude < 29.760227) {
+					} elseif ($latitude < 29.760227) {
 						return 165;
-					} else if ($longitude < -84.981323) {
+					} elseif ($longitude < -84.981323) {
 						if ($latitude < 30.444105) {
 							if ($this->polygons[708]->contains($latitude, $longitude)) {
 								return 165;
@@ -4869,7 +4869,7 @@ class PolygonLookup
 					} else {
 						return 165;
 					}
-				} else if ($latitude < 38.929596) {
+				} elseif ($latitude < 38.929596) {
 					if ($latitude < 36.997822) {
 						if ($latitude < 33.736012) {
 							if ($this->polygons[710]->contains($latitude, $longitude)) {
@@ -4877,17 +4877,17 @@ class PolygonLookup
 							} else {
 								return 160;
 							}
-						} else if ($longitude < -86.248566) {
+						} elseif ($longitude < -86.248566) {
 							return 160;
-						} else if ($latitude < 35.366917) {
+						} elseif ($latitude < 35.366917) {
 							if ($this->polygons[711]->contains($latitude, $longitude)) {
 								return 165;
 							} else {
 								return 160;
 							}
-						} else if ($longitude < -85.412205) {
+						} elseif ($longitude < -85.412205) {
 							return 160;
-						} else if ($latitude < 36.182369) {
+						} elseif ($latitude < 36.182369) {
 							if ($this->polygons[712]->contains($latitude, $longitude)) {
 								return 165;
 							} else {
@@ -4903,10 +4903,10 @@ class PolygonLookup
 								return 165;
 							}
 						}
-					} else if ($longitude < -87.072258) {
+					} elseif ($longitude < -87.072258) {
 						if ($latitude < 37.963709) {
 							return 160;
-						} else if ($latitude < 38.446652) {
+						} elseif ($latitude < 38.446652) {
 							if ($this->polygons[715]->contains($latitude, $longitude)) {
 								return 54;
 							}
@@ -4931,7 +4931,7 @@ class PolygonLookup
 								return 309;
 							}
 						}
-					} else if ($longitude < -85.824051) {
+					} elseif ($longitude < -85.824051) {
 						if ($latitude < 37.963688) {
 							if ($this->polygons[721]->contains($latitude, $longitude)) {
 								return 90;
@@ -4944,7 +4944,7 @@ class PolygonLookup
 							} else {
 								return 160;
 							}
-						} else if ($longitude < -86.448154) {
+						} elseif ($longitude < -86.448154) {
 							if ($this->polygons[724]->contains($latitude, $longitude)) {
 								return 89;
 							}
@@ -4968,7 +4968,7 @@ class PolygonLookup
 							} else {
 								return 90;
 							}
-						} else if ($latitude < 38.446592) {
+						} elseif ($latitude < 38.446592) {
 							if ($this->polygons[731]->contains($latitude, $longitude)) {
 								return 89;
 							}
@@ -4993,7 +4993,7 @@ class PolygonLookup
 								return 89;
 							}
 						}
-					} else if ($latitude < 37.963709) {
+					} elseif ($latitude < 37.963709) {
 						if ($this->polygons[737]->contains($latitude, $longitude)) {
 							return 160;
 						} else {
@@ -5012,7 +5012,7 @@ class PolygonLookup
 							return 165;
 						}
 					}
-				} else if ($longitude < -86.466347) {
+				} elseif ($longitude < -86.466347) {
 					if ($latitude < 41.760455) {
 						if ($this->polygons[741]->contains($latitude, $longitude)) {
 							return 89;
@@ -5025,7 +5025,7 @@ class PolygonLookup
 						} else {
 							return 160;
 						}
-					} else if ($longitude < -87.550373) {
+					} elseif ($longitude < -87.550373) {
 						return 160;
 					} else {
 						return 93;
@@ -5040,9 +5040,9 @@ class PolygonLookup
 						return 93;
 					}
 				}
-			} else if ($latitude < 41.697075) {
+			} elseif ($latitude < 41.697075) {
 				return 165;
-			} else if ($longitude < -83.173058) {
+			} elseif ($longitude < -83.173058) {
 				if ($latitude < 41.733951) {
 					if ($longitude < -83.446740) {
 						if ($this->polygons[746]->contains($latitude, $longitude)) {
@@ -5056,7 +5056,7 @@ class PolygonLookup
 				} else {
 					return 93;
 				}
-			} else if ($longitude < -82.407822) {
+			} elseif ($longitude < -82.407822) {
 				if ($latitude < 41.829945) {
 					if ($longitude < -82.742973) {
 						return 165;
@@ -5070,7 +5070,7 @@ class PolygonLookup
 						return 93;
 					}
 				}
-			} else if ($latitude < 42.303441) {
+			} elseif ($latitude < 42.303441) {
 				if ($longitude < -81.847701) {
 					return 238;
 				} else {
@@ -5079,11 +5079,11 @@ class PolygonLookup
 			} else {
 				return 238;
 			}
-		} else if ($longitude < -86.503700) {
+		} elseif ($longitude < -86.503700) {
 			if ($latitude < 47.860935) {
 				if ($longitude < -90.438179) {
 					return 160;
-				} else if ($latitude < 45.424801) {
+				} elseif ($latitude < 45.424801) {
 					if ($longitude < -87.351521) {
 						if ($longitude < -87.652123) {
 							if ($latitude < 45.240341) {
@@ -5105,9 +5105,9 @@ class PolygonLookup
 									return 94;
 								}
 							}
-						} else if ($latitude < 44.970303) {
+						} elseif ($latitude < 44.970303) {
 							return 160;
-						} else if ($longitude < -87.580826) {
+						} elseif ($longitude < -87.580826) {
 							if ($this->polygons[752]->contains($latitude, $longitude)) {
 								return 160;
 							}
@@ -5126,7 +5126,7 @@ class PolygonLookup
 					} else {
 						return 160;
 					}
-				} else if ($longitude < -87.267632) {
+				} elseif ($longitude < -87.267632) {
 					if ($latitude < 46.767605) {
 						if ($longitude < -88.852905) {
 							if ($this->polygons[755]->contains($latitude, $longitude)) {
@@ -5137,7 +5137,7 @@ class PolygonLookup
 							} else {
 								return 94;
 							}
-						} else if ($longitude < -88.060268) {
+						} elseif ($longitude < -88.060268) {
 							if ($this->polygons[757]->contains($latitude, $longitude)) {
 								return 93;
 							}
@@ -5159,7 +5159,7 @@ class PolygonLookup
 								return 94;
 							}
 						}
-					} else if ($longitude < -89.863985) {
+					} elseif ($longitude < -89.863985) {
 						if ($latitude < 46.772694) {
 							return 93;
 						} else {
@@ -5171,7 +5171,7 @@ class PolygonLookup
 				} else {
 					return 93;
 				}
-			} else if ($longitude < -88.182213) {
+			} elseif ($longitude < -88.182213) {
 				if ($longitude < -89.000000) {
 					if ($latitude < 48.175171) {
 						if ($longitude < -89.307442) {
@@ -5195,12 +5195,12 @@ class PolygonLookup
 							} else {
 								return 238;
 							}
-						} else if ($latitude < 47.993145) {
+						} elseif ($latitude < 47.993145) {
 							return 93;
 						} else {
 							return 238;
 						}
-					} else if ($longitude < -89.998705) {
+					} elseif ($longitude < -89.998705) {
 						if ($longitude < -91.732543) {
 							if ($latitude < 48.464100) {
 								if ($this->polygons[765]->contains($latitude, $longitude)) {
@@ -5218,7 +5218,7 @@ class PolygonLookup
 									return 284;
 								}
 							}
-						} else if ($latitude < 49.000000) {
+						} elseif ($latitude < 49.000000) {
 							if ($this->polygons[768]->contains($latitude, $longitude)) {
 								return 160;
 							}
@@ -5234,9 +5234,9 @@ class PolygonLookup
 								return 238;
 							}
 						}
-					} else if ($latitude < 48.269608) {
+					} elseif ($latitude < 48.269608) {
 						return 238;
-					} else if ($latitude < 52.750000) {
+					} elseif ($latitude < 52.750000) {
 						if ($this->polygons[771]->contains($latitude, $longitude)) {
 							return 238;
 						} else {
@@ -5245,19 +5245,19 @@ class PolygonLookup
 					} else {
 						return 284;
 					}
-				} else if ($longitude < -88.434196) {
+				} elseif ($longitude < -88.434196) {
 					if ($latitude < 48.185020) {
 						return 93;
 					} else {
 						return 238;
 					}
-				} else if ($latitude < 48.517834) {
+				} elseif ($latitude < 48.517834) {
 					if ($longitude < -88.375648) {
 						return 238;
 					} else {
 						return 93;
 					}
-				} else if ($latitude < 48.556038) {
+				} elseif ($latitude < 48.556038) {
 					return 238;
 				} else {
 					if ($this->polygons[772]->contains($latitude, $longitude)) {
@@ -5269,11 +5269,11 @@ class PolygonLookup
 			} else {
 				return 238;
 			}
-		} else if ($longitude < -81.695793) {
+		} elseif ($longitude < -81.695793) {
 			if ($longitude < -83.252220) {
 				if ($latitude < 45.828533) {
 					return 93;
-				} else if ($latitude < 46.770527) {
+				} elseif ($latitude < 46.770527) {
 					if ($longitude < -84.597824) {
 						if ($longitude < -84.706245) {
 							if ($this->polygons[773]->contains($latitude, $longitude)) {
@@ -5284,13 +5284,13 @@ class PolygonLookup
 						} else {
 							return 93;
 						}
-					} else if ($longitude < -84.557343) {
+					} elseif ($longitude < -84.557343) {
 						if ($latitude < 46.441211) {
 							return 93;
 						} else {
 							return 238;
 						}
-					} else if ($longitude < -84.298393) {
+					} elseif ($longitude < -84.298393) {
 						if ($latitude < 45.987839) {
 							return 93;
 						} else {
@@ -5310,7 +5310,7 @@ class PolygonLookup
 				} else {
 					return 238;
 				}
-			} else if ($latitude < 45.048958) {
+			} elseif ($latitude < 45.048958) {
 				if ($longitude < -82.802887) {
 					return 93;
 				} else {
@@ -5319,14 +5319,14 @@ class PolygonLookup
 			} else {
 				return 238;
 			}
-		} else if ($latitude < 52.532292) {
+		} elseif ($latitude < 52.532292) {
 			return 238;
 		} else {
 			return 137;
 		}
 	}
 	
-	protected function call11(float $latitude, float $longitude) : ?int
+	protected function call11(float $latitude, float $longitude): ?int
 	{
 		if ($latitude < 47.560501) {
 			if ($latitude < 39.177528) {
@@ -5335,7 +5335,7 @@ class PolygonLookup
 						if ($latitude < 28.585676) {
 							if ($latitude < 20.641302) {
 								return 33;
-							} else if ($latitude < 24.286565) {
+							} elseif ($latitude < 24.286565) {
 								if ($latitude < 21.330532) {
 									if ($this->polygons[776]->contains($latitude, $longitude)) {
 										return 29;
@@ -5351,7 +5351,7 @@ class PolygonLookup
 						} else {
 							return 63;
 						}
-					} else if ($longitude < -13.417682) {
+					} elseif ($longitude < -13.417682) {
 						if ($latitude < 27.131824) {
 							if ($this->polygons[777]->contains($latitude, $longitude)) {
 								return 33;
@@ -5361,7 +5361,7 @@ class PolygonLookup
 						} else {
 							return 264;
 						}
-					} else if ($latitude < 27.298073) {
+					} elseif ($latitude < 27.298073) {
 						if ($longitude < 1.713168) {
 							if ($this->polygons[778]->contains($latitude, $longitude)) {
 								return 29;
@@ -5381,7 +5381,7 @@ class PolygonLookup
 								return 380;
 							}
 						}
-					} else if ($longitude < -5.275472) {
+					} elseif ($longitude < -5.275472) {
 						if ($latitude < 29.949635) {
 							if ($this->polygons[782]->contains($latitude, $longitude)) {
 								return 29;
@@ -5398,7 +5398,7 @@ class PolygonLookup
 								return 343;
 							}
 						}
-					} else if ($latitude < 35.690445) {
+					} elseif ($latitude < 35.690445) {
 						if ($longitude < 0.924000) {
 							if ($latitude < 31.494259) {
 								if ($this->polygons[785]->contains($latitude, $longitude)) {
@@ -5406,7 +5406,7 @@ class PolygonLookup
 								} else {
 									return 380;
 								}
-							} else if ($longitude < -2.175736) {
+							} elseif ($longitude < -2.175736) {
 								if ($this->polygons[786]->contains($latitude, $longitude)) {
 									return 315;
 								}
@@ -5431,9 +5431,9 @@ class PolygonLookup
 					} else {
 						return 380;
 					}
-				} else if ($longitude < -7.828166) {
+				} elseif ($longitude < -7.828166) {
 					return 57;
-				} else if ($longitude < -0.467861) {
+				} elseif ($longitude < -0.467861) {
 					if ($longitude < -5.339639) {
 						if ($longitude < -6.933861) {
 							if ($this->polygons[790]->contains($latitude, $longitude)) {
@@ -5441,7 +5441,7 @@ class PolygonLookup
 							} else {
 								return 334;
 							}
-						} else if ($longitude < -6.877555) {
+						} elseif ($longitude < -6.877555) {
 							return 334;
 						} else {
 							if ($this->polygons[791]->contains($latitude, $longitude)) {
@@ -5453,12 +5453,12 @@ class PolygonLookup
 					} else {
 						return 334;
 					}
-				} else if ($latitude < 37.093723) {
+				} elseif ($latitude < 37.093723) {
 					return 380;
 				} else {
 					return 334;
 				}
-			} else if ($latitude < 43.791721) {
+			} elseif ($latitude < 43.791721) {
 				if ($latitude < 42.254749) {
 					if ($longitude < -6.182694) {
 						if ($latitude < 42.145638) {
@@ -5468,7 +5468,7 @@ class PolygonLookup
 								} else {
 									return 57;
 								}
-							} else if ($latitude < 40.661583) {
+							} elseif ($latitude < 40.661583) {
 								if ($this->polygons[793]->contains($latitude, $longitude)) {
 									return 334;
 								} else {
@@ -5487,13 +5487,13 @@ class PolygonLookup
 					} else {
 						return 334;
 					}
-				} else if ($longitude < 3.315139) {
+				} elseif ($longitude < 3.315139) {
 					if ($longitude < -8.847362) {
 						return 334;
-					} else if ($longitude < 1.780389) {
+					} elseif ($longitude < 1.780389) {
 						if ($longitude < -3.533486) {
 							return 334;
-						} else if ($longitude < -0.876549) {
+						} elseif ($longitude < -0.876549) {
 							if ($this->polygons[795]->contains($latitude, $longitude)) {
 								return 297;
 							} else {
@@ -5525,9 +5525,9 @@ class PolygonLookup
 				} else {
 					return 297;
 				}
-			} else if ($longitude < -0.597833) {
+			} elseif ($longitude < -0.597833) {
 				return 297;
-			} else if ($latitude < 45.349019) {
+			} elseif ($latitude < 45.349019) {
 				if ($latitude < 45.262008) {
 					if ($this->polygons[801]->contains($latitude, $longitude)) {
 						return 271;
@@ -5541,11 +5541,11 @@ class PolygonLookup
 						return 297;
 					}
 				}
-			} else if ($longitude < 3.262819) {
+			} elseif ($longitude < 3.262819) {
 				return 297;
-			} else if ($longitude < 5.193146) {
+			} elseif ($longitude < 5.193146) {
 				return 297;
-			} else if ($latitude < 46.454760) {
+			} elseif ($latitude < 46.454760) {
 				if ($this->polygons[803]->contains($latitude, $longitude)) {
 					return 172;
 				}
@@ -5570,41 +5570,41 @@ class PolygonLookup
 					return 172;
 				}
 			}
-		} else if ($longitude < -3.590778) {
+		} elseif ($longitude < -3.590778) {
 			if ($longitude < -6.628972) {
 				return 285;
-			} else if ($latitude < 48.755917) {
+			} elseif ($latitude < 48.755917) {
 				return 297;
-			} else if ($latitude < 51.883221) {
+			} elseif ($latitude < 51.883221) {
 				return 303;
-			} else if ($longitude < -6.040233) {
+			} elseif ($longitude < -6.040233) {
 				return 285;
 			} else {
 				return 303;
 			}
-		} else if ($longitude < 0.689972) {
+		} elseif ($longitude < 0.689972) {
 			if ($latitude < 49.871569) {
 				if ($longitude < -2.702667) {
 					return 297;
-				} else if ($longitude < -2.450417) {
+				} elseif ($longitude < -2.450417) {
 					if ($latitude < 48.654946) {
 						return 297;
 					} else {
 						return 296;
 					}
-				} else if ($longitude < -2.351278) {
+				} elseif ($longitude < -2.351278) {
 					if ($latitude < 49.044780) {
 						return 296;
 					} else {
 						return 297;
 					}
-				} else if ($latitude < 49.265057) {
+				} elseif ($latitude < 49.265057) {
 					if ($this->polygons[809]->contains($latitude, $longitude)) {
 						return 139;
 					} else {
 						return 297;
 					}
-				} else if ($longitude < -2.055792) {
+				} elseif ($longitude < -2.055792) {
 					return 296;
 				} else {
 					return 297;
@@ -5612,7 +5612,7 @@ class PolygonLookup
 			} else {
 				return 303;
 			}
-		} else if ($longitude < 1.759000) {
+		} elseif ($longitude < 1.759000) {
 			if ($latitude < 50.950080) {
 				if ($this->polygons[810]->contains($latitude, $longitude)) {
 					return 303;
@@ -5625,18 +5625,18 @@ class PolygonLookup
 			} else {
 				return 303;
 			}
-		} else if ($latitude < 51.770695) {
+		} elseif ($latitude < 51.770695) {
 			if ($latitude < 51.505444) {
 				if ($longitude < 4.441236) {
 					if ($latitude < 49.532972) {
 						return 297;
-					} else if ($longitude < 3.100118) {
+					} elseif ($longitude < 3.100118) {
 						if ($this->polygons[812]->contains($latitude, $longitude)) {
 							return 254;
 						} else {
 							return 297;
 						}
-					} else if ($latitude < 50.519208) {
+					} elseif ($latitude < 50.519208) {
 						if ($this->polygons[813]->contains($latitude, $longitude)) {
 							return 254;
 						}
@@ -5658,7 +5658,7 @@ class PolygonLookup
 							return 385;
 						}
 					}
-				} else if ($latitude < 49.532972) {
+				} elseif ($latitude < 49.532972) {
 					if ($this->polygons[818]->contains($latitude, $longitude)) {
 						return 6;
 					}
@@ -5670,7 +5670,7 @@ class PolygonLookup
 					} else {
 						return 297;
 					}
-				} else if ($longitude < 5.782354) {
+				} elseif ($longitude < 5.782354) {
 					if ($latitude < 50.519208) {
 						if ($this->polygons[821]->contains($latitude, $longitude)) {
 							return 211;
@@ -5693,7 +5693,7 @@ class PolygonLookup
 							return 385;
 						}
 					}
-				} else if ($latitude < 50.519208) {
+				} elseif ($latitude < 50.519208) {
 					if ($longitude < 6.452913) {
 						if ($latitude < 50.026090) {
 							if ($this->polygons[826]->contains($latitude, $longitude)) {
@@ -5746,7 +5746,7 @@ class PolygonLookup
 						return 6;
 					}
 				}
-			} else if ($longitude < 4.356167) {
+			} elseif ($longitude < 4.356167) {
 				return 385;
 			} else {
 				if ($this->polygons[838]->contains($latitude, $longitude)) {
@@ -5755,7 +5755,7 @@ class PolygonLookup
 					return 385;
 				}
 			}
-		} else if ($longitude < 5.862928) {
+		} elseif ($longitude < 5.862928) {
 			return 385;
 		} else {
 			if ($this->polygons[839]->contains($latitude, $longitude)) {
@@ -5766,13 +5766,13 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call12(float $latitude, float $longitude) : ?int
+	protected function call12(float $latitude, float $longitude): ?int
 	{
 		if ($latitude < 47.060444) {
 			if ($longitude < -66.343018) {
 				if ($latitude < 44.229080) {
 					return 165;
-				} else if ($longitude < -67.827522) {
+				} elseif ($longitude < -67.827522) {
 					if ($longitude < -69.624689) {
 						if ($this->polygons[840]->contains($latitude, $longitude)) {
 							return 20;
@@ -5782,10 +5782,10 @@ class PolygonLookup
 					} else {
 						return 165;
 					}
-				} else if ($longitude < -66.941940) {
+				} elseif ($longitude < -66.941940) {
 					if ($latitude < 44.620262) {
 						return 165;
-					} else if ($latitude < 45.028847) {
+					} elseif ($latitude < 45.028847) {
 						if ($this->polygons[841]->contains($latitude, $longitude)) {
 							return 77;
 						}
@@ -5794,7 +5794,7 @@ class PolygonLookup
 						} else {
 							return 165;
 						}
-					} else if ($longitude < -67.090355) {
+					} elseif ($longitude < -67.090355) {
 						if ($this->polygons[843]->contains($latitude, $longitude)) {
 							return 77;
 						} else {
@@ -5803,18 +5803,18 @@ class PolygonLookup
 					} else {
 						return 77;
 					}
-				} else if ($latitude < 44.283012) {
+				} elseif ($latitude < 44.283012) {
 					return 118;
 				} else {
 					return 77;
 				}
-			} else if ($latitude < 44.991669) {
+			} elseif ($latitude < 44.991669) {
 				if ($latitude < 32.393833) {
 					return 256;
 				} else {
 					return 118;
 				}
-			} else if ($longitude < -61.939835) {
+			} elseif ($longitude < -61.939835) {
 				if ($longitude < -63.777946) {
 					if ($latitude < 46.279369) {
 						if ($latitude < 46.006592) {
@@ -5828,7 +5828,7 @@ class PolygonLookup
 										return 77;
 									}
 								}
-							} else if ($latitude < 45.387333) {
+							} elseif ($latitude < 45.387333) {
 								return 118;
 							} else {
 								if ($this->polygons[845]->contains($latitude, $longitude)) {
@@ -5840,7 +5840,7 @@ class PolygonLookup
 						} else {
 							return 77;
 						}
-					} else if ($longitude < -64.516182) {
+					} elseif ($longitude < -64.516182) {
 						return 77;
 					} else {
 						return 118;
@@ -5848,9 +5848,9 @@ class PolygonLookup
 				} else {
 					return 118;
 				}
-			} else if ($longitude < -60.897530) {
+			} elseif ($longitude < -60.897530) {
 				return 118;
-			} else if ($latitude < 45.826886) {
+			} elseif ($latitude < 45.826886) {
 				if ($longitude < -60.766365) {
 					return 118;
 				} else {
@@ -5860,7 +5860,7 @@ class PolygonLookup
 						return 118;
 					}
 				}
-			} else if ($longitude < -60.311749) {
+			} elseif ($longitude < -60.311749) {
 				if ($this->polygons[847]->contains($latitude, $longitude)) {
 					return 81;
 				}
@@ -5872,7 +5872,7 @@ class PolygonLookup
 			} else {
 				return 81;
 			}
-		} else if ($longitude < -59.584435) {
+		} elseif ($longitude < -59.584435) {
 			if ($latitude < 50.081348) {
 				if ($latitude < 47.639160) {
 					if ($longitude < -64.803614) {
@@ -5891,7 +5891,7 @@ class PolygonLookup
 					} else {
 						return 118;
 					}
-				} else if ($latitude < 48.065315) {
+				} elseif ($latitude < 48.065315) {
 					if ($longitude < -66.119873) {
 						if ($longitude < -66.526045) {
 							if ($longitude < -69.406061) {
@@ -5906,7 +5906,7 @@ class PolygonLookup
 									return 20;
 								}
 							}
-						} else if ($longitude < -66.291616) {
+						} elseif ($longitude < -66.291616) {
 							if ($this->polygons[853]->contains($latitude, $longitude)) {
 								return 20;
 							} else {
@@ -5915,13 +5915,13 @@ class PolygonLookup
 						} else {
 							return 77;
 						}
-					} else if ($longitude < -64.751419) {
+					} elseif ($longitude < -64.751419) {
 						if ($latitude < 47.945091) {
 							return 77;
 						} else {
 							return 20;
 						}
-					} else if ($longitude < -64.470963) {
+					} elseif ($longitude < -64.470963) {
 						return 77;
 					} else {
 						return 118;
@@ -5929,23 +5929,23 @@ class PolygonLookup
 				} else {
 					return 20;
 				}
-			} else if ($longitude < -63.049610) {
+			} elseif ($longitude < -63.049610) {
 				if ($latitude < 50.567280) {
 					return 20;
-				} else if ($longitude < -66.638208) {
+				} elseif ($longitude < -66.638208) {
 					if ($this->polygons[854]->contains($latitude, $longitude)) {
 						return 182;
 					} else {
 						return 20;
 					}
-				} else if ($longitude < -64.843909) {
+				} elseif ($longitude < -64.843909) {
 					if ($latitude < 51.732883) {
 						if ($this->polygons[855]->contains($latitude, $longitude)) {
 							return 182;
 						} else {
 							return 20;
 						}
-					} else if ($longitude < -65.741058) {
+					} elseif ($longitude < -65.741058) {
 						if ($this->polygons[856]->contains($latitude, $longitude)) {
 							return 182;
 						} else {
@@ -5958,7 +5958,7 @@ class PolygonLookup
 							return 20;
 						}
 					}
-				} else if ($latitude < 51.732883) {
+				} elseif ($latitude < 51.732883) {
 					if ($this->polygons[858]->contains($latitude, $longitude)) {
 						return 182;
 					} else {
@@ -5971,7 +5971,7 @@ class PolygonLookup
 						return 20;
 					}
 				}
-			} else if ($latitude < 50.218616) {
+			} elseif ($latitude < 50.218616) {
 				if ($longitude < -61.578325) {
 					if ($longitude < -62.098534) {
 						return 20;
@@ -5988,7 +5988,7 @@ class PolygonLookup
 				} else {
 					return 243;
 				}
-			} else if ($latitude < 50.348381) {
+			} elseif ($latitude < 50.348381) {
 				if ($longitude < -61.174600) {
 					if ($latitude < 50.275000) {
 						if ($longitude < -62.354403) {
@@ -6010,7 +6010,7 @@ class PolygonLookup
 				} else {
 					return 243;
 				}
-			} else if ($latitude < 50.675139) {
+			} elseif ($latitude < 50.675139) {
 				if ($this->polygons[864]->contains($latitude, $longitude)) {
 					return 20;
 				} else {
@@ -6023,7 +6023,7 @@ class PolygonLookup
 					return 20;
 				}
 			}
-		} else if ($latitude < 50.841103) {
+		} elseif ($latitude < 50.841103) {
 			if ($longitude < -58.832348) {
 				if ($latitude < 50.645809) {
 					if ($latitude < 48.753311) {
@@ -6031,7 +6031,7 @@ class PolygonLookup
 					} else {
 						return 243;
 					}
-				} else if ($longitude < -59.432320) {
+				} elseif ($longitude < -59.432320) {
 					if ($this->polygons[866]->contains($latitude, $longitude)) {
 						return 243;
 					} else {
@@ -6043,7 +6043,7 @@ class PolygonLookup
 			} else {
 				return 290;
 			}
-		} else if ($longitude < -58.273293) {
+		} elseif ($longitude < -58.273293) {
 			if ($latitude < 51.162445) {
 				if ($longitude < -59.102900) {
 					if ($this->polygons[867]->contains($latitude, $longitude)) {
@@ -6054,7 +6054,7 @@ class PolygonLookup
 				} else {
 					return 243;
 				}
-			} else if ($longitude < -58.370186) {
+			} elseif ($longitude < -58.370186) {
 				if ($latitude < 51.204712) {
 					if ($longitude < -58.864370) {
 						if ($this->polygons[868]->contains($latitude, $longitude)) {
@@ -6065,7 +6065,7 @@ class PolygonLookup
 					} else {
 						return 243;
 					}
-				} else if ($latitude < 51.457100) {
+				} elseif ($latitude < 51.457100) {
 					if ($longitude < -58.647963) {
 						if ($this->polygons[869]->contains($latitude, $longitude)) {
 							return 243;
@@ -6078,9 +6078,9 @@ class PolygonLookup
 						} else {
 							return 20;
 						}
-					} else if ($latitude < 51.296436) {
+					} elseif ($latitude < 51.296436) {
 						return 243;
-					} else if ($longitude < -58.432500) {
+					} elseif ($longitude < -58.432500) {
 						if ($this->polygons[872]->contains($latitude, $longitude)) {
 							return 20;
 						} else {
@@ -6100,9 +6100,9 @@ class PolygonLookup
 						return 20;
 					}
 				}
-			} else if ($latitude < 51.376093) {
+			} elseif ($latitude < 51.376093) {
 				return 243;
-			} else if ($latitude < 51.456603) {
+			} elseif ($latitude < 51.456603) {
 				if ($this->polygons[875]->contains($latitude, $longitude)) {
 					return 20;
 				} else {
@@ -6115,18 +6115,18 @@ class PolygonLookup
 					return 20;
 				}
 			}
-		} else if ($latitude < 51.395161) {
+		} elseif ($latitude < 51.395161) {
 			if ($longitude < -57.116951) {
 				return 243;
 			} else {
 				return 290;
 			}
-		} else if ($latitude < 51.401176) {
+		} elseif ($latitude < 51.401176) {
 			return 243;
-		} else if ($longitude < -57.687763) {
+		} elseif ($longitude < -57.687763) {
 			if ($latitude < 51.446266) {
 				return 243;
-			} else if ($latitude < 51.588950) {
+			} elseif ($latitude < 51.588950) {
 				if ($this->polygons[877]->contains($latitude, $longitude)) {
 					return 20;
 				} else {
@@ -6139,10 +6139,10 @@ class PolygonLookup
 					return 20;
 				}
 			}
-		} else if ($latitude < 51.465385) {
+		} elseif ($latitude < 51.465385) {
 			if ($longitude < -57.257164) {
 				return 243;
-			} else if ($longitude < -57.096817) {
+			} elseif ($longitude < -57.096817) {
 				if ($this->polygons[879]->contains($latitude, $longitude)) {
 					return 290;
 				} else {
@@ -6166,7 +6166,7 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call13(float $latitude, float $longitude) : ?int
+	protected function call13(float $latitude, float $longitude): ?int
 	{
 		if ($longitude < -79.668747) {
 			if ($longitude < -92.267200) {
@@ -6175,15 +6175,15 @@ class PolygonLookup
 						if ($latitude < 48.589012) {
 							if ($latitude < 26.074541) {
 								return 244;
-							} else if ($latitude < 46.253250) {
+							} elseif ($latitude < 46.253250) {
 								if ($longitude < -177.319321) {
 									return 196;
 								} else {
 									return 39;
 								}
-							} else if ($latitude < 46.976349) {
+							} elseif ($latitude < 46.976349) {
 								return 39;
-							} else if ($latitude < 48.394943) {
+							} elseif ($latitude < 48.394943) {
 								if ($this->polygons[883]->contains($latitude, $longitude)) {
 									return 45;
 								} else {
@@ -6195,10 +6195,10 @@ class PolygonLookup
 						} else {
 							return 45;
 						}
-					} else if ($longitude < -131.767334) {
+					} elseif ($longitude < -131.767334) {
 						if ($longitude < -169.674606) {
 							return 158;
-						} else if ($longitude < -168.881073) {
+						} elseif ($longitude < -168.881073) {
 							return 134;
 						} else {
 							return 45;
@@ -6206,12 +6206,12 @@ class PolygonLookup
 					} else {
 						return 45;
 					}
-				} else if ($longitude < -111.000702) {
+				} elseif ($longitude < -111.000702) {
 					return $this->call8($latitude, $longitude);
 				} else {
 					return $this->call9($latitude, $longitude);
 				}
-			} else if ($latitude < 29.388796) {
+			} elseif ($latitude < 29.388796) {
 				if ($latitude < 24.771822) {
 					if ($latitude < 22.785154) {
 						if ($longitude < -86.703392) {
@@ -6231,9 +6231,9 @@ class PolygonLookup
 						} else {
 							return 376;
 						}
-					} else if ($latitude < 23.239244) {
+					} elseif ($latitude < 23.239244) {
 						return 376;
-					} else if ($latitude < 24.000000) {
+					} elseif ($latitude < 24.000000) {
 						if ($longitude < -80.865501) {
 							return 376;
 						} else {
@@ -6242,7 +6242,7 @@ class PolygonLookup
 					} else {
 						return 165;
 					}
-				} else if ($longitude < -88.995483) {
+				} elseif ($longitude < -88.995483) {
 					return 160;
 				} else {
 					return 165;
@@ -6250,12 +6250,12 @@ class PolygonLookup
 			} else {
 				return $this->call10($latitude, $longitude);
 			}
-		} else if ($longitude < -69.652000) {
+		} elseif ($longitude < -69.652000) {
 			if ($latitude < 25.591423) {
 				if ($latitude < 23.625103) {
 					if ($longitude < -77.591835) {
 						return 376;
-					} else if ($latitude < 22.128616) {
+					} elseif ($latitude < 22.128616) {
 						if ($longitude < -72.914970) {
 							if ($longitude < -74.517632) {
 								return 376;
@@ -6271,17 +6271,17 @@ class PolygonLookup
 				} else {
 					return 281;
 				}
-			} else if ($latitude < 37.677757) {
+			} elseif ($latitude < 37.677757) {
 				if ($latitude < 27.217571) {
 					return 281;
-				} else if ($latitude < 27.232027) {
+				} elseif ($latitude < 27.232027) {
 					return 281;
 				} else {
 					return 165;
 				}
-			} else if ($latitude < 42.831356) {
+			} elseif ($latitude < 42.831356) {
 				return 165;
-			} else if ($latitude < 47.366436) {
+			} elseif ($latitude < 47.366436) {
 				if ($latitude < 44.056385) {
 					if ($longitude < -76.605095) {
 						if ($latitude < 43.433300) {
@@ -6296,10 +6296,10 @@ class PolygonLookup
 					} else {
 						return 165;
 					}
-				} else if ($latitude < 44.366348) {
+				} elseif ($latitude < 44.366348) {
 					if ($longitude < -76.498672) {
 						return 238;
-					} else if ($latitude < 44.198559) {
+					} elseif ($latitude < 44.198559) {
 						if ($longitude < -76.328499) {
 							if ($this->polygons[886]->contains($latitude, $longitude)) {
 								return 165;
@@ -6309,7 +6309,7 @@ class PolygonLookup
 						} else {
 							return 165;
 						}
-					} else if ($longitude < -76.185989) {
+					} elseif ($longitude < -76.185989) {
 						if ($latitude < 44.210916) {
 							if ($longitude < -76.250479) {
 								return 165;
@@ -6319,7 +6319,7 @@ class PolygonLookup
 						} else {
 							return 238;
 						}
-					} else if ($latitude < 44.310806) {
+					} elseif ($latitude < 44.310806) {
 						return 165;
 					} else {
 						if ($this->polygons[887]->contains($latitude, $longitude)) {
@@ -6331,7 +6331,7 @@ class PolygonLookup
 							return 165;
 						}
 					}
-				} else if ($longitude < -74.322990) {
+				} elseif ($longitude < -74.322990) {
 					if ($latitude < 44.438393) {
 						if ($longitude < -75.882416) {
 							if ($latitude < 44.368198) {
@@ -6343,7 +6343,7 @@ class PolygonLookup
 							} else {
 								return 238;
 							}
-						} else if ($longitude < -75.846375) {
+						} elseif ($longitude < -75.846375) {
 							if ($latitude < 44.395919) {
 								return 165;
 							} else {
@@ -6352,7 +6352,7 @@ class PolygonLookup
 						} else {
 							return 165;
 						}
-					} else if ($latitude < 45.189449) {
+					} elseif ($latitude < 45.189449) {
 						if ($this->polygons[889]->contains($latitude, $longitude)) {
 							return 20;
 						}
@@ -6368,7 +6368,7 @@ class PolygonLookup
 							return 238;
 						}
 					}
-				} else if ($longitude < -70.717628) {
+				} elseif ($longitude < -70.717628) {
 					if ($latitude < 45.422798) {
 						if ($longitude < -70.752113) {
 							if ($this->polygons[892]->contains($latitude, $longitude)) {
@@ -6386,7 +6386,7 @@ class PolygonLookup
 					} else {
 						return 20;
 					}
-				} else if ($latitude < 47.033193) {
+				} elseif ($latitude < 47.033193) {
 					if ($this->polygons[894]->contains($latitude, $longitude)) {
 						return 165;
 					} else {
@@ -6395,7 +6395,7 @@ class PolygonLookup
 				} else {
 					return 20;
 				}
-			} else if ($latitude < 52.114346) {
+			} elseif ($latitude < 52.114346) {
 				if ($longitude < -78.852051) {
 					if ($latitude < 51.836979) {
 						if ($longitude < -79.051132) {
@@ -6431,9 +6431,9 @@ class PolygonLookup
 						} else {
 							return 20;
 						}
-					} else if ($longitude < -78.941681) {
+					} elseif ($longitude < -78.941681) {
 						return 137;
-					} else if ($latitude < 51.943222) {
+					} elseif ($latitude < 51.943222) {
 						return 20;
 					} else {
 						return 137;
@@ -6441,26 +6441,26 @@ class PolygonLookup
 				} else {
 					return 20;
 				}
-			} else if ($longitude < -78.946602) {
+			} elseif ($longitude < -78.946602) {
 				return 137;
-			} else if ($latitude < 52.447598) {
+			} elseif ($latitude < 52.447598) {
 				if ($longitude < -78.703720) {
 					return 137;
-				} else if ($latitude < 52.395023) {
+				} elseif ($latitude < 52.395023) {
 					if ($this->polygons[898]->contains($latitude, $longitude)) {
 						return 137;
 					} else {
 						return 20;
 					}
-				} else if ($longitude < -78.558243) {
+				} elseif ($longitude < -78.558243) {
 					return 20;
 				} else {
 					return 137;
 				}
-			} else if ($longitude < -78.775826) {
+			} elseif ($longitude < -78.775826) {
 				if ($latitude < 52.728059) {
 					return 20;
-				} else if ($latitude < 52.776230) {
+				} elseif ($latitude < 52.776230) {
 					if ($longitude < -78.855316) {
 						if ($latitude < 52.752114) {
 							return 20;
@@ -6477,7 +6477,7 @@ class PolygonLookup
 				} else {
 					return 20;
 				}
-			} else if ($longitude < -78.753601) {
+			} elseif ($longitude < -78.753601) {
 				if ($latitude < 52.665272) {
 					if ($latitude < 52.558494) {
 						return 20;
@@ -6498,9 +6498,9 @@ class PolygonLookup
 					return 20;
 				}
 			}
-		} else if ($longitude < -56.718918) {
+		} elseif ($longitude < -56.718918) {
 			return $this->call12($latitude, $longitude);
-		} else if ($longitude < -17.721861) {
+		} elseif ($longitude < -17.721861) {
 			if ($latitude < 47.258224) {
 				if ($latitude < 39.531334) {
 					if ($longitude < -25.015833) {
@@ -6508,13 +6508,13 @@ class PolygonLookup
 					} else {
 						return 264;
 					}
-				} else if ($longitude < -54.807180) {
+				} elseif ($longitude < -54.807180) {
 					if ($longitude < -56.166119) {
 						return 92;
 					} else {
 						return 290;
 					}
-				} else if ($longitude < -52.813107) {
+				} elseif ($longitude < -52.813107) {
 					return 290;
 				} else {
 					return 283;
@@ -6527,7 +6527,7 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call14(float $latitude, float $longitude) : ?int
+	protected function call14(float $latitude, float $longitude): ?int
 	{
 		if ($longitude < -131.905807) {
 			if ($latitude < 56.000004) {
@@ -6540,14 +6540,14 @@ class PolygonLookup
 				} else {
 					return 23;
 				}
-			} else if ($latitude < 56.786789) {
+			} elseif ($latitude < 56.786789) {
 				return 23;
-			} else if ($latitude < 57.121727) {
+			} elseif ($latitude < 57.121727) {
 				if ($longitude < -133.828668) {
 					if ($longitude < -134.365097) {
 						if ($longitude < -134.656831) {
 							return 23;
-						} else if ($latitude < 56.935338) {
+						} elseif ($latitude < 56.935338) {
 							return 23;
 						} else {
 							return 359;
@@ -6555,7 +6555,7 @@ class PolygonLookup
 					} else {
 						return 23;
 					}
-				} else if ($longitude < -132.799744) {
+				} elseif ($longitude < -132.799744) {
 					return 23;
 				} else {
 					if ($this->polygons[902]->contains($latitude, $longitude)) {
@@ -6564,7 +6564,7 @@ class PolygonLookup
 						return 23;
 					}
 				}
-			} else if ($latitude < 57.559906) {
+			} elseif ($latitude < 57.559906) {
 				if ($longitude < -133.791367) {
 					return 359;
 				} else {
@@ -6577,10 +6577,10 @@ class PolygonLookup
 						return 359;
 					}
 				}
-			} else if ($latitude < 57.895130) {
+			} elseif ($latitude < 57.895130) {
 				if ($longitude < -133.146686) {
 					return 359;
-				} else if ($longitude < -133.143158) {
+				} elseif ($longitude < -133.143158) {
 					return 359;
 				} else {
 					if ($this->polygons[905]->contains($latitude, $longitude)) {
@@ -6589,7 +6589,7 @@ class PolygonLookup
 						return 359;
 					}
 				}
-			} else if ($latitude < 60.000000) {
+			} elseif ($latitude < 60.000000) {
 				if ($longitude < -133.977960) {
 					if ($latitude < 58.412121) {
 						return 359;
@@ -6610,10 +6610,10 @@ class PolygonLookup
 			} else {
 				return 324;
 			}
-		} else if ($latitude < 54.191448) {
+		} elseif ($latitude < 54.191448) {
 			if ($longitude < -127.544479) {
 				return 45;
-			} else if ($longitude < -118.607060) {
+			} elseif ($longitude < -118.607060) {
 				if ($this->polygons[908]->contains($latitude, $longitude)) {
 					return 116;
 				}
@@ -6622,7 +6622,7 @@ class PolygonLookup
 				} else {
 					return 45;
 				}
-			} else if ($longitude < -118.465407) {
+			} elseif ($longitude < -118.465407) {
 				if ($this->polygons[910]->contains($latitude, $longitude)) {
 					return 45;
 				} else {
@@ -6638,7 +6638,7 @@ class PolygonLookup
 					return 227;
 				}
 			}
-		} else if ($longitude < -130.888184) {
+		} elseif ($longitude < -130.888184) {
 			if ($latitude < 55.457150) {
 				if ($longitude < -131.176437) {
 					if ($latitude < 55.110420) {
@@ -6655,10 +6655,10 @@ class PolygonLookup
 						} else {
 							return 23;
 						}
-					} else if ($latitude < 55.283344) {
+					} elseif ($latitude < 55.283344) {
 						if ($longitude < -131.628221) {
 							return 23;
-						} else if ($longitude < -131.328003) {
+						} elseif ($longitude < -131.328003) {
 							if ($latitude < 55.190212) {
 								return 195;
 							} else {
@@ -6674,14 +6674,14 @@ class PolygonLookup
 					} else {
 						return 23;
 					}
-				} else if ($latitude < 54.626297) {
+				} elseif ($latitude < 54.626297) {
 					return 45;
 				} else {
 					return 23;
 				}
-			} else if ($latitude < 55.990891) {
+			} elseif ($latitude < 55.990891) {
 				return 23;
-			} else if ($latitude < 60.000000) {
+			} elseif ($latitude < 60.000000) {
 				if ($this->polygons[915]->contains($latitude, $longitude)) {
 					return 45;
 				} else {
@@ -6690,23 +6690,23 @@ class PolygonLookup
 			} else {
 				return 324;
 			}
-		} else if ($longitude < -130.147552) {
+		} elseif ($longitude < -130.147552) {
 			if ($latitude < 54.663948) {
 				return 45;
-			} else if ($latitude < 55.027081) {
+			} elseif ($latitude < 55.027081) {
 				if ($longitude < -130.246087) {
 					if ($longitude < -130.681854) {
 						return 23;
-					} else if ($longitude < -130.429123) {
+					} elseif ($longitude < -130.429123) {
 						if ($latitude < 54.759205) {
 							if ($this->polygons[916]->contains($latitude, $longitude)) {
 								return 23;
 							} else {
 								return 45;
 							}
-						} else if ($longitude < -130.630005) {
+						} elseif ($longitude < -130.630005) {
 							return 23;
-						} else if ($latitude < 54.770226) {
+						} elseif ($latitude < 54.770226) {
 							return 45;
 						} else {
 							if ($this->polygons[917]->contains($latitude, $longitude)) {
@@ -6718,7 +6718,7 @@ class PolygonLookup
 								return 23;
 							}
 						}
-					} else if ($latitude < 54.778793) {
+					} elseif ($latitude < 54.778793) {
 						return 45;
 					} else {
 						if ($this->polygons[919]->contains($latitude, $longitude)) {
@@ -6730,7 +6730,7 @@ class PolygonLookup
 				} else {
 					return 45;
 				}
-			} else if ($latitude < 60.000000) {
+			} elseif ($latitude < 60.000000) {
 				if ($latitude < 55.116245) {
 					if ($longitude < -130.180752) {
 						return 23;
@@ -6747,10 +6747,10 @@ class PolygonLookup
 			} else {
 				return 324;
 			}
-		} else if ($longitude < -129.451582) {
+		} elseif ($longitude < -129.451582) {
 			if ($latitude < 55.063297) {
 				return 45;
-			} else if ($latitude < 55.692310) {
+			} elseif ($latitude < 55.692310) {
 				if ($longitude < -129.989868) {
 					if ($latitude < 55.250920) {
 						if ($this->polygons[921]->contains($latitude, $longitude)) {
@@ -6768,7 +6768,7 @@ class PolygonLookup
 				} else {
 					return 45;
 				}
-			} else if ($latitude < 60.000000) {
+			} elseif ($latitude < 60.000000) {
 				if ($this->polygons[923]->contains($latitude, $longitude)) {
 					return 23;
 				} else {
@@ -6777,14 +6777,14 @@ class PolygonLookup
 			} else {
 				return 324;
 			}
-		} else if ($latitude < 60.000000) {
+		} elseif ($latitude < 60.000000) {
 			if ($longitude < -129.253204) {
 				return 45;
-			} else if ($longitude < -110.000000) {
+			} elseif ($longitude < -110.000000) {
 				if ($longitude < -120.000000) {
 					if ($longitude < -124.626602) {
 						return 45;
-					} else if ($latitude < 57.095724) {
+					} elseif ($latitude < 57.095724) {
 						if ($longitude < -122.313301) {
 							if ($latitude < 55.643586) {
 								if ($this->polygons[924]->contains($latitude, $longitude)) {
@@ -6799,7 +6799,7 @@ class PolygonLookup
 									return 45;
 								}
 							}
-						} else if ($latitude < 55.643586) {
+						} elseif ($latitude < 55.643586) {
 							if ($this->polygons[926]->contains($latitude, $longitude)) {
 								return 45;
 							} else {
@@ -6840,7 +6840,7 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call15(float $latitude, float $longitude) : ?int
+	protected function call15(float $latitude, float $longitude): ?int
 	{
 		if ($longitude < -123.791763) {
 			if ($longitude < -141.000000) {
@@ -6848,13 +6848,13 @@ class PolygonLookup
 					if ($longitude < -168.892441) {
 						if ($longitude < -174.074051) {
 							return 365;
-						} else if ($latitude < 64.842125) {
+						} elseif ($latitude < 64.842125) {
 							if ($latitude < 63.787884) {
 								return 134;
 							} else {
 								return 365;
 							}
-						} else if ($longitude < -169.002365) {
+						} elseif ($longitude < -169.002365) {
 							return 365;
 						} else {
 							return 134;
@@ -6865,7 +6865,7 @@ class PolygonLookup
 				} else {
 					return 370;
 				}
-			} else if ($latitude < 69.665329) {
+			} elseif ($latitude < 69.665329) {
 				if ($longitude < -135.200684) {
 					if ($latitude < 69.206284) {
 						if ($latitude < 68.963966) {
@@ -6886,17 +6886,17 @@ class PolygonLookup
 									return 142;
 								}
 							}
-						} else if ($longitude < -137.210114) {
+						} elseif ($longitude < -137.210114) {
 							return 324;
 						} else {
 							return 142;
 						}
-					} else if ($longitude < -138.279434) {
+					} elseif ($longitude < -138.279434) {
 						return 324;
 					} else {
 						return 142;
 					}
-				} else if ($latitude < 68.416974) {
+				} elseif ($latitude < 68.416974) {
 					if ($latitude < 67.004977) {
 						if ($longitude < -129.496223) {
 							if ($latitude < 63.808471) {
@@ -6908,7 +6908,7 @@ class PolygonLookup
 								} else {
 									return 324;
 								}
-							} else if ($longitude < -132.348454) {
+							} elseif ($longitude < -132.348454) {
 								if ($latitude < 65.406724) {
 									if ($this->polygons[936]->contains($latitude, $longitude)) {
 										return 142;
@@ -6941,7 +6941,7 @@ class PolygonLookup
 									return 142;
 								}
 							}
-						} else if ($latitude < 63.808471) {
+						} elseif ($latitude < 63.808471) {
 							if ($longitude < -126.643993) {
 								if ($this->polygons[943]->contains($latitude, $longitude)) {
 									return 324;
@@ -6977,7 +6977,7 @@ class PolygonLookup
 			} else {
 				return 142;
 			}
-		} else if ($latitude < 68.452187) {
+		} elseif ($latitude < 68.452187) {
 			if ($longitude < -109.338089) {
 				if ($longitude < -113.141373) {
 					if ($longitude < -114.096313) {
@@ -6989,7 +6989,7 @@ class PolygonLookup
 									} else {
 										return 108;
 									}
-								} else if ($latitude < 66.009722) {
+								} elseif ($latitude < 66.009722) {
 									if ($this->polygons[949]->contains($latitude, $longitude)) {
 										return 108;
 									} else {
@@ -6998,7 +6998,7 @@ class PolygonLookup
 								} else {
 									return 108;
 								}
-							} else if ($latitude < 65.964136) {
+							} elseif ($latitude < 65.964136) {
 								if ($this->polygons[950]->contains($latitude, $longitude)) {
 									return 108;
 								} else {
@@ -7007,7 +7007,7 @@ class PolygonLookup
 							} else {
 								return 108;
 							}
-						} else if ($latitude < 65.857001) {
+						} elseif ($latitude < 65.857001) {
 							if ($this->polygons[951]->contains($latitude, $longitude)) {
 								return 108;
 							} else {
@@ -7016,7 +7016,7 @@ class PolygonLookup
 						} else {
 							return 108;
 						}
-					} else if ($latitude < 65.703211) {
+					} elseif ($latitude < 65.703211) {
 						if ($this->polygons[952]->contains($latitude, $longitude)) {
 							return 108;
 						} else {
@@ -7025,7 +7025,7 @@ class PolygonLookup
 					} else {
 						return 108;
 					}
-				} else if ($latitude < 65.481310) {
+				} elseif ($latitude < 65.481310) {
 					if ($this->polygons[953]->contains($latitude, $longitude)) {
 						return 108;
 					} else {
@@ -7034,7 +7034,7 @@ class PolygonLookup
 				} else {
 					return 108;
 				}
-			} else if ($latitude < 66.829147) {
+			} elseif ($latitude < 66.829147) {
 				if ($latitude < 64.649325) {
 					if ($this->polygons[954]->contains($latitude, $longitude)) {
 						return 108;
@@ -7047,7 +7047,7 @@ class PolygonLookup
 			} else {
 				return 108;
 			}
-		} else if ($latitude < 72.171257) {
+		} elseif ($latitude < 72.171257) {
 			if ($latitude < 70.471046) {
 				if ($longitude < -113.461769) {
 					if ($longitude < -113.989479) {
@@ -7061,7 +7061,7 @@ class PolygonLookup
 							} else {
 								return 108;
 							}
-						} else if ($longitude < -117.239929) {
+						} elseif ($longitude < -117.239929) {
 							if ($latitude < 69.666817) {
 								if ($this->polygons[956]->contains($latitude, $longitude)) {
 									return 108;
@@ -7071,7 +7071,7 @@ class PolygonLookup
 							} else {
 								return 142;
 							}
-						} else if ($latitude < 69.653069) {
+						} elseif ($latitude < 69.653069) {
 							return 108;
 						} else {
 							if ($this->polygons[957]->contains($latitude, $longitude)) {
@@ -7080,7 +7080,7 @@ class PolygonLookup
 								return 142;
 							}
 						}
-					} else if ($latitude < 69.212112) {
+					} elseif ($latitude < 69.212112) {
 						return 108;
 					} else {
 						if ($this->polygons[958]->contains($latitude, $longitude)) {
@@ -7089,9 +7089,9 @@ class PolygonLookup
 							return 108;
 						}
 					}
-				} else if ($latitude < 68.873958) {
+				} elseif ($latitude < 68.873958) {
 					return 108;
-				} else if ($longitude < -112.620987) {
+				} elseif ($longitude < -112.620987) {
 					if ($latitude < 70.034142) {
 						if ($this->polygons[959]->contains($latitude, $longitude)) {
 							return 142;
@@ -7101,7 +7101,7 @@ class PolygonLookup
 					} else {
 						return 142;
 					}
-				} else if ($longitude < -112.567856) {
+				} elseif ($longitude < -112.567856) {
 					if ($latitude < 69.785159) {
 						if ($this->polygons[960]->contains($latitude, $longitude)) {
 							return 142;
@@ -7118,21 +7118,21 @@ class PolygonLookup
 						return 142;
 					}
 				}
-			} else if ($longitude < -109.971375) {
+			} elseif ($longitude < -109.971375) {
 				return 142;
 			} else {
 				return 108;
 			}
-		} else if ($longitude < -109.972572) {
+		} elseif ($longitude < -109.972572) {
 			return 142;
-		} else if ($longitude < -109.971375) {
+		} elseif ($longitude < -109.971375) {
 			return 142;
 		} else {
 			return 108;
 		}
 	}
 	
-	protected function call16(float $latitude, float $longitude) : ?int
+	protected function call16(float $latitude, float $longitude): ?int
 	{
 		if ($latitude < 57.616158) {
 			if ($latitude < 56.072720) {
@@ -7140,17 +7140,17 @@ class PolygonLookup
 					if ($latitude < 53.544559) {
 						if ($longitude < -79.220665) {
 							return 137;
-						} else if ($latitude < 53.295464) {
+						} elseif ($latitude < 53.295464) {
 							if ($longitude < -79.004341) {
 								return 137;
-							} else if ($longitude < -78.951660) {
+							} elseif ($longitude < -78.951660) {
 								if ($latitude < 53.037329) {
 									if ($latitude < 52.940544) {
 										return 137;
 									} else {
 										return 20;
 									}
-								} else if ($longitude < -78.976112) {
+								} elseif ($longitude < -78.976112) {
 									if ($latitude < 53.180402) {
 										return 20;
 									} else {
@@ -7159,7 +7159,7 @@ class PolygonLookup
 								} else {
 									return 20;
 								}
-							} else if ($longitude < -78.911201) {
+							} elseif ($longitude < -78.911201) {
 								if ($latitude < 52.978027) {
 									if ($latitude < 52.914364) {
 										return 20;
@@ -7176,7 +7176,7 @@ class PolygonLookup
 									return 20;
 								}
 							}
-						} else if ($latitude < 53.413036) {
+						} elseif ($latitude < 53.413036) {
 							if ($longitude < -79.010345) {
 								if ($latitude < 53.361423) {
 									return 137;
@@ -7187,9 +7187,9 @@ class PolygonLookup
 										return 20;
 									}
 								}
-							} else if ($longitude < -78.996750) {
+							} elseif ($longitude < -78.996750) {
 								return 137;
-							} else if ($longitude < -78.969765) {
+							} elseif ($longitude < -78.969765) {
 								if ($latitude < 53.309853) {
 									return 137;
 								} else {
@@ -7202,13 +7202,13 @@ class PolygonLookup
 									return 20;
 								}
 							}
-						} else if ($longitude < -79.115227) {
+						} elseif ($longitude < -79.115227) {
 							if ($latitude < 53.459244) {
 								return 20;
 							} else {
 								return 137;
 							}
-						} else if ($latitude < 53.434547) {
+						} elseif ($latitude < 53.434547) {
 							if ($longitude < -79.082458) {
 								return 137;
 							} else {
@@ -7221,13 +7221,13 @@ class PolygonLookup
 								return 20;
 							}
 						}
-					} else if ($latitude < 54.116554) {
+					} elseif ($latitude < 54.116554) {
 						if ($longitude < -79.182358) {
 							return 137;
-						} else if ($latitude < 53.833500) {
+						} elseif ($latitude < 53.833500) {
 							if ($longitude < -79.100655) {
 								return 137;
-							} else if ($latitude < 53.552872) {
+							} elseif ($latitude < 53.552872) {
 								return 20;
 							} else {
 								if ($this->polygons[966]->contains($latitude, $longitude)) {
@@ -7236,9 +7236,9 @@ class PolygonLookup
 									return 20;
 								}
 							}
-						} else if ($longitude < -79.174927) {
+						} elseif ($longitude < -79.174927) {
 							return 137;
-						} else if ($latitude < 53.874668) {
+						} elseif ($latitude < 53.874668) {
 							if ($longitude < -79.087925) {
 								return 20;
 							} else {
@@ -7251,10 +7251,10 @@ class PolygonLookup
 								return 20;
 							}
 						}
-					} else if ($latitude < 54.247169) {
+					} elseif ($latitude < 54.247169) {
 						if ($longitude < -79.412979) {
 							return 137;
-						} else if ($longitude < -79.237053) {
+						} elseif ($longitude < -79.237053) {
 							if ($latitude < 54.174984) {
 								if ($this->polygons[968]->contains($latitude, $longitude)) {
 									return 137;
@@ -7271,7 +7271,7 @@ class PolygonLookup
 								return 20;
 							}
 						}
-					} else if ($latitude < 54.416172) {
+					} elseif ($latitude < 54.416172) {
 						if ($longitude < -79.520157) {
 							return 137;
 						} else {
@@ -7281,16 +7281,16 @@ class PolygonLookup
 								return 20;
 							}
 						}
-					} else if ($latitude < 54.467125) {
+					} elseif ($latitude < 54.467125) {
 						if ($longitude < -79.543602) {
 							return 20;
 						} else {
 							return 137;
 						}
-					} else if ($longitude < -79.566742) {
+					} elseif ($longitude < -79.566742) {
 						if ($latitude < 54.554594) {
 							return 20;
-						} else if ($latitude < 54.600740) {
+						} elseif ($latitude < 54.600740) {
 							return 20;
 						} else {
 							return 137;
@@ -7302,11 +7302,11 @@ class PolygonLookup
 							return 20;
 						}
 					}
-				} else if ($latitude < 55.653851) {
+				} elseif ($latitude < 55.653851) {
 					if ($latitude < 54.798294) {
 						if ($longitude < -79.658430) {
 							return 137;
-						} else if ($longitude < -79.557785) {
+						} elseif ($longitude < -79.557785) {
 							if ($latitude < 54.722511) {
 								if ($this->polygons[972]->contains($latitude, $longitude)) {
 									return 137;
@@ -7316,20 +7316,20 @@ class PolygonLookup
 							} else {
 								return 137;
 							}
-						} else if ($latitude < 54.768631) {
+						} elseif ($latitude < 54.768631) {
 							if ($this->polygons[973]->contains($latitude, $longitude)) {
 								return 20;
 							} else {
 								return 137;
 							}
-						} else if ($longitude < -79.384746) {
+						} elseif ($longitude < -79.384746) {
 							return 20;
 						} else {
 							return 137;
 						}
-					} else if ($longitude < -79.441200) {
+					} elseif ($longitude < -79.441200) {
 						return 137;
-					} else if ($longitude < -77.706451) {
+					} elseif ($longitude < -77.706451) {
 						if ($latitude < 55.322748) {
 							if ($this->polygons[974]->contains($latitude, $longitude)) {
 								return 137;
@@ -7339,7 +7339,7 @@ class PolygonLookup
 						} else {
 							return 137;
 						}
-					} else if ($longitude < -77.671234) {
+					} elseif ($longitude < -77.671234) {
 						if ($latitude < 55.371513) {
 							return 20;
 						} else {
@@ -7352,7 +7352,7 @@ class PolygonLookup
 							return 137;
 						}
 					}
-				} else if ($longitude < -78.680573) {
+				} elseif ($longitude < -78.680573) {
 					return 137;
 				} else {
 					if ($this->polygons[976]->contains($latitude, $longitude)) {
@@ -7361,41 +7361,41 @@ class PolygonLookup
 						return 20;
 					}
 				}
-			} else if ($longitude < -76.914421) {
+			} elseif ($longitude < -76.914421) {
 				return 137;
-			} else if ($latitude < 56.715569) {
+			} elseif ($latitude < 56.715569) {
 				if ($longitude < -76.714203) {
 					return 137;
-				} else if ($latitude < 56.383667) {
+				} elseif ($latitude < 56.383667) {
 					if ($latitude < 56.352753) {
 						if ($this->polygons[977]->contains($latitude, $longitude)) {
 							return 137;
 						} else {
 							return 20;
 						}
-					} else if ($longitude < -76.608892) {
+					} elseif ($longitude < -76.608892) {
 						return 20;
 					} else {
 						return 137;
 					}
-				} else if ($longitude < -76.620346) {
+				} elseif ($longitude < -76.620346) {
 					return 137;
 				} else {
 					return 20;
 				}
-			} else if ($latitude < 57.060780) {
+			} elseif ($latitude < 57.060780) {
 				if ($longitude < -76.620895) {
 					return 137;
 				} else {
 					return 20;
 				}
-			} else if ($latitude < 57.274315) {
+			} elseif ($latitude < 57.274315) {
 				if ($longitude < -76.650459) {
 					return 137;
 				} else {
 					return 20;
 				}
-			} else if ($longitude < -76.866554) {
+			} elseif ($longitude < -76.866554) {
 				if ($latitude < 57.600049) {
 					return 20;
 				} else {
@@ -7408,21 +7408,21 @@ class PolygonLookup
 					return 20;
 				}
 			}
-		} else if ($latitude < 60.192261) {
+		} elseif ($latitude < 60.192261) {
 			if ($longitude < -78.628052) {
 				return 137;
-			} else if ($latitude < 58.644310) {
+			} elseif ($latitude < 58.644310) {
 				if ($latitude < 58.337955) {
 					if ($latitude < 58.169769) {
 						if ($longitude < -78.124222) {
 							return 137;
-						} else if ($longitude < -77.527397) {
+						} elseif ($longitude < -77.527397) {
 							if ($this->polygons[979]->contains($latitude, $longitude)) {
 								return 20;
 							} else {
 								return 137;
 							}
-						} else if ($longitude < -77.205544) {
+						} elseif ($longitude < -77.205544) {
 							if ($latitude < 58.004467) {
 								return 20;
 							} else {
@@ -7439,7 +7439,7 @@ class PolygonLookup
 								return 20;
 							}
 						}
-					} else if ($longitude < -77.701317) {
+					} elseif ($longitude < -77.701317) {
 						if ($latitude < 58.276955) {
 							return 137;
 						} else {
@@ -7459,10 +7459,10 @@ class PolygonLookup
 							return 20;
 						}
 					}
-				} else if ($longitude < -78.495689) {
+				} elseif ($longitude < -78.495689) {
 					if ($longitude < -78.583992) {
 						return 137;
-					} else if ($latitude < 58.579838) {
+					} elseif ($latitude < 58.579838) {
 						return 137;
 					} else {
 						if ($this->polygons[985]->contains($latitude, $longitude)) {
@@ -7471,19 +7471,19 @@ class PolygonLookup
 							return 137;
 						}
 					}
-				} else if ($longitude < -78.293175) {
+				} elseif ($longitude < -78.293175) {
 					if ($latitude < 58.508587) {
 						return 137;
 					} else {
 						return 20;
 					}
-				} else if ($latitude < 58.369335) {
+				} elseif ($latitude < 58.369335) {
 					if ($this->polygons[986]->contains($latitude, $longitude)) {
 						return 137;
 					} else {
 						return 20;
 					}
-				} else if ($latitude < 58.411152) {
+				} elseif ($latitude < 58.411152) {
 					if ($longitude < -78.077976) {
 						return 20;
 					} else {
@@ -7496,14 +7496,14 @@ class PolygonLookup
 						return 20;
 					}
 				}
-			} else if ($latitude < 59.110462) {
+			} elseif ($latitude < 59.110462) {
 				if ($longitude < -78.562523) {
 					if ($latitude < 58.697945) {
 						return 20;
-					} else if ($latitude < 58.829868) {
+					} elseif ($latitude < 58.829868) {
 						if ($longitude < -78.599251) {
 							return 137;
-						} else if ($latitude < 58.795967) {
+						} elseif ($latitude < 58.795967) {
 							if ($this->polygons[988]->contains($latitude, $longitude)) {
 								return 137;
 							} else {
@@ -7519,7 +7519,7 @@ class PolygonLookup
 							return 20;
 						}
 					}
-				} else if ($longitude < -78.392517) {
+				} elseif ($longitude < -78.392517) {
 					if ($latitude < 58.776039) {
 						if ($longitude < -78.530769) {
 							if ($latitude < 58.697453) {
@@ -7541,11 +7541,11 @@ class PolygonLookup
 							return 20;
 						}
 					}
-				} else if ($longitude < -78.187141) {
+				} elseif ($longitude < -78.187141) {
 					if ($longitude < -78.310013) {
 						if ($latitude < 58.976772) {
 							return 20;
-						} else if ($latitude < 59.015853) {
+						} elseif ($latitude < 59.015853) {
 							return 20;
 						} else {
 							return 137;
@@ -7560,25 +7560,25 @@ class PolygonLookup
 				} else {
 					return 20;
 				}
-			} else if ($longitude < -77.730873) {
+			} elseif ($longitude < -77.730873) {
 				if ($latitude < 59.389897) {
 					if ($this->polygons[993]->contains($latitude, $longitude)) {
 						return 137;
 					} else {
 						return 20;
 					}
-				} else if ($latitude < 59.555698) {
+				} elseif ($latitude < 59.555698) {
 					if ($this->polygons[994]->contains($latitude, $longitude)) {
 						return 137;
 					} else {
 						return 20;
 					}
-				} else if ($latitude < 59.722752) {
+				} elseif ($latitude < 59.722752) {
 					return 20;
 				} else {
 					return 137;
 				}
-			} else if ($longitude < -77.626198) {
+			} elseif ($longitude < -77.626198) {
 				if ($latitude < 59.736664) {
 					if ($latitude < 59.691815) {
 						return 20;
@@ -7588,7 +7588,7 @@ class PolygonLookup
 				} else {
 					return 20;
 				}
-			} else if ($longitude < -77.502136) {
+			} elseif ($longitude < -77.502136) {
 				if ($latitude < 59.780479) {
 					if ($latitude < 59.706220) {
 						return 20;
@@ -7602,7 +7602,7 @@ class PolygonLookup
 				} else {
 					return 20;
 				}
-			} else if ($latitude < 59.880760) {
+			} elseif ($latitude < 59.880760) {
 				if ($this->polygons[996]->contains($latitude, $longitude)) {
 					return 137;
 				} else {
@@ -7615,16 +7615,16 @@ class PolygonLookup
 					return 20;
 				}
 			}
-		} else if ($latitude < 64.088704) {
+		} elseif ($latitude < 64.088704) {
 			if ($latitude < 62.414604) {
 				if ($latitude < 61.487820) {
 					if ($longitude < -77.790176) {
 						if ($longitude < -77.962517) {
 							if ($latitude < 60.775932) {
 								return 137;
-							} else if ($longitude < -78.257248) {
+							} elseif ($longitude < -78.257248) {
 								return 137;
-							} else if ($longitude < -78.080475) {
+							} elseif ($longitude < -78.080475) {
 								if ($this->polygons[998]->contains($latitude, $longitude)) {
 									return 137;
 								} else {
@@ -7633,9 +7633,9 @@ class PolygonLookup
 							} else {
 								return 20;
 							}
-						} else if ($latitude < 60.744922) {
+						} elseif ($latitude < 60.744922) {
 							return 20;
-						} else if ($latitude < 60.768257) {
+						} elseif ($latitude < 60.768257) {
 							if ($longitude < -77.833070) {
 								return 20;
 							} else {
@@ -7644,13 +7644,13 @@ class PolygonLookup
 						} else {
 							return 20;
 						}
-					} else if ($latitude < 60.234997) {
+					} elseif ($latitude < 60.234997) {
 						if ($longitude < -77.638252) {
 							return 137;
 						} else {
 							return 20;
 						}
-					} else if ($longitude < -77.757133) {
+					} elseif ($longitude < -77.757133) {
 						if ($latitude < 61.259742) {
 							return 20;
 						} else {
@@ -7660,7 +7660,7 @@ class PolygonLookup
 								return 20;
 							}
 						}
-					} else if ($latitude < 60.274155) {
+					} elseif ($latitude < 60.274155) {
 						if ($longitude < -77.606060) {
 							return 20;
 						} else {
@@ -7673,21 +7673,21 @@ class PolygonLookup
 							return 20;
 						}
 					}
-				} else if ($longitude < -78.011292) {
+				} elseif ($longitude < -78.011292) {
 					if ($longitude < -79.269890) {
 						return 137;
-					} else if ($latitude < 62.366461) {
+					} elseif ($latitude < 62.366461) {
 						return 20;
 					} else {
 						return 137;
 					}
-				} else if ($longitude < -77.801331) {
+				} elseif ($longitude < -77.801331) {
 					if ($latitude < 61.679256) {
 						return 137;
 					} else {
 						return 20;
 					}
-				} else if ($longitude < -77.754745) {
+				} elseif ($longitude < -77.754745) {
 					if ($latitude < 61.635977) {
 						return 20;
 					} else {
@@ -7696,13 +7696,13 @@ class PolygonLookup
 				} else {
 					return 20;
 				}
-			} else if ($latitude < 63.518543) {
+			} elseif ($latitude < 63.518543) {
 				if ($latitude < 62.585182) {
 					if ($longitude < -78.029663) {
 						return 137;
-					} else if ($latitude < 62.422283) {
+					} elseif ($latitude < 62.422283) {
 						return 20;
-					} else if ($longitude < -77.859993) {
+					} elseif ($longitude < -77.859993) {
 						if ($latitude < 62.488289) {
 							return 20;
 						} else {
@@ -7718,7 +7718,7 @@ class PolygonLookup
 				} else {
 					return 137;
 				}
-			} else if ($longitude < -80.147430) {
+			} elseif ($longitude < -80.147430) {
 				return 64;
 			} else {
 				return 137;
@@ -7728,7 +7728,7 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call17(float $latitude, float $longitude) : ?int
+	protected function call17(float $latitude, float $longitude): ?int
 	{
 		if ($latitude < 68.311264) {
 			if ($longitude < -80.829857) {
@@ -7744,7 +7744,7 @@ class PolygonLookup
 											} else {
 												return 284;
 											}
-										} else if ($latitude < 59.072639) {
+										} elseif ($latitude < 59.072639) {
 											if ($longitude < -94.795906) {
 												if ($this->polygons[1003]->contains($latitude, $longitude)) {
 													return 307;
@@ -7758,7 +7758,7 @@ class PolygonLookup
 													return 284;
 												}
 											}
-										} else if ($latitude < 59.348492) {
+										} elseif ($latitude < 59.348492) {
 											if ($longitude < -94.781494) {
 												if ($this->polygons[1005]->contains($latitude, $longitude)) {
 													return 307;
@@ -7775,19 +7775,19 @@ class PolygonLookup
 												return 284;
 											}
 										}
-									} else if ($longitude < -93.572128) {
+									} elseif ($longitude < -93.572128) {
 										if ($longitude < -93.629883) {
 											if ($this->polygons[1007]->contains($latitude, $longitude)) {
 												return 307;
 											} else {
 												return 284;
 											}
-										} else if ($latitude < 58.785896) {
+										} elseif ($latitude < 58.785896) {
 											return 284;
 										} else {
 											return 307;
 										}
-									} else if ($longitude < -92.852669) {
+									} elseif ($longitude < -92.852669) {
 										if ($longitude < -93.029205) {
 											if ($this->polygons[1008]->contains($latitude, $longitude)) {
 												return 307;
@@ -7804,31 +7804,31 @@ class PolygonLookup
 									} else {
 										return 284;
 									}
-								} else if ($longitude < -102.008194) {
+								} elseif ($longitude < -102.008194) {
 									return 142;
 								} else {
 									return 307;
 								}
-							} else if ($longitude < -102.008194) {
+							} elseif ($longitude < -102.008194) {
 								return 142;
 							} else {
 								return 307;
 							}
-						} else if ($longitude < -92.635559) {
+						} elseif ($longitude < -92.635559) {
 							if ($latitude < 62.243343) {
 								if ($longitude < -102.008194) {
 									return 142;
 								} else {
 									return 307;
 								}
-							} else if ($longitude < -93.469185) {
+							} elseif ($longitude < -93.469185) {
 								if ($longitude < -102.008194) {
 									if ($this->polygons[1010]->contains($latitude, $longitude)) {
 										return 142;
 									} else {
 										return 108;
 									}
-								} else if ($latitude < 63.965088) {
+								} elseif ($latitude < 63.965088) {
 									return 307;
 								} else {
 									if ($this->polygons[1011]->contains($latitude, $longitude)) {
@@ -7837,7 +7837,7 @@ class PolygonLookup
 										return 307;
 									}
 								}
-							} else if ($latitude < 63.971210) {
+							} elseif ($latitude < 63.971210) {
 								return 307;
 							} else {
 								if ($this->polygons[1012]->contains($latitude, $longitude)) {
@@ -7846,7 +7846,7 @@ class PolygonLookup
 									return 307;
 								}
 							}
-						} else if ($latitude < 63.815735) {
+						} elseif ($latitude < 63.815735) {
 							return 307;
 						} else {
 							if ($this->polygons[1013]->contains($latitude, $longitude)) {
@@ -7858,7 +7858,7 @@ class PolygonLookup
 					} else {
 						return 108;
 					}
-				} else if ($latitude < 65.453690) {
+				} elseif ($latitude < 65.453690) {
 					if ($longitude < -89.957558) {
 						if ($latitude < 57.251442) {
 							if ($longitude < -90.639900) {
@@ -7877,7 +7877,7 @@ class PolygonLookup
 						} else {
 							return 307;
 						}
-					} else if ($longitude < -88.378349) {
+					} elseif ($longitude < -88.378349) {
 						if ($latitude < 56.984006) {
 							if ($latitude < 54.000000) {
 								if ($this->polygons[1016]->contains($latitude, $longitude)) {
@@ -7885,7 +7885,7 @@ class PolygonLookup
 								} else {
 									return 238;
 								}
-							} else if ($longitude < -88.990593) {
+							} elseif ($longitude < -88.990593) {
 								if ($this->polygons[1017]->contains($latitude, $longitude)) {
 									return 284;
 								} else {
@@ -7901,7 +7901,7 @@ class PolygonLookup
 						} else {
 							return 307;
 						}
-					} else if ($latitude < 63.038517) {
+					} elseif ($latitude < 63.038517) {
 						if ($latitude < 55.199287) {
 							if ($longitude < -82.117599) {
 								if ($longitude < -82.722824) {
@@ -7916,9 +7916,9 @@ class PolygonLookup
 							} else {
 								return 137;
 							}
-						} else if ($latitude < 55.223709) {
+						} elseif ($latitude < 55.223709) {
 							return 238;
-						} else if ($latitude < 56.591577) {
+						} elseif ($latitude < 56.591577) {
 							if ($longitude < -83.479806) {
 								return 238;
 							} else {
@@ -7927,7 +7927,7 @@ class PolygonLookup
 						} else {
 							return 64;
 						}
-					} else if ($longitude < -86.900711) {
+					} elseif ($longitude < -86.900711) {
 						if ($latitude < 63.907318) {
 							return 64;
 						} else {
@@ -7936,12 +7936,12 @@ class PolygonLookup
 					} else {
 						return 64;
 					}
-				} else if ($longitude < -84.382332) {
+				} elseif ($longitude < -84.382332) {
 					if ($latitude < 66.466286) {
 						if ($longitude < -84.991508) {
 							if ($longitude < -88.369072) {
 								return 307;
-							} else if ($latitude < 66.086807) {
+							} elseif ($latitude < 66.086807) {
 								if ($longitude < -85.977935) {
 									if ($this->polygons[1020]->contains($latitude, $longitude)) {
 										return 64;
@@ -7954,9 +7954,9 @@ class PolygonLookup
 							} else {
 								return 307;
 							}
-						} else if ($latitude < 65.950470) {
+						} elseif ($latitude < 65.950470) {
 							return 64;
-						} else if ($longitude < -84.818901) {
+						} elseif ($longitude < -84.818901) {
 							if ($latitude < 66.025795) {
 								return 64;
 							} else {
@@ -7965,7 +7965,7 @@ class PolygonLookup
 						} else {
 							return 137;
 						}
-					} else if ($longitude < -85.000000) {
+					} elseif ($longitude < -85.000000) {
 						if ($longitude < -89.000000) {
 							if ($latitude < 67.000000) {
 								if ($this->polygons[1021]->contains($latitude, $longitude)) {
@@ -7988,10 +7988,10 @@ class PolygonLookup
 			} else {
 				return $this->call16($latitude, $longitude);
 			}
-		} else if ($latitude < 69.936737) {
+		} elseif ($latitude < 69.936737) {
 			if ($longitude < -89.775421) {
 				return 108;
-			} else if ($longitude < -85.000000) {
+			} elseif ($longitude < -85.000000) {
 				if ($longitude < -89.000000) {
 					return 108;
 				} else {
@@ -8000,16 +8000,16 @@ class PolygonLookup
 			} else {
 				return 137;
 			}
-		} else if ($latitude < 74.186783) {
+		} elseif ($latitude < 74.186783) {
 			if ($longitude < -96.420212) {
 				if ($latitude < 71.806007) {
 					return 108;
-				} else if ($longitude < -101.909744) {
+				} elseif ($longitude < -101.909744) {
 					return 108;
-				} else if ($latitude < 73.199013) {
+				} elseif ($latitude < 73.199013) {
 					if ($longitude < -100.585571) {
 						return 108;
-					} else if ($longitude < -98.208565) {
+					} elseif ($longitude < -98.208565) {
 						if ($latitude < 72.802119) {
 							return 108;
 						} else {
@@ -8022,14 +8022,14 @@ class PolygonLookup
 								return 108;
 							}
 						}
-					} else if ($latitude < 72.869066) {
+					} elseif ($latitude < 72.869066) {
 						if ($longitude < -96.998177) {
 							if ($this->polygons[1024]->contains($latitude, $longitude)) {
 								return 307;
 							} else {
 								return 108;
 							}
-						} else if ($latitude < 72.679507) {
+						} elseif ($latitude < 72.679507) {
 							if ($this->polygons[1025]->contains($latitude, $longitude)) {
 								return 307;
 							} else {
@@ -8044,18 +8044,18 @@ class PolygonLookup
 				} else {
 					return 307;
 				}
-			} else if ($longitude < -85.000000) {
+			} elseif ($longitude < -85.000000) {
 				if ($longitude < -90.483345) {
 					if ($latitude < 72.096191) {
 						return 108;
-					} else if ($latitude < 72.603363) {
+					} elseif ($latitude < 72.603363) {
 						if ($longitude < -95.507271) {
 							if ($longitude < -96.268059) {
 								return 108;
 							} else {
 								return 307;
 							}
-						} else if ($longitude < -95.335034) {
+						} elseif ($longitude < -95.335034) {
 							return 307;
 						} else {
 							if ($this->polygons[1026]->contains($latitude, $longitude)) {
@@ -8073,21 +8073,21 @@ class PolygonLookup
 			} else {
 				return 137;
 			}
-		} else if ($latitude < 77.060905) {
+		} elseif ($latitude < 77.060905) {
 			if ($longitude < -98.114273) {
 				if ($longitude < -102.000000) {
 					return 108;
 				} else {
 					return 307;
 				}
-			} else if ($longitude < -96.694435) {
+			} elseif ($longitude < -96.694435) {
 				return 307;
-			} else if ($longitude < -93.393501) {
+			} elseif ($longitude < -93.393501) {
 				if ($latitude < 75.642746) {
 					if ($latitude < 74.746109) {
 						if ($longitude < -96.132774) {
 							return 307;
-						} else if ($longitude < -95.229347) {
+						} elseif ($longitude < -95.229347) {
 							if ($latitude < 74.697929) {
 								return 153;
 							} else {
@@ -8096,7 +8096,7 @@ class PolygonLookup
 						} else {
 							return 153;
 						}
-					} else if ($latitude < 74.843742) {
+					} elseif ($latitude < 74.843742) {
 						if ($longitude < -96.103386) {
 							return 153;
 						} else {
@@ -8115,25 +8115,25 @@ class PolygonLookup
 				} else {
 					return 307;
 				}
-			} else if ($longitude < -85.000000) {
+			} elseif ($longitude < -85.000000) {
 				return 307;
 			} else {
 				return 137;
 			}
-		} else if ($longitude < -92.025925) {
+		} elseif ($longitude < -92.025925) {
 			if ($longitude < -102.000000) {
 				return 108;
 			} else {
 				return 307;
 			}
-		} else if ($longitude < -85.000000) {
+		} elseif ($longitude < -85.000000) {
 			return 307;
 		} else {
 			return 137;
 		}
 	}
 	
-	protected function call18(float $latitude, float $longitude) : ?int
+	protected function call18(float $latitude, float $longitude): ?int
 	{
 		if ($latitude < 56.190918) {
 			if ($longitude < -59.178490) {
@@ -8141,7 +8141,7 @@ class PolygonLookup
 					if ($longitude < -63.322098) {
 						if ($longitude < -69.141731) {
 							return 20;
-						} else if ($longitude < -66.231915) {
+						} elseif ($longitude < -66.231915) {
 							if ($latitude < 54.544703) {
 								if ($longitude < -67.686823) {
 									if ($this->polygons[1029]->contains($latitude, $longitude)) {
@@ -8152,7 +8152,7 @@ class PolygonLookup
 									} else {
 										return 20;
 									}
-								} else if ($latitude < 53.721595) {
+								} elseif ($latitude < 53.721595) {
 									if ($this->polygons[1031]->contains($latitude, $longitude)) {
 										return 182;
 									}
@@ -8175,15 +8175,15 @@ class PolygonLookup
 									return 20;
 								}
 							}
-						} else if ($latitude < 54.544703) {
+						} elseif ($latitude < 54.544703) {
 							return 182;
-						} else if ($longitude < -64.777006) {
+						} elseif ($longitude < -64.777006) {
 							if ($this->polygons[1035]->contains($latitude, $longitude)) {
 								return 182;
 							} else {
 								return 20;
 							}
-						} else if ($latitude < 55.367810) {
+						} elseif ($latitude < 55.367810) {
 							if ($this->polygons[1036]->contains($latitude, $longitude)) {
 								return 20;
 							} else {
@@ -8202,7 +8202,7 @@ class PolygonLookup
 				} else {
 					return 182;
 				}
-			} else if ($latitude < 53.691547) {
+			} elseif ($latitude < 53.691547) {
 				if ($longitude < -56.276463) {
 					if ($latitude < 53.630226) {
 						if ($longitude < -57.271252) {
@@ -8227,23 +8227,23 @@ class PolygonLookup
 			} else {
 				return 182;
 			}
-		} else if ($longitude < -62.987293) {
+		} elseif ($longitude < -62.987293) {
 			if ($longitude < -67.891647) {
 				if ($longitude < -69.269768) {
 					if ($longitude < -69.456772) {
 						if ($longitude < -69.770439) {
 							if ($longitude < -69.818451) {
 								return 20;
-							} else if ($latitude < 58.711903) {
+							} elseif ($latitude < 58.711903) {
 								return 20;
-							} else if ($longitude < -69.791435) {
+							} elseif ($longitude < -69.791435) {
 								return 20;
-							} else if ($latitude < 58.928640) {
+							} elseif ($latitude < 58.928640) {
 								return 20;
 							} else {
 								return 137;
 							}
-						} else if ($latitude < 58.798076) {
+						} elseif ($latitude < 58.798076) {
 							if ($longitude < -69.671379) {
 								if ($latitude < 58.723164) {
 									return 20;
@@ -8253,7 +8253,7 @@ class PolygonLookup
 							} else {
 								return 20;
 							}
-						} else if ($longitude < -69.700226) {
+						} elseif ($longitude < -69.700226) {
 							if ($latitude < 58.928741) {
 								return 20;
 							} else {
@@ -8266,7 +8266,7 @@ class PolygonLookup
 								return 20;
 							}
 						}
-					} else if ($latitude < 58.900829) {
+					} elseif ($latitude < 58.900829) {
 						if ($longitude < -69.454346) {
 							return 20;
 						} else {
@@ -8276,20 +8276,20 @@ class PolygonLookup
 								return 20;
 							}
 						}
-					} else if ($latitude < 58.986942) {
+					} elseif ($latitude < 58.986942) {
 						if ($longitude < -69.391823) {
 							return 137;
 						} else {
 							return 20;
 						}
-					} else if ($latitude < 59.032063) {
+					} elseif ($latitude < 59.032063) {
 						if ($longitude < -69.430695) {
 							if ($latitude < 59.015503) {
 								return 20;
 							} else {
 								return 137;
 							}
-						} else if ($longitude < -69.336906) {
+						} elseif ($longitude < -69.336906) {
 							return 20;
 						} else {
 							return 137;
@@ -8297,7 +8297,7 @@ class PolygonLookup
 					} else {
 						return 20;
 					}
-				} else if ($latitude < 58.919376) {
+				} elseif ($latitude < 58.919376) {
 					if ($longitude < -68.975906) {
 						if ($longitude < -69.177109) {
 							if ($this->polygons[1042]->contains($latitude, $longitude)) {
@@ -8308,7 +8308,7 @@ class PolygonLookup
 						} else {
 							return 20;
 						}
-					} else if ($longitude < -68.692970) {
+					} elseif ($longitude < -68.692970) {
 						if ($latitude < 57.985935) {
 							if ($this->polygons[1043]->contains($latitude, $longitude)) {
 								return 137;
@@ -8325,10 +8325,10 @@ class PolygonLookup
 					} else {
 						return 20;
 					}
-				} else if ($longitude < -69.095367) {
+				} elseif ($longitude < -69.095367) {
 					if ($longitude < -69.227913) {
 						return 20;
-					} else if ($latitude < 58.967100) {
+					} elseif ($latitude < 58.967100) {
 						if ($longitude < -69.160118) {
 							return 20;
 						} else {
@@ -8344,7 +8344,7 @@ class PolygonLookup
 				} else {
 					return 137;
 				}
-			} else if ($longitude < -65.941536) {
+			} elseif ($longitude < -65.941536) {
 				if ($longitude < -66.467194) {
 					if ($longitude < -67.493484) {
 						if ($longitude < -67.852905) {
@@ -8359,7 +8359,7 @@ class PolygonLookup
 								return 20;
 							}
 						}
-					} else if ($latitude < 58.717937) {
+					} elseif ($latitude < 58.717937) {
 						if ($this->polygons[1048]->contains($latitude, $longitude)) {
 							return 166;
 						} else {
@@ -8368,14 +8368,14 @@ class PolygonLookup
 					} else {
 						return 166;
 					}
-				} else if ($latitude < 58.867237) {
+				} elseif ($latitude < 58.867237) {
 					if ($longitude < -66.127945) {
 						if ($this->polygons[1049]->contains($latitude, $longitude)) {
 							return 166;
 						} else {
 							return 20;
 						}
-					} else if ($latitude < 58.730328) {
+					} elseif ($latitude < 58.730328) {
 						return 20;
 					} else {
 						if ($this->polygons[1050]->contains($latitude, $longitude)) {
@@ -8384,12 +8384,12 @@ class PolygonLookup
 							return 20;
 						}
 					}
-				} else if ($latitude < 58.928638) {
+				} elseif ($latitude < 58.928638) {
 					return 20;
 				} else {
 					return 166;
 				}
-			} else if ($longitude < -65.824425) {
+			} elseif ($longitude < -65.824425) {
 				if ($latitude < 58.990658) {
 					if ($latitude < 58.848312) {
 						return 20;
@@ -8403,11 +8403,11 @@ class PolygonLookup
 				} else {
 					return 166;
 				}
-			} else if ($longitude < -65.671173) {
+			} elseif ($longitude < -65.671173) {
 				if ($latitude < 59.082661) {
 					if ($latitude < 58.991425) {
 						return 20;
-					} else if ($longitude < -65.815163) {
+					} elseif ($longitude < -65.815163) {
 						return 166;
 					} else {
 						if ($this->polygons[1052]->contains($latitude, $longitude)) {
@@ -8416,9 +8416,9 @@ class PolygonLookup
 							return 20;
 						}
 					}
-				} else if ($longitude < -65.750923) {
+				} elseif ($longitude < -65.750923) {
 					return 166;
-				} else if ($latitude < 59.146431) {
+				} elseif ($latitude < 59.146431) {
 					if ($this->polygons[1053]->contains($latitude, $longitude)) {
 						return 20;
 					} else {
@@ -8427,7 +8427,7 @@ class PolygonLookup
 				} else {
 					return 20;
 				}
-			} else if ($longitude < -63.468971) {
+			} elseif ($longitude < -63.468971) {
 				if ($longitude < -65.599258) {
 					if ($latitude < 59.055573) {
 						if ($this->polygons[1054]->contains($latitude, $longitude)) {
@@ -8438,13 +8438,13 @@ class PolygonLookup
 					} else {
 						return 20;
 					}
-				} else if ($latitude < 57.734932) {
+				} elseif ($latitude < 57.734932) {
 					if ($this->polygons[1055]->contains($latitude, $longitude)) {
 						return 182;
 					} else {
 						return 20;
 					}
-				} else if ($longitude < -64.534115) {
+				} elseif ($longitude < -64.534115) {
 					if ($this->polygons[1056]->contains($latitude, $longitude)) {
 						return 182;
 					} else {
@@ -8468,13 +8468,13 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call19(float $latitude, float $longitude) : ?int
+	protected function call19(float $latitude, float $longitude): ?int
 	{
 		if ($longitude < -54.102795) {
 			if ($latitude < 63.936062) {
 				if ($latitude < 59.278946) {
 					return $this->call18($latitude, $longitude);
-				} else if ($longitude < -67.629715) {
+				} elseif ($longitude < -67.629715) {
 					if ($latitude < 63.325298) {
 						if ($longitude < -70.120392) {
 							if ($latitude < 62.477734) {
@@ -8482,7 +8482,7 @@ class PolygonLookup
 							} else {
 								return 137;
 							}
-						} else if ($longitude < -68.000000) {
+						} elseif ($longitude < -68.000000) {
 							if ($latitude < 61.080311) {
 								if ($latitude < 60.850647) {
 									if ($latitude < 59.984997) {
@@ -8492,15 +8492,15 @@ class PolygonLookup
 											} else {
 												return 20;
 											}
-										} else if ($longitude < -69.638916) {
+										} elseif ($longitude < -69.638916) {
 											if ($this->polygons[1060]->contains($latitude, $longitude)) {
 												return 137;
 											} else {
 												return 20;
 											}
-										} else if ($latitude < 59.391781) {
+										} elseif ($latitude < 59.391781) {
 											return 20;
-										} else if ($latitude < 59.699116) {
+										} elseif ($latitude < 59.699116) {
 											if ($this->polygons[1061]->contains($latitude, $longitude)) {
 												return 137;
 											} else {
@@ -8513,9 +8513,9 @@ class PolygonLookup
 												return 20;
 											}
 										}
-									} else if ($longitude < -69.876434) {
+									} elseif ($longitude < -69.876434) {
 										return 20;
-									} else if ($longitude < -69.363411) {
+									} elseif ($longitude < -69.363411) {
 										if ($latitude < 60.083309) {
 											if ($longitude < -69.607597) {
 												return 20;
@@ -8532,7 +8532,7 @@ class PolygonLookup
 									} else {
 										return 137;
 									}
-								} else if ($longitude < -70.065117) {
+								} elseif ($longitude < -70.065117) {
 									if ($latitude < 60.979642) {
 										if ($latitude < 60.881176) {
 											return 20;
@@ -8543,12 +8543,12 @@ class PolygonLookup
 												return 20;
 											}
 										}
-									} else if ($latitude < 61.035766) {
+									} elseif ($latitude < 61.035766) {
 										return 20;
 									} else {
 										return 137;
 									}
-								} else if ($longitude < -69.893997) {
+								} elseif ($longitude < -69.893997) {
 									if ($latitude < 60.913162) {
 										return 137;
 									} else {
@@ -8567,19 +8567,19 @@ class PolygonLookup
 						} else {
 							return 166;
 						}
-					} else if ($longitude < -68.000000) {
+					} elseif ($longitude < -68.000000) {
 						return 137;
 					} else {
 						return 166;
 					}
-				} else if ($latitude < 60.695583) {
+				} elseif ($latitude < 60.695583) {
 					if ($latitude < 60.372677) {
 						if ($longitude < -64.353218) {
 							if ($longitude < -65.378146) {
 								if ($latitude < 59.453045) {
 									if ($longitude < -65.590347) {
 										return 166;
-									} else if ($longitude < -65.506706) {
+									} elseif ($longitude < -65.506706) {
 										if ($latitude < 59.385551) {
 											if ($this->polygons[1066]->contains($latitude, $longitude)) {
 												return 166;
@@ -8589,7 +8589,7 @@ class PolygonLookup
 										} else {
 											return 166;
 										}
-									} else if ($latitude < 59.336494) {
+									} elseif ($latitude < 59.336494) {
 										if ($this->polygons[1067]->contains($latitude, $longitude)) {
 											return 166;
 										} else {
@@ -8598,11 +8598,11 @@ class PolygonLookup
 									} else {
 										return 20;
 									}
-								} else if ($longitude < -65.469658) {
+								} elseif ($longitude < -65.469658) {
 									if ($latitude < 59.504585) {
 										if ($longitude < -65.523506) {
 											return 166;
-										} else if ($latitude < 59.484665) {
+										} elseif ($latitude < 59.484665) {
 											return 20;
 										} else {
 											return 166;
@@ -8613,9 +8613,9 @@ class PolygonLookup
 								} else {
 									return 20;
 								}
-							} else if ($longitude < -65.101463) {
+							} elseif ($longitude < -65.101463) {
 								return 20;
-							} else if ($latitude < 60.227196) {
+							} elseif ($latitude < 60.227196) {
 								if ($latitude < 59.753071) {
 									if ($this->polygons[1068]->contains($latitude, $longitude)) {
 										return 20;
@@ -8648,36 +8648,36 @@ class PolygonLookup
 				} else {
 					return 166;
 				}
-			} else if ($latitude < 67.483208) {
+			} elseif ($latitude < 67.483208) {
 				if ($longitude < -68.000000) {
 					return 137;
 				} else {
 					return 166;
 				}
-			} else if ($longitude < -60.919846) {
+			} elseif ($longitude < -60.919846) {
 				if ($latitude < 70.351471) {
 					if ($longitude < -68.000000) {
 						return 137;
 					} else {
 						return 166;
 					}
-				} else if ($longitude < -68.000000) {
+				} elseif ($longitude < -68.000000) {
 					if ($latitude < 72.289263) {
 						return 137;
-					} else if ($latitude < 78.368271) {
+					} elseif ($latitude < 78.368271) {
 						return 306;
-					} else if ($longitude < -72.985229) {
+					} elseif ($longitude < -72.985229) {
 						return 137;
-					} else if ($latitude < 79.070419) {
+					} elseif ($latitude < 79.070419) {
 						return 306;
 					} else {
 						return 137;
 					}
-				} else if ($latitude < 77.469055) {
+				} elseif ($latitude < 77.469055) {
 					if ($longitude < -63.736012) {
 						if ($latitude < 76.134232) {
 							return 306;
-						} else if ($longitude < -66.141296) {
+						} elseif ($longitude < -66.141296) {
 							return 306;
 						} else {
 							if ($this->polygons[1072]->contains($latitude, $longitude)) {
@@ -8689,11 +8689,11 @@ class PolygonLookup
 					} else {
 						return 16;
 					}
-				} else if ($latitude < 80.684196) {
+				} elseif ($latitude < 80.684196) {
 					if ($latitude < 79.171616) {
 						if ($longitude < -66.601120) {
 							return 306;
-						} else if ($latitude < 77.519371) {
+						} elseif ($latitude < 77.519371) {
 							if ($longitude < -66.168510) {
 								return 306;
 							} else {
@@ -8713,9 +8713,9 @@ class PolygonLookup
 					} else {
 						return 16;
 					}
-				} else if ($longitude < -66.286903) {
+				} elseif ($longitude < -66.286903) {
 					return 166;
-				} else if ($latitude < 81.547485) {
+				} elseif ($latitude < 81.547485) {
 					if ($longitude < -64.459412) {
 						if ($latitude < 81.074245) {
 							return 16;
@@ -8725,7 +8725,7 @@ class PolygonLookup
 					} else {
 						return 16;
 					}
-				} else if ($longitude < -64.431755) {
+				} elseif ($longitude < -64.431755) {
 					return 166;
 				} else {
 					if ($this->polygons[1075]->contains($latitude, $longitude)) {
@@ -8737,18 +8737,18 @@ class PolygonLookup
 			} else {
 				return 16;
 			}
-		} else if ($longitude < -24.752028) {
+		} elseif ($longitude < -24.752028) {
 			return 16;
-		} else if ($latitude < 60.846443) {
+		} elseif ($latitude < 60.846443) {
 			if ($longitude < -1.743917) {
 				if ($latitude < 55.436916) {
 					if ($longitude < -8.195111) {
 						return 285;
-					} else if ($longitude < -5.434611) {
+					} elseif ($longitude < -5.434611) {
 						if ($longitude < -6.002389) {
 							if ($latitude < 53.499805) {
 								return 285;
-							} else if ($latitude < 55.253502) {
+							} elseif ($latitude < 55.253502) {
 								if ($longitude < -7.098750) {
 									if ($latitude < 54.376654) {
 										if ($this->polygons[1076]->contains($latitude, $longitude)) {
@@ -8773,7 +8773,7 @@ class PolygonLookup
 										return 285;
 									}
 								}
-							} else if ($longitude < -6.953667) {
+							} elseif ($longitude < -6.953667) {
 								return 285;
 							} else {
 								return 303;
@@ -8781,9 +8781,9 @@ class PolygonLookup
 						} else {
 							return 303;
 						}
-					} else if ($latitude < 53.433556) {
+					} elseif ($latitude < 53.433556) {
 						return 303;
-					} else if ($longitude < -4.311500) {
+					} elseif ($longitude < -4.311500) {
 						if ($latitude < 54.419724) {
 							return 242;
 						} else {
@@ -8795,7 +8795,7 @@ class PolygonLookup
 				} else {
 					return 303;
 				}
-			} else if ($latitude < 59.846554) {
+			} elseif ($latitude < 59.846554) {
 				if ($latitude < 59.034222) {
 					if ($latitude < 55.619720) {
 						if ($longitude < 5.153944) {
@@ -8804,9 +8804,9 @@ class PolygonLookup
 							} else {
 								return 385;
 							}
-						} else if ($longitude < 6.615556) {
+						} elseif ($longitude < 6.615556) {
 							return 385;
-						} else if ($latitude < 53.470085) {
+						} elseif ($latitude < 53.470085) {
 							if ($this->polygons[1080]->contains($latitude, $longitude)) {
 								return 6;
 							} else {
@@ -8818,27 +8818,27 @@ class PolygonLookup
 					} else {
 						return 355;
 					}
-				} else if ($longitude < -1.614194) {
+				} elseif ($longitude < -1.614194) {
 					return 303;
 				} else {
 					return 355;
 				}
-			} else if ($longitude < 4.695556) {
+			} elseif ($longitude < 4.695556) {
 				return 303;
 			} else {
 				return 355;
 			}
-		} else if ($latitude < 72.417862) {
+		} elseif ($latitude < 72.417862) {
 			if ($longitude < 4.650167) {
 				if ($longitude < -17.130816) {
 					if ($latitude < 66.563774) {
 						return 21;
-					} else if ($longitude < -21.973426) {
+					} elseif ($longitude < -21.973426) {
 						if ($latitude < 70.304049) {
 							return 16;
-						} else if ($latitude < 70.436001) {
+						} elseif ($latitude < 70.436001) {
 							return 73;
-						} else if ($latitude < 72.348299) {
+						} elseif ($latitude < 72.348299) {
 							if ($longitude < -24.400325) {
 								if ($this->polygons[1081]->contains($latitude, $longitude)) {
 									return 73;
@@ -8858,9 +8858,9 @@ class PolygonLookup
 					} else {
 						return 73;
 					}
-				} else if ($longitude < -13.495815) {
+				} elseif ($longitude < -13.495815) {
 					return 21;
-				} else if ($longitude < -7.920997) {
+				} elseif ($longitude < -7.920997) {
 					return 111;
 				} else {
 					return 361;
@@ -8868,10 +8868,10 @@ class PolygonLookup
 			} else {
 				return 355;
 			}
-		} else if ($latitude < 77.352264) {
+		} elseif ($latitude < 77.352264) {
 			if ($latitude < 75.090202) {
 				return 16;
-			} else if ($latitude < 76.526947) {
+			} elseif ($latitude < 76.526947) {
 				if ($latitude < 76.369011) {
 					if ($longitude < -20.440577) {
 						if ($longitude < -21.152466) {
@@ -8887,7 +8887,7 @@ class PolygonLookup
 								} else {
 									return 16;
 								}
-							} else if ($longitude < -22.890951) {
+							} elseif ($longitude < -22.890951) {
 								if ($this->polygons[1086]->contains($latitude, $longitude)) {
 									return 25;
 								} else {
@@ -8896,7 +8896,7 @@ class PolygonLookup
 							} else {
 								return 25;
 							}
-						} else if ($latitude < 75.841735) {
+						} elseif ($latitude < 75.841735) {
 							if ($latitude < 75.325089) {
 								return 16;
 							} else {
@@ -8909,7 +8909,7 @@ class PolygonLookup
 						} else {
 							return 25;
 						}
-					} else if ($latitude < 75.798696) {
+					} elseif ($latitude < 75.798696) {
 						if ($longitude < -19.495006) {
 							if ($this->polygons[1088]->contains($latitude, $longitude)) {
 								return 25;
@@ -8922,7 +8922,7 @@ class PolygonLookup
 					} else {
 						return 25;
 					}
-				} else if ($longitude < -22.880474) {
+				} elseif ($longitude < -22.880474) {
 					if ($this->polygons[1089]->contains($latitude, $longitude)) {
 						return 25;
 					} else {
@@ -8931,7 +8931,7 @@ class PolygonLookup
 				} else {
 					return 25;
 				}
-			} else if ($longitude < -22.825729) {
+			} elseif ($longitude < -22.825729) {
 				if ($this->polygons[1090]->contains($latitude, $longitude)) {
 					return 25;
 				} else {
@@ -8940,7 +8940,7 @@ class PolygonLookup
 			} else {
 				return 25;
 			}
-		} else if ($latitude < 78.385384) {
+		} elseif ($latitude < 78.385384) {
 			if ($longitude < -21.049835) {
 				if ($longitude < -22.757199) {
 					if ($this->polygons[1091]->contains($latitude, $longitude)) {
@@ -8954,7 +8954,7 @@ class PolygonLookup
 			} else {
 				return 25;
 			}
-		} else if ($latitude < 79.653531) {
+		} elseif ($latitude < 79.653531) {
 			if ($longitude < -19.217758) {
 				if ($latitude < 78.890169) {
 					if ($longitude < -22.723715) {
@@ -8966,13 +8966,13 @@ class PolygonLookup
 					} else {
 						return 25;
 					}
-				} else if ($longitude < -22.673079) {
+				} elseif ($longitude < -22.673079) {
 					if ($this->polygons[1093]->contains($latitude, $longitude)) {
 						return 25;
 					} else {
 						return 16;
 					}
-				} else if ($latitude < 79.360726) {
+				} elseif ($latitude < 79.360726) {
 					return 25;
 				} else {
 					if ($this->polygons[1094]->contains($latitude, $longitude)) {
@@ -8989,12 +8989,12 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call20(float $latitude, float $longitude) : ?int
+	protected function call20(float $latitude, float $longitude): ?int
 	{
 		if ($latitude < -28.572058) {
 			if ($latitude < -33.408588) {
 				return 169;
-			} else if ($longitude < 19.539615) {
+			} elseif ($longitude < 19.539615) {
 				if ($longitude < 16.478859) {
 					if ($this->polygons[1095]->contains($latitude, $longitude)) {
 						return 189;
@@ -9008,18 +9008,18 @@ class PolygonLookup
 						return 169;
 					}
 				}
-			} else if ($longitude < 25.950998) {
+			} elseif ($longitude < 25.950998) {
 				return 169;
-			} else if ($longitude < 29.156690) {
+			} elseif ($longitude < 29.156690) {
 				if ($latitude < -30.990323) {
 					return 169;
-				} else if ($longitude < 27.553844) {
+				} elseif ($longitude < 27.553844) {
 					if ($this->polygons[1097]->contains($latitude, $longitude)) {
 						return 339;
 					} else {
 						return 169;
 					}
-				} else if ($latitude < -29.781190) {
+				} elseif ($latitude < -29.781190) {
 					if ($this->polygons[1098]->contains($latitude, $longitude)) {
 						return 339;
 					} else {
@@ -9042,7 +9042,7 @@ class PolygonLookup
 					return 169;
 				}
 			}
-		} else if ($longitude < 29.360781) {
+		} elseif ($longitude < 29.360781) {
 			if ($longitude < 17.403767) {
 				if ($latitude < -28.037775) {
 					if ($longitude < 17.083324) {
@@ -9051,7 +9051,7 @@ class PolygonLookup
 						} else {
 							return 189;
 						}
-					} else if ($latitude < -28.411060) {
+					} elseif ($latitude < -28.411060) {
 						if ($this->polygons[1103]->contains($latitude, $longitude)) {
 							return 189;
 						} else {
@@ -9064,9 +9064,9 @@ class PolygonLookup
 							return 169;
 						}
 					}
-				} else if ($latitude < -26.993246) {
+				} elseif ($latitude < -26.993246) {
 					return 189;
-				} else if ($latitude < -16.959894) {
+				} elseif ($latitude < -16.959894) {
 					if ($longitude < 13.142432) {
 						if ($this->polygons[1105]->contains($latitude, $longitude)) {
 							return 299;
@@ -9083,7 +9083,7 @@ class PolygonLookup
 				} else {
 					return 299;
 				}
-			} else if ($latitude < -22.090446) {
+			} elseif ($latitude < -22.090446) {
 				if ($longitude < 23.382274) {
 					if ($latitude < -25.331252) {
 						if ($longitude < 20.393020) {
@@ -9092,9 +9092,9 @@ class PolygonLookup
 							} else {
 								return 189;
 							}
-						} else if ($latitude < -26.951655) {
+						} elseif ($latitude < -26.951655) {
 							return 169;
-						} else if ($longitude < 21.887647) {
+						} elseif ($longitude < 21.887647) {
 							if ($this->polygons[1108]->contains($latitude, $longitude)) {
 								return 12;
 							} else {
@@ -9120,13 +9120,13 @@ class PolygonLookup
 							return 12;
 						}
 					}
-				} else if ($latitude < -25.331252) {
+				} elseif ($latitude < -25.331252) {
 					if ($this->polygons[1113]->contains($latitude, $longitude)) {
 						return 12;
 					} else {
 						return 169;
 					}
-				} else if ($longitude < 26.371527) {
+				} elseif ($longitude < 26.371527) {
 					if ($this->polygons[1114]->contains($latitude, $longitude)) {
 						return 169;
 					}
@@ -9135,13 +9135,13 @@ class PolygonLookup
 					} else {
 						return 12;
 					}
-				} else if ($latitude < -23.710849) {
+				} elseif ($latitude < -23.710849) {
 					if ($this->polygons[1116]->contains($latitude, $longitude)) {
 						return 169;
 					} else {
 						return 12;
 					}
-				} else if ($longitude < 27.866154) {
+				} elseif ($longitude < 27.866154) {
 					if ($this->polygons[1117]->contains($latitude, $longitude)) {
 						return 169;
 					} else {
@@ -9157,20 +9157,20 @@ class PolygonLookup
 						return 169;
 					}
 				}
-			} else if ($longitude < 23.382274) {
+			} elseif ($longitude < 23.382274) {
 				if ($latitude < -18.849641) {
 					if ($this->polygons[1120]->contains($latitude, $longitude)) {
 						return 189;
 					} else {
 						return 12;
 					}
-				} else if ($longitude < 20.393020) {
+				} elseif ($longitude < 20.393020) {
 					if ($this->polygons[1121]->contains($latitude, $longitude)) {
 						return 299;
 					} else {
 						return 189;
 					}
-				} else if ($latitude < -17.229238) {
+				} elseif ($latitude < -17.229238) {
 					if ($this->polygons[1122]->contains($latitude, $longitude)) {
 						return 12;
 					}
@@ -9189,14 +9189,14 @@ class PolygonLookup
 						return 267;
 					}
 				}
-			} else if ($latitude < -18.849641) {
+			} elseif ($latitude < -18.849641) {
 				if ($longitude < 26.371527) {
 					if ($this->polygons[1126]->contains($latitude, $longitude)) {
 						return 269;
 					} else {
 						return 12;
 					}
-				} else if ($latitude < -20.470044) {
+				} elseif ($latitude < -20.470044) {
 					if ($this->polygons[1127]->contains($latitude, $longitude)) {
 						return 269;
 					} else {
@@ -9209,7 +9209,7 @@ class PolygonLookup
 						return 269;
 					}
 				}
-			} else if ($longitude < 26.371527) {
+			} elseif ($longitude < 26.371527) {
 				if ($latitude < -17.229238) {
 					if ($longitude < 24.876900) {
 						if ($latitude < -18.039439) {
@@ -9237,13 +9237,13 @@ class PolygonLookup
 								return 189;
 							}
 						}
-					} else if ($latitude < -18.039439) {
+					} elseif ($latitude < -18.039439) {
 						if ($this->polygons[1135]->contains($latitude, $longitude)) {
 							return 12;
 						} else {
 							return 269;
 						}
-					} else if ($longitude < 25.624214) {
+					} elseif ($longitude < 25.624214) {
 						if ($this->polygons[1136]->contains($latitude, $longitude)) {
 							return 12;
 						}
@@ -9272,7 +9272,7 @@ class PolygonLookup
 					return 267;
 				}
 			}
-		} else if ($latitude < -25.719648) {
+		} elseif ($latitude < -25.719648) {
 			if ($longitude < 32.895973) {
 				if ($longitude < 32.137260) {
 					if ($this->polygons[1141]->contains($latitude, $longitude)) {
@@ -9286,7 +9286,7 @@ class PolygonLookup
 					} else {
 						return 117;
 					}
-				} else if ($latitude < -26.830089) {
+				} elseif ($latitude < -26.830089) {
 					if ($this->polygons[1144]->contains($latitude, $longitude)) {
 						return 364;
 					} else {
@@ -9298,7 +9298,7 @@ class PolygonLookup
 			} else {
 				return 364;
 			}
-		} else if ($latitude < -20.664242) {
+		} elseif ($latitude < -20.664242) {
 			if ($latitude < -23.191945) {
 				if ($this->polygons[1145]->contains($latitude, $longitude)) {
 					return 169;
@@ -9315,13 +9315,13 @@ class PolygonLookup
 					return 269;
 				}
 			}
-		} else if ($latitude < -18.136539) {
+		} elseif ($latitude < -18.136539) {
 			if ($this->polygons[1148]->contains($latitude, $longitude)) {
 				return 364;
 			} else {
 				return 269;
 			}
-		} else if ($longitude < 31.533242) {
+		} elseif ($longitude < 31.533242) {
 			if ($this->polygons[1149]->contains($latitude, $longitude)) {
 				return 267;
 			}
@@ -9339,7 +9339,7 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call21(float $latitude, float $longitude) : ?int
+	protected function call21(float $latitude, float $longitude): ?int
 	{
 		if ($longitude < 24.421398) {
 			if ($latitude < -5.927235) {
@@ -9357,10 +9357,10 @@ class PolygonLookup
 					} else {
 						return 331;
 					}
-				} else if ($longitude < 12.869216) {
+				} elseif ($longitude < 12.869216) {
 					if ($latitude < -6.012101) {
 						return 299;
-					} else if ($latitude < -5.979688) {
+					} elseif ($latitude < -5.979688) {
 						if ($longitude < 12.722283) {
 							return 331;
 						} else {
@@ -9369,12 +9369,12 @@ class PolygonLookup
 					} else {
 						return 331;
 					}
-				} else if ($longitude < 12.944152) {
+				} elseif ($longitude < 12.944152) {
 					return 299;
-				} else if ($longitude < 18.682775) {
+				} elseif ($longitude < 18.682775) {
 					if ($longitude < 15.813463) {
 						return 299;
-					} else if ($longitude < 17.248119) {
+					} elseif ($longitude < 17.248119) {
 						if ($this->polygons[1152]->contains($latitude, $longitude)) {
 							return 331;
 						} else {
@@ -9387,7 +9387,7 @@ class PolygonLookup
 							return 331;
 						}
 					}
-				} else if ($longitude < 21.552087) {
+				} elseif ($longitude < 21.552087) {
 					if ($this->polygons[1154]->contains($latitude, $longitude)) {
 						return 299;
 					}
@@ -9403,9 +9403,9 @@ class PolygonLookup
 						return 352;
 					}
 				}
-			} else if ($longitude < 9.921646) {
+			} elseif ($longitude < 9.921646) {
 				return 155;
-			} else if ($longitude < 17.865310) {
+			} elseif ($longitude < 17.865310) {
 				if ($latitude < -5.841628) {
 					if ($longitude < 12.922298) {
 						if ($longitude < 12.876115) {
@@ -9417,7 +9417,7 @@ class PolygonLookup
 						} else {
 							return 331;
 						}
-					} else if ($longitude < 13.986273) {
+					} elseif ($longitude < 13.986273) {
 						if ($this->polygons[1158]->contains($latitude, $longitude)) {
 							return 331;
 						} else {
@@ -9430,7 +9430,7 @@ class PolygonLookup
 							return 331;
 						}
 					}
-				} else if ($longitude < 13.893478) {
+				} elseif ($longitude < 13.893478) {
 					if ($latitude < -2.791343) {
 						if ($longitude < 11.956557) {
 							if ($this->polygons[1160]->contains($latitude, $longitude)) {
@@ -9438,7 +9438,7 @@ class PolygonLookup
 							} else {
 								return 154;
 							}
-						} else if ($latitude < -4.316486) {
+						} elseif ($latitude < -4.316486) {
 							if ($longitude < 12.925017) {
 								if ($this->polygons[1161]->contains($latitude, $longitude)) {
 									return 154;
@@ -9468,7 +9468,7 @@ class PolygonLookup
 								return 154;
 							}
 						}
-					} else if ($longitude < 11.907562) {
+					} elseif ($longitude < 11.907562) {
 						if ($this->polygons[1167]->contains($latitude, $longitude)) {
 							return 154;
 						} else {
@@ -9487,13 +9487,13 @@ class PolygonLookup
 							return 155;
 						}
 					}
-				} else if ($latitude < -2.791343) {
+				} elseif ($latitude < -2.791343) {
 					if ($this->polygons[1171]->contains($latitude, $longitude)) {
 						return 154;
 					} else {
 						return 331;
 					}
-				} else if ($longitude < 15.879394) {
+				} elseif ($longitude < 15.879394) {
 					if ($this->polygons[1172]->contains($latitude, $longitude)) {
 						return 154;
 					}
@@ -9509,15 +9509,15 @@ class PolygonLookup
 						return 154;
 					}
 				}
-			} else if ($longitude < 21.143354) {
+			} elseif ($longitude < 21.143354) {
 				if ($this->polygons[1175]->contains($latitude, $longitude)) {
 					return 352;
 				} else {
 					return 331;
 				}
-			} else if ($latitude < -2.834147) {
+			} elseif ($latitude < -2.834147) {
 				return 352;
-			} else if ($longitude < 22.782376) {
+			} elseif ($longitude < 22.782376) {
 				if ($this->polygons[1176]->contains($latitude, $longitude)) {
 					return 352;
 				} else {
@@ -9530,7 +9530,7 @@ class PolygonLookup
 					return 352;
 				}
 			}
-		} else if ($latitude < -5.718678) {
+		} elseif ($latitude < -5.718678) {
 			if ($longitude < 30.744639) {
 				if ($this->polygons[1178]->contains($latitude, $longitude)) {
 					return 17;
@@ -9540,12 +9540,12 @@ class PolygonLookup
 			} else {
 				return 17;
 			}
-		} else if ($longitude < 39.221806) {
+		} elseif ($longitude < 39.221806) {
 			if ($longitude < 30.895958) {
 				if ($latitude < -2.078556) {
 					if ($longitude < 27.658678) {
 						return 352;
-					} else if ($latitude < -3.898617) {
+					} elseif ($latitude < -3.898617) {
 						if ($this->polygons[1179]->contains($latitude, $longitude)) {
 							return 83;
 						}
@@ -9554,7 +9554,7 @@ class PolygonLookup
 						} else {
 							return 17;
 						}
-					} else if ($longitude < 29.277318) {
+					} elseif ($longitude < 29.277318) {
 						if ($this->polygons[1181]->contains($latitude, $longitude)) {
 							return 83;
 						}
@@ -9563,13 +9563,13 @@ class PolygonLookup
 						} else {
 							return 352;
 						}
-					} else if ($latitude < -2.988586) {
+					} elseif ($latitude < -2.988586) {
 						if ($this->polygons[1183]->contains($latitude, $longitude)) {
 							return 83;
 						} else {
 							return 17;
 						}
-					} else if ($longitude < 30.086638) {
+					} elseif ($longitude < 30.086638) {
 						if ($this->polygons[1184]->contains($latitude, $longitude)) {
 							return 293;
 						} else {
@@ -9585,15 +9585,15 @@ class PolygonLookup
 							return 83;
 						}
 					}
-				} else if ($longitude < 27.658678) {
+				} elseif ($longitude < 27.658678) {
 					return 352;
-				} else if ($longitude < 29.277318) {
+				} elseif ($longitude < 29.277318) {
 					if ($this->polygons[1187]->contains($latitude, $longitude)) {
 						return 293;
 					} else {
 						return 352;
 					}
-				} else if ($latitude < -0.909808) {
+				} elseif ($latitude < -0.909808) {
 					if ($longitude < 30.086638) {
 						if ($this->polygons[1188]->contains($latitude, $longitude)) {
 							return 293;
@@ -9620,7 +9620,7 @@ class PolygonLookup
 						return 179;
 					}
 				}
-			} else if ($latitude < -5.085639) {
+			} elseif ($latitude < -5.085639) {
 				return 17;
 			} else {
 				if ($this->polygons[1193]->contains($latitude, $longitude)) {
@@ -9637,7 +9637,7 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call22(float $latitude, float $longitude) : ?int
+	protected function call22(float $latitude, float $longitude): ?int
 	{
 		if ($longitude < 31.305912) {
 			if ($latitude < 5.386098) {
@@ -9648,13 +9648,13 @@ class PolygonLookup
 						} else {
 							return 352;
 						}
-					} else if ($longitude < 21.150613) {
+					} elseif ($longitude < 21.150613) {
 						if ($this->polygons[1196]->contains($latitude, $longitude)) {
 							return 331;
 						} else {
 							return 214;
 						}
-					} else if ($latitude < 4.104309) {
+					} elseif ($latitude < 4.104309) {
 						if ($this->polygons[1197]->contains($latitude, $longitude)) {
 							return 331;
 						} else {
@@ -9670,13 +9670,13 @@ class PolygonLookup
 							return 214;
 						}
 					}
-				} else if ($longitude < 27.478649) {
+				} elseif ($longitude < 27.478649) {
 					if ($latitude < 2.822519) {
 						return 352;
-					} else if ($longitude < 25.565018) {
+					} elseif ($longitude < 25.565018) {
 						if ($latitude < 4.104309) {
 							return 352;
-						} else if ($longitude < 24.608202) {
+						} elseif ($longitude < 24.608202) {
 							if ($this->polygons[1200]->contains($latitude, $longitude)) {
 								return 352;
 							} else {
@@ -9689,9 +9689,9 @@ class PolygonLookup
 								return 214;
 							}
 						}
-					} else if ($latitude < 4.104309) {
+					} elseif ($latitude < 4.104309) {
 						return 352;
-					} else if ($longitude < 26.521833) {
+					} elseif ($longitude < 26.521833) {
 						if ($this->polygons[1202]->contains($latitude, $longitude)) {
 							return 214;
 						} else {
@@ -9707,19 +9707,19 @@ class PolygonLookup
 							return 214;
 						}
 					}
-				} else if ($latitude < 2.822519) {
+				} elseif ($latitude < 2.822519) {
 					if ($this->polygons[1205]->contains($latitude, $longitude)) {
 						return 352;
 					} else {
 						return 179;
 					}
-				} else if ($longitude < 29.392281) {
+				} elseif ($longitude < 29.392281) {
 					if ($this->polygons[1206]->contains($latitude, $longitude)) {
 						return 352;
 					} else {
 						return 395;
 					}
-				} else if ($latitude < 4.104309) {
+				} elseif ($latitude < 4.104309) {
 					if ($this->polygons[1207]->contains($latitude, $longitude)) {
 						return 179;
 					}
@@ -9735,18 +9735,18 @@ class PolygonLookup
 						return 395;
 					}
 				}
-			} else if ($longitude < 24.977876) {
+			} elseif ($longitude < 24.977876) {
 				if ($latitude < 10.869160) {
 					if ($longitude < 21.813858) {
 						if ($latitude < 8.127629) {
 							return 214;
-						} else if ($longitude < 20.231848) {
+						} elseif ($longitude < 20.231848) {
 							if ($this->polygons[1210]->contains($latitude, $longitude)) {
 								return 214;
 							} else {
 								return 202;
 							}
-						} else if ($latitude < 9.498395) {
+						} elseif ($latitude < 9.498395) {
 							if ($this->polygons[1211]->contains($latitude, $longitude)) {
 								return 202;
 							} else {
@@ -9759,13 +9759,13 @@ class PolygonLookup
 								return 202;
 							}
 						}
-					} else if ($latitude < 8.127629) {
+					} elseif ($latitude < 8.127629) {
 						if ($this->polygons[1213]->contains($latitude, $longitude)) {
 							return 395;
 						} else {
 							return 214;
 						}
-					} else if ($longitude < 23.395867) {
+					} elseif ($longitude < 23.395867) {
 						if ($this->polygons[1214]->contains($latitude, $longitude)) {
 							return 202;
 						}
@@ -9780,7 +9780,7 @@ class PolygonLookup
 						} else {
 							return 214;
 						}
-					} else if ($latitude < 9.498395) {
+					} elseif ($latitude < 9.498395) {
 						if ($longitude < 24.186871) {
 							if ($this->polygons[1218]->contains($latitude, $longitude)) {
 								return 322;
@@ -9816,9 +9816,9 @@ class PolygonLookup
 							return 322;
 						}
 					}
-				} else if ($longitude < 21.813858) {
+				} elseif ($longitude < 21.813858) {
 					return 202;
-				} else if ($latitude < 13.610691) {
+				} elseif ($latitude < 13.610691) {
 					if ($this->polygons[1226]->contains($latitude, $longitude)) {
 						return 214;
 					}
@@ -9834,7 +9834,7 @@ class PolygonLookup
 						return 202;
 					}
 				}
-			} else if ($latitude < 10.869160) {
+			} elseif ($latitude < 10.869160) {
 				if ($longitude < 28.141894) {
 					if ($latitude < 8.127629) {
 						if ($longitude < 26.559885) {
@@ -9875,7 +9875,7 @@ class PolygonLookup
 			} else {
 				return 322;
 			}
-		} else if ($latitude < 12.219149) {
+		} elseif ($latitude < 12.219149) {
 			if ($latitude < 4.629333) {
 				if ($longitude < 35.947697) {
 					if ($longitude < 33.626804) {
@@ -9884,7 +9884,7 @@ class PolygonLookup
 						} else {
 							return 179;
 						}
-					} else if ($latitude < 2.444137) {
+					} elseif ($latitude < 2.444137) {
 						if ($this->polygons[1235]->contains($latitude, $longitude)) {
 							return 179;
 						} else {
@@ -9907,7 +9907,7 @@ class PolygonLookup
 						return 122;
 					}
 				}
-			} else if ($longitude < 35.437428) {
+			} elseif ($longitude < 35.437428) {
 				if ($latitude < 8.424241) {
 					if ($longitude < 33.371670) {
 						if ($this->polygons[1239]->contains($latitude, $longitude)) {
@@ -9915,7 +9915,7 @@ class PolygonLookup
 						} else {
 							return 395;
 						}
-					} else if ($latitude < 6.526787) {
+					} elseif ($latitude < 6.526787) {
 						if ($this->polygons[1240]->contains($latitude, $longitude)) {
 							return 350;
 						} else {
@@ -9934,7 +9934,7 @@ class PolygonLookup
 							return 350;
 						}
 					}
-				} else if ($longitude < 33.371670) {
+				} elseif ($longitude < 33.371670) {
 					if ($this->polygons[1244]->contains($latitude, $longitude)) {
 						return 322;
 					}
@@ -9949,7 +9949,7 @@ class PolygonLookup
 					} else {
 						return 395;
 					}
-				} else if ($latitude < 10.321695) {
+				} elseif ($latitude < 10.321695) {
 					if ($this->polygons[1248]->contains($latitude, $longitude)) {
 						return 322;
 					}
@@ -9987,13 +9987,13 @@ class PolygonLookup
 					return 350;
 				}
 			}
-		} else if ($longitude < 35.437428) {
+		} elseif ($longitude < 35.437428) {
 			if ($this->polygons[1257]->contains($latitude, $longitude)) {
 				return 350;
 			} else {
 				return 322;
 			}
-		} else if ($latitude < 14.285686) {
+		} elseif ($latitude < 14.285686) {
 			if ($this->polygons[1258]->contains($latitude, $longitude)) {
 				return 149;
 			}
@@ -10026,7 +10026,7 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call23(float $latitude, float $longitude) : ?int
+	protected function call23(float $latitude, float $longitude): ?int
 	{
 		if ($longitude < 39.923779) {
 			if ($longitude < 18.649839) {
@@ -10037,22 +10037,22 @@ class PolygonLookup
 						} else {
 							return 201;
 						}
-					} else if ($longitude < 9.527758) {
+					} elseif ($longitude < 9.527758) {
 						if ($latitude < 0.922485) {
 							if ($latitude < 0.668440) {
 								return 155;
 							} else {
 								return 201;
 							}
-						} else if ($latitude < 1.464501) {
+						} elseif ($latitude < 1.464501) {
 							return 201;
 						} else {
 							return 326;
 						}
-					} else if ($longitude < 11.335724) {
+					} elseif ($longitude < 11.335724) {
 						if ($latitude < 0.279823) {
 							return 155;
-						} else if ($latitude < 2.346989) {
+						} elseif ($latitude < 2.346989) {
 							if ($this->polygons[1266]->contains($latitude, $longitude)) {
 								return 155;
 							}
@@ -10064,7 +10064,7 @@ class PolygonLookup
 						} else {
 							return 326;
 						}
-					} else if ($longitude < 14.992782) {
+					} elseif ($longitude < 14.992782) {
 						if ($latitude < 2.116439) {
 							if ($longitude < 13.164253) {
 								if ($this->polygons[1268]->contains($latitude, $longitude)) {
@@ -10078,13 +10078,13 @@ class PolygonLookup
 								} else {
 									return 155;
 								}
-							} else if ($latitude < 1.187690) {
+							} elseif ($latitude < 1.187690) {
 								if ($this->polygons[1271]->contains($latitude, $longitude)) {
 									return 155;
 								} else {
 									return 154;
 								}
-							} else if ($longitude < 14.078517) {
+							} elseif ($longitude < 14.078517) {
 								if ($this->polygons[1272]->contains($latitude, $longitude)) {
 									return 154;
 								} else {
@@ -10116,7 +10116,7 @@ class PolygonLookup
 								return 326;
 							}
 						}
-					} else if ($latitude < 2.116439) {
+					} elseif ($latitude < 2.116439) {
 						if ($longitude < 16.821311) {
 							if ($this->polygons[1279]->contains($latitude, $longitude)) {
 								return 326;
@@ -10130,7 +10130,7 @@ class PolygonLookup
 								return 154;
 							}
 						}
-					} else if ($longitude < 16.821311) {
+					} elseif ($longitude < 16.821311) {
 						if ($this->polygons[1281]->contains($latitude, $longitude)) {
 							return 154;
 						}
@@ -10139,7 +10139,7 @@ class PolygonLookup
 						} else {
 							return 214;
 						}
-					} else if ($latitude < 3.045189) {
+					} elseif ($latitude < 3.045189) {
 						if ($this->polygons[1283]->contains($latitude, $longitude)) {
 							return 331;
 						} else {
@@ -10155,7 +10155,7 @@ class PolygonLookup
 							return 154;
 						}
 					}
-				} else if ($longitude < 8.341630) {
+				} elseif ($longitude < 8.341630) {
 					if ($latitude < 4.832398) {
 						return 96;
 					} else {
@@ -10165,10 +10165,10 @@ class PolygonLookup
 							return 96;
 						}
 					}
-				} else if ($latitude < 4.686236) {
+				} elseif ($latitude < 4.686236) {
 					if ($longitude < 8.714308) {
 						return 326;
-					} else if ($longitude < 15.183470) {
+					} elseif ($longitude < 15.183470) {
 						if ($latitude < 4.054228) {
 							if ($longitude < 9.648236) {
 								return 326;
@@ -10193,7 +10193,7 @@ class PolygonLookup
 							return 214;
 						}
 					}
-				} else if ($latitude < 10.519229) {
+				} elseif ($latitude < 10.519229) {
 					if ($longitude < 13.495735) {
 						if ($latitude < 7.602733) {
 							if ($longitude < 10.918682) {
@@ -10224,7 +10224,7 @@ class PolygonLookup
 								return 96;
 							}
 						}
-					} else if ($latitude < 7.602733) {
+					} elseif ($latitude < 7.602733) {
 						if ($longitude < 16.072787) {
 							if ($latitude < 6.144484) {
 								if ($this->polygons[1294]->contains($latitude, $longitude)) {
@@ -10252,7 +10252,7 @@ class PolygonLookup
 								return 214;
 							}
 						}
-					} else if ($longitude < 16.072787) {
+					} elseif ($longitude < 16.072787) {
 						if ($latitude < 9.060981) {
 							if ($this->polygons[1299]->contains($latitude, $longitude)) {
 								return 326;
@@ -10279,7 +10279,7 @@ class PolygonLookup
 							return 202;
 						}
 					}
-				} else if ($longitude < 13.495735) {
+				} elseif ($longitude < 13.495735) {
 					if ($latitude < 13.435726) {
 						if ($this->polygons[1304]->contains($latitude, $longitude)) {
 							return 260;
@@ -10296,7 +10296,7 @@ class PolygonLookup
 							return 260;
 						}
 					}
-				} else if ($latitude < 13.435726) {
+				} elseif ($latitude < 13.435726) {
 					if ($longitude < 16.072787) {
 						if ($latitude < 11.977477) {
 							if ($this->polygons[1307]->contains($latitude, $longitude)) {
@@ -10307,7 +10307,7 @@ class PolygonLookup
 							} else {
 								return 326;
 							}
-						} else if ($longitude < 14.784261) {
+						} elseif ($longitude < 14.784261) {
 							if ($this->polygons[1309]->contains($latitude, $longitude)) {
 								return 96;
 							}
@@ -10339,9 +10339,9 @@ class PolygonLookup
 						return 202;
 					}
 				}
-			} else if ($longitude < 39.568943) {
+			} elseif ($longitude < 39.568943) {
 				return $this->call22($latitude, $longitude);
-			} else if ($latitude < 14.553577) {
+			} elseif ($latitude < 14.553577) {
 				if ($latitude < 3.903177) {
 					if ($this->polygons[1315]->contains($latitude, $longitude)) {
 						return 350;
@@ -10358,14 +10358,14 @@ class PolygonLookup
 			} else {
 				return 149;
 			}
-		} else if ($latitude < 14.457556) {
+		} elseif ($latitude < 14.457556) {
 			if ($latitude < 4.141098) {
 				if ($this->polygons[1317]->contains($latitude, $longitude)) {
 					return 350;
 				} else {
 					return 122;
 				}
-			} else if ($longitude < 40.114882) {
+			} elseif ($longitude < 40.114882) {
 				if ($this->polygons[1318]->contains($latitude, $longitude)) {
 					return 149;
 				} else {
@@ -10383,7 +10383,7 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call24(float $latitude, float $longitude) : ?int
+	protected function call24(float $latitude, float $longitude): ?int
 	{
 		if ($latitude < 0.258941) {
 			if ($latitude < -8.129065) {
@@ -10391,20 +10391,20 @@ class PolygonLookup
 					if ($longitude < 33.705704) {
 						if ($latitude < -15.608835) {
 							return $this->call20($latitude, $longitude);
-						} else if ($longitude < 13.264205) {
+						} elseif ($longitude < 13.264205) {
 							return 299;
-						} else if ($longitude < 24.082119) {
+						} elseif ($longitude < 24.082119) {
 							if ($latitude < -11.397731) {
 								if ($this->polygons[1320]->contains($latitude, $longitude)) {
 									return 267;
 								} else {
 									return 299;
 								}
-							} else if ($longitude < 18.673162) {
+							} elseif ($longitude < 18.673162) {
 								return 299;
-							} else if ($longitude < 21.377640) {
+							} elseif ($longitude < 21.377640) {
 								return 299;
-							} else if ($latitude < -9.763398) {
+							} elseif ($latitude < -9.763398) {
 								if ($this->polygons[1321]->contains($latitude, $longitude)) {
 									return 267;
 								}
@@ -10420,7 +10420,7 @@ class PolygonLookup
 									return 299;
 								}
 							}
-						} else if ($latitude < -13.998108) {
+						} elseif ($latitude < -13.998108) {
 							if ($this->polygons[1324]->contains($latitude, $longitude)) {
 								return 206;
 							}
@@ -10432,7 +10432,7 @@ class PolygonLookup
 							} else {
 								return 364;
 							}
-						} else if ($longitude < 30.774246) {
+						} elseif ($longitude < 30.774246) {
 							if ($latitude < -8.224360) {
 								if ($longitude < 27.428183) {
 									if ($latitude < -11.111234) {
@@ -10456,7 +10456,7 @@ class PolygonLookup
 											return 352;
 										}
 									}
-								} else if ($latitude < -11.111234) {
+								} elseif ($latitude < -11.111234) {
 									if ($longitude < 29.101214) {
 										if ($latitude < -12.554671) {
 											if ($this->polygons[1330]->contains($latitude, $longitude)) {
@@ -10492,7 +10492,7 @@ class PolygonLookup
 									return 352;
 								}
 							}
-						} else if ($latitude < -11.063586) {
+						} elseif ($latitude < -11.063586) {
 							if ($latitude < -12.530847) {
 								if ($this->polygons[1335]->contains($latitude, $longitude)) {
 									return 267;
@@ -10512,7 +10512,7 @@ class PolygonLookup
 									return 206;
 								}
 							}
-						} else if ($latitude < -9.596325) {
+						} elseif ($latitude < -9.596325) {
 							if ($this->polygons[1339]->contains($latitude, $longitude)) {
 								return 17;
 							}
@@ -10524,7 +10524,7 @@ class PolygonLookup
 							} else {
 								return 206;
 							}
-						} else if ($longitude < 32.239975) {
+						} elseif ($longitude < 32.239975) {
 							if ($this->polygons[1342]->contains($latitude, $longitude)) {
 								return 17;
 							} else {
@@ -10543,16 +10543,16 @@ class PolygonLookup
 								return 17;
 							}
 						}
-					} else if ($latitude < -19.090635) {
+					} elseif ($latitude < -19.090635) {
 						return 364;
-					} else if ($latitude < -13.609850) {
+					} elseif ($latitude < -13.609850) {
 						if ($latitude < -16.350243) {
 							if ($this->polygons[1346]->contains($latitude, $longitude)) {
 								return 206;
 							} else {
 								return 364;
 							}
-						} else if ($latitude < -14.980046) {
+						} elseif ($latitude < -14.980046) {
 							if ($this->polygons[1347]->contains($latitude, $longitude)) {
 								return 206;
 							} else {
@@ -10568,7 +10568,7 @@ class PolygonLookup
 								return 364;
 							}
 						}
-					} else if ($latitude < -10.869457) {
+					} elseif ($latitude < -10.869457) {
 						if ($this->polygons[1350]->contains($latitude, $longitude)) {
 							return 206;
 						}
@@ -10584,14 +10584,14 @@ class PolygonLookup
 							return 17;
 						}
 					}
-				} else if ($longitude < 40.443222) {
+				} elseif ($longitude < 40.443222) {
 					if ($latitude < -16.279331) {
 						if ($latitude < -46.609653) {
 							return 169;
 						} else {
 							return 364;
 						}
-					} else if ($latitude < -10.481017) {
+					} elseif ($latitude < -10.481017) {
 						if ($latitude < -12.512221) {
 							return 364;
 						} else {
@@ -10604,18 +10604,18 @@ class PolygonLookup
 					} else {
 						return 17;
 					}
-				} else if ($longitude < 40.842995) {
+				} elseif ($longitude < 40.842995) {
 					return 364;
 				} else {
 					return 101;
 				}
-			} else if ($longitude < 39.579086) {
+			} elseif ($longitude < 39.579086) {
 				return $this->call21($latitude, $longitude);
-			} else if ($latitude < -4.865081) {
+			} elseif ($latitude < -4.865081) {
 				return 17;
-			} else if ($latitude < -1.742535) {
+			} elseif ($latitude < -1.742535) {
 				return 122;
-			} else if ($longitude < 41.567944) {
+			} elseif ($longitude < 41.567944) {
 				if ($this->polygons[1354]->contains($latitude, $longitude)) {
 					return 250;
 				} else {
@@ -10624,9 +10624,9 @@ class PolygonLookup
 			} else {
 				return 250;
 			}
-		} else if ($longitude < 40.467030) {
+		} elseif ($longitude < 40.467030) {
 			return $this->call23($latitude, $longitude);
-		} else if ($latitude < 15.249888) {
+		} elseif ($latitude < 15.249888) {
 			if ($latitude < 13.170722) {
 				if ($latitude < 12.845361) {
 					if ($latitude < 4.667434) {
@@ -10638,7 +10638,7 @@ class PolygonLookup
 						} else {
 							return 350;
 						}
-					} else if ($latitude < 11.730194) {
+					} elseif ($latitude < 11.730194) {
 						if ($this->polygons[1357]->contains($latitude, $longitude)) {
 							return 250;
 						}
@@ -10657,7 +10657,7 @@ class PolygonLookup
 							return 149;
 						}
 					}
-				} else if ($longitude < 42.010485) {
+				} elseif ($longitude < 42.010485) {
 					if ($this->polygons[1361]->contains($latitude, $longitude)) {
 						return 149;
 					} else {
@@ -10666,7 +10666,7 @@ class PolygonLookup
 				} else {
 					return 149;
 				}
-			} else if ($longitude < 42.562199) {
+			} elseif ($longitude < 42.562199) {
 				if ($longitude < 41.809405) {
 					if ($latitude < 14.277273) {
 						if ($this->polygons[1362]->contains($latitude, $longitude)) {
@@ -10677,7 +10677,7 @@ class PolygonLookup
 					} else {
 						return 149;
 					}
-				} else if ($latitude < 13.918802) {
+				} elseif ($latitude < 13.918802) {
 					return 149;
 				} else {
 					return 215;
@@ -10685,18 +10685,18 @@ class PolygonLookup
 			} else {
 				return 215;
 			}
-		} else if ($longitude < 41.297417) {
+		} elseif ($longitude < 41.297417) {
 			return 149;
-		} else if ($latitude < 15.769584) {
+		} elseif ($latitude < 15.769584) {
 			return 215;
-		} else if ($longitude < 42.506054) {
+		} elseif ($longitude < 42.506054) {
 			return 163;
 		} else {
 			return 215;
 		}
 	}
 	
-	protected function call25(float $latitude, float $longitude) : ?int
+	protected function call25(float $latitude, float $longitude): ?int
 	{
 		if ($latitude < 25.886833) {
 			if ($longitude < 38.296612) {
@@ -10749,7 +10749,7 @@ class PolygonLookup
 										return 112;
 									}
 								}
-							} else if ($latitude < 23.146889) {
+							} elseif ($latitude < 23.146889) {
 								if ($longitude < 35.623360) {
 									if ($this->polygons[1374]->contains($latitude, $longitude)) {
 										return 112;
@@ -10765,14 +10765,14 @@ class PolygonLookup
 						} else {
 							return 322;
 						}
-					} else if ($latitude < 22.913195) {
+					} elseif ($latitude < 22.913195) {
 						return 322;
-					} else if ($longitude < 36.208694) {
+					} elseif ($longitude < 36.208694) {
 						return 112;
 					} else {
 						return 163;
 					}
-				} else if ($latitude < 22.173639) {
+				} elseif ($latitude < 22.173639) {
 					if ($latitude < 17.632252) {
 						if ($this->polygons[1375]->contains($latitude, $longitude)) {
 							return 149;
@@ -10785,7 +10785,7 @@ class PolygonLookup
 				} else {
 					return 163;
 				}
-			} else if ($latitude < 18.271140) {
+			} elseif ($latitude < 18.271140) {
 				if ($longitude < 41.825443) {
 					if ($longitude < 40.183971) {
 						if ($latitude < 18.003084) {
@@ -10804,9 +10804,9 @@ class PolygonLookup
 					} else {
 						return 163;
 					}
-				} else if ($longitude < 42.777195) {
+				} elseif ($longitude < 42.777195) {
 					return 163;
-				} else if ($latitude < 16.674110) {
+				} elseif ($latitude < 16.674110) {
 					if ($this->polygons[1377]->contains($latitude, $longitude)) {
 						return 215;
 					} else {
@@ -10822,7 +10822,7 @@ class PolygonLookup
 			} else {
 				return 163;
 			}
-		} else if ($longitude < 32.013668) {
+		} elseif ($longitude < 32.013668) {
 			if ($longitude < 26.336222) {
 				if ($longitude < 23.207056) {
 					if ($longitude < 11.598278) {
@@ -10844,7 +10844,7 @@ class PolygonLookup
 										return 318;
 									}
 								}
-							} else if ($latitude < 33.168999) {
+							} elseif ($latitude < 33.168999) {
 								if ($latitude < 32.523556) {
 									if ($this->polygons[1382]->contains($latitude, $longitude)) {
 										return 318;
@@ -10861,7 +10861,7 @@ class PolygonLookup
 							} else {
 								return 318;
 							}
-						} else if ($longitude < 8.473444) {
+						} elseif ($longitude < 8.473444) {
 							if ($latitude < 35.242054) {
 								if ($this->polygons[1384]->contains($latitude, $longitude)) {
 									return 380;
@@ -10878,7 +10878,7 @@ class PolygonLookup
 						} else {
 							return 318;
 						}
-					} else if ($latitude < 36.082027) {
+					} elseif ($latitude < 36.082027) {
 						if ($latitude < 35.877888) {
 							if ($latitude < 35.528362) {
 								if ($latitude < 34.318742) {
@@ -10886,7 +10886,7 @@ class PolygonLookup
 								} else {
 									return 333;
 								}
-							} else if ($longitude < 13.613921) {
+							} elseif ($longitude < 13.613921) {
 								return 271;
 							} else {
 								return 302;
@@ -10897,7 +10897,7 @@ class PolygonLookup
 					} else {
 						return 152;
 					}
-				} else if ($latitude < 32.286731) {
+				} elseif ($latitude < 32.286731) {
 					if ($longitude < 23.294111) {
 						return 333;
 					} else {
@@ -10910,16 +10910,16 @@ class PolygonLookup
 				} else {
 					return 152;
 				}
-			} else if ($latitude < 31.601473) {
+			} elseif ($latitude < 31.601473) {
 				return 112;
-			} else if ($longitude < 28.246389) {
+			} elseif ($longitude < 28.246389) {
 				return 152;
-			} else if ($longitude < 29.647083) {
+			} elseif ($longitude < 29.647083) {
 				if ($longitude < 29.370945) {
 					return 205;
-				} else if ($latitude < 36.115612) {
+				} elseif ($latitude < 36.115612) {
 					return 152;
-				} else if ($longitude < 29.513166) {
+				} elseif ($longitude < 29.513166) {
 					if ($latitude < 36.188656) {
 						return 152;
 					} else {
@@ -10935,27 +10935,27 @@ class PolygonLookup
 			} else {
 				return 205;
 			}
-		} else if ($longitude < 33.897335) {
+		} elseif ($longitude < 33.897335) {
 			if ($latitude < 31.414772) {
 				return 112;
-			} else if ($latitude < 35.429267) {
+			} elseif ($latitude < 35.429267) {
 				return 174;
 			} else {
 				return 205;
 			}
-		} else if ($latitude < 27.855917) {
+		} elseif ($latitude < 27.855917) {
 			if ($longitude < 34.419202) {
 				return 112;
 			} else {
 				return 163;
 			}
-		} else if ($latitude < 28.084833) {
+		} elseif ($latitude < 28.084833) {
 			if ($longitude < 34.444985) {
 				return 112;
 			} else {
 				return 163;
 			}
-		} else if ($latitude < 34.684856) {
+		} elseif ($latitude < 34.684856) {
 			if ($longitude < 34.546276) {
 				if ($latitude < 30.429844) {
 					if ($this->polygons[1388]->contains($latitude, $longitude)) {
@@ -10963,7 +10963,7 @@ class PolygonLookup
 					} else {
 						return 112;
 					}
-				} else if ($latitude < 31.523390) {
+				} elseif ($latitude < 31.523390) {
 					if ($this->polygons[1389]->contains($latitude, $longitude)) {
 						return 112;
 					}
@@ -10979,14 +10979,14 @@ class PolygonLookup
 						return 8;
 					}
 				}
-			} else if ($longitude < 34.557480) {
+			} elseif ($longitude < 34.557480) {
 				if ($latitude < 30.410903) {
 					if ($this->polygons[1392]->contains($latitude, $longitude)) {
 						return 8;
 					} else {
 						return 112;
 					}
-				} else if ($latitude < 30.494701) {
+				} elseif ($latitude < 30.494701) {
 					if ($this->polygons[1393]->contains($latitude, $longitude)) {
 						return 112;
 					} else {
@@ -10999,7 +10999,7 @@ class PolygonLookup
 						return 8;
 					}
 				}
-			} else if ($longitude < 38.878267) {
+			} elseif ($longitude < 38.878267) {
 				if ($latitude < 31.384845) {
 					if ($longitude < 36.717874) {
 						if ($latitude < 29.734839) {
@@ -11037,7 +11037,7 @@ class PolygonLookup
 							return 163;
 						}
 					}
-				} else if ($longitude < 36.717874) {
+				} elseif ($longitude < 36.717874) {
 					if ($latitude < 33.034851) {
 						if ($longitude < 35.637677) {
 							if ($latitude < 32.209848) {
@@ -11078,7 +11078,7 @@ class PolygonLookup
 								return 368;
 							}
 						}
-					} else if ($latitude < 33.859854) {
+					} elseif ($latitude < 33.859854) {
 						if ($this->polygons[1412]->contains($latitude, $longitude)) {
 							return 8;
 						}
@@ -11120,13 +11120,13 @@ class PolygonLookup
 					return 28;
 				}
 			}
-		} else if ($longitude < 34.597916) {
+		} elseif ($longitude < 34.597916) {
 			if ($latitude < 35.956875) {
 				return 174;
 			} else {
 				return 205;
 			}
-		} else if ($longitude < 36.704777) {
+		} elseif ($longitude < 36.704777) {
 			if ($this->polygons[1421]->contains($latitude, $longitude)) {
 				return 205;
 			} else {
@@ -11141,7 +11141,7 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call26(float $latitude, float $longitude) : ?int
+	protected function call26(float $latitude, float $longitude): ?int
 	{
 		if ($longitude < 19.449118) {
 			if ($latitude < 46.538750) {
@@ -11152,7 +11152,7 @@ class PolygonLookup
 						} else {
 							return 30;
 						}
-					} else if ($longitude < 16.881983) {
+					} elseif ($longitude < 16.881983) {
 						if ($this->polygons[1424]->contains($latitude, $longitude)) {
 							return 177;
 						}
@@ -11168,7 +11168,7 @@ class PolygonLookup
 							return 198;
 						}
 					}
-				} else if ($latitude < 45.712029) {
+				} elseif ($latitude < 45.712029) {
 					if ($this->polygons[1427]->contains($latitude, $longitude)) {
 						return 30;
 					}
@@ -11190,7 +11190,7 @@ class PolygonLookup
 						return 209;
 					}
 				}
-			} else if ($latitude < 48.102692) {
+			} elseif ($latitude < 48.102692) {
 				if ($longitude < 17.203238) {
 					if ($longitude < 16.080298) {
 						if ($this->polygons[1432]->contains($latitude, $longitude)) {
@@ -11198,7 +11198,7 @@ class PolygonLookup
 						} else {
 							return 276;
 						}
-					} else if ($latitude < 47.320721) {
+					} elseif ($latitude < 47.320721) {
 						if ($this->polygons[1433]->contains($latitude, $longitude)) {
 							return 177;
 						}
@@ -11224,7 +11224,7 @@ class PolygonLookup
 						return 162;
 					}
 				}
-			} else if ($longitude < 17.203238) {
+			} elseif ($longitude < 17.203238) {
 				if ($latitude < 49.580790) {
 					if ($this->polygons[1438]->contains($latitude, $longitude)) {
 						return 162;
@@ -11237,7 +11237,7 @@ class PolygonLookup
 					} else {
 						return 276;
 					}
-				} else if ($longitude < 16.080298) {
+				} elseif ($longitude < 16.080298) {
 					if ($this->polygons[1441]->contains($latitude, $longitude)) {
 						return 220;
 					} else {
@@ -11250,7 +11250,7 @@ class PolygonLookup
 						return 186;
 					}
 				}
-			} else if ($latitude < 49.580790) {
+			} elseif ($latitude < 49.580790) {
 				if ($this->polygons[1443]->contains($latitude, $longitude)) {
 					return 186;
 				}
@@ -11269,7 +11269,7 @@ class PolygonLookup
 					return 186;
 				}
 			}
-		} else if ($longitude < 24.644997) {
+		} elseif ($longitude < 24.644997) {
 			if ($latitude < 46.189445) {
 				if ($longitude < 22.047057) {
 					if ($longitude < 20.748087) {
@@ -11294,14 +11294,14 @@ class PolygonLookup
 				} else {
 					return 266;
 				}
-			} else if ($latitude < 46.192638) {
+			} elseif ($latitude < 46.192638) {
 				if ($longitude < 20.503389) {
 					if ($this->polygons[1451]->contains($latitude, $longitude)) {
 						return 266;
 					} else {
 						return 198;
 					}
-				} else if ($longitude < 20.511267) {
+				} elseif ($longitude < 20.511267) {
 					if ($this->polygons[1452]->contains($latitude, $longitude)) {
 						return 266;
 					} else {
@@ -11314,7 +11314,7 @@ class PolygonLookup
 						return 198;
 					}
 				}
-			} else if ($longitude < 22.047057) {
+			} elseif ($longitude < 22.047057) {
 				if ($latitude < 48.625763) {
 					if ($longitude < 20.748087) {
 						if ($this->polygons[1454]->contains($latitude, $longitude)) {
@@ -11325,7 +11325,7 @@ class PolygonLookup
 						} else {
 							return 162;
 						}
-					} else if ($latitude < 47.409201) {
+					} elseif ($latitude < 47.409201) {
 						if ($this->polygons[1456]->contains($latitude, $longitude)) {
 							return 198;
 						} else {
@@ -11348,11 +11348,11 @@ class PolygonLookup
 						return 186;
 					}
 				}
-			} else if ($latitude < 48.625763) {
+			} elseif ($latitude < 48.625763) {
 				if ($longitude < 23.346027) {
 					if ($latitude < 47.409201) {
 						return 266;
-					} else if ($longitude < 22.696542) {
+					} elseif ($longitude < 22.696542) {
 						if ($this->polygons[1460]->contains($latitude, $longitude)) {
 							return 162;
 						}
@@ -11387,7 +11387,7 @@ class PolygonLookup
 						return 387;
 					}
 				}
-			} else if ($longitude < 23.346027) {
+			} elseif ($longitude < 23.346027) {
 				if ($latitude < 49.842325) {
 					if ($longitude < 22.696542) {
 						if ($this->polygons[1468]->contains($latitude, $longitude)) {
@@ -11431,7 +11431,7 @@ class PolygonLookup
 					return 275;
 				}
 			}
-		} else if ($latitude < 47.972097) {
+		} elseif ($latitude < 47.972097) {
 			if ($longitude < 27.390221) {
 				if ($this->polygons[1477]->contains($latitude, $longitude)) {
 					return 275;
@@ -11441,7 +11441,7 @@ class PolygonLookup
 				} else {
 					return 266;
 				}
-			} else if ($latitude < 46.428702) {
+			} elseif ($latitude < 46.428702) {
 				if ($longitude < 28.762833) {
 					if ($this->polygons[1479]->contains($latitude, $longitude)) {
 						return 266;
@@ -11473,13 +11473,13 @@ class PolygonLookup
 						return 275;
 					}
 				}
-			} else if ($longitude < 28.762833) {
+			} elseif ($longitude < 28.762833) {
 				if ($this->polygons[1487]->contains($latitude, $longitude)) {
 					return 266;
 				} else {
 					return 294;
 				}
-			} else if ($latitude < 47.200400) {
+			} elseif ($latitude < 47.200400) {
 				if ($longitude < 29.449139) {
 					if ($this->polygons[1488]->contains($latitude, $longitude)) {
 						return 275;
@@ -11503,7 +11503,7 @@ class PolygonLookup
 					return 275;
 				}
 			}
-		} else if ($longitude < 27.390221) {
+		} elseif ($longitude < 27.390221) {
 			if ($latitude < 49.515492) {
 				if ($longitude < 26.017609) {
 					if ($this->polygons[1492]->contains($latitude, $longitude)) {
@@ -11511,7 +11511,7 @@ class PolygonLookup
 					} else {
 						return 275;
 					}
-				} else if ($latitude < 48.743795) {
+				} elseif ($latitude < 48.743795) {
 					if ($longitude < 26.703915) {
 						if ($this->polygons[1493]->contains($latitude, $longitude)) {
 							return 266;
@@ -11549,14 +11549,14 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call27(float $latitude, float $longitude) : ?int
+	protected function call27(float $latitude, float $longitude): ?int
 	{
 		if ($latitude < 51.058887) {
 			if ($longitude < 30.135445) {
 				if ($longitude < 14.957358) {
 					if ($latitude < 45.246277) {
 						return 30;
-					} else if ($latitude < 46.630390) {
+					} elseif ($latitude < 46.630390) {
 						if ($longitude < 13.369805) {
 							if ($latitude < 45.721138) {
 								return 271;
@@ -11567,10 +11567,10 @@ class PolygonLookup
 									return 271;
 								}
 							}
-						} else if ($latitude < 45.749973) {
+						} elseif ($latitude < 45.749973) {
 							if ($longitude < 13.470082) {
 								return 271;
-							} else if ($longitude < 13.552361) {
+							} elseif ($longitude < 13.552361) {
 								if ($latitude < 45.506027) {
 									return 30;
 								} else {
@@ -11586,7 +11586,7 @@ class PolygonLookup
 									return 30;
 								}
 							}
-						} else if ($longitude < 14.955778) {
+						} elseif ($longitude < 14.955778) {
 							if ($this->polygons[1502]->contains($latitude, $longitude)) {
 								return 271;
 							}
@@ -11602,7 +11602,7 @@ class PolygonLookup
 								return 177;
 							}
 						}
-					} else if ($latitude < 47.915885) {
+					} elseif ($latitude < 47.915885) {
 						if ($latitude < 47.721027) {
 							if ($this->polygons[1505]->contains($latitude, $longitude)) {
 								return 6;
@@ -11616,7 +11616,7 @@ class PolygonLookup
 								return 276;
 							}
 						}
-					} else if ($latitude < 49.336078) {
+					} elseif ($latitude < 49.336078) {
 						if ($longitude < 13.960470) {
 							if ($this->polygons[1507]->contains($latitude, $longitude)) {
 								return 220;
@@ -11649,15 +11649,15 @@ class PolygonLookup
 				} else {
 					return $this->call26($latitude, $longitude);
 				}
-			} else if ($longitude < 32.325027) {
+			} elseif ($longitude < 32.325027) {
 				return 275;
-			} else if ($longitude < 33.260555) {
+			} elseif ($longitude < 33.260555) {
 				if ($latitude < 45.807167) {
 					return 197;
 				} else {
 					return 275;
 				}
-			} else if ($longitude < 37.223877) {
+			} elseif ($longitude < 37.223877) {
 				if ($latitude < 45.442917) {
 					if ($longitude < 36.583805) {
 						if ($this->polygons[1513]->contains($latitude, $longitude)) {
@@ -11672,9 +11672,9 @@ class PolygonLookup
 							return 183;
 						}
 					}
-				} else if ($latitude < 45.476776) {
+				} elseif ($latitude < 45.476776) {
 					return 197;
-				} else if ($latitude < 48.130928) {
+				} elseif ($latitude < 48.130928) {
 					if ($longitude < 35.246422) {
 						if ($latitude < 46.282494) {
 							if ($longitude < 34.253489) {
@@ -11693,13 +11693,13 @@ class PolygonLookup
 									return 275;
 								}
 							}
-						} else if ($longitude < 34.253489) {
+						} elseif ($longitude < 34.253489) {
 							if ($this->polygons[1518]->contains($latitude, $longitude)) {
 								return 146;
 							} else {
 								return 275;
 							}
-						} else if ($latitude < 47.206711) {
+						} elseif ($latitude < 47.206711) {
 							if ($this->polygons[1519]->contains($latitude, $longitude)) {
 								return 275;
 							} else {
@@ -11712,7 +11712,7 @@ class PolygonLookup
 								return 275;
 							}
 						}
-					} else if ($longitude < 36.235149) {
+					} elseif ($longitude < 36.235149) {
 						if ($this->polygons[1521]->contains($latitude, $longitude)) {
 							return 275;
 						} else {
@@ -11728,7 +11728,7 @@ class PolygonLookup
 							return 146;
 						}
 					}
-				} else if ($longitude < 35.303777) {
+				} elseif ($longitude < 35.303777) {
 					if ($this->polygons[1524]->contains($latitude, $longitude)) {
 						return 183;
 					} else {
@@ -11741,9 +11741,9 @@ class PolygonLookup
 						return 275;
 					}
 				}
-			} else if ($latitude < 46.770611) {
+			} elseif ($latitude < 46.770611) {
 				return 183;
-			} else if ($longitude < 40.207390) {
+			} elseif ($longitude < 40.207390) {
 				if ($latitude < 48.914749) {
 					if ($longitude < 38.715633) {
 						if ($this->polygons[1526]->contains($latitude, $longitude)) {
@@ -11768,7 +11768,7 @@ class PolygonLookup
 						return 183;
 					}
 				}
-			} else if ($latitude < 48.914749) {
+			} elseif ($latitude < 48.914749) {
 				if ($this->polygons[1530]->contains($latitude, $longitude)) {
 					return 99;
 				} else {
@@ -11781,13 +11781,13 @@ class PolygonLookup
 					return 99;
 				}
 			}
-		} else if ($longitude < 15.497833) {
+		} elseif ($longitude < 15.497833) {
 			if ($latitude < 54.210609) {
 				if ($longitude < 13.778584) {
 					return 6;
-				} else if ($longitude < 13.804861) {
+				} elseif ($longitude < 13.804861) {
 					return 6;
-				} else if ($longitude < 14.358836) {
+				} elseif ($longitude < 14.358836) {
 					if ($latitude < 53.741001) {
 						if ($latitude < 53.088120) {
 							if ($this->polygons[1532]->contains($latitude, $longitude)) {
@@ -11802,11 +11802,11 @@ class PolygonLookup
 								return 6;
 							}
 						}
-					} else if ($longitude < 14.092113) {
+					} elseif ($longitude < 14.092113) {
 						return 6;
-					} else if ($latitude < 53.759693) {
+					} elseif ($latitude < 53.759693) {
 						return 6;
-					} else if ($longitude < 14.224361) {
+					} elseif ($longitude < 14.224361) {
 						if ($this->polygons[1534]->contains($latitude, $longitude)) {
 							return 186;
 						} else {
@@ -11815,7 +11815,7 @@ class PolygonLookup
 					} else {
 						return 186;
 					}
-				} else if ($latitude < 53.467436) {
+				} elseif ($latitude < 53.467436) {
 					if ($latitude < 52.747607) {
 						if ($this->polygons[1535]->contains($latitude, $longitude)) {
 							return 6;
@@ -11832,20 +11832,20 @@ class PolygonLookup
 				} else {
 					return 186;
 				}
-			} else if ($latitude < 54.683807) {
+			} elseif ($latitude < 54.683807) {
 				return 6;
-			} else if ($latitude < 55.300140) {
+			} elseif ($latitude < 55.300140) {
 				return 319;
 			} else {
 				return 375;
 			}
-		} else if ($longitude < 16.890838) {
+		} elseif ($longitude < 16.890838) {
 			if ($latitude < 54.592905) {
 				return 186;
 			} else {
 				return 375;
 			}
-		} else if ($longitude < 35.202944) {
+		} elseif ($longitude < 35.202944) {
 			if ($longitude < 22.892805) {
 				if ($latitude < 55.724445) {
 					if ($latitude < 54.813721) {
@@ -11860,7 +11860,7 @@ class PolygonLookup
 						} else {
 							return 186;
 						}
-					} else if ($longitude < 18.363342) {
+					} elseif ($longitude < 18.363342) {
 						return 186;
 					} else {
 						if ($this->polygons[1540]->contains($latitude, $longitude)) {
@@ -11879,7 +11879,7 @@ class PolygonLookup
 						return 332;
 					}
 				}
-			} else if ($longitude < 29.047875) {
+			} elseif ($longitude < 29.047875) {
 				if ($longitude < 25.970340) {
 					if ($latitude < 53.979597) {
 						if ($longitude < 24.431573) {
@@ -11950,7 +11950,7 @@ class PolygonLookup
 								return 399;
 							}
 						}
-					} else if ($longitude < 24.431573) {
+					} elseif ($longitude < 24.431573) {
 						if ($this->polygons[1560]->contains($latitude, $longitude)) {
 							return 186;
 						}
@@ -11972,13 +11972,13 @@ class PolygonLookup
 							return 53;
 						}
 					}
-				} else if ($latitude < 53.979597) {
+				} elseif ($latitude < 53.979597) {
 					if ($this->polygons[1565]->contains($latitude, $longitude)) {
 						return 399;
 					} else {
 						return 275;
 					}
-				} else if ($longitude < 27.509107) {
+				} elseif ($longitude < 27.509107) {
 					if ($latitude < 55.439952) {
 						if ($this->polygons[1566]->contains($latitude, $longitude)) {
 							return 53;
@@ -12005,7 +12005,7 @@ class PolygonLookup
 						return 183;
 					}
 				}
-			} else if ($longitude < 32.125410) {
+			} elseif ($longitude < 32.125410) {
 				if ($latitude < 53.979597) {
 					if ($longitude < 30.586642) {
 						if ($this->polygons[1571]->contains($latitude, $longitude)) {
@@ -12022,7 +12022,7 @@ class PolygonLookup
 						} else {
 							return 399;
 						}
-					} else if ($latitude < 52.519242) {
+					} elseif ($latitude < 52.519242) {
 						if ($this->polygons[1575]->contains($latitude, $longitude)) {
 							return 183;
 						}
@@ -12038,7 +12038,7 @@ class PolygonLookup
 							return 183;
 						}
 					}
-				} else if ($longitude < 30.586642) {
+				} elseif ($longitude < 30.586642) {
 					if ($this->polygons[1578]->contains($latitude, $longitude)) {
 						return 399;
 					} else {
@@ -12051,7 +12051,7 @@ class PolygonLookup
 						return 183;
 					}
 				}
-			} else if ($latitude < 53.979597) {
+			} elseif ($latitude < 53.979597) {
 				if ($longitude < 33.664177) {
 					if ($this->polygons[1580]->contains($latitude, $longitude)) {
 						return 275;
@@ -12071,7 +12071,7 @@ class PolygonLookup
 			} else {
 				return 183;
 			}
-		} else if ($longitude < 35.416372) {
+		} elseif ($longitude < 35.416372) {
 			if ($this->polygons[1583]->contains($latitude, $longitude)) {
 				return 275;
 			} else {
@@ -12086,7 +12086,7 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call28(float $latitude, float $longitude) : ?int
+	protected function call28(float $latitude, float $longitude): ?int
 	{
 		if ($longitude < 21.254360) {
 			if ($latitude < 41.371582) {
@@ -12116,25 +12116,25 @@ class PolygonLookup
 					} else {
 						return 271;
 					}
-				} else if ($latitude < 38.677971) {
+				} elseif ($latitude < 38.677971) {
 					return 152;
-				} else if ($longitude < 19.537333) {
+				} elseif ($longitude < 19.537333) {
 					if ($longitude < 18.513445) {
 						return 271;
-					} else if ($latitude < 39.873859) {
+					} elseif ($latitude < 39.873859) {
 						return 152;
 					} else {
 						return 75;
 					}
-				} else if ($latitude < 39.251167) {
+				} elseif ($latitude < 39.251167) {
 					return 152;
-				} else if ($longitude < 19.598167) {
+				} elseif ($longitude < 19.598167) {
 					if ($latitude < 40.038214) {
 						return 75;
 					} else {
 						return 152;
 					}
-				} else if ($latitude < 40.311375) {
+				} elseif ($latitude < 40.311375) {
 					if ($this->polygons[1587]->contains($latitude, $longitude)) {
 						return 75;
 					} else {
@@ -12150,7 +12150,7 @@ class PolygonLookup
 						return 75;
 					}
 				}
-			} else if ($longitude < 15.454583) {
+			} elseif ($longitude < 15.454583) {
 				if ($latitude < 44.272278) {
 					if ($longitude < 11.115666) {
 						if ($longitude < 9.561556) {
@@ -12168,7 +12168,7 @@ class PolygonLookup
 										return 271;
 									}
 								}
-							} else if ($latitude < 43.606562) {
+							} elseif ($latitude < 43.606562) {
 								return 271;
 							} else {
 								return 297;
@@ -12176,7 +12176,7 @@ class PolygonLookup
 						} else {
 							return 271;
 						}
-					} else if ($latitude < 43.999805) {
+					} elseif ($latitude < 43.999805) {
 						if ($longitude < 15.228278) {
 							if ($longitude < 12.515555) {
 								if ($this->polygons[1592]->contains($latitude, $longitude)) {
@@ -12197,29 +12197,29 @@ class PolygonLookup
 									return 271;
 								}
 							}
-						} else if ($latitude < 41.926615) {
+						} elseif ($latitude < 41.926615) {
 							return 271;
 						} else {
 							return 30;
 						}
-					} else if ($longitude < 12.678526) {
+					} elseif ($longitude < 12.678526) {
 						return 271;
 					} else {
 						return 30;
 					}
-				} else if ($longitude < 12.496844) {
+				} elseif ($longitude < 12.496844) {
 					return 271;
 				} else {
 					return 30;
 				}
-			} else if ($longitude < 16.283112) {
+			} elseif ($longitude < 16.283112) {
 				if ($latitude < 43.460499) {
 					if ($latitude < 42.126751) {
 						return 271;
 					} else {
 						return 30;
 					}
-				} else if ($latitude < 43.866528) {
+				} elseif ($latitude < 43.866528) {
 					return 30;
 				} else {
 					if ($this->polygons[1596]->contains($latitude, $longitude)) {
@@ -12228,10 +12228,10 @@ class PolygonLookup
 						return 30;
 					}
 				}
-			} else if ($longitude < 17.754278) {
+			} elseif ($longitude < 17.754278) {
 				if ($latitude < 42.806278) {
 					return 30;
-				} else if ($latitude < 43.099861) {
+				} elseif ($latitude < 43.099861) {
 					if ($longitude < 17.201416) {
 						return 30;
 					} else {
@@ -12241,7 +12241,7 @@ class PolygonLookup
 							return 30;
 						}
 					}
-				} else if ($latitude < 43.236000) {
+				} elseif ($latitude < 43.236000) {
 					if ($longitude < 17.194445) {
 						return 30;
 					} else {
@@ -12258,7 +12258,7 @@ class PolygonLookup
 						return 30;
 					}
 				}
-			} else if ($longitude < 18.018444) {
+			} elseif ($longitude < 18.018444) {
 				if ($latitude < 42.755833) {
 					return 30;
 				} else {
@@ -12268,11 +12268,11 @@ class PolygonLookup
 						return 30;
 					}
 				}
-			} else if ($longitude < 19.088497) {
+			} elseif ($longitude < 19.088497) {
 				if ($latitude < 43.558743) {
 					if ($latitude < 42.091462) {
 						return 212;
-					} else if ($latitude < 42.833974) {
+					} elseif ($latitude < 42.833974) {
 						if ($this->polygons[1601]->contains($latitude, $longitude)) {
 							return 30;
 						}
@@ -12298,7 +12298,7 @@ class PolygonLookup
 						return 348;
 					}
 				}
-			} else if ($latitude < 43.128445) {
+			} elseif ($latitude < 43.128445) {
 				if ($longitude < 20.171428) {
 					if ($latitude < 42.250013) {
 						if ($this->polygons[1606]->contains($latitude, $longitude)) {
@@ -12319,7 +12319,7 @@ class PolygonLookup
 							return 212;
 						}
 					}
-				} else if ($latitude < 42.250013) {
+				} elseif ($latitude < 42.250013) {
 					if ($this->polygons[1610]->contains($latitude, $longitude)) {
 						return 75;
 					}
@@ -12338,7 +12338,7 @@ class PolygonLookup
 						return 209;
 					}
 				}
-			} else if ($longitude < 20.171428) {
+			} elseif ($longitude < 20.171428) {
 				if ($latitude < 44.006876) {
 					if ($this->polygons[1614]->contains($latitude, $longitude)) {
 						return 212;
@@ -12364,18 +12364,18 @@ class PolygonLookup
 			} else {
 				return 209;
 			}
-		} else if ($longitude < 25.743999) {
+		} elseif ($longitude < 25.743999) {
 			if ($latitude < 40.022305) {
 				return 152;
-			} else if ($latitude < 40.350529) {
+			} elseif ($latitude < 40.350529) {
 				if ($longitude < 25.432277) {
 					return 152;
 				} else {
 					return 205;
 				}
-			} else if ($latitude < 40.806194) {
+			} elseif ($latitude < 40.806194) {
 				return 152;
-			} else if ($latitude < 41.580002) {
+			} elseif ($latitude < 41.580002) {
 				if ($longitude < 23.499180) {
 					if ($this->polygons[1619]->contains($latitude, $longitude)) {
 						return 337;
@@ -12392,7 +12392,7 @@ class PolygonLookup
 						return 152;
 					}
 				}
-			} else if ($longitude < 23.499180) {
+			} elseif ($longitude < 23.499180) {
 				if ($latitude < 43.232655) {
 					if ($longitude < 22.376770) {
 						if ($this->polygons[1622]->contains($latitude, $longitude)) {
@@ -12413,7 +12413,7 @@ class PolygonLookup
 							return 340;
 						}
 					}
-				} else if ($longitude < 22.376770) {
+				} elseif ($longitude < 22.376770) {
 					if ($this->polygons[1626]->contains($latitude, $longitude)) {
 						return 266;
 					}
@@ -12422,7 +12422,7 @@ class PolygonLookup
 					} else {
 						return 209;
 					}
-				} else if ($latitude < 44.058981) {
+				} elseif ($latitude < 44.058981) {
 					if ($this->polygons[1628]->contains($latitude, $longitude)) {
 						return 209;
 					}
@@ -12451,14 +12451,14 @@ class PolygonLookup
 					return 266;
 				}
 			}
-		} else if ($latitude < 37.410751) {
+		} elseif ($latitude < 37.410751) {
 			if ($longitude < 27.176777) {
 				return 152;
-			} else if ($longitude < 27.874916) {
+			} elseif ($longitude < 27.874916) {
 				if ($latitude < 36.917999) {
 					if ($longitude < 27.357195) {
 						return 152;
-					} else if ($latitude < 36.640251) {
+					} elseif ($latitude < 36.640251) {
 						if ($latitude < 36.533819) {
 							return 152;
 						} else {
@@ -12467,7 +12467,7 @@ class PolygonLookup
 					} else {
 						return 205;
 					}
-				} else if ($longitude < 27.224751) {
+				} elseif ($longitude < 27.224751) {
 					if ($latitude < 37.182851) {
 						return 152;
 					} else {
@@ -12476,11 +12476,11 @@ class PolygonLookup
 				} else {
 					return 205;
 				}
-			} else if ($longitude < 35.659962) {
+			} elseif ($longitude < 35.659962) {
 				return 205;
-			} else if ($longitude < 35.722252) {
+			} elseif ($longitude < 35.722252) {
 				return 205;
-			} else if ($longitude < 39.460653) {
+			} elseif ($longitude < 39.460653) {
 				if ($this->polygons[1634]->contains($latitude, $longitude)) {
 					return 368;
 				} else {
@@ -12496,11 +12496,11 @@ class PolygonLookup
 					return 205;
 				}
 			}
-		} else if ($latitude < 39.399502) {
+		} elseif ($latitude < 39.399502) {
 			if ($latitude < 37.814610) {
 				if ($longitude < 26.808306) {
 					return 152;
-				} else if ($longitude < 27.069723) {
+				} elseif ($longitude < 27.069723) {
 					if ($latitude < 37.476891) {
 						return 152;
 					} else {
@@ -12513,11 +12513,11 @@ class PolygonLookup
 				} else {
 					return 205;
 				}
-			} else if ($longitude < 26.619278) {
+			} elseif ($longitude < 26.619278) {
 				if ($latitude < 38.682251) {
 					if ($longitude < 26.165445) {
 						return 152;
-					} else if ($longitude < 26.294640) {
+					} elseif ($longitude < 26.294640) {
 						if ($latitude < 38.379166) {
 							return 205;
 						} else {
@@ -12526,21 +12526,21 @@ class PolygonLookup
 					} else {
 						return 205;
 					}
-				} else if ($longitude < 26.603834) {
+				} elseif ($longitude < 26.603834) {
 					if ($longitude < 25.845306) {
 						return 152;
-					} else if ($latitude < 39.307919) {
+					} elseif ($latitude < 39.307919) {
 						if ($this->polygons[1638]->contains($latitude, $longitude)) {
 							return 205;
 						} else {
 							return 152;
 						}
-					} else if ($longitude < 26.500569) {
+					} elseif ($longitude < 26.500569) {
 						return 152;
 					} else {
 						return 205;
 					}
-				} else if ($latitude < 39.053222) {
+				} elseif ($latitude < 39.053222) {
 					return 152;
 				} else {
 					return 205;
@@ -12548,9 +12548,9 @@ class PolygonLookup
 			} else {
 				return 205;
 			}
-		} else if ($latitude < 40.677166) {
+		} elseif ($latitude < 40.677166) {
 			return 205;
-		} else if ($longitude < 29.620806) {
+		} elseif ($longitude < 29.620806) {
 			if ($latitude < 42.107613) {
 				if ($longitude < 28.043638) {
 					if ($longitude < 26.893819) {
@@ -12583,7 +12583,7 @@ class PolygonLookup
 				} else {
 					return 205;
 				}
-			} else if ($longitude < 28.612167) {
+			} elseif ($longitude < 28.612167) {
 				if ($this->polygons[1644]->contains($latitude, $longitude)) {
 					return 266;
 				} else {
@@ -12592,21 +12592,21 @@ class PolygonLookup
 			} else {
 				return 266;
 			}
-		} else if ($longitude < 35.162596) {
+		} elseif ($longitude < 35.162596) {
 			if ($latitude < 43.246111) {
 				return 197;
 			} else {
 				return 205;
 			}
-		} else if ($longitude < 35.221638) {
+		} elseif ($longitude < 35.221638) {
 			return 205;
-		} else if ($latitude < 41.763479) {
+		} elseif ($latitude < 41.763479) {
 			if ($this->polygons[1645]->contains($latitude, $longitude)) {
 				return 47;
 			} else {
 				return 205;
 			}
-		} else if ($longitude < 40.250756) {
+		} elseif ($longitude < 40.250756) {
 			if ($this->polygons[1646]->contains($latitude, $longitude)) {
 				return 47;
 			} else {
@@ -12621,7 +12621,7 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call29(float $latitude, float $longitude) : ?int
+	protected function call29(float $latitude, float $longitude): ?int
 	{
 		if ($latitude < 63.393749) {
 			if ($longitude < 21.000000) {
@@ -12630,15 +12630,15 @@ class PolygonLookup
 						if ($longitude < 17.594973) {
 							if ($longitude < 10.975583) {
 								return 355;
-							} else if ($latitude < 58.861279) {
+							} elseif ($latitude < 58.861279) {
 								return 375;
-							} else if ($longitude < 11.114695) {
+							} elseif ($longitude < 11.114695) {
 								if ($latitude < 58.967918) {
 									return 375;
 								} else {
 									return 355;
 								}
-							} else if ($longitude < 12.483325) {
+							} elseif ($longitude < 12.483325) {
 								if ($latitude < 58.893585) {
 									if ($longitude < 11.183945) {
 										return 375;
@@ -12649,7 +12649,7 @@ class PolygonLookup
 											return 375;
 										}
 									}
-								} else if ($longitude < 11.471500) {
+								} elseif ($longitude < 11.471500) {
 									if ($latitude < 58.996334) {
 										if ($longitude < 11.169000) {
 											return 375;
@@ -12680,18 +12680,18 @@ class PolygonLookup
 						} else {
 							return 375;
 						}
-					} else if ($longitude < 19.165695) {
+					} elseif ($longitude < 19.165695) {
 						return 375;
-					} else if ($longitude < 19.207306) {
+					} elseif ($longitude < 19.207306) {
 						return 375;
 					} else {
 						return 188;
 					}
-				} else if ($longitude < 19.480333) {
+				} elseif ($longitude < 19.480333) {
 					if ($longitude < 17.196722) {
 						if ($longitude < 9.436603) {
 							return 355;
-						} else if ($longitude < 12.874028) {
+						} elseif ($longitude < 12.874028) {
 							if ($latitude < 61.360279) {
 								if ($this->polygons[1652]->contains($latitude, $longitude)) {
 									return 375;
@@ -12711,14 +12711,14 @@ class PolygonLookup
 					} else {
 						return 375;
 					}
-				} else if ($latitude < 60.473862) {
+				} elseif ($latitude < 60.473862) {
 					return 188;
-				} else if ($longitude < 20.865360) {
+				} elseif ($longitude < 20.865360) {
 					return 323;
 				} else {
 					return 188;
 				}
-			} else if ($longitude < 21.912750) {
+			} elseif ($longitude < 21.912750) {
 				if ($longitude < 21.153862) {
 					if ($latitude < 60.560112) {
 						return 188;
@@ -12728,19 +12728,19 @@ class PolygonLookup
 				} else {
 					return 323;
 				}
-			} else if ($longitude < 23.447250) {
+			} elseif ($longitude < 23.447250) {
 				if ($latitude < 59.306194) {
 					return 49;
 				} else {
 					return 323;
 				}
-			} else if ($longitude < 26.259001) {
+			} elseif ($longitude < 26.259001) {
 				if ($latitude < 59.687946) {
 					return 49;
 				} else {
 					return 323;
 				}
-			} else if ($longitude < 27.435055) {
+			} elseif ($longitude < 27.435055) {
 				if ($latitude < 60.110668) {
 					if ($latitude < 59.586161) {
 						return 49;
@@ -12750,7 +12750,7 @@ class PolygonLookup
 				} else {
 					return 323;
 				}
-			} else if ($longitude < 28.407444) {
+			} elseif ($longitude < 28.407444) {
 				if ($latitude < 60.044083) {
 					if ($latitude < 59.470806) {
 						if ($this->polygons[1654]->contains($latitude, $longitude)) {
@@ -12761,9 +12761,9 @@ class PolygonLookup
 					} else {
 						return 183;
 					}
-				} else if ($latitude < 60.457390) {
+				} elseif ($latitude < 60.457390) {
 					return 183;
-				} else if ($longitude < 27.854750) {
+				} elseif ($longitude < 27.854750) {
 					if ($latitude < 60.525665) {
 						if ($longitude < 27.745832) {
 							return 323;
@@ -12777,7 +12777,7 @@ class PolygonLookup
 							return 323;
 						}
 					}
-				} else if ($latitude < 60.485054) {
+				} elseif ($latitude < 60.485054) {
 					return 183;
 				} else {
 					if ($this->polygons[1656]->contains($latitude, $longitude)) {
@@ -12786,7 +12786,7 @@ class PolygonLookup
 						return 183;
 					}
 				}
-			} else if ($latitude < 60.750500) {
+			} elseif ($latitude < 60.750500) {
 				return 183;
 			} else {
 				if ($this->polygons[1657]->contains($latitude, $longitude)) {
@@ -12795,11 +12795,11 @@ class PolygonLookup
 					return 183;
 				}
 			}
-		} else if ($latitude < 66.493835) {
+		} elseif ($latitude < 66.493835) {
 			if ($longitude < 21.873028) {
 				if ($longitude < 12.043694) {
 					return 355;
-				} else if ($latitude < 65.745277) {
+				} elseif ($latitude < 65.745277) {
 					if ($longitude < 20.798334) {
 						if ($longitude < 14.575282) {
 							if ($longitude < 12.227278) {
@@ -12812,13 +12812,13 @@ class PolygonLookup
 								} else {
 									return 355;
 								}
-							} else if ($latitude < 65.221085) {
+							} elseif ($latitude < 65.221085) {
 								if ($this->polygons[1659]->contains($latitude, $longitude)) {
 									return 375;
 								} else {
 									return 355;
 								}
-							} else if ($longitude < 12.453417) {
+							} elseif ($longitude < 12.453417) {
 								return 355;
 							} else {
 								if ($this->polygons[1660]->contains($latitude, $longitude)) {
@@ -12830,12 +12830,12 @@ class PolygonLookup
 						} else {
 							return 375;
 						}
-					} else if ($latitude < 63.464695) {
+					} elseif ($latitude < 63.464695) {
 						return 323;
 					} else {
 						return 375;
 					}
-				} else if ($longitude < 13.186111) {
+				} elseif ($longitude < 13.186111) {
 					return 355;
 				} else {
 					if ($this->polygons[1661]->contains($latitude, $longitude)) {
@@ -12844,7 +12844,7 @@ class PolygonLookup
 						return 355;
 					}
 				}
-			} else if ($longitude < 33.387779) {
+			} elseif ($longitude < 33.387779) {
 				if ($longitude < 22.965139) {
 					if ($latitude < 65.340164) {
 						if ($longitude < 21.957138) {
@@ -12855,18 +12855,18 @@ class PolygonLookup
 					} else {
 						return 375;
 					}
-				} else if ($longitude < 24.163279) {
+				} elseif ($longitude < 24.163279) {
 					if ($latitude < 65.677864) {
 						if ($latitude < 64.456893) {
 							return 323;
 						} else {
 							return 375;
 						}
-					} else if ($longitude < 23.574472) {
+					} elseif ($longitude < 23.574472) {
 						return 375;
-					} else if ($latitude < 65.717720) {
+					} elseif ($latitude < 65.717720) {
 						return 375;
-					} else if ($latitude < 65.759140) {
+					} elseif ($latitude < 65.759140) {
 						if ($longitude < 23.981722) {
 							return 323;
 						} else {
@@ -12879,7 +12879,7 @@ class PolygonLookup
 							return 375;
 						}
 					}
-				} else if ($longitude < 25.360001) {
+				} elseif ($longitude < 25.360001) {
 					return 323;
 				} else {
 					if ($this->polygons[1663]->contains($latitude, $longitude)) {
@@ -12891,10 +12891,10 @@ class PolygonLookup
 			} else {
 				return 183;
 			}
-		} else if ($latitude < 69.757027) {
+		} elseif ($latitude < 69.757027) {
 			if ($longitude < 15.314777) {
 				return 355;
-			} else if ($longitude < 32.329250) {
+			} elseif ($longitude < 32.329250) {
 				if ($longitude < 16.755695) {
 					if ($latitude < 67.925449) {
 						if ($this->polygons[1664]->contains($latitude, $longitude)) {
@@ -12905,7 +12905,7 @@ class PolygonLookup
 					} else {
 						return 355;
 					}
-				} else if ($longitude < 18.256083) {
+				} elseif ($longitude < 18.256083) {
 					if ($latitude < 68.558932) {
 						if ($this->polygons[1665]->contains($latitude, $longitude)) {
 							return 375;
@@ -12915,7 +12915,7 @@ class PolygonLookup
 					} else {
 						return 355;
 					}
-				} else if ($longitude < 26.171008) {
+				} elseif ($longitude < 26.171008) {
 					if ($longitude < 19.024416) {
 						if ($latitude < 68.584389) {
 							if ($longitude < 18.417805) {
@@ -12934,7 +12934,7 @@ class PolygonLookup
 						} else {
 							return 355;
 						}
-					} else if ($longitude < 22.597712) {
+					} elseif ($longitude < 22.597712) {
 						if ($longitude < 20.811064) {
 							if ($this->polygons[1668]->contains($latitude, $longitude)) {
 								return 323;
@@ -12954,7 +12954,7 @@ class PolygonLookup
 								return 323;
 							}
 						}
-					} else if ($longitude < 24.384360) {
+					} elseif ($longitude < 24.384360) {
 						if ($this->polygons[1672]->contains($latitude, $longitude)) {
 							return 355;
 						}
@@ -12970,7 +12970,7 @@ class PolygonLookup
 							return 323;
 						}
 					}
-				} else if ($longitude < 30.945389) {
+				} elseif ($longitude < 30.945389) {
 					if ($longitude < 28.558198) {
 						if ($this->polygons[1675]->contains($latitude, $longitude)) {
 							return 183;
@@ -12980,7 +12980,7 @@ class PolygonLookup
 						} else {
 							return 323;
 						}
-					} else if ($latitude < 68.125431) {
+					} elseif ($latitude < 68.125431) {
 						if ($this->polygons[1677]->contains($latitude, $longitude)) {
 							return 323;
 						} else {
@@ -13011,14 +13011,14 @@ class PolygonLookup
 			} else {
 				return 183;
 			}
-		} else if ($latitude < 76.436279) {
+		} elseif ($latitude < 76.436279) {
 			if ($longitude < 21.929611) {
 				if ($latitude < 70.395920) {
 					return 355;
 				} else {
 					return 111;
 				}
-			} else if ($latitude < 70.096054) {
+			} elseif ($latitude < 70.096054) {
 				if ($longitude < 30.098833) {
 					if ($longitude < 28.792934) {
 						if ($longitude < 22.034249) {
@@ -13033,9 +13033,9 @@ class PolygonLookup
 					} else {
 						return 355;
 					}
-				} else if ($longitude < 30.400282) {
+				} elseif ($longitude < 30.400282) {
 					return 355;
-				} else if ($longitude < 30.856945) {
+				} elseif ($longitude < 30.856945) {
 					if ($this->polygons[1684]->contains($latitude, $longitude)) {
 						return 183;
 					} else {
@@ -13052,13 +13052,13 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call30(float $latitude, float $longitude) : ?int
+	protected function call30(float $latitude, float $longitude): ?int
 	{
 		if ($latitude < 11.098028) {
 			if ($latitude < 9.890555) {
 				if ($latitude < 8.278500) {
 					return 270;
-				} else if ($longitude < 98.502388) {
+				} elseif ($longitude < 98.502388) {
 					if ($longitude < 98.175087) {
 						if ($longitude < 97.912476) {
 							return 270;
@@ -13068,14 +13068,14 @@ class PolygonLookup
 					} else {
 						return 270;
 					}
-				} else if ($longitude < 100.258641) {
+				} elseif ($longitude < 100.258641) {
 					return 270;
 				} else {
 					return 24;
 				}
-			} else if ($longitude < 98.470779) {
+			} elseif ($longitude < 98.470779) {
 				return 40;
-			} else if ($longitude < 102.955833) {
+			} elseif ($longitude < 102.955833) {
 				if ($longitude < 98.630722) {
 					if ($latitude < 10.036747) {
 						if ($longitude < 98.503304) {
@@ -13084,7 +13084,7 @@ class PolygonLookup
 							} else {
 								return 40;
 							}
-						} else if ($longitude < 98.551109) {
+						} elseif ($longitude < 98.551109) {
 							return 40;
 						} else {
 							if ($this->polygons[1685]->contains($latitude, $longitude)) {
@@ -13096,7 +13096,7 @@ class PolygonLookup
 					} else {
 						return 40;
 					}
-				} else if ($longitude < 99.519447) {
+				} elseif ($longitude < 99.519447) {
 					if ($longitude < 99.223419) {
 						if ($latitude < 10.941639) {
 							if ($this->polygons[1686]->contains($latitude, $longitude)) {
@@ -13107,7 +13107,7 @@ class PolygonLookup
 							} else {
 								return 270;
 							}
-						} else if ($longitude < 98.707916) {
+						} elseif ($longitude < 98.707916) {
 							return 40;
 						} else {
 							if ($this->polygons[1688]->contains($latitude, $longitude)) {
@@ -13119,22 +13119,22 @@ class PolygonLookup
 					} else {
 						return 270;
 					}
-				} else if ($longitude < 99.855583) {
+				} elseif ($longitude < 99.855583) {
 					return 270;
 				} else {
 					return 251;
 				}
-			} else if ($longitude < 103.821335) {
+			} elseif ($longitude < 103.821335) {
 				return 251;
-			} else if ($latitude < 10.323584) {
+			} elseif ($latitude < 10.323584) {
 				return 24;
-			} else if ($longitude < 104.078867) {
+			} elseif ($longitude < 104.078867) {
 				if ($latitude < 10.498389) {
 					return 24;
 				} else {
 					return 251;
 				}
-			} else if ($longitude < 104.334137) {
+			} elseif ($longitude < 104.334137) {
 				return 251;
 			} else {
 				if ($this->polygons[1689]->contains($latitude, $longitude)) {
@@ -13143,10 +13143,10 @@ class PolygonLookup
 					return 24;
 				}
 			}
-		} else if ($latitude < 12.230139) {
+		} elseif ($latitude < 12.230139) {
 			if ($longitude < 98.681419) {
 				return 40;
-			} else if ($longitude < 102.919525) {
+			} elseif ($longitude < 102.919525) {
 				if ($longitude < 100.020752) {
 					if ($longitude < 98.690804) {
 						return 40;
@@ -13157,7 +13157,7 @@ class PolygonLookup
 							return 40;
 						}
 					}
-				} else if ($longitude < 102.610809) {
+				} elseif ($longitude < 102.610809) {
 					return 270;
 				} else {
 					if ($this->polygons[1691]->contains($latitude, $longitude)) {
@@ -13169,10 +13169,10 @@ class PolygonLookup
 			} else {
 				return 251;
 			}
-		} else if ($latitude < 12.614500) {
+		} elseif ($latitude < 12.614500) {
 			if ($longitude < 98.613220) {
 				return 40;
-			} else if ($longitude < 100.972930) {
+			} elseif ($longitude < 100.972930) {
 				if ($longitude < 99.497317) {
 					if ($this->polygons[1692]->contains($latitude, $longitude)) {
 						return 270;
@@ -13182,7 +13182,7 @@ class PolygonLookup
 				} else {
 					return 270;
 				}
-			} else if ($longitude < 102.244331) {
+			} elseif ($longitude < 102.244331) {
 				return 270;
 			} else {
 				if ($this->polygons[1693]->contains($latitude, $longitude)) {
@@ -13191,13 +13191,13 @@ class PolygonLookup
 					return 270;
 				}
 			}
-		} else if ($longitude < 98.224945) {
+		} elseif ($longitude < 98.224945) {
 			if ($latitude < 14.414500) {
 				return 40;
-			} else if ($latitude < 16.337936) {
+			} elseif ($latitude < 16.337936) {
 				if ($longitude < 97.888252) {
 					return 40;
-				} else if ($latitude < 15.008137) {
+				} elseif ($latitude < 15.008137) {
 					if ($this->polygons[1694]->contains($latitude, $longitude)) {
 						return 270;
 					} else {
@@ -13210,7 +13210,7 @@ class PolygonLookup
 						return 40;
 					}
 				}
-			} else if ($latitude < 17.826316) {
+			} elseif ($latitude < 17.826316) {
 				if ($latitude < 16.375928) {
 					return 40;
 				} else {
@@ -13220,13 +13220,13 @@ class PolygonLookup
 						return 40;
 					}
 				}
-			} else if ($latitude < 18.056516) {
+			} elseif ($latitude < 18.056516) {
 				if ($this->polygons[1697]->contains($latitude, $longitude)) {
 					return 40;
 				} else {
 					return 270;
 				}
-			} else if ($latitude < 18.916257) {
+			} elseif ($latitude < 18.916257) {
 				if ($this->polygons[1698]->contains($latitude, $longitude)) {
 					return 40;
 				} else {
@@ -13239,7 +13239,7 @@ class PolygonLookup
 					return 40;
 				}
 			}
-		} else if ($longitude < 99.394151) {
+		} elseif ($longitude < 99.394151) {
 			if ($latitude < 12.907416) {
 				if ($longitude < 98.699638) {
 					return 40;
@@ -13250,7 +13250,7 @@ class PolygonLookup
 						return 40;
 					}
 				}
-			} else if ($latitude < 14.976789) {
+			} elseif ($latitude < 14.976789) {
 				if ($longitude < 98.335114) {
 					if ($latitude < 13.213333) {
 						return 40;
@@ -13261,7 +13261,7 @@ class PolygonLookup
 							return 40;
 						}
 					}
-				} else if ($latitude < 12.936528) {
+				} elseif ($latitude < 12.936528) {
 					if ($longitude < 98.556503) {
 						return 40;
 					} else {
@@ -13278,13 +13278,13 @@ class PolygonLookup
 						return 40;
 					}
 				}
-			} else if ($latitude < 15.059563) {
+			} elseif ($latitude < 15.059563) {
 				if ($this->polygons[1704]->contains($latitude, $longitude)) {
 					return 40;
 				} else {
 					return 270;
 				}
-			} else if ($latitude < 17.224167) {
+			} elseif ($latitude < 17.224167) {
 				if ($latitude < 16.141865) {
 					if ($this->polygons[1705]->contains($latitude, $longitude)) {
 						return 40;
@@ -13305,10 +13305,10 @@ class PolygonLookup
 					return 270;
 				}
 			}
-		} else if ($latitude < 14.439500) {
+		} elseif ($latitude < 14.439500) {
 			if ($longitude < 100.822113) {
 				return 270;
-			} else if ($longitude < 103.662552) {
+			} elseif ($longitude < 103.662552) {
 				if ($this->polygons[1708]->contains($latitude, $longitude)) {
 					return 251;
 				} else {
@@ -13321,7 +13321,7 @@ class PolygonLookup
 					return 251;
 				}
 			}
-		} else if ($latitude < 17.542611) {
+		} elseif ($latitude < 17.542611) {
 			if ($this->polygons[1710]->contains($latitude, $longitude)) {
 				return 265;
 			}
@@ -13330,11 +13330,11 @@ class PolygonLookup
 			} else {
 				return 270;
 			}
-		} else if ($longitude < 102.249394) {
+		} elseif ($longitude < 102.249394) {
 			if ($latitude < 19.094166) {
 				if ($longitude < 100.821773) {
 					return 270;
-				} else if ($latitude < 18.318388) {
+				} elseif ($latitude < 18.318388) {
 					if ($this->polygons[1712]->contains($latitude, $longitude)) {
 						return 265;
 					} else {
@@ -13347,7 +13347,7 @@ class PolygonLookup
 						return 265;
 					}
 				}
-			} else if ($longitude < 100.821773) {
+			} elseif ($longitude < 100.821773) {
 				if ($this->polygons[1714]->contains($latitude, $longitude)) {
 					return 40;
 				}
@@ -13363,7 +13363,7 @@ class PolygonLookup
 					return 265;
 				}
 			}
-		} else if ($latitude < 19.094166) {
+		} elseif ($latitude < 19.094166) {
 			if ($longitude < 103.677016) {
 				if ($this->polygons[1717]->contains($latitude, $longitude)) {
 					return 270;
@@ -13380,9 +13380,9 @@ class PolygonLookup
 					return 265;
 				}
 			}
-		} else if ($longitude < 103.677016) {
+		} elseif ($longitude < 103.677016) {
 			return 265;
-		} else if ($latitude < 19.869944) {
+		} elseif ($latitude < 19.869944) {
 			if ($this->polygons[1720]->contains($latitude, $longitude)) {
 				return 265;
 			} else {
@@ -13397,7 +13397,7 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call31(float $latitude, float $longitude) : ?int
+	protected function call31(float $latitude, float $longitude): ?int
 	{
 		if ($latitude < 55.192631) {
 			if ($longitude < 55.123322) {
@@ -13408,13 +13408,13 @@ class PolygonLookup
 						} else {
 							return 120;
 						}
-					} else if ($longitude < 52.374453) {
+					} elseif ($longitude < 52.374453) {
 						if ($this->polygons[1723]->contains($latitude, $longitude)) {
 							return 120;
 						} else {
 							return 115;
 						}
-					} else if ($latitude < 49.412832) {
+					} elseif ($latitude < 49.412832) {
 						if ($this->polygons[1724]->contains($latitude, $longitude)) {
 							return 115;
 						}
@@ -13436,7 +13436,7 @@ class PolygonLookup
 							return 240;
 						}
 					}
-				} else if ($latitude < 52.307041) {
+				} elseif ($latitude < 52.307041) {
 					if ($longitude < 52.374453) {
 						if ($longitude < 51.000018) {
 							if ($latitude < 51.619549) {
@@ -13481,7 +13481,7 @@ class PolygonLookup
 							return 115;
 						}
 					}
-				} else if ($longitude < 52.374453) {
+				} elseif ($longitude < 52.374453) {
 					if ($latitude < 53.749836) {
 						if ($this->polygons[1738]->contains($latitude, $longitude)) {
 							return 99;
@@ -13491,7 +13491,7 @@ class PolygonLookup
 						} else {
 							return 157;
 						}
-					} else if ($longitude < 51.000018) {
+					} elseif ($longitude < 51.000018) {
 						if ($this->polygons[1740]->contains($latitude, $longitude)) {
 							return 183;
 						} else {
@@ -13513,9 +13513,9 @@ class PolygonLookup
 							return 157;
 						}
 					}
-				} else if ($latitude < 53.749836) {
+				} elseif ($latitude < 53.749836) {
 					return 178;
-				} else if ($longitude < 53.748887) {
+				} elseif ($longitude < 53.748887) {
 					if ($latitude < 54.471233) {
 						if ($longitude < 53.061670) {
 							if ($this->polygons[1745]->contains($latitude, $longitude)) {
@@ -13558,7 +13558,7 @@ class PolygonLookup
 				} else {
 					return 178;
 				}
-			} else if ($longitude < 61.844131) {
+			} elseif ($longitude < 61.844131) {
 				if ($latitude < 51.509230) {
 					if ($longitude < 58.483727) {
 						if ($this->polygons[1754]->contains($latitude, $longitude)) {
@@ -13576,9 +13576,9 @@ class PolygonLookup
 							return 178;
 						}
 					}
-				} else if ($longitude < 58.483727) {
+				} elseif ($longitude < 58.483727) {
 					return 178;
-				} else if ($latitude < 53.350930) {
+				} elseif ($latitude < 53.350930) {
 					if ($this->polygons[1757]->contains($latitude, $longitude)) {
 						return 239;
 					}
@@ -13594,7 +13594,7 @@ class PolygonLookup
 						return 178;
 					}
 				}
-			} else if ($latitude < 51.509230) {
+			} elseif ($latitude < 51.509230) {
 				if ($longitude < 65.204536) {
 					if ($latitude < 49.667529) {
 						if ($this->polygons[1760]->contains($latitude, $longitude)) {
@@ -13619,7 +13619,7 @@ class PolygonLookup
 						return 347;
 					}
 				}
-			} else if ($longitude < 65.204536) {
+			} elseif ($longitude < 65.204536) {
 				if ($latitude < 53.350930) {
 					if ($this->polygons[1764]->contains($latitude, $longitude)) {
 						return 178;
@@ -13636,13 +13636,13 @@ class PolygonLookup
 						return 178;
 					}
 				}
-			} else if ($latitude < 53.350930) {
+			} elseif ($latitude < 53.350930) {
 				if ($this->polygons[1767]->contains($latitude, $longitude)) {
 					return 347;
 				} else {
 					return 239;
 				}
-			} else if ($longitude < 66.884739) {
+			} elseif ($longitude < 66.884739) {
 				if ($this->polygons[1768]->contains($latitude, $longitude)) {
 					return 178;
 				}
@@ -13661,7 +13661,7 @@ class PolygonLookup
 					return 347;
 				}
 			}
-		} else if ($longitude < 59.095263) {
+		} elseif ($longitude < 59.095263) {
 			if ($latitude < 60.730856) {
 				if ($longitude < 54.360423) {
 					if ($latitude < 57.961743) {
@@ -13673,13 +13673,13 @@ class PolygonLookup
 									} else {
 										return 183;
 									}
-								} else if ($latitude < 55.884909) {
+								} elseif ($latitude < 55.884909) {
 									if ($this->polygons[1773]->contains($latitude, $longitude)) {
 										return 157;
 									} else {
 										return 183;
 									}
-								} else if ($longitude < 51.401148) {
+								} elseif ($longitude < 51.401148) {
 									if ($this->polygons[1774]->contains($latitude, $longitude)) {
 										return 157;
 									}
@@ -13713,7 +13713,7 @@ class PolygonLookup
 										return 157;
 									}
 								}
-							} else if ($longitude < 50.809294) {
+							} elseif ($longitude < 50.809294) {
 								if ($this->polygons[1783]->contains($latitude, $longitude)) {
 									return 183;
 								} else {
@@ -13726,11 +13726,11 @@ class PolygonLookup
 									return 99;
 								}
 							}
-						} else if ($latitude < 56.577187) {
+						} elseif ($latitude < 56.577187) {
 							if ($longitude < 53.176713) {
 								if ($latitude < 55.884909) {
 									return 183;
-								} else if ($longitude < 52.584858) {
+								} elseif ($longitude < 52.584858) {
 									if ($this->polygons[1785]->contains($latitude, $longitude)) {
 										return 157;
 									} else {
@@ -13743,7 +13743,7 @@ class PolygonLookup
 										return 157;
 									}
 								}
-							} else if ($latitude < 55.884909) {
+							} elseif ($latitude < 55.884909) {
 								if ($this->polygons[1787]->contains($latitude, $longitude)) {
 									return 157;
 								}
@@ -13778,7 +13778,7 @@ class PolygonLookup
 								return 157;
 							}
 						}
-					} else if ($longitude < 51.993003) {
+					} elseif ($longitude < 51.993003) {
 						if ($this->polygons[1795]->contains($latitude, $longitude)) {
 							return 157;
 						}
@@ -13790,7 +13790,7 @@ class PolygonLookup
 						} else {
 							return 99;
 						}
-					} else if ($latitude < 59.346300) {
+					} elseif ($latitude < 59.346300) {
 						if ($this->polygons[1798]->contains($latitude, $longitude)) {
 							return 157;
 						}
@@ -13826,9 +13826,9 @@ class PolygonLookup
 					return 183;
 				}
 			}
-		} else if ($latitude < 60.730856) {
+		} elseif ($latitude < 60.730856) {
 			return 178;
-		} else if ($longitude < 63.830102) {
+		} elseif ($longitude < 63.830102) {
 			if ($latitude < 63.499969) {
 				if ($this->polygons[1805]->contains($latitude, $longitude)) {
 					return 183;
@@ -13847,7 +13847,7 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call32(float $latitude, float $longitude) : ?int
+	protected function call32(float $latitude, float $longitude): ?int
 	{
 		if ($latitude < 45.945526) {
 			if ($latitude < 44.510529) {
@@ -13870,7 +13870,7 @@ class PolygonLookup
 									return 47;
 								}
 							}
-						} else if ($latitude < 41.802489) {
+						} elseif ($latitude < 41.802489) {
 							if ($longitude < 45.571343) {
 								if ($this->polygons[1810]->contains($latitude, $longitude)) {
 									return 47;
@@ -13900,7 +13900,7 @@ class PolygonLookup
 								return 47;
 							}
 						}
-					} else if ($longitude < 47.943632) {
+					} elseif ($longitude < 47.943632) {
 						if ($latitude < 41.802489) {
 							if ($this->polygons[1816]->contains($latitude, $longitude)) {
 								return 47;
@@ -13933,7 +13933,7 @@ class PolygonLookup
 				} else {
 					return 183;
 				}
-			} else if ($longitude < 47.589027) {
+			} elseif ($longitude < 47.589027) {
 				if ($latitude < 45.179359) {
 					return 183;
 				} else {
@@ -13946,7 +13946,7 @@ class PolygonLookup
 			} else {
 				return 99;
 			}
-		} else if ($latitude < 46.203140) {
+		} elseif ($latitude < 46.203140) {
 			if ($longitude < 49.029415) {
 				if ($longitude < 47.174988) {
 					if ($this->polygons[1823]->contains($latitude, $longitude)) {
@@ -13957,12 +13957,12 @@ class PolygonLookup
 				} else {
 					return 99;
 				}
-			} else if ($longitude < 49.248165) {
+			} elseif ($longitude < 49.248165) {
 				return 99;
 			} else {
 				return 120;
 			}
-		} else if ($latitude < 51.129581) {
+		} elseif ($latitude < 51.129581) {
 			if ($longitude < 49.420502) {
 				if ($latitude < 46.267223) {
 					if ($longitude < 49.135693) {
@@ -13983,19 +13983,19 @@ class PolygonLookup
 						} else {
 							return 99;
 						}
-					} else if ($longitude < 49.240028) {
+					} elseif ($longitude < 49.240028) {
 						return 99;
 					} else {
 						return 120;
 					}
-				} else if ($longitude < 49.216098) {
+				} elseif ($longitude < 49.216098) {
 					if ($longitude < 46.207577) {
 						if ($this->polygons[1826]->contains($latitude, $longitude)) {
 							return 99;
 						} else {
 							return 183;
 						}
-					} else if ($latitude < 48.698402) {
+					} elseif ($latitude < 48.698402) {
 						if ($longitude < 47.711837) {
 							if ($this->polygons[1827]->contains($latitude, $longitude)) {
 								return 115;
@@ -14028,7 +14028,7 @@ class PolygonLookup
 							return 115;
 						}
 					}
-				} else if ($latitude < 46.433438) {
+				} elseif ($latitude < 46.433438) {
 					if ($latitude < 46.298000) {
 						if ($longitude < 49.220917) {
 							return 99;
@@ -14038,7 +14038,7 @@ class PolygonLookup
 					} else {
 						return 120;
 					}
-				} else if ($latitude < 48.018226) {
+				} elseif ($latitude < 48.018226) {
 					if ($this->polygons[1834]->contains($latitude, $longitude)) {
 						return 115;
 					} else {
@@ -14051,9 +14051,9 @@ class PolygonLookup
 						return 99;
 					}
 				}
-			} else if ($latitude < 46.325863) {
+			} elseif ($latitude < 46.325863) {
 				return 120;
-			} else if ($latitude < 48.059217) {
+			} elseif ($latitude < 48.059217) {
 				if ($this->polygons[1836]->contains($latitude, $longitude)) {
 					return 115;
 				} else {
@@ -14066,14 +14066,14 @@ class PolygonLookup
 					return 115;
 				}
 			}
-		} else if ($latitude < 53.870827) {
+		} elseif ($latitude < 53.870827) {
 			if ($longitude < 46.412319) {
 				if ($this->polygons[1838]->contains($latitude, $longitude)) {
 					return 183;
 				} else {
 					return 99;
 				}
-			} else if ($longitude < 48.018951) {
+			} elseif ($longitude < 48.018951) {
 				if ($this->polygons[1839]->contains($latitude, $longitude)) {
 					return 99;
 				}
@@ -14085,7 +14085,7 @@ class PolygonLookup
 				} else {
 					return 183;
 				}
-			} else if ($latitude < 52.500204) {
+			} elseif ($latitude < 52.500204) {
 				if ($this->polygons[1842]->contains($latitude, $longitude)) {
 					return 157;
 				}
@@ -14097,7 +14097,7 @@ class PolygonLookup
 				} else {
 					return 99;
 				}
-			} else if ($longitude < 48.822268) {
+			} elseif ($longitude < 48.822268) {
 				if ($latitude < 53.185186) {
 					if ($this->polygons[1845]->contains($latitude, $longitude)) {
 						return 99;
@@ -14130,20 +14130,20 @@ class PolygonLookup
 					return 157;
 				}
 			}
-		} else if ($latitude < 60.069954) {
+		} elseif ($latitude < 60.069954) {
 			if ($longitude < 46.412319) {
 				if ($this->polygons[1852]->contains($latitude, $longitude)) {
 					return 99;
 				} else {
 					return 183;
 				}
-			} else if ($latitude < 56.970390) {
+			} elseif ($latitude < 56.970390) {
 				if ($this->polygons[1853]->contains($latitude, $longitude)) {
 					return 99;
 				} else {
 					return 183;
 				}
-			} else if ($longitude < 48.018951) {
+			} elseif ($longitude < 48.018951) {
 				if ($latitude < 58.520172) {
 					if ($longitude < 47.215635) {
 						if ($this->polygons[1854]->contains($latitude, $longitude)) {
@@ -14187,7 +14187,7 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call33(float $latitude, float $longitude) : ?int
+	protected function call33(float $latitude, float $longitude): ?int
 	{
 		if ($longitude < 49.249474) {
 			if ($latitude < 30.415028) {
@@ -14204,7 +14204,7 @@ class PolygonLookup
 						} else {
 							return 231;
 						}
-					} else if ($latitude < 29.472639) {
+					} elseif ($latitude < 29.472639) {
 						if ($latitude < 28.535639) {
 							if ($this->polygons[1864]->contains($latitude, $longitude)) {
 								return 231;
@@ -14214,9 +14214,9 @@ class PolygonLookup
 						} else {
 							return 231;
 						}
-					} else if ($latitude < 29.903723) {
+					} elseif ($latitude < 29.903723) {
 						return 231;
-					} else if ($longitude < 48.015431) {
+					} elseif ($longitude < 48.015431) {
 						if ($latitude < 29.993876) {
 							return 28;
 						} else {
@@ -14232,12 +14232,12 @@ class PolygonLookup
 							return 231;
 						}
 					}
-				} else if ($latitude < 28.263104) {
+				} elseif ($latitude < 28.263104) {
 					return 163;
 				} else {
 					return 55;
 				}
-			} else if ($longitude < 49.007973) {
+			} elseif ($longitude < 49.007973) {
 				if ($latitude < 37.350142) {
 					if ($longitude < 48.168983) {
 						if ($latitude < 33.882585) {
@@ -14247,7 +14247,7 @@ class PolygonLookup
 								} else {
 									return 28;
 								}
-							} else if ($latitude < 32.148806) {
+							} elseif ($latitude < 32.148806) {
 								if ($this->polygons[1868]->contains($latitude, $longitude)) {
 									return 55;
 								} else {
@@ -14260,7 +14260,7 @@ class PolygonLookup
 									return 55;
 								}
 							}
-						} else if ($longitude < 45.684019) {
+						} elseif ($longitude < 45.684019) {
 							if ($latitude < 35.616364) {
 								if ($this->polygons[1870]->contains($latitude, $longitude)) {
 									return 55;
@@ -14270,13 +14270,13 @@ class PolygonLookup
 								} else {
 									return 28;
 								}
-							} else if ($longitude < 44.441537) {
+							} elseif ($longitude < 44.441537) {
 								if ($this->polygons[1872]->contains($latitude, $longitude)) {
 									return 205;
 								} else {
 									return 28;
 								}
-							} else if ($latitude < 36.483253) {
+							} elseif ($latitude < 36.483253) {
 								if ($this->polygons[1873]->contains($latitude, $longitude)) {
 									return 55;
 								} else {
@@ -14292,7 +14292,7 @@ class PolygonLookup
 									return 28;
 								}
 							}
-						} else if ($latitude < 35.616364) {
+						} elseif ($latitude < 35.616364) {
 							if ($this->polygons[1876]->contains($latitude, $longitude)) {
 								return 28;
 							}
@@ -14311,7 +14311,7 @@ class PolygonLookup
 					} else {
 						return 55;
 					}
-				} else if ($longitude < 46.103514) {
+				} elseif ($longitude < 46.103514) {
 					if ($latitude < 39.011363) {
 						if ($longitude < 44.651284) {
 							if ($this->polygons[1879]->contains($latitude, $longitude)) {
@@ -14329,7 +14329,7 @@ class PolygonLookup
 								return 55;
 							}
 						}
-					} else if ($longitude < 44.651284) {
+					} elseif ($longitude < 44.651284) {
 						if ($this->polygons[1882]->contains($latitude, $longitude)) {
 							return 48;
 						}
@@ -14338,7 +14338,7 @@ class PolygonLookup
 						} else {
 							return 205;
 						}
-					} else if ($latitude < 39.841974) {
+					} elseif ($latitude < 39.841974) {
 						if ($this->polygons[1884]->contains($latitude, $longitude)) {
 							return 48;
 						}
@@ -14360,7 +14360,7 @@ class PolygonLookup
 							return 48;
 						}
 					}
-				} else if ($latitude < 39.011363) {
+				} elseif ($latitude < 39.011363) {
 					if ($this->polygons[1889]->contains($latitude, $longitude)) {
 						return 48;
 					}
@@ -14375,7 +14375,7 @@ class PolygonLookup
 					} else {
 						return 55;
 					}
-				} else if ($longitude < 47.555743) {
+				} elseif ($longitude < 47.555743) {
 					if ($this->polygons[1893]->contains($latitude, $longitude)) {
 						return 48;
 					}
@@ -14391,28 +14391,28 @@ class PolygonLookup
 						return 51;
 					}
 				}
-			} else if ($latitude < 37.722569) {
+			} elseif ($latitude < 37.722569) {
 				return 55;
 			} else {
 				return 51;
 			}
-		} else if ($longitude < 50.639946) {
+		} elseif ($longitude < 50.639946) {
 			if ($latitude < 27.723528) {
 				return 163;
-			} else if ($latitude < 37.547089) {
+			} elseif ($latitude < 37.547089) {
 				return 55;
 			} else {
 				return 51;
 			}
-		} else if ($longitude < 51.467556) {
+		} elseif ($longitude < 51.467556) {
 			return 55;
-		} else if ($longitude < 53.649776) {
+		} elseif ($longitude < 53.649776) {
 			if ($latitude < 36.882539) {
 				return 55;
 			} else {
 				return 76;
 			}
-		} else if ($longitude < 56.605778) {
+		} elseif ($longitude < 56.605778) {
 			if ($latitude < 36.947498) {
 				return 55;
 			} else {
@@ -14422,7 +14422,7 @@ class PolygonLookup
 					return 76;
 				}
 			}
-		} else if ($latitude < 31.834249) {
+		} elseif ($latitude < 31.834249) {
 			if ($longitude < 68.168892) {
 				if ($longitude < 62.387335) {
 					if ($this->polygons[1897]->contains($latitude, $longitude)) {
@@ -14433,7 +14433,7 @@ class PolygonLookup
 					} else {
 						return 55;
 					}
-				} else if ($longitude < 65.278113) {
+				} elseif ($longitude < 65.278113) {
 					if ($this->polygons[1899]->contains($latitude, $longitude)) {
 						return 55;
 					}
@@ -14456,11 +14456,11 @@ class PolygonLookup
 					return 210;
 				}
 			}
-		} else if ($longitude < 61.278584) {
+		} elseif ($longitude < 61.278584) {
 			if ($latitude < 36.253417) {
 				if ($longitude < 58.942181) {
 					return 55;
-				} else if ($latitude < 34.043833) {
+				} elseif ($latitude < 34.043833) {
 					if ($this->polygons[1903]->contains($latitude, $longitude)) {
 						return 366;
 					} else {
@@ -14476,7 +14476,7 @@ class PolygonLookup
 						return 55;
 					}
 				}
-			} else if ($longitude < 58.942181) {
+			} elseif ($longitude < 58.942181) {
 				if ($this->polygons[1906]->contains($latitude, $longitude)) {
 					return 76;
 				} else {
@@ -14489,13 +14489,13 @@ class PolygonLookup
 					return 76;
 				}
 			}
-		} else if ($latitude < 36.253417) {
+		} elseif ($latitude < 36.253417) {
 			if ($this->polygons[1908]->contains($latitude, $longitude)) {
 				return 76;
 			} else {
 				return 366;
 			}
-		} else if ($longitude < 64.921762) {
+		} elseif ($longitude < 64.921762) {
 			if ($this->polygons[1909]->contains($latitude, $longitude)) {
 				return 167;
 			}
@@ -14504,7 +14504,7 @@ class PolygonLookup
 			} else {
 				return 76;
 			}
-		} else if ($latitude < 38.463001) {
+		} elseif ($latitude < 38.463001) {
 			if ($longitude < 66.743352) {
 				if ($this->polygons[1911]->contains($latitude, $longitude)) {
 					return 167;
@@ -14514,7 +14514,7 @@ class PolygonLookup
 				} else {
 					return 76;
 				}
-			} else if ($latitude < 37.358209) {
+			} elseif ($latitude < 37.358209) {
 				if ($this->polygons[1913]->contains($latitude, $longitude)) {
 					return 167;
 				}
@@ -14536,7 +14536,7 @@ class PolygonLookup
 					return 167;
 				}
 			}
-		} else if ($longitude < 66.743352) {
+		} elseif ($longitude < 66.743352) {
 			if ($this->polygons[1918]->contains($latitude, $longitude)) {
 				return 76;
 			}
@@ -14545,7 +14545,7 @@ class PolygonLookup
 			} else {
 				return 167;
 			}
-		} else if ($latitude < 39.567793) {
+		} elseif ($latitude < 39.567793) {
 			if ($this->polygons[1920]->contains($latitude, $longitude)) {
 				return 167;
 			}
@@ -14575,12 +14575,12 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call34(float $latitude, float $longitude) : ?int
+	protected function call34(float $latitude, float $longitude): ?int
 	{
 		if ($longitude < 77.840919) {
 			if ($latitude < 23.877695) {
 				return 371;
-			} else if ($latitude < 31.180556) {
+			} elseif ($latitude < 31.180556) {
 				if ($longitude < 73.202930) {
 					if ($latitude < 27.529126) {
 						if ($longitude < 70.883936) {
@@ -14621,7 +14621,7 @@ class PolygonLookup
 						return 371;
 					}
 				}
-			} else if ($longitude < 73.202930) {
+			} elseif ($longitude < 73.202930) {
 				if ($latitude < 34.831987) {
 					if ($longitude < 70.883936) {
 						if ($latitude < 33.006272) {
@@ -14647,10 +14647,10 @@ class PolygonLookup
 							return 210;
 						}
 					}
-				} else if ($longitude < 70.883936) {
+				} elseif ($longitude < 70.883936) {
 					if ($latitude < 36.657702) {
 						return 366;
-					} else if ($longitude < 69.724439) {
+					} elseif ($longitude < 69.724439) {
 						if ($this->polygons[1937]->contains($latitude, $longitude)) {
 							return 366;
 						} else {
@@ -14663,13 +14663,13 @@ class PolygonLookup
 							return 208;
 						}
 					}
-				} else if ($latitude < 36.657702) {
+				} elseif ($latitude < 36.657702) {
 					if ($this->polygons[1939]->contains($latitude, $longitude)) {
 						return 366;
 					} else {
 						return 210;
 					}
-				} else if ($longitude < 72.043433) {
+				} elseif ($longitude < 72.043433) {
 					if ($this->polygons[1940]->contains($latitude, $longitude)) {
 						return 366;
 					} else {
@@ -14685,7 +14685,7 @@ class PolygonLookup
 						return 366;
 					}
 				}
-			} else if ($latitude < 34.831987) {
+			} elseif ($latitude < 34.831987) {
 				if ($longitude < 75.521925) {
 					if ($latitude < 33.006272) {
 						if ($this->polygons[1943]->contains($latitude, $longitude)) {
@@ -14707,10 +14707,10 @@ class PolygonLookup
 						return 371;
 					}
 				}
-			} else if ($longitude < 75.521925) {
+			} elseif ($longitude < 75.521925) {
 				if ($latitude < 36.657702) {
 					return 210;
-				} else if ($longitude < 74.362428) {
+				} elseif ($longitude < 74.362428) {
 					if ($this->polygons[1946]->contains($latitude, $longitude)) {
 						return 208;
 					}
@@ -14719,7 +14719,7 @@ class PolygonLookup
 					} else {
 						return 366;
 					}
-				} else if ($latitude < 37.570560) {
+				} elseif ($latitude < 37.570560) {
 					if ($longitude < 74.942176) {
 						if ($latitude < 37.114131) {
 							if ($this->polygons[1948]->contains($latitude, $longitude)) {
@@ -14757,7 +14757,7 @@ class PolygonLookup
 						return 4;
 					}
 				}
-			} else if ($latitude < 36.657702) {
+			} elseif ($latitude < 36.657702) {
 				if ($this->polygons[1955]->contains($latitude, $longitude)) {
 					return 4;
 				}
@@ -14773,7 +14773,7 @@ class PolygonLookup
 					return 4;
 				}
 			}
-		} else if ($latitude < 25.213472) {
+		} elseif ($latitude < 25.213472) {
 			if ($latitude < 23.874722) {
 				if ($longitude < 88.620415) {
 					if ($this->polygons[1958]->contains($latitude, $longitude)) {
@@ -14795,7 +14795,7 @@ class PolygonLookup
 					return 371;
 				}
 			}
-		} else if ($latitude < 31.848445) {
+		} elseif ($latitude < 31.848445) {
 			if ($longitude < 83.240298) {
 				if ($latitude < 28.530959) {
 					if ($this->polygons[1961]->contains($latitude, $longitude)) {
@@ -14803,7 +14803,7 @@ class PolygonLookup
 					} else {
 						return 371;
 					}
-				} else if ($longitude < 80.540609) {
+				} elseif ($longitude < 80.540609) {
 					if ($latitude < 30.189702) {
 						if ($this->polygons[1962]->contains($latitude, $longitude)) {
 							return 268;
@@ -14817,7 +14817,7 @@ class PolygonLookup
 							return 371;
 						}
 					}
-				} else if ($latitude < 30.189702) {
+				} elseif ($latitude < 30.189702) {
 					if ($this->polygons[1964]->contains($latitude, $longitude)) {
 						return 4;
 					}
@@ -14835,7 +14835,7 @@ class PolygonLookup
 					} else {
 						return 268;
 					}
-				} else if ($longitude < 81.890454) {
+				} elseif ($longitude < 81.890454) {
 					if ($this->polygons[1969]->contains($latitude, $longitude)) {
 						return 268;
 					}
@@ -14850,7 +14850,7 @@ class PolygonLookup
 					} else {
 						return 4;
 					}
-				} else if ($latitude < 31.019073) {
+				} elseif ($latitude < 31.019073) {
 					if ($this->polygons[1973]->contains($latitude, $longitude)) {
 						return 4;
 					}
@@ -14869,7 +14869,7 @@ class PolygonLookup
 						return 4;
 					}
 				}
-			} else if ($latitude < 28.530959) {
+			} elseif ($latitude < 28.530959) {
 				if ($longitude < 85.939988) {
 					if ($latitude < 26.872216) {
 						if ($this->polygons[1977]->contains($latitude, $longitude)) {
@@ -14877,7 +14877,7 @@ class PolygonLookup
 						} else {
 							return 268;
 						}
-					} else if ($longitude < 84.590143) {
+					} elseif ($longitude < 84.590143) {
 						if ($this->polygons[1978]->contains($latitude, $longitude)) {
 							return 371;
 						} else {
@@ -14899,14 +14899,14 @@ class PolygonLookup
 							return 268;
 						}
 					}
-				} else if ($latitude < 26.872216) {
+				} elseif ($latitude < 26.872216) {
 					if ($longitude < 87.289832) {
 						if ($this->polygons[1983]->contains($latitude, $longitude)) {
 							return 371;
 						} else {
 							return 268;
 						}
-					} else if ($latitude < 26.042844) {
+					} elseif ($latitude < 26.042844) {
 						if ($this->polygons[1984]->contains($latitude, $longitude)) {
 							return 150;
 						} else {
@@ -14922,13 +14922,13 @@ class PolygonLookup
 							return 371;
 						}
 					}
-				} else if ($longitude < 87.289832) {
+				} elseif ($longitude < 87.289832) {
 					if ($this->polygons[1987]->contains($latitude, $longitude)) {
 						return 268;
 					} else {
 						return 406;
 					}
-				} else if ($latitude < 27.701587) {
+				} elseif ($latitude < 27.701587) {
 					if ($this->polygons[1988]->contains($latitude, $longitude)) {
 						return 371;
 					} else {
@@ -14954,7 +14954,7 @@ class PolygonLookup
 					return 406;
 				}
 			}
-		} else if ($longitude < 83.240298) {
+		} elseif ($longitude < 83.240298) {
 			if ($latitude < 35.165931) {
 				if ($longitude < 80.540609) {
 					if ($latitude < 33.507188) {
@@ -14995,7 +14995,7 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call35(float $latitude, float $longitude) : ?int
+	protected function call35(float $latitude, float $longitude): ?int
 	{
 		if ($longitude < 92.486359) {
 			if ($latitude < 24.867944) {
@@ -15017,7 +15017,7 @@ class PolygonLookup
 					} else {
 						return 150;
 					}
-				} else if ($longitude < 90.062531) {
+				} elseif ($longitude < 90.062531) {
 					return 150;
 				} else {
 					if ($this->polygons[2001]->contains($latitude, $longitude)) {
@@ -15026,7 +15026,7 @@ class PolygonLookup
 						return 150;
 					}
 				}
-			} else if ($latitude < 26.461971) {
+			} elseif ($latitude < 26.461971) {
 				if ($longitude < 90.563018) {
 					if ($longitude < 89.601347) {
 						if ($latitude < 25.664958) {
@@ -15035,7 +15035,7 @@ class PolygonLookup
 							} else {
 								return 150;
 							}
-						} else if ($longitude < 89.120512) {
+						} elseif ($longitude < 89.120512) {
 							if ($this->polygons[2003]->contains($latitude, $longitude)) {
 								return 371;
 							}
@@ -15074,7 +15074,7 @@ class PolygonLookup
 						return 150;
 					}
 				}
-			} else if ($latitude < 32.472694) {
+			} elseif ($latitude < 32.472694) {
 				if ($latitude < 29.467333) {
 					if ($longitude < 90.563018) {
 						if ($latitude < 27.964652) {
@@ -15104,14 +15104,14 @@ class PolygonLookup
 								return 406;
 							}
 						}
-					} else if ($latitude < 27.964652) {
+					} elseif ($latitude < 27.964652) {
 						if ($longitude < 91.524688) {
 							if ($this->polygons[2016]->contains($latitude, $longitude)) {
 								return 371;
 							} else {
 								return 62;
 							}
-						} else if ($latitude < 27.213312) {
+						} elseif ($latitude < 27.213312) {
 							if ($this->polygons[2017]->contains($latitude, $longitude)) {
 								return 62;
 							} else {
@@ -15140,7 +15140,7 @@ class PolygonLookup
 			} else {
 				return 406;
 			}
-		} else if ($longitude < 94.108883) {
+		} elseif ($longitude < 94.108883) {
 			if ($latitude < 24.079779) {
 				if ($this->polygons[2021]->contains($latitude, $longitude)) {
 					return 40;
@@ -15154,7 +15154,7 @@ class PolygonLookup
 					return 371;
 				}
 			}
-		} else if ($latitude < 31.176903) {
+		} elseif ($latitude < 31.176903) {
 			if ($longitude < 99.606760) {
 				if ($latitude < 27.523645) {
 					if ($longitude < 96.857821) {
@@ -15171,7 +15171,7 @@ class PolygonLookup
 								return 371;
 							}
 						}
-					} else if ($latitude < 25.697017) {
+					} elseif ($latitude < 25.697017) {
 						if ($longitude < 98.232291) {
 							if ($this->polygons[2025]->contains($latitude, $longitude)) {
 								return 403;
@@ -15195,7 +15195,7 @@ class PolygonLookup
 							return 40;
 						}
 					}
-				} else if ($longitude < 96.857821) {
+				} elseif ($longitude < 96.857821) {
 					if ($latitude < 29.350274) {
 						if ($longitude < 95.483352) {
 							if ($this->polygons[2029]->contains($latitude, $longitude)) {
@@ -15203,7 +15203,7 @@ class PolygonLookup
 							} else {
 								return 371;
 							}
-						} else if ($latitude < 28.436960) {
+						} elseif ($latitude < 28.436960) {
 							if ($this->polygons[2030]->contains($latitude, $longitude)) {
 								return 406;
 							}
@@ -15229,7 +15229,7 @@ class PolygonLookup
 							return 406;
 						}
 					}
-				} else if ($latitude < 29.350274) {
+				} elseif ($latitude < 29.350274) {
 					if ($longitude < 98.232291) {
 						if ($latitude < 28.436960) {
 							if ($longitude < 97.545056) {
@@ -15284,17 +15284,17 @@ class PolygonLookup
 			} else {
 				return 403;
 			}
-		} else if ($longitude < 99.606760) {
+		} elseif ($longitude < 99.606760) {
 			if ($latitude < 34.830160) {
 				if ($longitude < 96.857821) {
 					return 406;
-				} else if ($latitude < 33.003531) {
+				} elseif ($latitude < 33.003531) {
 					if ($this->polygons[2045]->contains($latitude, $longitude)) {
 						return 406;
 					} else {
 						return 403;
 					}
-				} else if ($longitude < 98.232291) {
+				} elseif ($longitude < 98.232291) {
 					if ($this->polygons[2046]->contains($latitude, $longitude)) {
 						return 403;
 					} else {
@@ -15307,9 +15307,9 @@ class PolygonLookup
 						return 403;
 					}
 				}
-			} else if ($longitude < 96.857821) {
+			} elseif ($longitude < 96.857821) {
 				return 406;
-			} else if ($latitude < 36.656789) {
+			} elseif ($latitude < 36.656789) {
 				if ($this->polygons[2048]->contains($latitude, $longitude)) {
 					return 406;
 				} else {
@@ -15334,7 +15334,7 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call36(float $latitude, float $longitude) : ?int
+	protected function call36(float $latitude, float $longitude): ?int
 	{
 		if ($longitude < 83.509430) {
 			if ($longitude < 76.037186) {
@@ -15342,7 +15342,7 @@ class PolygonLookup
 					if ($longitude < 72.301064) {
 						if ($latitude < 53.128227) {
 							return 347;
-						} else if ($longitude < 70.433002) {
+						} elseif ($longitude < 70.433002) {
 							if ($this->polygons[2052]->contains($latitude, $longitude)) {
 								return 178;
 							}
@@ -15351,7 +15351,7 @@ class PolygonLookup
 							} else {
 								return 347;
 							}
-						} else if ($latitude < 54.448383) {
+						} elseif ($latitude < 54.448383) {
 							if ($this->polygons[2054]->contains($latitude, $longitude)) {
 								return 379;
 							} else {
@@ -15367,9 +15367,9 @@ class PolygonLookup
 								return 379;
 							}
 						}
-					} else if ($latitude < 53.128227) {
+					} elseif ($latitude < 53.128227) {
 						return 347;
-					} else if ($longitude < 74.169125) {
+					} elseif ($longitude < 74.169125) {
 						if ($latitude < 54.448383) {
 							if ($longitude < 73.235094) {
 								if ($this->polygons[2057]->contains($latitude, $longitude)) {
@@ -15387,7 +15387,7 @@ class PolygonLookup
 						} else {
 							return 379;
 						}
-					} else if ($latitude < 54.448383) {
+					} elseif ($latitude < 54.448383) {
 						if ($this->polygons[2059]->contains($latitude, $longitude)) {
 							return 95;
 						}
@@ -15406,7 +15406,7 @@ class PolygonLookup
 							return 95;
 						}
 					}
-				} else if ($longitude < 72.301064) {
+				} elseif ($longitude < 72.301064) {
 					if ($latitude < 58.408852) {
 						if ($longitude < 70.433002) {
 							if ($this->polygons[2063]->contains($latitude, $longitude)) {
@@ -15420,7 +15420,7 @@ class PolygonLookup
 							} else {
 								return 178;
 							}
-						} else if ($latitude < 57.088696) {
+						} elseif ($latitude < 57.088696) {
 							if ($this->polygons[2066]->contains($latitude, $longitude)) {
 								return 379;
 							} else {
@@ -15440,7 +15440,7 @@ class PolygonLookup
 							return 178;
 						}
 					}
-				} else if ($latitude < 58.408852) {
+				} elseif ($latitude < 58.408852) {
 					if ($this->polygons[2069]->contains($latitude, $longitude)) {
 						return 95;
 					}
@@ -15468,7 +15468,7 @@ class PolygonLookup
 						return 178;
 					}
 				}
-			} else if ($latitude < 55.768539) {
+			} elseif ($latitude < 55.768539) {
 				if ($longitude < 79.773308) {
 					if ($latitude < 53.128227) {
 						if ($this->polygons[2076]->contains($latitude, $longitude)) {
@@ -15476,7 +15476,7 @@ class PolygonLookup
 						} else {
 							return 347;
 						}
-					} else if ($longitude < 77.905247) {
+					} elseif ($longitude < 77.905247) {
 						if ($this->polygons[2077]->contains($latitude, $longitude)) {
 							return 347;
 						}
@@ -15495,7 +15495,7 @@ class PolygonLookup
 							return 379;
 						}
 					}
-				} else if ($latitude < 53.128227) {
+				} elseif ($latitude < 53.128227) {
 					if ($longitude < 81.641369) {
 						if ($this->polygons[2081]->contains($latitude, $longitude)) {
 							return 379;
@@ -15509,7 +15509,7 @@ class PolygonLookup
 							return 347;
 						}
 					}
-				} else if ($longitude < 81.641369) {
+				} elseif ($longitude < 81.641369) {
 					if ($this->polygons[2083]->contains($latitude, $longitude)) {
 						return 379;
 					} else {
@@ -15522,7 +15522,7 @@ class PolygonLookup
 						return 95;
 					}
 				}
-			} else if ($longitude < 79.773308) {
+			} elseif ($longitude < 79.773308) {
 				if ($latitude < 58.408852) {
 					if ($this->polygons[2085]->contains($latitude, $longitude)) {
 						return 379;
@@ -15546,7 +15546,7 @@ class PolygonLookup
 					return 95;
 				}
 			}
-		} else if ($latitude < 50.955069) {
+		} elseif ($latitude < 50.955069) {
 			if ($longitude < 84.233223) {
 				if ($latitude < 50.515362) {
 					if ($this->polygons[2089]->contains($latitude, $longitude)) {
@@ -15568,7 +15568,7 @@ class PolygonLookup
 					return 289;
 				}
 			}
-		} else if ($latitude < 56.002116) {
+		} elseif ($latitude < 56.002116) {
 			if ($longitude < 87.293533) {
 				if ($latitude < 53.478593) {
 					if ($this->polygons[2092]->contains($latitude, $longitude)) {
@@ -15579,7 +15579,7 @@ class PolygonLookup
 					} else {
 						return 379;
 					}
-				} else if ($longitude < 85.401482) {
+				} elseif ($longitude < 85.401482) {
 					if ($latitude < 54.740354) {
 						if ($this->polygons[2094]->contains($latitude, $longitude)) {
 							return 87;
@@ -15606,7 +15606,7 @@ class PolygonLookup
 						return 87;
 					}
 				}
-			} else if ($latitude < 53.478593) {
+			} elseif ($latitude < 53.478593) {
 				if ($longitude < 89.185585) {
 					if ($latitude < 52.216831) {
 						if ($this->polygons[2099]->contains($latitude, $longitude)) {
@@ -15640,7 +15640,7 @@ class PolygonLookup
 						return 289;
 					}
 				}
-			} else if ($longitude < 89.185585) {
+			} elseif ($longitude < 89.185585) {
 				if ($latitude < 54.740354) {
 					if ($this->polygons[2106]->contains($latitude, $longitude)) {
 						return 87;
@@ -15673,7 +15673,7 @@ class PolygonLookup
 					return 289;
 				}
 			}
-		} else if ($longitude < 87.293533) {
+		} elseif ($longitude < 87.293533) {
 			if ($latitude < 58.525640) {
 				if ($this->polygons[2113]->contains($latitude, $longitude)) {
 					return 87;
@@ -15690,7 +15690,7 @@ class PolygonLookup
 					return 95;
 				}
 			}
-		} else if ($latitude < 58.525640) {
+		} elseif ($latitude < 58.525640) {
 			if ($longitude < 89.185585) {
 				if ($latitude < 57.263878) {
 					if ($this->polygons[2116]->contains($latitude, $longitude)) {
@@ -15730,7 +15730,7 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call37(float $latitude, float $longitude) : ?int
+	protected function call37(float $latitude, float $longitude): ?int
 	{
 		if ($longitude < 81.689583) {
 			if ($longitude < 69.014221) {
@@ -15740,7 +15740,7 @@ class PolygonLookup
 					} else {
 						return 208;
 					}
-				} else if ($latitude < 40.220528) {
+				} elseif ($latitude < 40.220528) {
 					if ($this->polygons[2124]->contains($latitude, $longitude)) {
 						return 208;
 					} else {
@@ -15753,7 +15753,7 @@ class PolygonLookup
 						return 246;
 					}
 				}
-			} else if ($longitude < 73.132278) {
+			} elseif ($longitude < 73.132278) {
 				if ($latitude < 41.042252) {
 					if ($longitude < 70.738670) {
 						if ($latitude < 39.902557) {
@@ -15765,7 +15765,7 @@ class PolygonLookup
 							} else {
 								return 208;
 							}
-						} else if ($longitude < 69.876446) {
+						} elseif ($longitude < 69.876446) {
 							if ($this->polygons[2128]->contains($latitude, $longitude)) {
 								return 230;
 							}
@@ -15790,7 +15790,7 @@ class PolygonLookup
 								return 208;
 							}
 						}
-					} else if ($latitude < 40.228500) {
+					} elseif ($latitude < 40.228500) {
 						if ($longitude < 70.971222) {
 							if ($latitude < 39.492379) {
 								if ($this->polygons[2134]->contains($latitude, $longitude)) {
@@ -15808,7 +15808,7 @@ class PolygonLookup
 									return 230;
 								}
 							}
-						} else if ($latitude < 39.613609) {
+						} elseif ($latitude < 39.613609) {
 							if ($longitude < 71.498947) {
 								if ($this->polygons[2137]->contains($latitude, $longitude)) {
 									return 230;
@@ -15822,7 +15822,7 @@ class PolygonLookup
 									return 208;
 								}
 							}
-						} else if ($longitude < 71.229332) {
+						} elseif ($longitude < 71.229332) {
 							if ($this->polygons[2139]->contains($latitude, $longitude)) {
 								return 246;
 							} else {
@@ -15838,7 +15838,7 @@ class PolygonLookup
 								return 230;
 							}
 						}
-					} else if ($longitude < 71.664379) {
+					} elseif ($longitude < 71.664379) {
 						if ($longitude < 70.789665) {
 							if ($latitude < 40.725140) {
 								if ($this->polygons[2142]->contains($latitude, $longitude)) {
@@ -15853,7 +15853,7 @@ class PolygonLookup
 									return 246;
 								}
 							}
-						} else if ($longitude < 71.491906) {
+						} elseif ($longitude < 71.491906) {
 							if ($this->polygons[2144]->contains($latitude, $longitude)) {
 								return 230;
 							} else {
@@ -15873,7 +15873,7 @@ class PolygonLookup
 							return 230;
 						}
 					}
-				} else if ($latitude < 43.204445) {
+				} elseif ($latitude < 43.204445) {
 					if ($longitude < 71.073250) {
 						if ($latitude < 42.123348) {
 							if ($longitude < 70.043736) {
@@ -15911,7 +15911,7 @@ class PolygonLookup
 								return 347;
 							}
 						}
-					} else if ($latitude < 42.123348) {
+					} elseif ($latitude < 42.123348) {
 						if ($this->polygons[2155]->contains($latitude, $longitude)) {
 							return 230;
 						} else {
@@ -15933,7 +15933,7 @@ class PolygonLookup
 				} else {
 					return 347;
 				}
-			} else if ($longitude < 77.410931) {
+			} elseif ($longitude < 77.410931) {
 				if ($latitude < 41.925028) {
 					if ($longitude < 75.271605) {
 						if ($latitude < 40.204223) {
@@ -15977,19 +15977,19 @@ class PolygonLookup
 						return 230;
 					}
 				}
-			} else if ($latitude < 41.925028) {
+			} elseif ($latitude < 41.925028) {
 				if ($this->polygons[2166]->contains($latitude, $longitude)) {
 					return 230;
 				} else {
 					return 4;
 				}
-			} else if ($longitude < 79.550257) {
+			} elseif ($longitude < 79.550257) {
 				if ($this->polygons[2167]->contains($latitude, $longitude)) {
 					return 347;
 				} else {
 					return 230;
 				}
-			} else if ($latitude < 43.645833) {
+			} elseif ($latitude < 43.645833) {
 				if ($longitude < 80.619920) {
 					if ($this->polygons[2168]->contains($latitude, $longitude)) {
 						return 4;
@@ -16013,14 +16013,14 @@ class PolygonLookup
 					return 347;
 				}
 			}
-		} else if ($longitude < 84.960781) {
+		} elseif ($longitude < 84.960781) {
 			if ($latitude < 41.925028) {
 				if ($this->polygons[2172]->contains($latitude, $longitude)) {
 					return 406;
 				} else {
 					return 4;
 				}
-			} else if ($latitude < 43.645833) {
+			} elseif ($latitude < 43.645833) {
 				if ($longitude < 83.325182) {
 					if ($this->polygons[2173]->contains($latitude, $longitude)) {
 						return 406;
@@ -16040,7 +16040,7 @@ class PolygonLookup
 						return 406;
 					}
 				}
-			} else if ($longitude < 83.325182) {
+			} elseif ($longitude < 83.325182) {
 				if ($this->polygons[2177]->contains($latitude, $longitude)) {
 					return 347;
 				}
@@ -16062,13 +16062,13 @@ class PolygonLookup
 					return 406;
 				}
 			}
-		} else if ($longitude < 95.032709) {
+		} elseif ($longitude < 95.032709) {
 			if ($this->polygons[2182]->contains($latitude, $longitude)) {
 				return 121;
 			} else {
 				return 406;
 			}
-		} else if ($longitude < 100.068673) {
+		} elseif ($longitude < 100.068673) {
 			if ($latitude < 41.925028) {
 				if ($this->polygons[2183]->contains($latitude, $longitude)) {
 					return 406;
@@ -16097,7 +16097,7 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call38(float $latitude, float $longitude) : ?int
+	protected function call38(float $latitude, float $longitude): ?int
 	{
 		if ($latitude < 23.870388) {
 			if ($longitude < 90.252220) {
@@ -16117,9 +16117,9 @@ class PolygonLookup
 				} else {
 					return 150;
 				}
-			} else if ($longitude < 90.759941) {
+			} elseif ($longitude < 90.759941) {
 				return 150;
-			} else if ($longitude < 93.437553) {
+			} elseif ($longitude < 93.437553) {
 				if ($longitude < 92.333679) {
 					if ($longitude < 91.259092) {
 						if ($this->polygons[2190]->contains($latitude, $longitude)) {
@@ -16134,7 +16134,7 @@ class PolygonLookup
 							return 371;
 						}
 					}
-				} else if ($latitude < 23.680471) {
+				} elseif ($latitude < 23.680471) {
 					if ($this->polygons[2192]->contains($latitude, $longitude)) {
 						return 40;
 					} else {
@@ -16147,13 +16147,13 @@ class PolygonLookup
 						return 371;
 					}
 				}
-			} else if ($longitude < 94.162030) {
+			} elseif ($longitude < 94.162030) {
 				if ($this->polygons[2194]->contains($latitude, $longitude)) {
 					return 371;
 				} else {
 					return 40;
 				}
-			} else if ($longitude < 97.683406) {
+			} elseif ($longitude < 97.683406) {
 				if ($this->polygons[2195]->contains($latitude, $longitude)) {
 					return 403;
 				} else {
@@ -16166,38 +16166,38 @@ class PolygonLookup
 					return 40;
 				}
 			}
-		} else if ($latitude < 38.483418) {
+		} elseif ($latitude < 38.483418) {
 			if ($longitude < 88.639677) {
 				return $this->call34($latitude, $longitude);
 			} else {
 				return $this->call35($latitude, $longitude);
 			}
-		} else if ($latitude < 45.366638) {
+		} elseif ($latitude < 45.366638) {
 			return $this->call37($latitude, $longitude);
-		} else if ($longitude < 91.077637) {
+		} elseif ($longitude < 91.077637) {
 			if ($latitude < 50.487915) {
 				if ($longitude < 87.312668) {
 					if ($longitude < 77.938805) {
 						return 347;
-					} else if ($longitude < 82.625736) {
+					} elseif ($longitude < 82.625736) {
 						if ($this->polygons[2197]->contains($latitude, $longitude)) {
 							return 406;
 						} else {
 							return 347;
 						}
-					} else if ($latitude < 47.927277) {
+					} elseif ($latitude < 47.927277) {
 						if ($this->polygons[2198]->contains($latitude, $longitude)) {
 							return 406;
 						} else {
 							return 347;
 						}
-					} else if ($longitude < 84.969202) {
+					} elseif ($longitude < 84.969202) {
 						if ($this->polygons[2199]->contains($latitude, $longitude)) {
 							return 379;
 						} else {
 							return 347;
 						}
-					} else if ($latitude < 49.207596) {
+					} elseif ($latitude < 49.207596) {
 						if ($this->polygons[2200]->contains($latitude, $longitude)) {
 							return 379;
 						}
@@ -16213,19 +16213,19 @@ class PolygonLookup
 							return 379;
 						}
 					}
-				} else if ($latitude < 46.563946) {
+				} elseif ($latitude < 46.563946) {
 					if ($this->polygons[2203]->contains($latitude, $longitude)) {
 						return 121;
 					} else {
 						return 406;
 					}
-				} else if ($latitude < 48.525930) {
+				} elseif ($latitude < 48.525930) {
 					if ($this->polygons[2204]->contains($latitude, $longitude)) {
 						return 406;
 					} else {
 						return 121;
 					}
-				} else if ($longitude < 89.195152) {
+				} elseif ($longitude < 89.195152) {
 					if ($latitude < 49.506923) {
 						if ($longitude < 88.253910) {
 							if ($this->polygons[2205]->contains($latitude, $longitude)) {
@@ -16274,9 +16274,9 @@ class PolygonLookup
 							return 379;
 						}
 					}
-				} else if ($latitude < 49.506923) {
+				} elseif ($latitude < 49.506923) {
 					return 121;
-				} else if ($longitude < 90.136395) {
+				} elseif ($longitude < 90.136395) {
 					if ($this->polygons[2217]->contains($latitude, $longitude)) {
 						return 121;
 					}
@@ -16292,17 +16292,17 @@ class PolygonLookup
 						return 289;
 					}
 				}
-			} else if ($latitude < 61.049164) {
+			} elseif ($latitude < 61.049164) {
 				return $this->call36($latitude, $longitude);
-			} else if ($longitude < 72.250832) {
+			} elseif ($longitude < 72.250832) {
 				return 178;
-			} else if ($longitude < 81.664234) {
+			} elseif ($longitude < 81.664234) {
 				return 178;
-			} else if ($longitude < 86.370935) {
+			} elseif ($longitude < 86.370935) {
 				if ($latitude < 63.659122) {
 					if ($longitude < 84.017585) {
 						return 178;
-					} else if ($latitude < 62.354143) {
+					} elseif ($latitude < 62.354143) {
 						if ($this->polygons[2220]->contains($latitude, $longitude)) {
 							return 289;
 						} else {
@@ -16315,7 +16315,7 @@ class PolygonLookup
 							return 178;
 						}
 					}
-				} else if ($longitude < 84.017585) {
+				} elseif ($longitude < 84.017585) {
 					if ($this->polygons[2222]->contains($latitude, $longitude)) {
 						return 289;
 					} else {
@@ -16331,7 +16331,7 @@ class PolygonLookup
 			} else {
 				return 289;
 			}
-		} else if ($latitude < 59.320831) {
+		} elseif ($latitude < 59.320831) {
 			if ($longitude < 98.091137) {
 				if ($latitude < 52.343735) {
 					if ($longitude < 94.584387) {
@@ -16340,7 +16340,7 @@ class PolygonLookup
 						} else {
 							return 121;
 						}
-					} else if ($latitude < 48.855186) {
+					} elseif ($latitude < 48.855186) {
 						if ($this->polygons[2225]->contains($latitude, $longitude)) {
 							return 123;
 						}
@@ -16349,7 +16349,7 @@ class PolygonLookup
 						} else {
 							return 121;
 						}
-					} else if ($longitude < 96.337762) {
+					} elseif ($longitude < 96.337762) {
 						if ($this->polygons[2227]->contains($latitude, $longitude)) {
 							return 121;
 						} else {
@@ -16368,9 +16368,9 @@ class PolygonLookup
 							return 289;
 						}
 					}
-				} else if ($longitude < 94.584387) {
+				} elseif ($longitude < 94.584387) {
 					return 289;
-				} else if ($latitude < 55.832283) {
+				} elseif ($latitude < 55.832283) {
 					if ($longitude < 96.337762) {
 						if ($this->polygons[2231]->contains($latitude, $longitude)) {
 							return 144;
@@ -16391,7 +16391,7 @@ class PolygonLookup
 						return 289;
 					}
 				}
-			} else if ($latitude < 52.343735) {
+			} elseif ($latitude < 52.343735) {
 				if ($longitude < 101.597887) {
 					if ($latitude < 48.855186) {
 						if ($this->polygons[2234]->contains($latitude, $longitude)) {
@@ -16399,7 +16399,7 @@ class PolygonLookup
 						} else {
 							return 121;
 						}
-					} else if ($longitude < 99.844512) {
+					} elseif ($longitude < 99.844512) {
 						if ($this->polygons[2235]->contains($latitude, $longitude)) {
 							return 121;
 						}
@@ -16428,7 +16428,7 @@ class PolygonLookup
 						return 123;
 					}
 				}
-			} else if ($longitude < 101.597887) {
+			} elseif ($longitude < 101.597887) {
 				if ($latitude < 55.832283) {
 					if ($this->polygons[2241]->contains($latitude, $longitude)) {
 						return 289;
@@ -16442,9 +16442,9 @@ class PolygonLookup
 						return 144;
 					}
 				}
-			} else if ($latitude < 55.832283) {
+			} elseif ($latitude < 55.832283) {
 				return 144;
-			} else if ($longitude < 103.351262) {
+			} elseif ($longitude < 103.351262) {
 				if ($this->polygons[2243]->contains($latitude, $longitude)) {
 					return 289;
 				}
@@ -16460,7 +16460,7 @@ class PolygonLookup
 					return 289;
 				}
 			}
-		} else if ($latitude < 59.849081) {
+		} elseif ($latitude < 59.849081) {
 			if ($this->polygons[2246]->contains($latitude, $longitude)) {
 				return 144;
 			} else {
@@ -16475,7 +16475,7 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call39(float $latitude, float $longitude) : ?int
+	protected function call39(float $latitude, float $longitude): ?int
 	{
 		if ($latitude < 27.104834) {
 			if ($longitude < 55.210827) {
@@ -16485,12 +16485,12 @@ class PolygonLookup
 							if ($longitude < 50.664471) {
 								if ($longitude < 50.359833) {
 									return 163;
-								} else if ($latitude < 25.509583) {
+								} elseif ($latitude < 25.509583) {
 									return 163;
 								} else {
 									return 109;
 								}
-							} else if ($latitude < 25.615926) {
+							} elseif ($latitude < 25.615926) {
 								if ($latitude < 25.523945) {
 									if ($latitude < 24.963544) {
 										if ($this->polygons[2248]->contains($latitude, $longitude)) {
@@ -16501,7 +16501,7 @@ class PolygonLookup
 									} else {
 										return 100;
 									}
-								} else if ($longitude < 50.817749) {
+								} elseif ($longitude < 50.817749) {
 									if ($this->polygons[2249]->contains($latitude, $longitude)) {
 										return 100;
 									} else {
@@ -16513,7 +16513,7 @@ class PolygonLookup
 							} else {
 								return 109;
 							}
-						} else if ($latitude < 24.743839) {
+						} elseif ($latitude < 24.743839) {
 							if ($longitude < 51.580971) {
 								if ($longitude < 51.478639) {
 									if ($this->polygons[2250]->contains($latitude, $longitude)) {
@@ -16521,14 +16521,14 @@ class PolygonLookup
 									} else {
 										return 163;
 									}
-								} else if ($longitude < 51.511971) {
+								} elseif ($longitude < 51.511971) {
 									return 163;
-								} else if ($latitude < 24.283293) {
+								} elseif ($latitude < 24.283293) {
 									return 163;
 								} else {
 									return 321;
 								}
-							} else if ($latitude < 24.239900) {
+							} elseif ($latitude < 24.239900) {
 								if ($this->polygons[2251]->contains($latitude, $longitude)) {
 									return 163;
 								} else {
@@ -16540,7 +16540,7 @@ class PolygonLookup
 						} else {
 							return 100;
 						}
-					} else if ($latitude < 24.356861) {
+					} elseif ($latitude < 24.356861) {
 						if ($latitude < 23.924778) {
 							if ($this->polygons[2252]->contains($latitude, $longitude)) {
 								return 321;
@@ -16550,14 +16550,14 @@ class PolygonLookup
 						} else {
 							return 321;
 						}
-					} else if ($latitude < 25.154139) {
+					} elseif ($latitude < 25.154139) {
 						return 321;
-					} else if ($longitude < 52.427582) {
+					} elseif ($longitude < 52.427582) {
 						return 100;
 					} else {
 						return 55;
 					}
-				} else if ($latitude < 24.475027) {
+				} elseif ($latitude < 24.475027) {
 					if ($latitude < 22.826911) {
 						if ($this->polygons[2253]->contains($latitude, $longitude)) {
 							return 321;
@@ -16567,9 +16567,9 @@ class PolygonLookup
 					} else {
 						return 321;
 					}
-				} else if ($latitude < 25.246805) {
+				} elseif ($latitude < 25.246805) {
 					return 321;
-				} else if ($latitude < 25.897194) {
+				} elseif ($latitude < 25.897194) {
 					if ($longitude < 54.772754) {
 						return 55;
 					} else {
@@ -16578,7 +16578,7 @@ class PolygonLookup
 				} else {
 					return 55;
 				}
-			} else if ($longitude < 66.393387) {
+			} elseif ($longitude < 66.393387) {
 				if ($longitude < 56.537693) {
 					if ($latitude < 26.387972) {
 						if ($latitude < 25.553473) {
@@ -16597,14 +16597,14 @@ class PolygonLookup
 							} else {
 								return 321;
 							}
-						} else if ($latitude < 26.286167) {
+						} elseif ($latitude < 26.286167) {
 							if ($longitude < 55.572693) {
 								if ($latitude < 25.918639) {
 									return 55;
 								} else {
 									return 321;
 								}
-							} else if ($longitude < 55.973804) {
+							} elseif ($longitude < 55.973804) {
 								return 321;
 							} else {
 								if ($this->polygons[2257]->contains($latitude, $longitude)) {
@@ -16619,18 +16619,18 @@ class PolygonLookup
 					} else {
 						return 55;
 					}
-				} else if ($longitude < 58.490417) {
+				} elseif ($longitude < 58.490417) {
 					if ($latitude < 24.613961) {
 						return 357;
 					} else {
 						return 55;
 					}
-				} else if ($latitude < 23.643444) {
+				} elseif ($latitude < 23.643444) {
 					return 357;
-				} else if ($longitude < 63.281387) {
+				} elseif ($longitude < 63.281387) {
 					if ($longitude < 59.965057) {
 						return 55;
-					} else if ($latitude < 26.874584) {
+					} elseif ($latitude < 26.874584) {
 						if ($longitude < 61.623222) {
 							if ($this->polygons[2258]->contains($latitude, $longitude)) {
 								return 210;
@@ -16654,11 +16654,11 @@ class PolygonLookup
 				} else {
 					return 210;
 				}
-			} else if ($longitude < 67.529053) {
+			} elseif ($longitude < 67.529053) {
 				return 210;
-			} else if ($latitude < 23.647362) {
+			} elseif ($latitude < 23.647362) {
 				return 371;
-			} else if ($longitude < 68.258080) {
+			} elseif ($longitude < 68.258080) {
 				if ($latitude < 23.653912) {
 					return 371;
 				} else {
@@ -16674,7 +16674,7 @@ class PolygonLookup
 						return 210;
 					}
 				}
-			} else if ($latitude < 23.734138) {
+			} elseif ($latitude < 23.734138) {
 				return 371;
 			} else {
 				if ($this->polygons[2264]->contains($latitude, $longitude)) {
@@ -16683,11 +16683,11 @@ class PolygonLookup
 					return 371;
 				}
 			}
-		} else if ($latitude < 40.672585) {
+		} elseif ($latitude < 40.672585) {
 			return $this->call33($latitude, $longitude);
-		} else if ($longitude < 49.625584) {
+		} elseif ($longitude < 49.625584) {
 			return $this->call32($latitude, $longitude);
-		} else if ($latitude < 46.052723) {
+		} elseif ($latitude < 46.052723) {
 			if ($longitude < 52.873138) {
 				if ($latitude < 42.038017) {
 					if ($latitude < 40.823005) {
@@ -16702,7 +16702,7 @@ class PolygonLookup
 				} else {
 					return 120;
 				}
-			} else if ($longitude < 59.666477) {
+			} elseif ($longitude < 59.666477) {
 				if ($latitude < 44.892151) {
 					if ($latitude < 44.271465) {
 						if ($longitude < 56.269808) {
@@ -16714,7 +16714,7 @@ class PolygonLookup
 							} else {
 								return 76;
 							}
-						} else if ($latitude < 42.472025) {
+						} elseif ($latitude < 42.472025) {
 							if ($this->polygons[2268]->contains($latitude, $longitude)) {
 								return 167;
 							}
@@ -16736,7 +16736,7 @@ class PolygonLookup
 								return 167;
 							}
 						}
-					} else if ($longitude < 55.998606) {
+					} elseif ($longitude < 55.998606) {
 						if ($this->polygons[2273]->contains($latitude, $longitude)) {
 							return 167;
 						} else {
@@ -16745,7 +16745,7 @@ class PolygonLookup
 					} else {
 						return 167;
 					}
-				} else if ($longitude < 58.607960) {
+				} elseif ($longitude < 58.607960) {
 					if ($this->polygons[2274]->contains($latitude, $longitude)) {
 						return 167;
 					}
@@ -16757,7 +16757,7 @@ class PolygonLookup
 					} else {
 						return 120;
 					}
-				} else if ($latitude < 45.436764) {
+				} elseif ($latitude < 45.436764) {
 					if ($longitude < 59.239082) {
 						if ($latitude < 44.974435) {
 							return 167;
@@ -16775,7 +16775,7 @@ class PolygonLookup
 							return 167;
 						}
 					}
-				} else if ($latitude < 45.622234) {
+				} elseif ($latitude < 45.622234) {
 					return 239;
 				} else {
 					if ($this->polygons[2279]->contains($latitude, $longitude)) {
@@ -16784,7 +16784,7 @@ class PolygonLookup
 						return 239;
 					}
 				}
-			} else if ($longitude < 62.074552) {
+			} elseif ($longitude < 62.074552) {
 				if ($latitude < 44.584438) {
 					if ($latitude < 42.306305) {
 						if ($longitude < 59.827972) {
@@ -16810,13 +16810,13 @@ class PolygonLookup
 				} else {
 					return 239;
 				}
-			} else if ($longitude < 65.319747) {
+			} elseif ($longitude < 65.319747) {
 				if ($this->polygons[2283]->contains($latitude, $longitude)) {
 					return 239;
 				} else {
 					return 167;
 				}
-			} else if ($latitude < 43.362654) {
+			} elseif ($latitude < 43.362654) {
 				if ($longitude < 66.942344) {
 					if ($this->polygons[2284]->contains($latitude, $longitude)) {
 						return 239;
@@ -16849,10 +16849,10 @@ class PolygonLookup
 					return 239;
 				}
 			}
-		} else if ($latitude < 47.825829) {
+		} elseif ($latitude < 47.825829) {
 			if ($longitude < 53.026917) {
 				return 120;
-			} else if ($longitude < 61.927216) {
+			} elseif ($longitude < 61.927216) {
 				if ($longitude < 56.525335) {
 					if ($this->polygons[2291]->contains($latitude, $longitude)) {
 						return 240;
@@ -16881,17 +16881,17 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call40(float $latitude, float $longitude) : ?int
+	protected function call40(float $latitude, float $longitude): ?int
 	{
 		if ($latitude < 6.978889) {
 			if ($longitude < 99.459221) {
 				if ($latitude < -6.391056) {
 					if ($latitude < -38.738110) {
 						return 236;
-					} else if ($latitude < -13.424148) {
+					} elseif ($latitude < -13.424148) {
 						if ($longitude < 50.483780) {
 							return 101;
-						} else if ($latitude < -20.856855) {
+						} elseif ($latitude < -20.856855) {
 							if ($longitude < 55.845039) {
 								return 274;
 							} else {
@@ -16900,7 +16900,7 @@ class PolygonLookup
 						} else {
 							return 233;
 						}
-					} else if ($longitude < 48.694023) {
+					} elseif ($longitude < 48.694023) {
 						if ($latitude < -11.362381) {
 							if ($longitude < 45.292950) {
 								if ($longitude < 44.538223) {
@@ -16914,11 +16914,11 @@ class PolygonLookup
 						} else {
 							return 66;
 						}
-					} else if ($longitude < 50.022717) {
+					} elseif ($longitude < 50.022717) {
 						return 101;
-					} else if ($longitude < 56.279507) {
+					} elseif ($longitude < 56.279507) {
 						return 66;
-					} else if ($longitude < 72.493164) {
+					} elseif ($longitude < 72.493164) {
 						if ($longitude < 56.632473) {
 							return 233;
 						} else {
@@ -16927,7 +16927,7 @@ class PolygonLookup
 					} else {
 						return 97;
 					}
-				} else if ($longitude < 93.949997) {
+				} elseif ($longitude < 93.949997) {
 					if ($longitude < 73.069031) {
 						if ($longitude < 55.880646) {
 							if ($longitude < 49.355780) {
@@ -16939,7 +16939,7 @@ class PolygonLookup
 							} else {
 								return 66;
 							}
-						} else if ($longitude < 72.336807) {
+						} elseif ($longitude < 72.336807) {
 							if ($longitude < 55.951393) {
 								return 66;
 							} else {
@@ -16948,30 +16948,30 @@ class PolygonLookup
 						} else {
 							return 382;
 						}
-					} else if ($longitude < 73.637276) {
+					} elseif ($longitude < 73.637276) {
 						return 382;
-					} else if ($longitude < 87.800070) {
+					} elseif ($longitude < 87.800070) {
 						return 288;
 					} else {
 						return 371;
 					}
-				} else if ($latitude < 5.768278) {
+				} elseif ($latitude < 5.768278) {
 					return 26;
-				} else if ($longitude < 95.376556) {
+				} elseif ($longitude < 95.376556) {
 					return 26;
 				} else {
 					return 270;
 				}
-			} else if ($latitude < 1.156361) {
+			} elseif ($latitude < 1.156361) {
 				return 26;
-			} else if ($latitude < 2.704722) {
+			} elseif ($latitude < 2.704722) {
 				if ($longitude < 103.439392) {
 					if ($longitude < 101.424667) {
 						return 26;
-					} else if ($longitude < 102.513641) {
+					} elseif ($longitude < 102.513641) {
 						if ($latitude < 1.697561) {
 							return 26;
-						} else if ($longitude < 101.791115) {
+						} elseif ($longitude < 101.791115) {
 							if ($latitude < 2.119222) {
 								return 26;
 							} else {
@@ -16983,23 +16983,23 @@ class PolygonLookup
 					} else {
 						return 327;
 					}
-				} else if ($latitude < 1.471278) {
+				} elseif ($latitude < 1.471278) {
 					if ($latitude < 1.256694) {
 						if ($longitude < 103.842331) {
 							return 316;
 						} else {
 							return 26;
 						}
-					} else if ($longitude < 104.009645) {
+					} elseif ($longitude < 104.009645) {
 						if ($longitude < 103.785408) {
 							if ($this->polygons[2296]->contains($latitude, $longitude)) {
 								return 327;
 							} else {
 								return 316;
 							}
-						} else if ($latitude < 1.425806) {
+						} elseif ($latitude < 1.425806) {
 							return 316;
-						} else if ($longitude < 103.865644) {
+						} elseif ($longitude < 103.865644) {
 							return 316;
 						} else {
 							return 327;
@@ -17014,7 +17014,7 @@ class PolygonLookup
 				} else {
 					return 327;
 				}
-			} else if ($longitude < 100.075518) {
+			} elseif ($longitude < 100.075518) {
 				if ($latitude < 6.471167) {
 					if ($latitude < 3.361025) {
 						return 26;
@@ -17024,7 +17024,7 @@ class PolygonLookup
 				} else {
 					return 270;
 				}
-			} else if ($longitude < 102.092140) {
+			} elseif ($longitude < 102.092140) {
 				if ($latitude < 5.238778) {
 					if ($longitude < 100.218333) {
 						if ($latitude < 3.966694) {
@@ -17035,16 +17035,16 @@ class PolygonLookup
 					} else {
 						return 327;
 					}
-				} else if ($latitude < 5.479667) {
+				} elseif ($latitude < 5.479667) {
 					return 327;
-				} else if ($latitude < 6.714139) {
+				} elseif ($latitude < 6.714139) {
 					if ($longitude < 100.203247) {
 						if ($this->polygons[2298]->contains($latitude, $longitude)) {
 							return 327;
 						} else {
 							return 270;
 						}
-					} else if ($longitude < 101.147694) {
+					} elseif ($longitude < 101.147694) {
 						if ($this->polygons[2299]->contains($latitude, $longitude)) {
 							return 270;
 						} else {
@@ -17063,7 +17063,7 @@ class PolygonLookup
 			} else {
 				return 327;
 			}
-		} else if ($longitude < 97.696892) {
+		} elseif ($longitude < 97.696892) {
 			if ($longitude < 93.273331) {
 				if ($longitude < 92.358528) {
 					if ($longitude < 72.996170) {
@@ -17077,7 +17077,7 @@ class PolygonLookup
 											} else {
 												return 250;
 											}
-										} else if ($longitude < 43.254696) {
+										} elseif ($longitude < 43.254696) {
 											if ($this->polygons[2302]->contains($latitude, $longitude)) {
 												return 311;
 											} else {
@@ -17086,7 +17086,7 @@ class PolygonLookup
 										} else {
 											return 250;
 										}
-									} else if ($longitude < 43.416973) {
+									} elseif ($longitude < 43.416973) {
 										return 311;
 									} else {
 										return 250;
@@ -17094,7 +17094,7 @@ class PolygonLookup
 								} else {
 									return 215;
 								}
-							} else if ($latitude < 13.289861) {
+							} elseif ($latitude < 13.289861) {
 								if ($latitude < 12.586202) {
 									if ($longitude < 48.346151) {
 										return 215;
@@ -17104,7 +17104,7 @@ class PolygonLookup
 								} else {
 									return 215;
 								}
-							} else if ($longitude < 55.215251) {
+							} elseif ($longitude < 55.215251) {
 								if ($longitude < 49.207153) {
 									if ($this->polygons[2303]->contains($latitude, $longitude)) {
 										return 163;
@@ -17127,59 +17127,59 @@ class PolygonLookup
 							} else {
 								return 357;
 							}
-						} else if ($longitude < 58.958778) {
+						} elseif ($longitude < 58.958778) {
 							return 357;
-						} else if ($latitude < 7.098361) {
+						} elseif ($latitude < 7.098361) {
 							return 382;
 						} else {
 							return 371;
 						}
-					} else if ($longitude < 79.228668) {
+					} elseif ($longitude < 79.228668) {
 						return 371;
-					} else if ($latitude < 9.555528) {
+					} elseif ($latitude < 9.555528) {
 						if ($longitude < 79.442337) {
 							return 371;
 						} else {
 							return 288;
 						}
-					} else if ($latitude < 9.831361) {
+					} elseif ($latitude < 9.831361) {
 						return 288;
-					} else if ($longitude < 92.290085) {
+					} elseif ($longitude < 92.290085) {
 						return 371;
 					} else {
 						return 150;
 					}
-				} else if ($latitude < 13.618361) {
+				} elseif ($latitude < 13.618361) {
 					return 371;
-				} else if ($latitude < 13.678945) {
+				} elseif ($latitude < 13.678945) {
 					return 371;
 				} else {
 					return 40;
 				}
-			} else if ($latitude < 19.040861) {
+			} elseif ($latitude < 19.040861) {
 				if ($longitude < 95.210640) {
 					if ($latitude < 13.453917) {
 						return 371;
 					} else {
 						return 40;
 					}
-				} else if ($longitude < 97.278137) {
+				} elseif ($longitude < 97.278137) {
 					return 40;
-				} else if ($latitude < 15.588417) {
+				} elseif ($latitude < 15.588417) {
 					if ($latitude < 8.661195) {
 						return 270;
 					} else {
 						return 40;
 					}
-				} else if ($latitude < 16.618416) {
+				} elseif ($latitude < 16.618416) {
 					return 40;
-				} else if ($latitude < 17.923909) {
+				} elseif ($latitude < 17.923909) {
 					if ($this->polygons[2307]->contains($latitude, $longitude)) {
 						return 270;
 					} else {
 						return 40;
 					}
-				} else if ($latitude < 18.595112) {
+				} elseif ($latitude < 18.595112) {
 					if ($this->polygons[2308]->contains($latitude, $longitude)) {
 						return 270;
 					} else {
@@ -17200,15 +17200,15 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call41(float $latitude, float $longitude) : ?int
+	protected function call41(float $latitude, float $longitude): ?int
 	{
 		if ($latitude < 66.269081) {
 			if ($longitude < 68.564941) {
 				return $this->call39($latitude, $longitude);
-			} else if ($latitude < 22.532944) {
+			} elseif ($latitude < 22.532944) {
 				if ($longitude < 88.974408) {
 					return 371;
-				} else if ($longitude < 90.701530) {
+				} elseif ($longitude < 90.701530) {
 					if ($longitude < 89.295280) {
 						if ($longitude < 89.106918) {
 							if ($this->polygons[2310]->contains($latitude, $longitude)) {
@@ -17228,13 +17228,13 @@ class PolygonLookup
 					} else {
 						return 150;
 					}
-				} else if ($longitude < 92.143913) {
+				} elseif ($longitude < 92.143913) {
 					return 150;
-				} else if ($longitude < 93.198753) {
+				} elseif ($longitude < 93.198753) {
 					if ($longitude < 92.359863) {
 						if ($latitude < 20.724388) {
 							return 150;
-						} else if ($latitude < 20.864358) {
+						} elseif ($latitude < 20.864358) {
 							if ($this->polygons[2313]->contains($latitude, $longitude)) {
 								return 150;
 							} else {
@@ -17247,7 +17247,7 @@ class PolygonLookup
 								return 40;
 							}
 						}
-					} else if ($latitude < 20.758194) {
+					} elseif ($latitude < 20.758194) {
 						return 40;
 					} else {
 						if ($this->polygons[2315]->contains($latitude, $longitude)) {
@@ -17259,16 +17259,16 @@ class PolygonLookup
 							return 40;
 						}
 					}
-				} else if ($longitude < 102.310904) {
+				} elseif ($longitude < 102.310904) {
 					if ($longitude < 97.754829) {
 						return 40;
-					} else if ($longitude < 100.032866) {
+					} elseif ($longitude < 100.032866) {
 						if ($this->polygons[2317]->contains($latitude, $longitude)) {
 							return 403;
 						} else {
 							return 40;
 						}
-					} else if ($longitude < 101.171885) {
+					} elseif ($longitude < 101.171885) {
 						if ($this->polygons[2318]->contains($latitude, $longitude)) {
 							return 265;
 						}
@@ -17277,7 +17277,7 @@ class PolygonLookup
 						} else {
 							return 40;
 						}
-					} else if ($latitude < 21.589333) {
+					} elseif ($latitude < 21.589333) {
 						if ($this->polygons[2320]->contains($latitude, $longitude)) {
 							return 403;
 						} else {
@@ -17296,7 +17296,7 @@ class PolygonLookup
 							return 265;
 						}
 					}
-				} else if ($latitude < 22.204487) {
+				} elseif ($latitude < 22.204487) {
 					if ($longitude < 103.707771) {
 						if ($this->polygons[2324]->contains($latitude, $longitude)) {
 							return 24;
@@ -17310,7 +17310,7 @@ class PolygonLookup
 							return 24;
 						}
 					}
-				} else if ($longitude < 103.136834) {
+				} elseif ($longitude < 103.136834) {
 					if ($this->polygons[2326]->contains($latitude, $longitude)) {
 						return 403;
 					} else {
@@ -17323,12 +17323,12 @@ class PolygonLookup
 						return 24;
 					}
 				}
-			} else if ($latitude < 23.438555) {
+			} elseif ($latitude < 23.438555) {
 				if ($longitude < 90.524109) {
 					if ($longitude < 88.997475) {
 						if ($longitude < 70.478226) {
 							return 371;
-						} else if ($latitude < 23.199751) {
+						} elseif ($latitude < 23.199751) {
 							if ($this->polygons[2328]->contains($latitude, $longitude)) {
 								return 150;
 							} else {
@@ -17344,9 +17344,9 @@ class PolygonLookup
 					} else {
 						return 150;
 					}
-				} else if ($longitude < 91.172333) {
+				} elseif ($longitude < 91.172333) {
 					return 150;
-				} else if ($longitude < 91.940453) {
+				} elseif ($longitude < 91.940453) {
 					if ($latitude < 22.756250) {
 						return 150;
 					} else {
@@ -17356,7 +17356,7 @@ class PolygonLookup
 							return 150;
 						}
 					}
-				} else if ($longitude < 99.563530) {
+				} elseif ($longitude < 99.563530) {
 					if ($longitude < 93.402527) {
 						if ($longitude < 92.529763) {
 							if ($this->polygons[2331]->contains($latitude, $longitude)) {
@@ -17364,7 +17364,7 @@ class PolygonLookup
 							} else {
 								return 150;
 							}
-						} else if ($latitude < 23.386499) {
+						} elseif ($latitude < 23.386499) {
 							if ($this->polygons[2332]->contains($latitude, $longitude)) {
 								return 40;
 							} else {
@@ -17387,13 +17387,13 @@ class PolygonLookup
 							return 40;
 						}
 					}
-				} else if ($longitude < 102.907940) {
+				} elseif ($longitude < 102.907940) {
 					if ($this->polygons[2336]->contains($latitude, $longitude)) {
 						return 24;
 					} else {
 						return 403;
 					}
-				} else if ($longitude < 103.916794) {
+				} elseif ($longitude < 103.916794) {
 					if ($this->polygons[2337]->contains($latitude, $longitude)) {
 						return 24;
 					} else {
@@ -17409,10 +17409,10 @@ class PolygonLookup
 			} else {
 				return $this->call38($latitude, $longitude);
 			}
-		} else if ($longitude < 83.435236) {
+		} elseif ($longitude < 83.435236) {
 			if ($longitude < 63.223320) {
 				return 183;
-			} else if ($longitude < 79.953110) {
+			} elseif ($longitude < 79.953110) {
 				if ($longitude < 71.758553) {
 					if ($longitude < 69.184860) {
 						if ($latitude < 69.667392) {
@@ -17423,7 +17423,7 @@ class PolygonLookup
 									} else {
 										return 178;
 									}
-								} else if ($latitude < 67.696091) {
+								} elseif ($latitude < 67.696091) {
 									if ($this->polygons[2340]->contains($latitude, $longitude)) {
 										return 183;
 									} else {
@@ -17439,7 +17439,7 @@ class PolygonLookup
 							} else {
 								return 178;
 							}
-						} else if ($latitude < 72.784257) {
+						} elseif ($latitude < 72.784257) {
 							return 178;
 						} else {
 							return 183;
@@ -17447,14 +17447,14 @@ class PolygonLookup
 					} else {
 						return 178;
 					}
-				} else if ($latitude < 69.003365) {
+				} elseif ($latitude < 69.003365) {
 					return 178;
-				} else if ($longitude < 76.088142) {
+				} elseif ($longitude < 76.088142) {
 					return 178;
-				} else if ($latitude < 72.602837) {
+				} elseif ($latitude < 72.602837) {
 					if ($longitude < 78.340698) {
 						return 178;
-					} else if ($latitude < 71.623577) {
+					} elseif ($latitude < 71.623577) {
 						if ($latitude < 70.303423) {
 							if ($this->polygons[2342]->contains($latitude, $longitude)) {
 								return 289;
@@ -17475,7 +17475,7 @@ class PolygonLookup
 							return 178;
 						}
 					}
-				} else if ($longitude < 76.746025) {
+				} elseif ($longitude < 76.746025) {
 					if ($latitude < 73.520027) {
 						return 178;
 					} else {
@@ -17484,7 +17484,7 @@ class PolygonLookup
 				} else {
 					return 289;
 				}
-			} else if ($latitude < 71.978767) {
+			} elseif ($latitude < 71.978767) {
 				if ($latitude < 70.489197) {
 					if ($longitude < 82.683777) {
 						if ($latitude < 70.098442) {
@@ -17503,7 +17503,7 @@ class PolygonLookup
 											return 178;
 										}
 									}
-								} else if ($longitude < 81.683594) {
+								} elseif ($longitude < 81.683594) {
 									if ($this->polygons[2347]->contains($latitude, $longitude)) {
 										return 289;
 									} else {
@@ -17519,7 +17519,7 @@ class PolygonLookup
 							} else {
 								return 289;
 							}
-						} else if ($longitude < 80.798584) {
+						} elseif ($longitude < 80.798584) {
 							if ($this->polygons[2349]->contains($latitude, $longitude)) {
 								return 289;
 							}
@@ -17531,7 +17531,7 @@ class PolygonLookup
 						} else {
 							return 289;
 						}
-					} else if ($latitude < 68.798813) {
+					} elseif ($latitude < 68.798813) {
 						if ($latitude < 68.466825) {
 							if ($latitude < 67.026181) {
 								if ($this->polygons[2351]->contains($latitude, $longitude)) {
@@ -17556,14 +17556,14 @@ class PolygonLookup
 					} else {
 						return 289;
 					}
-				} else if ($longitude < 80.759369) {
+				} elseif ($longitude < 80.759369) {
 					if ($latitude < 70.654465) {
 						if ($this->polygons[2354]->contains($latitude, $longitude)) {
 							return 289;
 						} else {
 							return 178;
 						}
-					} else if ($latitude < 71.133958) {
+					} elseif ($latitude < 71.133958) {
 						if ($this->polygons[2355]->contains($latitude, $longitude)) {
 							return 289;
 						} else {
@@ -17587,7 +17587,7 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call42(float $latitude, float $longitude) : ?int
+	protected function call42(float $latitude, float $longitude): ?int
 	{
 		if ($latitude < -10.915778) {
 			if ($longitude < 152.840439) {
@@ -17595,7 +17595,7 @@ class PolygonLookup
 					if ($latitude < -38.222610) {
 						if ($latitude < -40.198944) {
 							return 113;
-						} else if ($latitude < -39.442554) {
+						} elseif ($latitude < -39.442554) {
 							if ($longitude < 146.662109) {
 								if ($longitude < 144.138580) {
 									return 43;
@@ -17608,11 +17608,11 @@ class PolygonLookup
 						} else {
 							return 126;
 						}
-					} else if ($longitude < 150.145752) {
+					} elseif ($longitude < 150.145752) {
 						if ($latitude < -28.555558) {
 							if ($longitude < 139.718369) {
 								return 67;
-							} else if ($longitude < 149.977966) {
+							} elseif ($longitude < 149.977966) {
 								if ($latitude < -37.546555) {
 									if ($longitude < 140.969055) {
 										if ($this->polygons[2357]->contains($latitude, $longitude)) {
@@ -17623,7 +17623,7 @@ class PolygonLookup
 									} else {
 										return 126;
 									}
-								} else if ($longitude < 144.848167) {
+								} elseif ($longitude < 144.848167) {
 									if ($latitude < -33.051056) {
 										if ($longitude < 142.283268) {
 											if ($latitude < -35.298805) {
@@ -17642,13 +17642,13 @@ class PolygonLookup
 													return 126;
 												}
 											}
-										} else if ($latitude < -35.298805) {
+										} elseif ($latitude < -35.298805) {
 											if ($this->polygons[2361]->contains($latitude, $longitude)) {
 												return 207;
 											} else {
 												return 126;
 											}
-										} else if ($longitude < 143.565718) {
+										} elseif ($longitude < 143.565718) {
 											if ($latitude < -34.174931) {
 												if ($longitude < 142.924493) {
 													if ($this->polygons[2362]->contains($latitude, $longitude)) {
@@ -17686,7 +17686,7 @@ class PolygonLookup
 											return 207;
 										}
 									}
-								} else if ($latitude < -33.051056) {
+								} elseif ($latitude < -33.051056) {
 									if ($longitude < 147.413067) {
 										if ($this->polygons[2368]->contains($latitude, $longitude)) {
 											return 207;
@@ -17707,7 +17707,7 @@ class PolygonLookup
 										return 207;
 									}
 								}
-							} else if ($latitude < -35.620555) {
+							} elseif ($latitude < -35.620555) {
 								return 207;
 							} else {
 								if ($this->polygons[2371]->contains($latitude, $longitude)) {
@@ -17716,7 +17716,7 @@ class PolygonLookup
 									return 207;
 								}
 							}
-						} else if ($longitude < 141.004157) {
+						} elseif ($longitude < 141.004157) {
 							if ($this->polygons[2372]->contains($latitude, $longitude)) {
 								return 67;
 							}
@@ -17728,16 +17728,16 @@ class PolygonLookup
 						} else {
 							return 235;
 						}
-					} else if ($latitude < -28.264166) {
+					} elseif ($latitude < -28.264166) {
 						if ($latitude < -32.203251) {
 							return 207;
-						} else if ($longitude < 152.468948) {
+						} elseif ($longitude < 152.468948) {
 							if ($this->polygons[2374]->contains($latitude, $longitude)) {
 								return 235;
 							} else {
 								return 207;
 							}
-						} else if ($latitude < -32.180173) {
+						} elseif ($latitude < -32.180173) {
 							return 207;
 						} else {
 							if ($this->polygons[2375]->contains($latitude, $longitude)) {
@@ -17749,9 +17749,9 @@ class PolygonLookup
 					} else {
 						return 235;
 					}
-				} else if ($longitude < 136.964493) {
+				} elseif ($longitude < 136.964493) {
 					return 10;
-				} else if ($longitude < 146.692200) {
+				} elseif ($longitude < 146.692200) {
 					if ($longitude < 138.000049) {
 						if ($longitude < 137.104355) {
 							return 10;
@@ -17765,20 +17765,20 @@ class PolygonLookup
 					} else {
 						return 235;
 					}
-				} else if ($latitude < -20.460417) {
+				} elseif ($latitude < -20.460417) {
 					return 235;
-				} else if ($longitude < 148.871002) {
+				} elseif ($longitude < 148.871002) {
 					return 235;
-				} else if ($longitude < 149.111053) {
+				} elseif ($longitude < 149.111053) {
 					if ($latitude < -20.333471) {
 						if ($longitude < 148.937225) {
 							return 235;
-						} else if ($longitude < 149.064468) {
+						} elseif ($longitude < 149.064468) {
 							return 213;
 						} else {
 							return 235;
 						}
-					} else if ($longitude < 148.893860) {
+					} elseif ($longitude < 148.893860) {
 						if ($latitude < -20.085666) {
 							return 213;
 						} else {
@@ -17790,7 +17790,7 @@ class PolygonLookup
 				} else {
 					return 170;
 				}
-			} else if ($latitude < -21.188667) {
+			} elseif ($latitude < -21.188667) {
 				if ($longitude < 171.450439) {
 					if ($longitude < 159.045700) {
 						if ($latitude < -28.160110) {
@@ -17804,10 +17804,10 @@ class PolygonLookup
 										return 207;
 									}
 								}
-							} else if ($longitude < 153.639252) {
+							} elseif ($longitude < 153.639252) {
 								if ($latitude < -28.204887) {
 									return 207;
-								} else if ($longitude < 153.518413) {
+								} elseif ($longitude < 153.518413) {
 									if ($this->polygons[2378]->contains($latitude, $longitude)) {
 										return 235;
 									} else {
@@ -17822,12 +17822,12 @@ class PolygonLookup
 						} else {
 							return 235;
 						}
-					} else if ($latitude < -44.594396) {
+					} elseif ($latitude < -44.594396) {
 						return 377;
-					} else if ($latitude < -28.992390) {
+					} elseif ($latitude < -28.992390) {
 						if ($latitude < -41.865051) {
 							return 377;
-						} else if ($longitude < 159.111282) {
+						} elseif ($longitude < 159.111282) {
 							return 3;
 						} else {
 							return 224;
@@ -17838,20 +17838,20 @@ class PolygonLookup
 				} else {
 					return 377;
 				}
-			} else if ($longitude < 177.058060) {
+			} elseif ($longitude < 177.058060) {
 				if ($latitude < -16.968111) {
 					if ($longitude < 167.830368) {
 						return 369;
-					} else if ($longitude < 170.234772) {
+					} elseif ($longitude < 170.234772) {
 						return 232;
 					} else {
 						return 147;
 					}
-				} else if ($latitude < -12.518985) {
+				} elseif ($latitude < -12.518985) {
 					return 232;
-				} else if ($longitude < 154.281662) {
+				} elseif ($longitude < 154.281662) {
 					return 170;
-				} else if ($longitude < 168.843506) {
+				} elseif ($longitude < 168.843506) {
 					return 304;
 				} else {
 					return 147;
@@ -17859,13 +17859,13 @@ class PolygonLookup
 			} else {
 				return 147;
 			}
-		} else if ($longitude < 151.356415) {
+		} elseif ($longitude < 151.356415) {
 			if ($longitude < 144.128952) {
 				if ($longitude < 140.413481) {
 					return 131;
-				} else if ($latitude < -9.333750) {
+				} elseif ($latitude < -9.333750) {
 					return 235;
-				} else if ($longitude < 142.474640) {
+				} elseif ($longitude < 142.474640) {
 					if ($latitude < -9.182138) {
 						if ($longitude < 142.071442) {
 							if ($longitude < 141.950039) {
@@ -17873,9 +17873,9 @@ class PolygonLookup
 							} else {
 								return 235;
 							}
-						} else if ($longitude < 142.251190) {
+						} elseif ($longitude < 142.251190) {
 							return 235;
-						} else if ($latitude < -9.260387) {
+						} elseif ($latitude < -9.260387) {
 							return 235;
 						} else {
 							if ($this->polygons[2379]->contains($latitude, $longitude)) {
@@ -17884,7 +17884,7 @@ class PolygonLookup
 								return 170;
 							}
 						}
-					} else if ($longitude < 141.021805) {
+					} elseif ($longitude < 141.021805) {
 						if ($longitude < 140.487747) {
 							return 131;
 						} else {
@@ -17903,15 +17903,15 @@ class PolygonLookup
 			} else {
 				return 170;
 			}
-		} else if ($longitude < 158.416245) {
+		} elseif ($longitude < 158.416245) {
 			if ($longitude < 157.126251) {
 				if ($longitude < 154.725937) {
 					return 170;
-				} else if ($latitude < -6.962555) {
+				} elseif ($latitude < -6.962555) {
 					return 304;
-				} else if ($longitude < 155.963562) {
+				} elseif ($longitude < 155.963562) {
 					return 170;
-				} else if ($latitude < -6.589611) {
+				} elseif ($latitude < -6.589611) {
 					return 304;
 				} else {
 					return 170;
@@ -17919,18 +17919,18 @@ class PolygonLookup
 			} else {
 				return 304;
 			}
-		} else if ($latitude < -8.854750) {
+		} elseif ($latitude < -8.854750) {
 			if ($longitude < 167.145645) {
 				return 304;
-			} else if ($longitude < 167.233505) {
+			} elseif ($longitude < 167.233505) {
 				return 304;
 			} else {
 				return 65;
 			}
-		} else if ($longitude < 173.587646) {
+		} elseif ($longitude < 173.587646) {
 			if ($latitude < -5.449806) {
 				return 304;
-			} else if ($longitude < 166.945282) {
+			} elseif ($longitude < 166.945282) {
 				if ($latitude < -2.550833) {
 					return 170;
 				} else {
@@ -17939,14 +17939,14 @@ class PolygonLookup
 			} else {
 				return 148;
 			}
-		} else if ($latitude < -5.641972) {
+		} elseif ($latitude < -5.641972) {
 			return 65;
 		} else {
 			return 148;
 		}
 	}
 	
-	protected function call43(float $latitude, float $longitude) : ?int
+	protected function call43(float $latitude, float $longitude): ?int
 	{
 		if ($longitude < 113.448914) {
 			if ($longitude < 108.187553) {
@@ -17959,14 +17959,14 @@ class PolygonLookup
 								} else {
 									return 251;
 								}
-							} else if ($latitude < 16.095304) {
+							} elseif ($latitude < 16.095304) {
 								if ($latitude < 14.199581) {
 									if ($this->polygons[2382]->contains($latitude, $longitude)) {
 										return 265;
 									} else {
 										return 251;
 									}
-								} else if ($longitude < 106.189095) {
+								} elseif ($longitude < 106.189095) {
 									if ($latitude < 15.147442) {
 										if ($this->polygons[2383]->contains($latitude, $longitude)) {
 											return 251;
@@ -17996,7 +17996,7 @@ class PolygonLookup
 										return 265;
 									}
 								}
-							} else if ($latitude < 17.402836) {
+							} elseif ($latitude < 17.402836) {
 								if ($this->polygons[2389]->contains($latitude, $longitude)) {
 									return 265;
 								} else {
@@ -18012,9 +18012,9 @@ class PolygonLookup
 						} else {
 							return 24;
 						}
-					} else if ($latitude < 21.023890) {
+					} elseif ($latitude < 21.023890) {
 						return 24;
-					} else if ($latitude < 23.203362) {
+					} elseif ($latitude < 23.203362) {
 						if ($latitude < 22.113626) {
 							if ($this->polygons[2391]->contains($latitude, $longitude)) {
 								return 403;
@@ -18035,7 +18035,7 @@ class PolygonLookup
 							return 403;
 						}
 					}
-				} else if ($latitude < 20.977722) {
+				} elseif ($latitude < 20.977722) {
 					if ($latitude < 16.122683) {
 						if ($latitude < 15.680320) {
 							if ($latitude < 13.628118) {
@@ -18044,7 +18044,7 @@ class PolygonLookup
 								} else {
 									return 24;
 								}
-							} else if ($latitude < 14.654219) {
+							} elseif ($latitude < 14.654219) {
 								if ($this->polygons[2395]->contains($latitude, $longitude)) {
 									return 24;
 								}
@@ -18073,9 +18073,9 @@ class PolygonLookup
 					} else {
 						return 24;
 					}
-				} else if ($latitude < 21.495306) {
+				} elseif ($latitude < 21.495306) {
 					return 24;
-				} else if ($longitude < 108.035889) {
+				} elseif ($longitude < 108.035889) {
 					if ($this->polygons[2400]->contains($latitude, $longitude)) {
 						return 403;
 					} else {
@@ -18084,7 +18084,7 @@ class PolygonLookup
 				} else {
 					return 403;
 				}
-			} else if ($latitude < 21.252361) {
+			} elseif ($latitude < 21.252361) {
 				if ($latitude < 20.156473) {
 					if ($latitude < 16.223473) {
 						return 24;
@@ -18094,11 +18094,11 @@ class PolygonLookup
 				} else {
 					return 406;
 				}
-			} else if ($longitude < 113.043556) {
+			} elseif ($longitude < 113.043556) {
 				if ($longitude < 112.198914) {
 					if ($longitude < 109.072281) {
 						return 403;
-					} else if ($latitude < 22.694863) {
+					} elseif ($latitude < 22.694863) {
 						if ($longitude < 111.681794) {
 							if ($longitude < 111.101901) {
 								if ($longitude < 110.087091) {
@@ -18114,7 +18114,7 @@ class PolygonLookup
 										return 406;
 									}
 								}
-							} else if ($latitude < 21.392139) {
+							} elseif ($latitude < 21.392139) {
 								return 406;
 							} else {
 								if ($this->polygons[2403]->contains($latitude, $longitude)) {
@@ -18126,15 +18126,15 @@ class PolygonLookup
 						} else {
 							return 403;
 						}
-					} else if ($latitude < 23.139450) {
+					} elseif ($latitude < 23.139450) {
 						if ($this->polygons[2404]->contains($latitude, $longitude)) {
 							return 291;
 						} else {
 							return 403;
 						}
-					} else if ($longitude < 110.635597) {
+					} elseif ($longitude < 110.635597) {
 						return 403;
-					} else if ($latitude < 24.261142) {
+					} elseif ($latitude < 24.261142) {
 						if ($this->polygons[2405]->contains($latitude, $longitude)) {
 							return 291;
 						}
@@ -18153,9 +18153,9 @@ class PolygonLookup
 							return 291;
 						}
 					}
-				} else if ($latitude < 21.980417) {
+				} elseif ($latitude < 21.980417) {
 					return 403;
-				} else if ($latitude < 23.123449) {
+				} elseif ($latitude < 23.123449) {
 					if ($this->polygons[2409]->contains($latitude, $longitude)) {
 						return 291;
 					}
@@ -18164,13 +18164,13 @@ class PolygonLookup
 					} else {
 						return 403;
 					}
-				} else if ($latitude < 23.211371) {
+				} elseif ($latitude < 23.211371) {
 					if ($this->polygons[2411]->contains($latitude, $longitude)) {
 						return 403;
 					} else {
 						return 291;
 					}
-				} else if ($latitude < 23.385080) {
+				} elseif ($latitude < 23.385080) {
 					if ($this->polygons[2412]->contains($latitude, $longitude)) {
 						return 403;
 					} else {
@@ -18186,21 +18186,21 @@ class PolygonLookup
 			} else {
 				return 291;
 			}
-		} else if ($latitude < 20.697500) {
+		} elseif ($latitude < 20.697500) {
 			return 279;
-		} else if ($longitude < 114.403358) {
+		} elseif ($longitude < 114.403358) {
 			if ($longitude < 113.837753) {
 				if ($latitude < 22.222334) {
 					if ($longitude < 113.591026) {
 						if ($longitude < 113.526558) {
 							return 291;
-						} else if ($latitude < 22.137777) {
+						} elseif ($latitude < 22.137777) {
 							if ($this->polygons[2414]->contains($latitude, $longitude)) {
 								return 291;
 							} else {
 								return 132;
 							}
-						} else if ($latitude < 22.163389) {
+						} elseif ($latitude < 22.163389) {
 							if ($longitude < 113.541180) {
 								return 132;
 							} else {
@@ -18219,15 +18219,15 @@ class PolygonLookup
 				} else {
 					return 291;
 				}
-			} else if ($latitude < 22.253416) {
+			} elseif ($latitude < 22.253416) {
 				if ($latitude < 22.129694) {
 					return 291;
 				} else {
 					return 15;
 				}
-			} else if ($latitude < 22.374916) {
+			} elseif ($latitude < 22.374916) {
 				return 15;
-			} else if ($latitude < 22.481138) {
+			} elseif ($latitude < 22.481138) {
 				if ($longitude < 113.913659) {
 					if ($latitude < 22.442740) {
 						return 15;
@@ -18244,19 +18244,19 @@ class PolygonLookup
 					return 15;
 				}
 			}
-		} else if ($longitude < 119.324997) {
+		} elseif ($longitude < 119.324997) {
 			if ($longitude < 117.531754) {
 				if ($latitude < 20.709833) {
 					return 125;
 				} else {
 					return 291;
 				}
-			} else if ($longitude < 118.197639) {
+			} elseif ($longitude < 118.197639) {
 				return 291;
-			} else if ($latitude < 24.531528) {
+			} elseif ($latitude < 24.531528) {
 				if ($longitude < 118.472969) {
 					return 125;
-				} else if ($latitude < 23.962000) {
+				} elseif ($latitude < 23.962000) {
 					return 125;
 				} else {
 					return 291;
@@ -18264,14 +18264,14 @@ class PolygonLookup
 			} else {
 				return 291;
 			}
-		} else if ($latitude < 24.179411) {
+		} elseif ($latitude < 24.179411) {
 			return 125;
 		} else {
 			return 291;
 		}
 	}
 	
-	protected function call44(float $latitude, float $longitude) : ?int
+	protected function call44(float $latitude, float $longitude): ?int
 	{
 		if ($longitude < 120.827698) {
 			if ($latitude < 43.386189) {
@@ -18282,7 +18282,7 @@ class PolygonLookup
 						} else {
 							return 123;
 						}
-					} else if ($longitude < 112.394374) {
+					} elseif ($longitude < 112.394374) {
 						if ($this->polygons[2418]->contains($latitude, $longitude)) {
 							return 123;
 						}
@@ -18294,7 +18294,7 @@ class PolygonLookup
 						} else {
 							return 403;
 						}
-					} else if ($latitude < 41.384137) {
+					} elseif ($latitude < 41.384137) {
 						if ($this->polygons[2421]->contains($latitude, $longitude)) {
 							return 403;
 						} else {
@@ -18310,12 +18310,12 @@ class PolygonLookup
 				} else {
 					return 291;
 				}
-			} else if ($latitude < 53.269103) {
+			} elseif ($latitude < 53.269103) {
 				if ($longitude < 112.966167) {
 					if ($latitude < 48.327646) {
 						if ($longitude < 109.035402) {
 							return 123;
-						} else if ($latitude < 45.856918) {
+						} elseif ($latitude < 45.856918) {
 							if ($this->polygons[2423]->contains($latitude, $longitude)) {
 								return 123;
 							}
@@ -18331,7 +18331,7 @@ class PolygonLookup
 								return 123;
 							}
 						}
-					} else if ($longitude < 109.035402) {
+					} elseif ($longitude < 109.035402) {
 						if ($latitude < 50.798375) {
 							if ($longitude < 107.070020) {
 								if ($this->polygons[2426]->contains($latitude, $longitude)) {
@@ -18339,7 +18339,7 @@ class PolygonLookup
 								} else {
 									return 144;
 								}
-							} else if ($latitude < 49.563011) {
+							} elseif ($latitude < 49.563011) {
 								if ($this->polygons[2427]->contains($latitude, $longitude)) {
 									return 141;
 								} else {
@@ -18362,7 +18362,7 @@ class PolygonLookup
 								return 144;
 							}
 						}
-					} else if ($latitude < 50.798375) {
+					} elseif ($latitude < 50.798375) {
 						if ($this->polygons[2431]->contains($latitude, $longitude)) {
 							return 141;
 						}
@@ -18378,16 +18378,16 @@ class PolygonLookup
 							return 141;
 						}
 					}
-				} else if ($latitude < 48.327646) {
+				} elseif ($latitude < 48.327646) {
 					if ($longitude < 116.896933) {
 						if ($this->polygons[2434]->contains($latitude, $longitude)) {
 							return 203;
 						} else {
 							return 291;
 						}
-					} else if ($latitude < 45.856918) {
+					} elseif ($latitude < 45.856918) {
 						return 291;
-					} else if ($longitude < 118.862315) {
+					} elseif ($longitude < 118.862315) {
 						if ($this->polygons[2435]->contains($latitude, $longitude)) {
 							return 203;
 						} else {
@@ -18400,7 +18400,7 @@ class PolygonLookup
 							return 291;
 						}
 					}
-				} else if ($longitude < 116.896933) {
+				} elseif ($longitude < 116.896933) {
 					if ($latitude < 50.798375) {
 						if ($this->polygons[2437]->contains($latitude, $longitude)) {
 							return 141;
@@ -18417,15 +18417,15 @@ class PolygonLookup
 							return 141;
 						}
 					}
-				} else if ($latitude < 50.798375) {
+				} elseif ($latitude < 50.798375) {
 					if ($this->polygons[2440]->contains($latitude, $longitude)) {
 						return 141;
 					} else {
 						return 291;
 					}
-				} else if ($longitude < 118.862315) {
+				} elseif ($longitude < 118.862315) {
 					return 141;
-				} else if ($latitude < 52.033739) {
+				} elseif ($latitude < 52.033739) {
 					if ($this->polygons[2441]->contains($latitude, $longitude)) {
 						return 291;
 					} else {
@@ -18438,7 +18438,7 @@ class PolygonLookup
 						return 141;
 					}
 				}
-			} else if ($longitude < 105.495247) {
+			} elseif ($longitude < 105.495247) {
 				if ($latitude < 59.469437) {
 					if ($this->polygons[2443]->contains($latitude, $longitude)) {
 						return 289;
@@ -18452,7 +18452,7 @@ class PolygonLookup
 						return 144;
 					}
 				}
-			} else if ($longitude < 113.161472) {
+			} elseif ($longitude < 113.161472) {
 				if ($longitude < 109.328360) {
 					if ($this->polygons[2445]->contains($latitude, $longitude)) {
 						return 141;
@@ -18462,9 +18462,9 @@ class PolygonLookup
 					} else {
 						return 144;
 					}
-				} else if ($latitude < 56.783855) {
+				} elseif ($latitude < 56.783855) {
 					return 144;
-				} else if ($longitude < 111.244916) {
+				} elseif ($longitude < 111.244916) {
 					if ($this->polygons[2447]->contains($latitude, $longitude)) {
 						return 141;
 					} else {
@@ -18477,7 +18477,7 @@ class PolygonLookup
 						return 141;
 					}
 				}
-			} else if ($longitude < 116.994585) {
+			} elseif ($longitude < 116.994585) {
 				if ($latitude < 56.783855) {
 					if ($longitude < 115.078029) {
 						if ($this->polygons[2449]->contains($latitude, $longitude)) {
@@ -18485,7 +18485,7 @@ class PolygonLookup
 						} else {
 							return 144;
 						}
-					} else if ($latitude < 55.026479) {
+					} elseif ($latitude < 55.026479) {
 						if ($this->polygons[2450]->contains($latitude, $longitude)) {
 							return 144;
 						} else {
@@ -18505,13 +18505,13 @@ class PolygonLookup
 						return 141;
 					}
 				}
-			} else if ($latitude < 56.783855) {
+			} elseif ($latitude < 56.783855) {
 				if ($this->polygons[2453]->contains($latitude, $longitude)) {
 					return 144;
 				} else {
 					return 141;
 				}
-			} else if ($longitude < 118.911141) {
+			} elseif ($longitude < 118.911141) {
 				if ($latitude < 58.541231) {
 					if ($longitude < 117.952863) {
 						if ($this->polygons[2454]->contains($latitude, $longitude)) {
@@ -18540,16 +18540,16 @@ class PolygonLookup
 					return 141;
 				}
 			}
-		} else if ($latitude < 40.943722) {
+		} elseif ($latitude < 40.943722) {
 			return 291;
-		} else if ($latitude < 48.188303) {
+		} elseif ($latitude < 48.188303) {
 			if ($latitude < 44.566012) {
 				if ($this->polygons[2458]->contains($latitude, $longitude)) {
 					return 42;
 				} else {
 					return 291;
 				}
-			} else if ($latitude < 46.377158) {
+			} elseif ($latitude < 46.377158) {
 				if ($this->polygons[2459]->contains($latitude, $longitude)) {
 					return 291;
 				} else {
@@ -18562,7 +18562,7 @@ class PolygonLookup
 					return 291;
 				}
 			}
-		} else if ($latitude < 52.939128) {
+		} elseif ($latitude < 52.939128) {
 			if ($this->polygons[2461]->contains($latitude, $longitude)) {
 				return 42;
 			} else {
@@ -18577,7 +18577,7 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call45(float $latitude, float $longitude) : ?int
+	protected function call45(float $latitude, float $longitude): ?int
 	{
 		if ($latitude < 60.298607) {
 			if ($latitude < 38.331139) {
@@ -18600,9 +18600,9 @@ class PolygonLookup
 						} else {
 							return 291;
 						}
-					} else if ($latitude < 37.284248) {
+					} elseif ($latitude < 37.284248) {
 						return 11;
-					} else if ($longitude < 125.197052) {
+					} elseif ($longitude < 125.197052) {
 						if ($longitude < 124.768219) {
 							if ($latitude < 37.982666) {
 								return 11;
@@ -18612,7 +18612,7 @@ class PolygonLookup
 						} else {
 							return 151;
 						}
-					} else if ($latitude < 37.678055) {
+					} elseif ($latitude < 37.678055) {
 						if ($longitude < 125.510507) {
 							return 11;
 						} else {
@@ -18621,20 +18621,20 @@ class PolygonLookup
 					} else {
 						return 151;
 					}
-				} else if ($latitude < 37.681999) {
+				} elseif ($latitude < 37.681999) {
 					return 11;
-				} else if ($longitude < 126.666692) {
+				} elseif ($longitude < 126.666692) {
 					if ($longitude < 126.167000) {
 						return 151;
-					} else if ($latitude < 37.749195) {
+					} elseif ($latitude < 37.749195) {
 						return 11;
-					} else if ($longitude < 126.336586) {
+					} elseif ($longitude < 126.336586) {
 						if ($latitude < 37.823339) {
 							return 11;
 						} else {
 							return 151;
 						}
-					} else if ($longitude < 126.516444) {
+					} elseif ($longitude < 126.516444) {
 						if ($this->polygons[2465]->contains($latitude, $longitude)) {
 							return 11;
 						} else {
@@ -18647,7 +18647,7 @@ class PolygonLookup
 							return 151;
 						}
 					}
-				} else if ($longitude < 127.382829) {
+				} elseif ($longitude < 127.382829) {
 					if ($this->polygons[2467]->contains($latitude, $longitude)) {
 						return 151;
 					} else {
@@ -18660,7 +18660,7 @@ class PolygonLookup
 						return 11;
 					}
 				}
-			} else if ($latitude < 39.382084) {
+			} elseif ($latitude < 39.382084) {
 				if ($longitude < 121.710999) {
 					if ($longitude < 111.212129) {
 						if ($latitude < 39.289394) {
@@ -18679,16 +18679,16 @@ class PolygonLookup
 					} else {
 						return 291;
 					}
-				} else if ($longitude < 123.197807) {
+				} elseif ($longitude < 123.197807) {
 					return 291;
 				} else {
 					return 151;
 				}
-			} else if ($longitude < 123.756470) {
+			} elseif ($longitude < 123.756470) {
 				return $this->call44($latitude, $longitude);
-			} else if ($latitude < 39.723915) {
+			} elseif ($latitude < 39.723915) {
 				return 151;
-			} else if ($latitude < 39.931973) {
+			} elseif ($latitude < 39.931973) {
 				if ($longitude < 124.255466) {
 					if ($this->polygons[2471]->contains($latitude, $longitude)) {
 						return 151;
@@ -18698,14 +18698,14 @@ class PolygonLookup
 				} else {
 					return 151;
 				}
-			} else if ($latitude < 43.487705) {
+			} elseif ($latitude < 43.487705) {
 				if ($longitude < 123.811134) {
 					if ($this->polygons[2472]->contains($latitude, $longitude)) {
 						return 42;
 					} else {
 						return 291;
 					}
-				} else if ($longitude < 125.610680) {
+				} elseif ($longitude < 125.610680) {
 					if ($latitude < 41.709839) {
 						if ($this->polygons[2473]->contains($latitude, $longitude)) {
 							return 42;
@@ -18725,7 +18725,7 @@ class PolygonLookup
 							return 42;
 						}
 					}
-				} else if ($latitude < 41.709839) {
+				} elseif ($latitude < 41.709839) {
 					if ($longitude < 126.510452) {
 						if ($this->polygons[2477]->contains($latitude, $longitude)) {
 							return 151;
@@ -18758,16 +18758,16 @@ class PolygonLookup
 						return 42;
 					}
 				}
-			} else if ($latitude < 51.893156) {
+			} elseif ($latitude < 51.893156) {
 				if ($latitude < 47.690430) {
 					return 42;
-				} else if ($latitude < 49.791793) {
+				} elseif ($latitude < 49.791793) {
 					if ($this->polygons[2484]->contains($latitude, $longitude)) {
 						return 291;
 					} else {
 						return 42;
 					}
-				} else if ($longitude < 125.583347) {
+				} elseif ($longitude < 125.583347) {
 					if ($this->polygons[2485]->contains($latitude, $longitude)) {
 						return 291;
 					} else {
@@ -18783,7 +18783,7 @@ class PolygonLookup
 						return 42;
 					}
 				}
-			} else if ($latitude < 56.095881) {
+			} elseif ($latitude < 56.095881) {
 				if ($latitude < 53.994519) {
 					if ($longitude < 125.583347) {
 						if ($this->polygons[2488]->contains($latitude, $longitude)) {
@@ -18807,7 +18807,7 @@ class PolygonLookup
 			} else {
 				return 141;
 			}
-		} else if ($longitude < 118.797836) {
+		} elseif ($longitude < 118.797836) {
 			if ($latitude < 75.927002) {
 				if ($latitude < 73.209663) {
 					if ($latitude < 72.847191) {
@@ -18820,7 +18820,7 @@ class PolygonLookup
 										} else {
 											return 144;
 										}
-									} else if ($longitude < 107.009928) {
+									} elseif ($longitude < 107.009928) {
 										if ($latitude < 65.004326) {
 											if ($this->polygons[2492]->contains($latitude, $longitude)) {
 												return 141;
@@ -18837,7 +18837,7 @@ class PolygonLookup
 												return 141;
 											}
 										}
-									} else if ($latitude < 65.004326) {
+									} elseif ($latitude < 65.004326) {
 										if ($longitude < 107.962573) {
 											if ($this->polygons[2495]->contains($latitude, $longitude)) {
 												return 141;
@@ -18860,7 +18860,7 @@ class PolygonLookup
 									} else {
 										return 141;
 									}
-								} else if ($latitude < 63.435753) {
+								} elseif ($latitude < 63.435753) {
 									if ($longitude < 110.820509) {
 										if ($latitude < 61.867180) {
 											if ($this->polygons[2499]->contains($latitude, $longitude)) {
@@ -18885,15 +18885,15 @@ class PolygonLookup
 										return 141;
 									}
 								}
-							} else if ($longitude < 108.915218) {
+							} elseif ($longitude < 108.915218) {
 								if ($this->polygons[2502]->contains($latitude, $longitude)) {
 									return 141;
 								} else {
 									return 289;
 								}
-							} else if ($latitude < 69.710045) {
+							} elseif ($latitude < 69.710045) {
 								return 141;
-							} else if ($longitude < 110.820509) {
+							} elseif ($longitude < 110.820509) {
 								if ($this->polygons[2503]->contains($latitude, $longitude)) {
 									return 289;
 								} else {
@@ -18913,7 +18913,7 @@ class PolygonLookup
 								return 141;
 							}
 						}
-					} else if ($longitude < 108.341057) {
+					} elseif ($longitude < 108.341057) {
 						return 289;
 					} else {
 						if ($this->polygons[2506]->contains($latitude, $longitude)) {
@@ -18922,10 +18922,10 @@ class PolygonLookup
 							return 289;
 						}
 					}
-				} else if ($longitude < 113.919746) {
+				} elseif ($longitude < 113.919746) {
 					if ($longitude < 109.343498) {
 						return 289;
-					} else if ($latitude < 74.049721) {
+					} elseif ($latitude < 74.049721) {
 						if ($longitude < 111.589165) {
 							if ($this->polygons[2507]->contains($latitude, $longitude)) {
 								return 141;
@@ -18935,13 +18935,13 @@ class PolygonLookup
 						} else {
 							return 141;
 						}
-					} else if ($longitude < 111.209999) {
+					} elseif ($longitude < 111.209999) {
 						if ($this->polygons[2508]->contains($latitude, $longitude)) {
 							return 141;
 						} else {
 							return 289;
 						}
-					} else if ($latitude < 74.551941) {
+					} elseif ($latitude < 74.551941) {
 						return 141;
 					} else {
 						if ($this->polygons[2509]->contains($latitude, $longitude)) {
@@ -18961,7 +18961,7 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call46(float $latitude, float $longitude) : ?int
+	protected function call46(float $latitude, float $longitude): ?int
 	{
 		if ($latitude < 54.555332) {
 			if ($longitude < 141.546310) {
@@ -18980,13 +18980,13 @@ class PolygonLookup
 								return 141;
 							}
 						}
-					} else if ($latitude < 52.739679) {
+					} elseif ($latitude < 52.739679) {
 						if ($this->polygons[2512]->contains($latitude, $longitude)) {
 							return 141;
 						} else {
 							return 37;
 						}
-					} else if ($longitude < 133.623215) {
+					} elseif ($longitude < 133.623215) {
 						if ($this->polygons[2513]->contains($latitude, $longitude)) {
 							return 141;
 						} else {
@@ -19005,7 +19005,7 @@ class PolygonLookup
 			} else {
 				return 36;
 			}
-		} else if ($latitude < 55.194805) {
+		} elseif ($latitude < 55.194805) {
 			if ($longitude < 132.413686) {
 				if ($this->polygons[2515]->contains($latitude, $longitude)) {
 					return 37;
@@ -19015,7 +19015,7 @@ class PolygonLookup
 			} else {
 				return 37;
 			}
-		} else if ($latitude < 71.260391) {
+		} elseif ($latitude < 71.260391) {
 			if ($longitude < 139.044365) {
 				if ($latitude < 63.227598) {
 					if ($longitude < 134.328671) {
@@ -19024,7 +19024,7 @@ class PolygonLookup
 								if ($latitude < 57.203003) {
 									if ($longitude < 130.791900) {
 										return 141;
-									} else if ($latitude < 56.198904) {
+									} elseif ($latitude < 56.198904) {
 										if ($this->polygons[2516]->contains($latitude, $longitude)) {
 											return 37;
 										} else {
@@ -19053,13 +19053,13 @@ class PolygonLookup
 										return 141;
 									}
 								}
-							} else if ($latitude < 57.203003) {
+							} elseif ($latitude < 57.203003) {
 								if ($this->polygons[2522]->contains($latitude, $longitude)) {
 									return 141;
 								} else {
 									return 37;
 								}
-							} else if ($longitude < 133.149747) {
+							} elseif ($longitude < 133.149747) {
 								if ($this->polygons[2523]->contains($latitude, $longitude)) {
 									return 104;
 								}
@@ -19094,7 +19094,7 @@ class PolygonLookup
 								return 104;
 							}
 						}
-					} else if ($latitude < 59.211202) {
+					} elseif ($latitude < 59.211202) {
 						if ($this->polygons[2531]->contains($latitude, $longitude)) {
 							return 104;
 						}
@@ -19103,7 +19103,7 @@ class PolygonLookup
 						} else {
 							return 37;
 						}
-					} else if ($longitude < 136.686518) {
+					} elseif ($longitude < 136.686518) {
 						if ($this->polygons[2533]->contains($latitude, $longitude)) {
 							return 37;
 						}
@@ -19115,7 +19115,7 @@ class PolygonLookup
 						} else {
 							return 104;
 						}
-					} else if ($latitude < 61.219400) {
+					} elseif ($latitude < 61.219400) {
 						if ($longitude < 137.865441) {
 							if ($this->polygons[2536]->contains($latitude, $longitude)) {
 								return 104;
@@ -19139,7 +19139,7 @@ class PolygonLookup
 							return 104;
 						}
 					}
-				} else if ($longitude < 134.328671) {
+				} elseif ($longitude < 134.328671) {
 					if ($latitude < 67.243995) {
 						if ($longitude < 131.970823) {
 							if ($this->polygons[2540]->contains($latitude, $longitude)) {
@@ -19177,11 +19177,11 @@ class PolygonLookup
 						return 37;
 					}
 				}
-			} else if ($latitude < 64.217725) {
+			} elseif ($latitude < 64.217725) {
 				if ($longitude < 143.760059) {
 					if ($latitude < 60.696391) {
 						return 37;
-					} else if ($longitude < 141.402212) {
+					} elseif ($longitude < 141.402212) {
 						if ($latitude < 62.457058) {
 							if ($this->polygons[2547]->contains($latitude, $longitude)) {
 								return 104;
@@ -19214,14 +19214,14 @@ class PolygonLookup
 							return 37;
 						}
 					}
-				} else if ($latitude < 61.679001) {
+				} elseif ($latitude < 61.679001) {
 					if ($longitude < 146.117907) {
 						if ($this->polygons[2554]->contains($latitude, $longitude)) {
 							return 46;
 						} else {
 							return 37;
 						}
-					} else if ($latitude < 60.425264) {
+					} elseif ($latitude < 60.425264) {
 						if ($this->polygons[2555]->contains($latitude, $longitude)) {
 							return 37;
 						} else {
@@ -19234,7 +19234,7 @@ class PolygonLookup
 							return 46;
 						}
 					}
-				} else if ($longitude < 146.117907) {
+				} elseif ($longitude < 146.117907) {
 					if ($latitude < 62.948363) {
 						if ($longitude < 144.938983) {
 							if ($this->polygons[2557]->contains($latitude, $longitude)) {
@@ -19272,7 +19272,7 @@ class PolygonLookup
 						return 46;
 					}
 				}
-			} else if ($longitude < 143.760059) {
+			} elseif ($longitude < 143.760059) {
 				if ($latitude < 67.739058) {
 					if ($longitude < 141.402212) {
 						if ($latitude < 65.978391) {
@@ -19315,7 +19315,7 @@ class PolygonLookup
 					return 46;
 				}
 			}
-		} else if ($longitude < 138.020813) {
+		} elseif ($longitude < 138.020813) {
 			return 37;
 		} else {
 			if ($this->polygons[2571]->contains($latitude, $longitude)) {
@@ -19326,13 +19326,13 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call47(float $latitude, float $longitude) : ?int
+	protected function call47(float $latitude, float $longitude): ?int
 	{
 		if ($latitude < 50.924026) {
 			if ($latitude < 35.537945) {
 				if ($longitude < 128.948471) {
 					return 11;
-				} else if ($longitude < 129.456300) {
+				} elseif ($longitude < 129.456300) {
 					if ($latitude < 34.702641) {
 						return 280;
 					} else {
@@ -19341,7 +19341,7 @@ class PolygonLookup
 				} else {
 					return 280;
 				}
-			} else if ($longitude < 140.967285) {
+			} elseif ($longitude < 140.967285) {
 				if ($latitude < 39.235085) {
 					if ($longitude < 130.923218) {
 						if ($longitude < 128.363785) {
@@ -19360,10 +19360,10 @@ class PolygonLookup
 					} else {
 						return 280;
 					}
-				} else if ($longitude < 131.517105) {
+				} elseif ($longitude < 131.517105) {
 					if ($latitude < 40.005638) {
 						return 151;
-					} else if ($latitude < 45.016474) {
+					} elseif ($latitude < 45.016474) {
 						if ($longitude < 130.936279) {
 							if ($longitude < 130.674866) {
 								if ($latitude < 42.511056) {
@@ -19396,7 +19396,7 @@ class PolygonLookup
 										return 42;
 									}
 								}
-							} else if ($latitude < 42.642555) {
+							} elseif ($latitude < 42.642555) {
 								return 37;
 							} else {
 								if ($this->polygons[2579]->contains($latitude, $longitude)) {
@@ -19405,7 +19405,7 @@ class PolygonLookup
 									return 37;
 								}
 							}
-						} else if ($latitude < 42.833363) {
+						} elseif ($latitude < 42.833363) {
 							return 37;
 						} else {
 							if ($this->polygons[2580]->contains($latitude, $longitude)) {
@@ -19414,19 +19414,19 @@ class PolygonLookup
 								return 37;
 							}
 						}
-					} else if ($latitude < 47.970250) {
+					} elseif ($latitude < 47.970250) {
 						if ($this->polygons[2581]->contains($latitude, $longitude)) {
 							return 37;
 						} else {
 							return 42;
 						}
-					} else if ($longitude < 129.463665) {
+					} elseif ($longitude < 129.463665) {
 						if ($this->polygons[2582]->contains($latitude, $longitude)) {
 							return 42;
 						} else {
 							return 141;
 						}
-					} else if ($latitude < 49.447138) {
+					} elseif ($latitude < 49.447138) {
 						if ($longitude < 130.490385) {
 							if ($this->polygons[2583]->contains($latitude, $longitude)) {
 								return 141;
@@ -19450,12 +19450,12 @@ class PolygonLookup
 							return 37;
 						}
 					}
-				} else if ($latitude < 42.342888) {
+				} elseif ($latitude < 42.342888) {
 					return 280;
-				} else if ($longitude < 131.939438) {
+				} elseif ($longitude < 131.939438) {
 					if ($latitude < 43.206934) {
 						return 37;
-					} else if ($latitude < 45.336029) {
+					} elseif ($latitude < 45.336029) {
 						if ($longitude < 131.891479) {
 							if ($this->polygons[2587]->contains($latitude, $longitude)) {
 								return 42;
@@ -19476,16 +19476,16 @@ class PolygonLookup
 							return 37;
 						}
 					}
-				} else if ($longitude < 134.773911) {
+				} elseif ($longitude < 134.773911) {
 					if ($latitude < 42.900028) {
 						return 37;
-					} else if ($latitude < 46.912027) {
+					} elseif ($latitude < 46.912027) {
 						if ($this->polygons[2590]->contains($latitude, $longitude)) {
 							return 42;
 						} else {
 							return 37;
 						}
-					} else if ($latitude < 48.918027) {
+					} elseif ($latitude < 48.918027) {
 						if ($longitude < 133.356674) {
 							if ($this->polygons[2591]->contains($latitude, $longitude)) {
 								return 42;
@@ -19509,16 +19509,16 @@ class PolygonLookup
 						return 37;
 					}
 				}
-			} else if ($longitude < 146.209671) {
+			} elseif ($longitude < 146.209671) {
 				if ($latitude < 43.290001) {
 					return 280;
-				} else if ($longitude < 145.393784) {
+				} elseif ($longitude < 145.393784) {
 					if ($latitude < 45.523140) {
 						return 280;
 					} else {
 						return 36;
 					}
-				} else if ($longitude < 145.820892) {
+				} elseif ($longitude < 145.820892) {
 					if ($latitude < 43.521431) {
 						return 140;
 					} else {
@@ -19527,24 +19527,24 @@ class PolygonLookup
 				} else {
 					return 140;
 				}
-			} else if ($longitude < 156.510300) {
+			} elseif ($longitude < 156.510300) {
 				return 140;
 			} else {
 				return 373;
 			}
-		} else if ($longitude < 148.475754) {
+		} elseif ($longitude < 148.475754) {
 			if ($longitude < 129.612976) {
 				return 141;
-			} else if ($latitude < 71.356834) {
+			} elseif ($latitude < 71.356834) {
 				return $this->call46($latitude, $longitude);
-			} else if ($latitude < 72.331413) {
+			} elseif ($latitude < 72.331413) {
 				if ($longitude < 137.560638) {
 					if ($longitude < 130.047699) {
 						return 141;
 					} else {
 						return 37;
 					}
-				} else if ($longitude < 138.896896) {
+				} elseif ($longitude < 138.896896) {
 					return 37;
 				} else {
 					if ($this->polygons[2594]->contains($latitude, $longitude)) {
@@ -19556,18 +19556,18 @@ class PolygonLookup
 			} else {
 				return 37;
 			}
-		} else if ($longitude < 161.149689) {
+		} elseif ($longitude < 161.149689) {
 			if ($longitude < 152.057312) {
 				if ($latitude < 72.314082) {
 					return 46;
 				} else {
 					return 37;
 				}
-			} else if ($latitude < 69.467075) {
+			} elseif ($latitude < 69.467075) {
 				if ($latitude < 68.347848) {
 					if ($longitude < 155.534637) {
 						return 46;
-					} else if ($latitude < 59.780066) {
+					} elseif ($latitude < 59.780066) {
 						if ($longitude < 155.597702) {
 							if ($latitude < 57.468508) {
 								return 46;
@@ -19577,11 +19577,11 @@ class PolygonLookup
 						} else {
 							return 373;
 						}
-					} else if ($latitude < 60.907417) {
+					} elseif ($latitude < 60.907417) {
 						return 46;
-					} else if ($latitude < 64.627632) {
+					} elseif ($latitude < 64.627632) {
 						return 46;
-					} else if ($longitude < 158.342163) {
+					} elseif ($longitude < 158.342163) {
 						if ($this->polygons[2595]->contains($latitude, $longitude)) {
 							return 365;
 						} else {
@@ -19597,17 +19597,17 @@ class PolygonLookup
 				} else {
 					return 46;
 				}
-			} else if ($latitude < 71.090889) {
+			} elseif ($latitude < 71.090889) {
 				return 46;
 			} else {
 				return 37;
 			}
-		} else if ($latitude < 65.153413) {
+		} elseif ($latitude < 65.153413) {
 			if ($latitude < 53.005890) {
 				return 158;
-			} else if ($latitude < 60.870335) {
+			} elseif ($latitude < 60.870335) {
 				return 373;
-			} else if ($longitude < 163.466064) {
+			} elseif ($longitude < 163.466064) {
 				if ($latitude < 64.386932) {
 					if ($latitude < 61.465637) {
 						if ($longitude < 162.566748) {
@@ -19615,7 +19615,7 @@ class PolygonLookup
 						} else {
 							return 373;
 						}
-					} else if ($latitude < 62.926285) {
+					} elseif ($latitude < 62.926285) {
 						if ($this->polygons[2597]->contains($latitude, $longitude)) {
 							return 46;
 						} else {
@@ -19638,10 +19638,10 @@ class PolygonLookup
 						return 46;
 					}
 				}
-			} else if ($longitude < 174.513611) {
+			} elseif ($longitude < 174.513611) {
 				if ($latitude < 61.112862) {
 					return 373;
-				} else if ($longitude < 168.989838) {
+				} elseif ($longitude < 168.989838) {
 					if ($longitude < 166.227951) {
 						if ($this->polygons[2601]->contains($latitude, $longitude)) {
 							return 365;
@@ -19655,7 +19655,7 @@ class PolygonLookup
 							return 365;
 						}
 					}
-				} else if ($longitude < 171.751724) {
+				} elseif ($longitude < 171.751724) {
 					if ($latitude < 63.133138) {
 						if ($this->polygons[2603]->contains($latitude, $longitude)) {
 							return 373;
@@ -19679,7 +19679,7 @@ class PolygonLookup
 			} else {
 				return 365;
 			}
-		} else if ($longitude < 162.849396) {
+		} elseif ($longitude < 162.849396) {
 			if ($latitude < 69.663055) {
 				if ($longitude < 161.655670) {
 					if ($latitude < 68.411377) {
@@ -19699,7 +19699,7 @@ class PolygonLookup
 					} else {
 						return 46;
 					}
-				} else if ($longitude < 161.891998) {
+				} elseif ($longitude < 161.891998) {
 					if ($latitude < 68.378539) {
 						if ($this->polygons[2608]->contains($latitude, $longitude)) {
 							return 46;
@@ -19709,13 +19709,13 @@ class PolygonLookup
 					} else {
 						return 46;
 					}
-				} else if ($latitude < 68.869705) {
+				} elseif ($latitude < 68.869705) {
 					if ($this->polygons[2609]->contains($latitude, $longitude)) {
 						return 46;
 					} else {
 						return 365;
 					}
-				} else if ($longitude < 162.089188) {
+				} elseif ($longitude < 162.089188) {
 					return 46;
 				} else {
 					if ($this->polygons[2610]->contains($latitude, $longitude)) {
@@ -19732,14 +19732,14 @@ class PolygonLookup
 		}
 	}
 	
-	protected function call48(float $latitude, float $longitude) : ?int
+	protected function call48(float $latitude, float $longitude): ?int
 	{
 		if ($longitude < 120.474747) {
 			if ($latitude < 11.575916) {
 				if ($latitude < 5.157583) {
 					if ($longitude < 108.696526) {
 						return 26;
-					} else if ($longitude < 118.300781) {
+					} elseif ($longitude < 118.300781) {
 						if ($latitude < 3.061667) {
 							if ($longitude < 109.267975) {
 								if ($latitude < 1.751361) {
@@ -19747,7 +19747,7 @@ class PolygonLookup
 								} else {
 									return 26;
 								}
-							} else if ($longitude < 115.507401) {
+							} elseif ($longitude < 115.507401) {
 								if ($longitude < 111.416031) {
 									if ($latitude < 2.083333) {
 										if ($this->polygons[2611]->contains($latitude, $longitude)) {
@@ -19758,13 +19758,13 @@ class PolygonLookup
 									} else {
 										return 286;
 									}
-								} else if ($longitude < 113.461716) {
+								} elseif ($longitude < 113.461716) {
 									if ($this->polygons[2612]->contains($latitude, $longitude)) {
 										return 320;
 									} else {
 										return 286;
 									}
-								} else if ($latitude < 1.841722) {
+								} elseif ($latitude < 1.841722) {
 									if ($longitude < 114.484558) {
 										if ($this->polygons[2613]->contains($latitude, $longitude)) {
 											return 286;
@@ -19794,7 +19794,7 @@ class PolygonLookup
 							} else {
 								return 383;
 							}
-						} else if ($longitude < 117.507942) {
+						} elseif ($longitude < 117.507942) {
 							if ($latitude < 3.454611) {
 								if ($longitude < 115.648697) {
 									if ($this->polygons[2618]->contains($latitude, $longitude)) {
@@ -19808,7 +19808,7 @@ class PolygonLookup
 								} else {
 									return 383;
 								}
-							} else if ($longitude < 117.061142) {
+							} elseif ($longitude < 117.061142) {
 								if ($longitude < 115.359444) {
 									if ($longitude < 114.294377) {
 										if ($this->polygons[2620]->contains($latitude, $longitude)) {
@@ -19816,7 +19816,7 @@ class PolygonLookup
 										} else {
 											return 286;
 										}
-									} else if ($latitude < 4.250889) {
+									} elseif ($latitude < 4.250889) {
 										if ($this->polygons[2621]->contains($latitude, $longitude)) {
 											return 217;
 										}
@@ -19825,7 +19825,7 @@ class PolygonLookup
 										} else {
 											return 286;
 										}
-									} else if ($longitude < 114.826910) {
+									} elseif ($longitude < 114.826910) {
 										if ($this->polygons[2623]->contains($latitude, $longitude)) {
 											return 286;
 										}
@@ -19860,7 +19860,7 @@ class PolygonLookup
 										return 286;
 									}
 								}
-							} else if ($latitude < 3.628139) {
+							} elseif ($latitude < 3.628139) {
 								return 383;
 							} else {
 								if ($this->polygons[2631]->contains($latitude, $longitude)) {
@@ -19869,9 +19869,9 @@ class PolygonLookup
 									return 383;
 								}
 							}
-						} else if ($latitude < 4.147695) {
+						} elseif ($latitude < 4.147695) {
 							return 383;
-						} else if ($longitude < 117.585808) {
+						} elseif ($longitude < 117.585808) {
 							if ($this->polygons[2632]->contains($latitude, $longitude)) {
 								return 383;
 							} else {
@@ -19884,24 +19884,24 @@ class PolygonLookup
 								return 286;
 							}
 						}
-					} else if ($longitude < 119.222952) {
+					} elseif ($longitude < 119.222952) {
 						if ($latitude < 2.312556) {
 							return 383;
 						} else {
 							return 286;
 						}
-					} else if ($latitude < 1.079167) {
+					} elseif ($latitude < 1.079167) {
 						return 383;
 					} else {
 						return 279;
 					}
-				} else if ($longitude < 119.272194) {
+				} elseif ($longitude < 119.272194) {
 					if ($latitude < 6.890389) {
 						return 286;
-					} else if ($longitude < 117.930031) {
+					} elseif ($longitude < 117.930031) {
 						if ($latitude < 7.363417) {
 							return 286;
-						} else if ($longitude < 109.135417) {
+						} elseif ($longitude < 109.135417) {
 							if ($longitude < 106.207001) {
 								if ($this->polygons[2634]->contains($latitude, $longitude)) {
 									return 251;
@@ -19923,16 +19923,16 @@ class PolygonLookup
 			} else {
 				return $this->call43($latitude, $longitude);
 			}
-		} else if ($longitude < 124.619637) {
+		} elseif ($longitude < 124.619637) {
 			if ($latitude < 11.415667) {
 				if ($latitude < 1.422111) {
 					return 383;
 				} else {
 					return 279;
 				}
-			} else if ($latitude < 21.103582) {
+			} elseif ($latitude < 21.103582) {
 				return 279;
-			} else if ($longitude < 122.000443) {
+			} elseif ($longitude < 122.000443) {
 				if ($latitude < 21.120611) {
 					return 279;
 				} else {
@@ -19941,7 +19941,7 @@ class PolygonLookup
 			} else {
 				return 280;
 			}
-		} else if ($longitude < 129.147415) {
+		} elseif ($longitude < 129.147415) {
 			if ($latitude < 8.397028) {
 				if ($longitude < 127.323502) {
 					if ($latitude < 2.817055) {
@@ -19950,7 +19950,7 @@ class PolygonLookup
 						} else {
 							return 131;
 						}
-					} else if ($latitude < 4.780778) {
+					} elseif ($latitude < 4.780778) {
 						return 383;
 					} else {
 						return 279;
@@ -19958,12 +19958,12 @@ class PolygonLookup
 				} else {
 					return 131;
 				}
-			} else if ($latitude < 12.690361) {
+			} elseif ($latitude < 12.690361) {
 				return 279;
 			} else {
 				return 280;
 			}
-		} else if ($longitude < 163.034882) {
+		} elseif ($longitude < 163.034882) {
 			if ($longitude < 145.852493) {
 				if ($longitude < 144.953979) {
 					if ($latitude < 7.300587) {
@@ -19972,19 +19972,19 @@ class PolygonLookup
 						} else {
 							return 187;
 						}
-					} else if ($longitude < 139.663284) {
+					} elseif ($longitude < 139.663284) {
 						if ($latitude < 8.092916) {
 							return 187;
-						} else if ($longitude < 131.193527) {
+						} elseif ($longitude < 131.193527) {
 							return 280;
 						} else {
 							return 216;
 						}
-					} else if ($latitude < 10.022223) {
+					} elseif ($latitude < 10.022223) {
 						return 216;
-					} else if ($longitude < 141.476913) {
+					} elseif ($longitude < 141.476913) {
 						return 280;
-					} else if ($latitude < 17.090556) {
+					} elseif ($latitude < 17.090556) {
 						return 106;
 					} else {
 						return 389;
@@ -19992,19 +19992,19 @@ class PolygonLookup
 				} else {
 					return 389;
 				}
-			} else if ($longitude < 153.821915) {
+			} elseif ($longitude < 153.821915) {
 				if ($longitude < 146.081223) {
 					return 389;
 				} else {
 					return 216;
 				}
-			} else if ($longitude < 158.336243) {
+			} elseif ($longitude < 158.336243) {
 				if ($longitude < 153.985229) {
 					return 280;
 				} else {
 					return 222;
 				}
-			} else if ($latitude < 6.857666) {
+			} elseif ($latitude < 6.857666) {
 				if ($longitude < 160.718369) {
 					return 222;
 				} else {
@@ -20013,13 +20013,13 @@ class PolygonLookup
 			} else {
 				return 18;
 			}
-		} else if ($longitude < 170.237549) {
+		} elseif ($longitude < 170.237549) {
 			if ($longitude < 167.775497) {
 				if ($longitude < 166.271835) {
 					return 18;
-				} else if ($longitude < 166.654526) {
+				} elseif ($longitude < 166.654526) {
 					return 135;
-				} else if ($longitude < 166.901505) {
+				} elseif ($longitude < 166.901505) {
 					return 18;
 				} else {
 					return 292;
@@ -20027,21 +20027,21 @@ class PolygonLookup
 			} else {
 				return 18;
 			}
-		} else if ($longitude < 172.137970) {
+		} elseif ($longitude < 172.137970) {
 			return 18;
 		} else {
 			return 148;
 		}
 	}
 	
-	protected function call49(float $latitude, float $longitude) : ?int
+	protected function call49(float $latitude, float $longitude): ?int
 	{
 		if ($latitude < 0.621778) {
 			if ($longitude < 135.281830) {
 				if ($longitude < 124.870331) {
 					if ($latitude < -14.905778) {
 						return 35;
-					} else if ($longitude < 118.159142) {
+					} elseif ($longitude < 118.159142) {
 						if ($latitude < -5.413084) {
 							if ($latitude < -7.231639) {
 								if ($longitude < 114.601669) {
@@ -20052,7 +20052,7 @@ class PolygonLookup
 											} else {
 												return 26;
 											}
-										} else if ($longitude < 113.425163) {
+										} elseif ($longitude < 113.425163) {
 											return 26;
 										} else {
 											if ($this->polygons[2635]->contains($latitude, $longitude)) {
@@ -20073,26 +20073,26 @@ class PolygonLookup
 							} else {
 								return 26;
 							}
-						} else if ($longitude < 108.029915) {
+						} elseif ($longitude < 108.029915) {
 							return 26;
-						} else if ($longitude < 115.817696) {
+						} elseif ($longitude < 115.817696) {
 							if ($longitude < 109.185059) {
 								if ($latitude < -2.501333) {
 									return 26;
 								} else {
 									return 320;
 								}
-							} else if ($longitude < 113.424698) {
+							} elseif ($longitude < 113.424698) {
 								return 320;
-							} else if ($latitude < -4.363333) {
+							} elseif ($latitude < -4.363333) {
 								return 383;
-							} else if ($longitude < 114.026596) {
+							} elseif ($longitude < 114.026596) {
 								if ($this->polygons[2637]->contains($latitude, $longitude)) {
 									return 383;
 								} else {
 									return 320;
 								}
-							} else if ($latitude < -1.783340) {
+							} elseif ($latitude < -1.783340) {
 								if ($this->polygons[2638]->contains($latitude, $longitude)) {
 									return 320;
 								} else {
@@ -20111,9 +20111,9 @@ class PolygonLookup
 						} else {
 							return 383;
 						}
-					} else if ($longitude < 124.036163) {
+					} elseif ($longitude < 124.036163) {
 						return 383;
-					} else if ($latitude < -8.119555) {
+					} elseif ($latitude < -8.119555) {
 						if ($latitude < -9.174916) {
 							if ($latitude < -14.858306) {
 								return 35;
@@ -20127,22 +20127,22 @@ class PolygonLookup
 						} else {
 							return 383;
 						}
-					} else if ($latitude < -5.320944) {
+					} elseif ($latitude < -5.320944) {
 						return 383;
-					} else if ($latitude < -1.961278) {
+					} elseif ($latitude < -1.961278) {
 						return 131;
-					} else if ($latitude < -1.628500) {
+					} elseif ($latitude < -1.628500) {
 						if ($longitude < 124.177025) {
 							return 383;
 						} else {
 							return 131;
 						}
-					} else if ($latitude < -0.611208) {
+					} elseif ($latitude < -0.611208) {
 						return 131;
 					} else {
 						return 383;
 					}
-				} else if ($latitude < -8.137417) {
+				} elseif ($latitude < -8.137417) {
 					if ($longitude < 128.731216) {
 						if ($latitude < -14.416805) {
 							if ($latitude < -31.300000) {
@@ -20154,9 +20154,9 @@ class PolygonLookup
 							} else {
 								return 35;
 							}
-						} else if ($latitude < -13.734889) {
+						} elseif ($latitude < -13.734889) {
 							return 35;
-						} else if ($longitude < 127.345337) {
+						} elseif ($longitude < 127.345337) {
 							if ($longitude < 125.165901) {
 								if ($latitude < -8.630452) {
 									if ($latitude < -8.964142) {
@@ -20185,11 +20185,11 @@ class PolygonLookup
 						} else {
 							return 131;
 						}
-					} else if ($latitude < -11.953861) {
+					} elseif ($latitude < -11.953861) {
 						if ($latitude < -14.820723) {
 							if ($latitude < -32.235695) {
 								return 67;
-							} else if ($longitude < 129.259827) {
+							} elseif ($longitude < 129.259827) {
 								if ($latitude < -31.300000) {
 									if ($this->polygons[2645]->contains($latitude, $longitude)) {
 										return 79;
@@ -20206,7 +20206,7 @@ class PolygonLookup
 										return 10;
 									}
 								}
-							} else if ($latitude < -25.998917) {
+							} elseif ($latitude < -25.998917) {
 								if ($this->polygons[2648]->contains($latitude, $longitude)) {
 									return 10;
 								} else {
@@ -20218,7 +20218,7 @@ class PolygonLookup
 						} else {
 							return 10;
 						}
-					} else if ($latitude < -10.902861) {
+					} elseif ($latitude < -10.902861) {
 						return 10;
 					} else {
 						return 131;
@@ -20229,9 +20229,9 @@ class PolygonLookup
 			} else {
 				return $this->call42($latitude, $longitude);
 			}
-		} else if ($latitude < 25.382833) {
+		} elseif ($latitude < 25.382833) {
 			return $this->call48($latitude, $longitude);
-		} else if ($longitude < 127.410225) {
+		} elseif ($longitude < 127.410225) {
 			if ($latitude < 35.297001) {
 				if ($latitude < 30.342751) {
 					if ($longitude < 121.602638) {
@@ -20240,7 +20240,7 @@ class PolygonLookup
 								if ($longitude < 111.484301) {
 									if ($longitude < 108.294469) {
 										return 403;
-									} else if ($latitude < 27.862792) {
+									} elseif ($latitude < 27.862792) {
 										if ($longitude < 109.889385) {
 											if ($latitude < 26.622813) {
 												if ($this->polygons[2649]->contains($latitude, $longitude)) {
@@ -20262,7 +20262,7 @@ class PolygonLookup
 												return 291;
 											}
 										}
-									} else if ($longitude < 109.889385) {
+									} elseif ($longitude < 109.889385) {
 										if ($latitude < 29.102771) {
 											if ($this->polygons[2652]->contains($latitude, $longitude)) {
 												return 403;
@@ -20282,10 +20282,10 @@ class PolygonLookup
 								} else {
 									return 291;
 								}
-							} else if ($latitude < 26.386000) {
+							} elseif ($latitude < 26.386000) {
 								if ($latitude < 26.279583) {
 									return 125;
-								} else if ($longitude < 120.219345) {
+								} elseif ($longitude < 120.219345) {
 									return 125;
 								} else {
 									return 291;
@@ -20296,24 +20296,24 @@ class PolygonLookup
 						} else {
 							return 291;
 						}
-					} else if ($longitude < 123.510361) {
+					} elseif ($longitude < 123.510361) {
 						return 291;
 					} else {
 						return 280;
 					}
-				} else if ($longitude < 125.216530) {
+				} elseif ($longitude < 125.216530) {
 					if ($longitude < 121.895668) {
 						if ($longitude < 111.023788) {
 							if ($latitude < 33.487884) {
 								if ($longitude < 108.064213) {
 									return 403;
-								} else if ($latitude < 31.915317) {
+								} elseif ($latitude < 31.915317) {
 									if ($this->polygons[2654]->contains($latitude, $longitude)) {
 										return 403;
 									} else {
 										return 291;
 									}
-								} else if ($longitude < 109.544000) {
+								} elseif ($longitude < 109.544000) {
 									if ($this->polygons[2655]->contains($latitude, $longitude)) {
 										return 291;
 									}
@@ -20322,7 +20322,7 @@ class PolygonLookup
 									} else {
 										return 403;
 									}
-								} else if ($latitude < 32.701600) {
+								} elseif ($latitude < 32.701600) {
 									if ($this->polygons[2657]->contains($latitude, $longitude)) {
 										return 403;
 									}
@@ -20348,7 +20348,7 @@ class PolygonLookup
 						} else {
 							return 291;
 						}
-					} else if ($longitude < 122.833557) {
+					} elseif ($longitude < 122.833557) {
 						return 291;
 					} else {
 						return 11;
@@ -20359,14 +20359,14 @@ class PolygonLookup
 			} else {
 				return $this->call45($latitude, $longitude);
 			}
-		} else if ($latitude < 34.400917) {
+		} elseif ($latitude < 34.400917) {
 			return 280;
 		} else {
 			return $this->call47($latitude, $longitude);
 		}
 	}
 	
-	protected function call50(float $latitude, float $longitude) : ?int
+	protected function call50(float $latitude, float $longitude): ?int
 	{
 		if ($latitude < 52.898487) {
 			if ($latitude < 20.373875) {
@@ -20374,22 +20374,22 @@ class PolygonLookup
 					if ($latitude < -50.907104) {
 						if ($longitude < -72.437805) {
 							return 31;
-						} else if ($latitude < -54.523746) {
+						} elseif ($latitude < -54.523746) {
 							if ($longitude < -68.613205) {
 								return 31;
-							} else if ($latitude < -55.351746) {
+							} elseif ($latitude < -55.351746) {
 								if ($longitude < -66.772804) {
 									return 31;
 								} else {
 									return 69;
 								}
-							} else if ($latitude < -55.121574) {
+							} elseif ($latitude < -55.121574) {
 								return 31;
-							} else if ($longitude < -65.110054) {
+							} elseif ($longitude < -65.110054) {
 								if ($latitude < -54.922653) {
 									if ($longitude < -67.035919) {
 										return 31;
-									} else if ($longitude < -66.787865) {
+									} elseif ($longitude < -66.787865) {
 										if ($latitude < -54.971360) {
 											return 31;
 										} else {
@@ -20398,10 +20398,10 @@ class PolygonLookup
 									} else {
 										return 287;
 									}
-								} else if ($longitude < -68.253555) {
+								} elseif ($longitude < -68.253555) {
 									if ($latitude < -54.907707) {
 										return 31;
-									} else if ($longitude < -68.609608) {
+									} elseif ($longitude < -68.609608) {
 										if ($this->polygons[2661]->contains($latitude, $longitude)) {
 											return 287;
 										} else {
@@ -20410,13 +20410,13 @@ class PolygonLookup
 									} else {
 										return 287;
 									}
-								} else if ($longitude < -67.756295) {
+								} elseif ($longitude < -67.756295) {
 									if ($latitude < -54.893145) {
 										return 31;
 									} else {
 										return 287;
 									}
-								} else if ($latitude < -54.916042) {
+								} elseif ($latitude < -54.916042) {
 									if ($longitude < -67.298005) {
 										return 31;
 									} else {
@@ -20425,16 +20425,16 @@ class PolygonLookup
 								} else {
 									return 287;
 								}
-							} else if ($longitude < -63.806961) {
+							} elseif ($longitude < -63.806961) {
 								return 287;
 							} else {
 								return 69;
 							}
-						} else if ($longitude < -61.327831) {
+						} elseif ($longitude < -61.327831) {
 							if ($longitude < -72.023773) {
 								if ($latitude < -51.821801) {
 									return 31;
-								} else if ($latitude < -51.569118) {
+								} elseif ($latitude < -51.569118) {
 									if ($this->polygons[2662]->contains($latitude, $longitude)) {
 										return 85;
 									} else {
@@ -20447,7 +20447,7 @@ class PolygonLookup
 										return 85;
 									}
 								}
-							} else if ($longitude < -71.377541) {
+							} elseif ($longitude < -71.377541) {
 								if ($latitude < -52.638439) {
 									return 31;
 								} else {
@@ -20457,7 +20457,7 @@ class PolygonLookup
 										return 31;
 									}
 								}
-							} else if ($latitude < -53.978534) {
+							} elseif ($latitude < -53.978534) {
 								if ($longitude < -69.057579) {
 									return 31;
 								} else {
@@ -20467,7 +20467,7 @@ class PolygonLookup
 										return 287;
 									}
 								}
-							} else if ($latitude < -52.456120) {
+							} elseif ($latitude < -52.456120) {
 								if ($longitude < -69.544449) {
 									return 31;
 								} else {
@@ -20477,7 +20477,7 @@ class PolygonLookup
 										return 287;
 									}
 								}
-							} else if ($longitude < -68.368202) {
+							} elseif ($longitude < -68.368202) {
 								if ($this->polygons[2667]->contains($latitude, $longitude)) {
 									return 31;
 								} else {
@@ -20486,22 +20486,22 @@ class PolygonLookup
 							} else {
 								return 82;
 							}
-						} else if ($longitude < -38.240654) {
+						} elseif ($longitude < -38.240654) {
 							return 82;
 						} else {
 							return 69;
 						}
-					} else if ($latitude < -44.969273) {
+					} elseif ($latitude < -44.969273) {
 						if ($longitude < -73.589836) {
 							return 31;
-						} else if ($latitude < -45.399536) {
+						} elseif ($latitude < -45.399536) {
 							if ($longitude < -73.585594) {
 								return 31;
-							} else if ($longitude < -73.533890) {
+							} elseif ($longitude < -73.533890) {
 								if ($latitude < -49.517205) {
 									if ($latitude < -50.669666) {
 										return 31;
-									} else if ($latitude < -50.072808) {
+									} elseif ($latitude < -50.072808) {
 										if ($latitude < -50.156428) {
 											if ($this->polygons[2668]->contains($latitude, $longitude)) {
 												return 85;
@@ -20515,7 +20515,7 @@ class PolygonLookup
 												return 31;
 											}
 										}
-									} else if ($latitude < -49.912819) {
+									} elseif ($latitude < -49.912819) {
 										if ($this->polygons[2670]->contains($latitude, $longitude)) {
 											return 85;
 										} else {
@@ -20531,7 +20531,7 @@ class PolygonLookup
 								} else {
 									return 31;
 								}
-							} else if ($latitude < -49.584360) {
+							} elseif ($latitude < -49.584360) {
 								if ($latitude < -50.092410) {
 									if ($longitude < -72.230858) {
 										if ($latitude < -50.855255) {
@@ -20540,7 +20540,7 @@ class PolygonLookup
 											} else {
 												return 31;
 											}
-										} else if ($latitude < -50.312183) {
+										} elseif ($latitude < -50.312183) {
 											if ($this->polygons[2673]->contains($latitude, $longitude)) {
 												return 85;
 											} else {
@@ -20556,7 +20556,7 @@ class PolygonLookup
 									} else {
 										return 85;
 									}
-								} else if ($latitude < -49.953084) {
+								} elseif ($latitude < -49.953084) {
 									if ($longitude < -73.497192) {
 										if ($latitude < -50.047192) {
 											if ($this->polygons[2675]->contains($latitude, $longitude)) {
@@ -20581,7 +20581,7 @@ class PolygonLookup
 										return 85;
 									}
 								}
-							} else if ($longitude < -67.100245) {
+							} elseif ($longitude < -67.100245) {
 								if ($longitude < -72.887050) {
 									if ($latitude < -48.943169) {
 										if ($this->polygons[2678]->contains($latitude, $longitude)) {
@@ -20592,7 +20592,7 @@ class PolygonLookup
 									} else {
 										return 31;
 									}
-								} else if ($longitude < -69.993648) {
+								} elseif ($longitude < -69.993648) {
 									if ($latitude < -47.491948) {
 										if ($this->polygons[2679]->contains($latitude, $longitude)) {
 											return 31;
@@ -20619,9 +20619,9 @@ class PolygonLookup
 							} else {
 								return 85;
 							}
-						} else if ($longitude < -73.093870) {
+						} elseif ($longitude < -73.093870) {
 							return 31;
-						} else if ($longitude < -71.297264) {
+						} elseif ($longitude < -71.297264) {
 							if ($this->polygons[2683]->contains($latitude, $longitude)) {
 								return 88;
 							} else {
@@ -20630,7 +20630,7 @@ class PolygonLookup
 						} else {
 							return 88;
 						}
-					} else if ($latitude < -43.470894) {
+					} elseif ($latitude < -43.470894) {
 						if ($longitude < -73.787636) {
 							if ($longitude < -75.012062) {
 								if ($longitude < -176.153000) {
@@ -20641,11 +20641,11 @@ class PolygonLookup
 							} else {
 								return 31;
 							}
-						} else if ($longitude < -72.847519) {
+						} elseif ($longitude < -72.847519) {
 							return 31;
-						} else if ($longitude < -72.698524) {
+						} elseif ($longitude < -72.698524) {
 							return 31;
-						} else if ($longitude < -71.110161) {
+						} elseif ($longitude < -71.110161) {
 							if ($latitude < -44.523029) {
 								if ($this->polygons[2684]->contains($latitude, $longitude)) {
 									return 88;
@@ -20662,13 +20662,13 @@ class PolygonLookup
 						} else {
 							return 88;
 						}
-					} else if ($longitude < -72.622307) {
+					} elseif ($longitude < -72.622307) {
 						if ($longitude < -80.716499) {
 							if ($longitude < -177.880646) {
 								return 377;
-							} else if ($longitude < -144.296722) {
+							} elseif ($longitude < -144.296722) {
 								return 312;
-							} else if ($latitude < -30.451663) {
+							} elseif ($latitude < -30.451663) {
 								return 31;
 							} else {
 								return 263;
@@ -20685,7 +20685,7 @@ class PolygonLookup
 			} else {
 				return $this->call13($latitude, $longitude);
 			}
-		} else if ($longitude < -74.961365) {
+		} elseif ($longitude < -74.961365) {
 			if ($longitude < -106.448578) {
 				if ($latitude < 60.611965) {
 					if ($longitude < -134.793625) {
@@ -20703,15 +20703,15 @@ class PolygonLookup
 							} else {
 								return 370;
 							}
-						} else if ($longitude < -141.000000) {
+						} elseif ($longitude < -141.000000) {
 							return 370;
-						} else if ($latitude < 57.727699) {
+						} elseif ($latitude < 57.727699) {
 							return 23;
-						} else if ($latitude < 58.559212) {
+						} elseif ($latitude < 58.559212) {
 							if ($latitude < 58.010578) {
 								if ($latitude < 57.768707) {
 									return 23;
-								} else if ($longitude < -135.902527) {
+								} elseif ($longitude < -135.902527) {
 									if ($this->polygons[2686]->contains($latitude, $longitude)) {
 										return 359;
 									}
@@ -20730,9 +20730,9 @@ class PolygonLookup
 							} else {
 								return 359;
 							}
-						} else if ($latitude < 58.786423) {
+						} elseif ($latitude < 58.786423) {
 							return 359;
-						} else if ($longitude < -139.228378) {
+						} elseif ($longitude < -139.228378) {
 							if ($latitude < 59.995773) {
 								return 98;
 							} else {
@@ -20742,7 +20742,7 @@ class PolygonLookup
 									return 98;
 								}
 							}
-						} else if ($longitude < -136.475357) {
+						} elseif ($longitude < -136.475357) {
 							if ($latitude < 58.897247) {
 								if ($longitude < -137.563436) {
 									if ($this->polygons[2690]->contains($latitude, $longitude)) {
@@ -20753,7 +20753,7 @@ class PolygonLookup
 								} else {
 									return 359;
 								}
-							} else if ($latitude < 60.000000) {
+							} elseif ($latitude < 60.000000) {
 								if ($longitude < -137.492722) {
 									if ($latitude < 58.990978) {
 										if ($this->polygons[2691]->contains($latitude, $longitude)) {
@@ -20771,7 +20771,7 @@ class PolygonLookup
 											return 98;
 										}
 									}
-								} else if ($latitude < 58.904221) {
+								} elseif ($latitude < 58.904221) {
 									return 359;
 								} else {
 									if ($this->polygons[2694]->contains($latitude, $longitude)) {
@@ -20787,9 +20787,9 @@ class PolygonLookup
 									return 324;
 								}
 							}
-						} else if ($latitude < 59.019775) {
+						} elseif ($latitude < 59.019775) {
 							return 359;
-						} else if ($latitude < 60.000000) {
+						} elseif ($latitude < 60.000000) {
 							if ($this->polygons[2696]->contains($latitude, $longitude)) {
 								return 45;
 							} else {

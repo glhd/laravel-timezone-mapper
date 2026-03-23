@@ -6,6 +6,8 @@ composer.lock
 .idea/
 .phpstorm.meta.php
 _ide_helper.php
+.php-cs-fixer.cache
+.php-cs-fixer.php
 
 node_modules
 mix-manifest.json

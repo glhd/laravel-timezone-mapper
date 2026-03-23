@@ -8,14 +8,14 @@ use Orchestra\Testbench\TestCase as Orchestra;
 
 abstract class TestCase extends Orchestra
 {
-	protected function getPackageProviders($app) : array
+	protected function getPackageProviders($app): array
 	{
 		return [
 			TimezoneMapperProvider::class,
 		];
 	}
 	
-	protected function getPackageAliases($app) : array
+	protected function getPackageAliases($app): array
 	{
 		return [
 			'TimezoneMapper' => TimezoneMapper::class,

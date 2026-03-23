@@ -8,7 +8,7 @@ class TimezoneMapper
 	
 	protected $lookup;
 	
-	public function mapCoordinates(float $latitude, float $longitude, string $fallback = null) : ?string
+	public function mapCoordinates(float $latitude, float $longitude, string $fallback = null): ?string
 	{
 		if (null === $this->lookup) {
 			$this->timezones = require dirname(__DIR__).'/timezones.php';
@@ -17,7 +17,7 @@ class TimezoneMapper
 		
 		$index = $this->lookup->lookup($latitude, $longitude);
 		
-		if (!$index || !isset($this->timezones[$index])) {
+		if (! $index || ! isset($this->timezones[$index])) {
 			return $fallback;
 		}
 		

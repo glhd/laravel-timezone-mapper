@@ -11,7 +11,7 @@ class Polygon
 		$this->points = $points;
 	}
 	
-	public function contains($testy, $testx) : bool
+	public function contains($testy, $testx): bool
 	{
 		$n = count($this->points);
 		
@@ -24,7 +24,7 @@ class Polygon
 			$yi = $this->points[$i++];
 			$xi = $this->points[$i++];
 			if ((($yi > $testy) !== ($yj > $testy)) && ($testx < ($xj - $xi) * ($testy - $yi) / ($yj - $yi) + $xi - 0.0001)) {
-				$inside = !$inside;
+				$inside = ! $inside;
 			}
 			$xj = $xi;
 			$yj = $yi;
